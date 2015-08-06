@@ -1,8 +1,8 @@
 # Survival-Industry-Configuration
 
 Here are the configuration files that were changed for the
-"Survival Industry Modpack Recipe."  This is meant to go into the
-"config" folder in the modpack.
+"Survival Industry Modpack Recipe."  This is meant to go in the
+main folder of Minecraft.
 
 I placed it here so further changes could be tracked and discussed
 by others who want a hand in the modpack's design.
