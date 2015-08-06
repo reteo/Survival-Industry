@@ -1,1 +1,0 @@
-OpenBlocks:sleepingBag, 1
