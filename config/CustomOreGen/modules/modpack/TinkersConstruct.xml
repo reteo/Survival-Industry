@@ -26,7 +26,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Copper Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoCopperDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoCopperDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Copper is generated </Description> 
                         <DisplayName>Tinkers Construct Copper</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -65,7 +65,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Tin Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoTinDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoTinDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Tin is generated </Description> 
                         <DisplayName>Tinkers Construct Tin</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -143,7 +143,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Iron Gravel Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoIronGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoIronGravelDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Iron Gravel is generated </Description> 
                         <DisplayName>Tinkers Construct Iron Gravel</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -182,7 +182,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Gold Gravel Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoGoldGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoGoldGravelDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Gold Gravel is generated </Description> 
                         <DisplayName>Tinkers Construct Gold Gravel</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -221,7 +221,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Copper Gravel Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoCopperGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoCopperGravelDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Copper Gravel is generated </Description> 
                         <DisplayName>Tinkers Construct Copper Gravel</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -260,7 +260,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Tin Gravel Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoTinGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoTinGravelDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Tin Gravel is generated </Description> 
                         <DisplayName>Tinkers Construct Tin Gravel</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -299,7 +299,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                 
                 <!-- Aluminum Gravel Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='ticoAluminumGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'> 
+                    <OptionChoice name='ticoAluminumGravelDist' default='none' displayState='shown' displayGroup='groupTinkersConstruct'> 
                         <Description> Controls how Aluminum Gravel is generated </Description> 
                         <DisplayName>Tinkers Construct Aluminum Gravel</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -593,7 +593,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                         <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * ticoCopperSize * _default_' range=':= 1 * 0.8 * ticoCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * ticoCopperSize * _default_' range=':= 1 * 0.8 * ticoCopperSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.8 * ticoCopperSize * _default_' range=':= 1 * 0.8 * 0.8 * ticoCopperSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * ticoCopperFreq *_default_'/>
@@ -773,7 +773,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                         <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * ticoTinSize * _default_' range=':= 1 * 0.8 * ticoTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * ticoTinSize * _default_' range=':= 1 * 0.8 * ticoTinSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.8 * ticoTinSize * _default_' range=':= 1 * 0.8 * 0.8 * ticoTinSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * ticoTinFreq *_default_'/>
@@ -953,7 +953,7 @@ Gravel, Aluminum Gravel, Cobalt, Ardite, Nether Cobalt Gravel
                         <WireframeColor>0x60EDEDED</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.7 * ticoAluminumSize * _default_' range=':= 1 * 0.7 * ticoAluminumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.7 * ticoAluminumSize * _default_' range=':= 1 * 0.7 * ticoAluminumSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.7 * ticoAluminumSize * _default_' range=':= 1 * 0.8 * 0.7 * ticoAluminumSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 7 * ticoAluminumFreq *_default_'/>

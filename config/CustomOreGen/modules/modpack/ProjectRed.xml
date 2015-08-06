@@ -143,7 +143,7 @@ Basalt
                 
                 <!-- Copper Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='predCopperDist'  displayState='shown' displayGroup='groupProjectRed'> 
+                    <OptionChoice name='predCopperDist' default='none' displayState='shown' displayGroup='groupProjectRed'> 
                         <Description> Controls how Copper is generated </Description> 
                         <DisplayName>Project Red Copper</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -182,7 +182,7 @@ Basalt
                 
                 <!-- Tin Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='predTinDist'  displayState='shown' displayGroup='groupProjectRed'> 
+                    <OptionChoice name='predTinDist' default='none' displayState='shown' displayGroup='groupProjectRed'> 
                         <Description> Controls how Tin is generated </Description> 
                         <DisplayName>Project Red Tin</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -221,7 +221,7 @@ Basalt
                 
                 <!-- Silver Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='predSilverDist'  displayState='shown' displayGroup='groupProjectRed'> 
+                    <OptionChoice name='predSilverDist' default='none' displayState='shown' displayGroup='groupProjectRed'> 
                         <Description> Controls how Silver is generated </Description> 
                         <DisplayName>Project Red Silver</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -299,7 +299,7 @@ Basalt
                 
                 <!-- Marble Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='predMarbleDist'  displayState='shown' displayGroup='groupProjectRed'> 
+                    <OptionChoice name='predMarbleDist' default='none' displayState='shown' displayGroup='groupProjectRed'> 
                         <Description> Controls how Marble is generated </Description> 
                         <DisplayName>Project Red Marble</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -363,14 +363,14 @@ Basalt
                 
                     
                     <!-- Begin Ruby Ore Configuration -->
-                    <Veins name='predRubyBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore' inherits='PresetPipeVeins' seed='0x0xE23A'>
+                    <Veins name='predRubyBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore' inherits='PresetPipeVeins' seed='0xE23A'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x60900113</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' />
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predRubyFreq * _default_'/>
@@ -381,7 +381,7 @@ Basalt
                     
                     
                     <!-- Begin Ruby Pipe Configuration -->
-                    <Veins name= 'predRubyBasePipe' block='minecraft:stone' inherits='predRubyBaseVeins' seed='0x0xE23A'>
+                    <Veins name= 'predRubyBasePipe' block='minecraft:stone' inherits='predRubyBaseVeins' seed='0xE23A'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
@@ -415,7 +415,7 @@ Basalt
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x60900113</WireframeColor>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' /> 
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predRubyFreq * _default_'/>
@@ -502,14 +502,14 @@ Basalt
                 
                     
                     <!-- Begin Sapphire Ore Configuration -->
-                    <Veins name='predSapphireBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:1' inherits='PresetPipeVeins' seed='0x0x5196'>
+                    <Veins name='predSapphireBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:1' inherits='PresetPipeVeins' seed='0x5196'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x600011C8</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' />
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predSapphireFreq * _default_'/>
@@ -520,7 +520,7 @@ Basalt
                     
                     
                     <!-- Begin Sapphire Pipe Configuration -->
-                    <Veins name= 'predSapphireBasePipe' block='minecraft:stone' inherits='predSapphireBaseVeins' seed='0x0x5196'>
+                    <Veins name= 'predSapphireBasePipe' block='minecraft:stone' inherits='predSapphireBaseVeins' seed='0x5196'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
@@ -554,7 +554,7 @@ Basalt
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x600011C8</WireframeColor>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' /> 
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predSapphireFreq * _default_'/>
@@ -641,14 +641,14 @@ Basalt
                 
                     
                     <!-- Begin Peridot Ore Configuration -->
-                    <Veins name='predPeridotBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:2' inherits='PresetPipeVeins' seed='0x0x8759'>
+                    <Veins name='predPeridotBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:2' inherits='PresetPipeVeins' seed='0x8759'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x60057529</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' />
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predPeridotFreq * _default_'/>
@@ -659,7 +659,7 @@ Basalt
                     
                     
                     <!-- Begin Peridot Pipe Configuration -->
-                    <Veins name= 'predPeridotBasePipe' block='minecraft:stone' inherits='predPeridotBaseVeins' seed='0x0x8759'>
+                    <Veins name= 'predPeridotBasePipe' block='minecraft:stone' inherits='predPeridotBaseVeins' seed='0x8759'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
@@ -693,7 +693,7 @@ Basalt
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
                         <WireframeColor>0x60057529</WireframeColor>
-                        <Setting name='MotherlodeHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel' /> 
+                        <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 1 * 1.5 * predPeridotFreq * _default_'/>
@@ -902,7 +902,7 @@ Basalt
                         <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.95 * predCopperSize * _default_' range=':= 1 * 0.95 * predCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.95 * predCopperSize * _default_' range=':= 1 * 0.95 * predCopperSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.95 * 0.95 * predCopperSize * _default_' range=':= 1 * 0.95 * 0.95 * predCopperSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 2.5 * predCopperFreq *_default_'/>
@@ -1082,7 +1082,7 @@ Basalt
                         <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.9 * predTinSize * _default_' range=':= 1 * 0.9 * predTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.9 * predTinSize * _default_' range=':= 1 * 0.9 * predTinSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.9 * 0.9 * predTinSize * _default_' range=':= 1 * 0.9 * 0.9 * predTinSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 2.5 * predTinFreq *_default_'/>
@@ -1262,7 +1262,7 @@ Basalt
                         <WireframeColor>0x60E3F2F7</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * predSilverSize * _default_' range=':= 1 * 0.8 * predSilverSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * predSilverSize * _default_' range=':= 1 * 0.8 * predSilverSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.5 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.8 * predSilverSize * _default_' range=':= 1 * 0.8 * 0.8 * predSilverSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * predSilverFreq *_default_'/>

@@ -497,7 +497,7 @@ Saltpeter, Magnesium
                 
                 <!-- Nikolite Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoNikoliteDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoNikoliteDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Nikolite is generated </Description> 
                         <DisplayName>Nether Ores Nikolite</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -770,7 +770,7 @@ Saltpeter, Magnesium
                 
                 <!-- Iridium Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoIridiumDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoIridiumDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Iridium is generated </Description> 
                         <DisplayName>Nether Ores Iridium</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -809,7 +809,7 @@ Saltpeter, Magnesium
                 
                 <!-- Osmium Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoOsmiumDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoOsmiumDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Osmium is generated </Description> 
                         <DisplayName>Nether Ores Osmium</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -887,7 +887,7 @@ Saltpeter, Magnesium
                 
                 <!-- Titanium Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoTitaniumDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoTitaniumDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Titanium is generated </Description> 
                         <DisplayName>Nether Ores Titanium</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -926,7 +926,7 @@ Saltpeter, Magnesium
                 
                 <!-- Mithril Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoMithrilDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoMithrilDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Mithril is generated </Description> 
                         <DisplayName>Nether Ores Mithril</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -965,7 +965,7 @@ Saltpeter, Magnesium
                 
                 <!-- Adamantium Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoAdamantiumDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoAdamantiumDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Adamantium is generated </Description> 
                         <DisplayName>Nether Ores Adamantium</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -1004,7 +1004,7 @@ Saltpeter, Magnesium
                 
                 <!-- Rutile Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoRutileDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoRutileDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Rutile is generated </Description> 
                         <DisplayName>Nether Ores Rutile</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -1043,7 +1043,7 @@ Saltpeter, Magnesium
                 
                 <!-- Tungsten Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoTungstenDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoTungstenDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Tungsten is generated </Description> 
                         <DisplayName>Nether Ores Tungsten</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -1082,7 +1082,7 @@ Saltpeter, Magnesium
                 
                 <!-- Amber Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoAmberDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoAmberDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Amber is generated </Description> 
                         <DisplayName>Nether Ores Amber</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -1121,7 +1121,7 @@ Saltpeter, Magnesium
                 
                 <!-- Tennantite Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoTennantiteDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoTennantiteDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Tennantite is generated </Description> 
                         <DisplayName>Nether Ores Tennantite</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -1238,7 +1238,7 @@ Saltpeter, Magnesium
                 
                 <!-- Magnesium Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='nthoMagnesiumDist'  displayState='shown' displayGroup='groupNetherOres'> 
+                    <OptionChoice name='nthoMagnesiumDist' default='none' displayState='shown' displayGroup='groupNetherOres'> 
                         <Description> Controls how Magnesium is generated </Description> 
                         <DisplayName>Nether Ores Magnesium</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>

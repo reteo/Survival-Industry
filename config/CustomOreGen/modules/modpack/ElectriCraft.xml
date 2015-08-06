@@ -181,7 +181,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                 
                 <!-- Aluminum Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='elcrAluminumDist'  displayState='shown' displayGroup='groupElectriCraft'> 
+                    <OptionChoice name='elcrAluminumDist' default='none' displayState='shown' displayGroup='groupElectriCraft'> 
                         <Description> Controls how Aluminum is generated </Description> 
                         <DisplayName>ElectriCraft Aluminum</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -397,7 +397,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x60BB6E30</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.95 * elcrCopperSize * _default_' range=':= 1 * 0.95 * elcrCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.95 * elcrCopperSize * _default_' range=':= 1 * 0.95 * elcrCopperSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.95 * 0.95 * elcrCopperSize * _default_' range=':= 1 * 0.95 * 0.95 * elcrCopperSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 2.5 * elcrCopperFreq *_default_'/>
@@ -577,7 +577,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x60A9C7CF</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.9 * elcrTinSize * _default_' range=':= 1 * 0.9 * elcrTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.9 * elcrTinSize * _default_' range=':= 1 * 0.9 * elcrTinSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.9 * 0.9 * elcrTinSize * _default_' range=':= 1 * 0.9 * 0.9 * elcrTinSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 2.5 * elcrTinFreq *_default_'/>
@@ -757,7 +757,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x60B6D2EA</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * elcrSilverSize * _default_' range=':= 1 * 0.8 * elcrSilverSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * elcrSilverSize * _default_' range=':= 1 * 0.8 * elcrSilverSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.5 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.8 * elcrSilverSize * _default_' range=':= 1 * 0.8 * 0.8 * elcrSilverSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * elcrSilverFreq *_default_'/>
@@ -937,7 +937,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x60D2D1B6</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * elcrNickelSize * _default_' range=':= 1 * 0.8 * elcrNickelSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * elcrNickelSize * _default_' range=':= 1 * 0.8 * elcrNickelSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.8 * elcrNickelSize * _default_' range=':= 1 * 0.8 * 0.8 * elcrNickelSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * elcrNickelFreq *_default_'/>
@@ -1117,7 +1117,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x60DAD9DB</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.7 * elcrAluminumSize * _default_' range=':= 1 * 0.7 * elcrAluminumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.7 * elcrAluminumSize * _default_' range=':= 1 * 0.7 * elcrAluminumSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * 0.7 * elcrAluminumSize * _default_' range=':= 1 * 0.8 * 0.7 * elcrAluminumSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 7 * elcrAluminumFreq *_default_'/>
@@ -1297,7 +1297,7 @@ Copper, Tin, Silver, Nickel, Aluminum, Platinum
                         <WireframeColor>0x602D84E7</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.6 * elcrPlatinumSize * _default_' range=':= 1 * 0.6 * elcrPlatinumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.6 * elcrPlatinumSize * _default_' range=':= 1 * 0.6 * elcrPlatinumSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 0.3 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.6 * 0.6 * elcrPlatinumSize * _default_' range=':= 1 * 0.6 * 0.6 * elcrPlatinumSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 1 * 4.5 * elcrPlatinumFreq *_default_'/>
