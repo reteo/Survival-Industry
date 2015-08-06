@@ -68,7 +68,7 @@ Limestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60FC3B16</WireframeColor>
+                        <WireframeColor>0x60C5CCA9</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * tiswLimestoneSize * _default_' range=':= 1 * 1 * tiswLimestoneSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 128' range=':= 128' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * tiswLimestoneSize * _default_' range=':= 1 * 1 * tiswLimestoneSize * _default_'/>
@@ -83,7 +83,7 @@ Limestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60FC3B16</WireframeColor>
+                        <WireframeColor>0x60C5CCA9</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='swamp'/>
                     </Veins>

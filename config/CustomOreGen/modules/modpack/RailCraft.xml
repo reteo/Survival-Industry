@@ -89,7 +89,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                 <!-- Poor Iron Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='rlcrPoorIronDist' default='none' displayState='shown' displayGroup='groupRailCraft'> 
+                    <OptionChoice name='rlcrPoorIronDist'  displayState='shown' displayGroup='groupRailCraft'> 
                         <Description> Controls how Poor Iron is generated </Description> 
                         <DisplayName>RailCraft Poor Iron</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -128,7 +128,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                 <!-- Poor Gold Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='rlcrPoorGoldDist' default='none' displayState='shown' displayGroup='groupRailCraft'> 
+                    <OptionChoice name='rlcrPoorGoldDist'  displayState='shown' displayGroup='groupRailCraft'> 
                         <Description> Controls how Poor Gold is generated </Description> 
                         <DisplayName>RailCraft Poor Gold</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -167,7 +167,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                 <!-- Poor Copper Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='rlcrPoorCopperDist' default='none' displayState='shown' displayGroup='groupRailCraft'> 
+                    <OptionChoice name='rlcrPoorCopperDist'  displayState='shown' displayGroup='groupRailCraft'> 
                         <Description> Controls how Poor Copper is generated </Description> 
                         <DisplayName>RailCraft Poor Copper</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -206,7 +206,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                 <!-- Poor Tin Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='rlcrPoorTinDist' default='none' displayState='shown' displayGroup='groupRailCraft'> 
+                    <OptionChoice name='rlcrPoorTinDist'  displayState='shown' displayGroup='groupRailCraft'> 
                         <Description> Controls how Poor Tin is generated </Description> 
                         <DisplayName>RailCraft Poor Tin</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -245,7 +245,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                 <!-- Poor Lead Configuration UI Starting -->
                 <ConfigSection>
-                    <OptionChoice name='rlcrPoorLeadDist' default='none' displayState='shown' displayGroup='groupRailCraft'> 
+                    <OptionChoice name='rlcrPoorLeadDist'  displayState='shown' displayGroup='groupRailCraft'> 
                         <Description> Controls how Poor Lead is generated </Description> 
                         <DisplayName>RailCraft Poor Lead</DisplayName>
                         <Choice value='layeredVeins' displayValue='Layered Veins'>
@@ -424,7 +424,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFFFFF</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * rlcrQuarryStoneSize * _default_' range=':= 1 * 1 * rlcrQuarryStoneSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 128' range=':= 128' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * rlcrQuarryStoneSize * _default_' range=':= 1 * 1 * rlcrQuarryStoneSize * _default_'/>
@@ -439,7 +439,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFFFFF</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='mountain'/>
                     </Veins>
@@ -458,12 +458,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                     
                     <!-- Begin Sulfur Ore Configuration -->
-                    <Veins name='rlcrSulfurBaseVeins' block='Railcraft:ore' inherits='PresetPipeVeins' seed='0x0xCE49'>
+                    <Veins name='rlcrSulfurBaseVeins' block='Railcraft:ore' inherits='PresetPipeVeins' seed='0x0x68D1'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFE25C</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 32' type='normal' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
@@ -476,12 +476,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                     
                     
                     <!-- Begin Sulfur Pipe Configuration -->
-                    <Veins name= 'rlcrSulfurBasePipe' block='Railcraft:cube:6' inherits='rlcrSulfurBaseVeins' seed='0x0xCE49'>
+                    <Veins name= 'rlcrSulfurBasePipe' block='Railcraft:cube:6' inherits='rlcrSulfurBaseVeins' seed='0x0x68D1'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFE25C</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 1 * rlcrSulfurSize * _default_' range=':= 0.5 * 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 1 * rlcrSulfurSize * _default_' range=':= 0.5 * 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -515,7 +515,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFE25C</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 32' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
@@ -533,7 +533,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60FFE25C</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -560,7 +560,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFE25C</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * rlcrSulfurSize * _default_' range=':= 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
@@ -579,7 +579,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60FFE25C</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -601,7 +601,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FFE25C</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * rlcrSulfurSize * _default_'/>
                         <Setting name='Height' avg=':= 8' range=':= 32' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.025 * rlcrSulfurFreq * _default_'/>
@@ -625,7 +625,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
@@ -641,7 +641,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -667,7 +667,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
@@ -685,7 +685,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60DDC2AF</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -700,7 +700,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -711,7 +711,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60DDC2AF</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -740,7 +740,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 3 * 1 * rlcrPoorIronSize * _default_' range=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
@@ -758,7 +758,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60DDC2AF</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -780,7 +780,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60DDC2AF</WireframeColor>
                         <Setting name='Size' avg=':= 3 * 1 * rlcrPoorIronSize * _default_'/>
                         <Setting name='Height' avg=':= 32' range=':= 32' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * rlcrPoorIronFreq * _default_'/>
@@ -804,7 +804,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 20' range=':= 10' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
@@ -822,7 +822,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Forest'/>
                     </Veins>
@@ -847,7 +847,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 20' range=':= 10' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
@@ -867,7 +867,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60EAEF57</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -882,7 +882,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Forest'/>
                         
@@ -892,7 +892,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60EAEF57</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -920,7 +920,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 3 * 0.8 * rlcrPoorGoldSize * _default_' range=':= 3 * 0.8 * rlcrPoorGoldSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 16' range=':= 16' type='normal' scaleTo='SeaLevel'/>
@@ -938,7 +938,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60EAEF57</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -960,7 +960,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60EAEF57</WireframeColor>
                         <Setting name='Size' avg=':= 3 * 1 * rlcrPoorGoldSize * _default_'/>
                         <Setting name='Height' avg=':= 16' range=':= 16' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * rlcrPoorGoldFreq * _default_'/>
@@ -984,7 +984,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
@@ -1000,7 +1000,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1026,7 +1026,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
@@ -1044,7 +1044,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60FF8E2B</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1059,7 +1059,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1070,7 +1070,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60FF8E2B</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1099,7 +1099,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_' range=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
@@ -1117,7 +1117,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60FF8E2B</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1139,7 +1139,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60FF8E2B</WireframeColor>
                         <Setting name='Size' avg=':= 3 * 1 * rlcrPoorCopperSize * _default_'/>
                         <Setting name='Height' avg=':= 32' range=':= 32' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * rlcrPoorCopperFreq * _default_'/>
@@ -1163,7 +1163,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
@@ -1179,7 +1179,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1205,7 +1205,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
@@ -1223,7 +1223,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60E8E8E8</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1238,7 +1238,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1249,7 +1249,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60E8E8E8</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1278,7 +1278,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 3 * 1 * rlcrPoorTinSize * _default_' range=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
@@ -1296,7 +1296,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60E8E8E8</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1318,7 +1318,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60E8E8E8</WireframeColor>
                         <Setting name='Size' avg=':= 3 * 1 * rlcrPoorTinSize * _default_'/>
                         <Setting name='Height' avg=':= 32' range=':= 32' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * rlcrPoorTinFreq * _default_'/>
@@ -1342,7 +1342,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
@@ -1358,7 +1358,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1384,7 +1384,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 43' range=':= 10.5' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
@@ -1402,7 +1402,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60818EBE</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1417,7 +1417,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Cold'/>
                         <BiomeType name='Ocean' weight='-1'/>
@@ -1428,7 +1428,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60818EBE</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1457,7 +1457,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_' range=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='normal' scaleTo='SeaLevel'/>
@@ -1475,7 +1475,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60818EBE</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1497,7 +1497,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60818EBE</WireframeColor>
                         <Setting name='Size' avg=':= 3 * 1 * rlcrPoorLeadSize * _default_'/>
                         <Setting name='Height' avg=':= 32' range=':= 32' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * rlcrPoorLeadFreq * _default_'/>
@@ -1521,7 +1521,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60CED0BA</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 2.3 * rlcrSaltpeterSize * _default_' range=':= 1 * 2.3 * rlcrSaltpeterSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 64' range=':= 5' type='normal' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 2.3 * rlcrSaltpeterSize * _default_' range=':= 1 * 2.3 * rlcrSaltpeterSize * _default_'/>
@@ -1555,7 +1555,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60CED0BA</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 2.3 * rlcrSaltpeterSize * _default_' range=':= 1 * 2.3 * rlcrSaltpeterSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 64' range=':= 5' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 2.3 * rlcrSaltpeterSize * _default_' range=':= 1 * 2.3 * rlcrSaltpeterSize * _default_'/>
@@ -1578,7 +1578,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60CED0BA</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:sandstone'/>
@@ -1601,7 +1601,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60CED0BA</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 7/8 * rlcrSaltpeterSize * _default_'/>
                         <Setting name='Height' avg=':= 64' range=':= 5' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.1 * rlcrSaltpeterFreq * _default_'/>
@@ -1639,12 +1639,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                 
                     
                     <!-- Begin Abyssal Ores Geode Crust -->
-                    <Veins name='rlcrAbyssalOresBaseShell' block='Railcraft:cube:6' inherits='PresetSmallDeposits' seed='0x0xCE49'>
+                    <Veins name='rlcrAbyssalOresBaseShell' block='Railcraft:cube:6' inherits='PresetSmallDeposits' seed='0x0x9668'>
                         <Description>
                             The geode's outer shell, composed of the Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60000000</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeFrequency' avg=':= 0.2 * 1 * rlcrAbyssalOresFreq * _default_'/>
@@ -1658,12 +1658,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                     
                     
                     <!-- Begin Abyssal Ores Geode Crystals -->
-                    <Veins name='rlcrAbyssalOresBaseCrystal' block='Railcraft:ore:2' inherits='PresetSmallDeposits' seed='0x0xCE49'>
+                    <Veins name='rlcrAbyssalOresBaseCrystal' block='Railcraft:ore:2' inherits='PresetSmallDeposits' seed='0x0x9668'>
                         <Description>
                             The geode's inner material, usually some form of crystal.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60000000</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1.5 * 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='OreDensity' avg=':= 0.04 * 1 * _default_' range=':= _default_'/>
@@ -1675,12 +1675,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                     
                     
                     <!-- Begin Abyssal Ores Geode Crystals (Railcraft:ore:3) -->
-                    <Veins name='rlcrAbyssalOresBase1Crystal' block='Railcraft:ore:3' inherits='PresetSmallDeposits' seed='0x0xCE49'>
+                    <Veins name='rlcrAbyssalOresBase1Crystal' block='Railcraft:ore:3' inherits='PresetSmallDeposits' seed='0x0x9668'>
                         <Description>
                             The geode's inner material, usually some form of crystal.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60000000</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1.5 * 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='OreDensity' avg=':= 2/3 * 0.04 * 1 * _default_' range=':= _default_'/>
@@ -1692,12 +1692,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                     
                     
                     <!-- Begin Abyssal Ores Geode Crystals (Railcraft:ore:4) -->
-                    <Veins name='rlcrAbyssalOresBase2Crystal' block='Railcraft:ore:4' inherits='PresetSmallDeposits' seed='0x0xCE49'>
+                    <Veins name='rlcrAbyssalOresBase2Crystal' block='Railcraft:ore:4' inherits='PresetSmallDeposits' seed='0x0x9668'>
                         <Description>
                             The geode's inner material, usually some form of crystal.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60000000</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1.5 * 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='OreDensity' avg=':= 1/3 * 0.04 * 1 * _default_' range=':= _default_'/>
@@ -1709,12 +1709,12 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                     
                     
                     <!-- Begin Abyssal Ores Geode Air Pocket -->
-                    <Veins name='rlcrAbyssalOresBaseAirBubble' block='minecraft:air' inherits='PresetSmallDeposits' seed='0x0xCE49'>
+                    <Veins name='rlcrAbyssalOresBaseAirBubble' block='minecraft:air' inherits='PresetSmallDeposits' seed='0x0x9668'>
                         <Description>
                             The air pocket within the center of a geode.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60000000</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 3 * 1 * rlcrAbyssalOresSize * _default_' range=':= 3 * 1 * rlcrAbyssalOresSize * _default_'/>
@@ -1755,9 +1755,9 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60C64E0D</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
-                        <Setting name='MotherlodeHeight' avg=':= 31' range=':= 2' type='normal' scaleTo='SeaLevel'/> 
+                        <Setting name='MotherlodeHeight' avg=':= 31' range=':= 2' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 0.5 * 1 * rlcrFirestoneFreq * _default_'/>
@@ -1783,9 +1783,9 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60C64E0D</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
-                        <Setting name='MotherlodeHeight' avg=':= 31' range=':= 2' type='normal' scaleTo='SeaLevel' /> 
+                        <Setting name='MotherlodeHeight' avg=':= 31' range=':= 2' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='MotherlodeFrequency' avg=':= 0.5 * 1 * rlcrFirestoneFreq * _default_'/>
@@ -1800,7 +1800,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60C64E0D</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1826,10 +1826,10 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60C64E0D</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
-                        <Setting name='CloudHeight' avg=':= 31' range=':= 2' type='normal' scaleTo='SeaLevel'/>
+                        <Setting name='CloudHeight' avg=':= 31' range=':= 2' type='uniform' scaleTo='SeaLevel'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                         <Setting name='CloudThickness' avg=':= 0.5 * 1 * 1 * rlcrFirestoneSize * _default_' range=':= 0.5 * 1 * 1 * rlcrFirestoneSize  * _default_'/>
                         <Setting name='DistributionFrequency' avg=':= 0.5 * 1 * rlcrFirestoneFreq *_default_'/>
@@ -1844,7 +1844,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60D2FD28</WireframeColor>
+                            <WireframeColor>0x60C64E0D</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1865,7 +1865,7 @@ Poor Lead, Saltpeter, Remove Abyssal Stone, Abyssal Ores, Firestone
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60D2FD28</WireframeColor>
+                        <WireframeColor>0x60C64E0D</WireframeColor>
                         <Setting name='Size' avg=':= 0.5 * 1 * rlcrFirestoneSize * _default_'/>
                         <Setting name='Height' avg=':= 31' range=':= 2' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 0.5 * 1 * rlcrFirestoneFreq * _default_'/>
