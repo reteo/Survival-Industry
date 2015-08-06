@@ -1295,46 +1295,6 @@ Saltpeter, Magnesium
             <IfCondition condition=':= dimension.generator = "HellRandomLevelSource"'>
                 
                 <!-- Starting Original Nether Ore Removal -->
-                <Substitute name='nthoNetherOreSubstitute0' block='minecraft:netherrack'>
-                    <Description>
-                        Replace vanilla-generated ore clusters.
-                    </Description>
-                    <Comment>
-                        The global option deferredPopulationRange must be large enough to catch all ore clusters (>= 32).
-                    </Comment>
-                    <Replaces block='NetherOres:tile.netherores.ore.0:0' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:1' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:2' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:3' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:4' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:5' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:6' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:7' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:8' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:9' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:10' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:11' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:12' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:13' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:14' />
-                    <Replaces block='NetherOres:tile.netherores.ore.0:15' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:0' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:1' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:2' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:3' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:4' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:5' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:6' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:7' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:8' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:9' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:10' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:11' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:12' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:13' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:14' />
-                    <Replaces block='NetherOres:tile.netherores.ore.1:15' />
-                </Substitute>
                 <!-- Original Nether Ore Removal Complete -->
                 
                 <!-- Adding ores --> 
@@ -1349,7 +1309,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
@@ -1377,7 +1337,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
@@ -1394,7 +1354,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1420,7 +1380,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoCoalSize * _default_' range=':= 1 * 1 * nthoCoalSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -1438,7 +1398,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1459,7 +1419,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoCoalSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoCoalFreq * _default_'/>
@@ -1482,7 +1442,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
@@ -1510,7 +1470,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
@@ -1527,7 +1487,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1553,7 +1513,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoDiamondSize * _default_' range=':= 1 * 1 * nthoDiamondSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -1571,7 +1531,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1592,7 +1552,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoDiamondSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoDiamondFreq * _default_'/>
@@ -1615,7 +1575,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
@@ -1643,7 +1603,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
@@ -1660,7 +1620,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1686,7 +1646,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoGoldSize * _default_' range=':= 1 * 1 * nthoGoldSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -1704,7 +1664,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1725,7 +1685,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoGoldSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoGoldFreq * _default_'/>
@@ -1748,7 +1708,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
@@ -1776,7 +1736,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
@@ -1793,7 +1753,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1819,7 +1779,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoIronSize * _default_' range=':= 1 * 1 * nthoIronSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -1837,7 +1797,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1858,7 +1818,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoIronSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoIronFreq * _default_'/>
@@ -1881,7 +1841,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
@@ -1909,7 +1869,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
@@ -1926,7 +1886,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1952,7 +1912,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_' range=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -1970,7 +1930,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -1991,7 +1951,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoLapisLazuliSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoLapisLazuliFreq * _default_'/>
@@ -2014,7 +1974,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
@@ -2042,7 +2002,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
@@ -2059,7 +2019,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2085,7 +2045,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoRedstoneSize * _default_' range=':= 1 * 1 * nthoRedstoneSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2103,7 +2063,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2124,7 +2084,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoRedstoneSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoRedstoneFreq * _default_'/>
@@ -2147,7 +2107,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
@@ -2175,7 +2135,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
@@ -2192,7 +2152,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2218,7 +2178,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoCopperSize * _default_' range=':= 1 * 1 * nthoCopperSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2236,7 +2196,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2257,7 +2217,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoCopperSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoCopperFreq * _default_'/>
@@ -2280,7 +2240,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
@@ -2308,7 +2268,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
@@ -2325,7 +2285,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2351,7 +2311,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoTinSize * _default_' range=':= 1 * 1 * nthoTinSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2369,7 +2329,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2390,7 +2350,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoTinSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoTinFreq * _default_'/>
@@ -2413,7 +2373,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
@@ -2441,7 +2401,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
@@ -2458,7 +2418,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2484,7 +2444,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoEmeraldSize * _default_' range=':= 1 * 1 * nthoEmeraldSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2502,7 +2462,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2523,7 +2483,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoEmeraldSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoEmeraldFreq * _default_'/>
@@ -2546,7 +2506,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
@@ -2574,7 +2534,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
@@ -2591,7 +2551,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2617,7 +2577,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoSilverSize * _default_' range=':= 1 * 1 * nthoSilverSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2635,7 +2595,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2656,7 +2616,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoSilverSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoSilverFreq * _default_'/>
@@ -2679,7 +2639,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
@@ -2707,7 +2667,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
@@ -2724,7 +2684,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2750,7 +2710,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoLeadSize * _default_' range=':= 1 * 1 * nthoLeadSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2768,7 +2728,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2789,7 +2749,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoLeadSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoLeadFreq * _default_'/>
@@ -2812,7 +2772,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
@@ -2840,7 +2800,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
@@ -2857,7 +2817,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2883,7 +2843,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoUraniumSize * _default_' range=':= 1 * 1 * nthoUraniumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -2901,7 +2861,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -2922,7 +2882,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoUraniumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoUraniumFreq * _default_'/>
@@ -2945,7 +2905,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
@@ -2973,7 +2933,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
@@ -2990,7 +2950,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3016,7 +2976,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoNikoliteSize * _default_' range=':= 1 * 1 * nthoNikoliteSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3034,7 +2994,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3055,7 +3015,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoNikoliteSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoNikoliteFreq * _default_'/>
@@ -3078,7 +3038,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
@@ -3106,7 +3066,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
@@ -3123,7 +3083,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3149,7 +3109,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoRubySize * _default_' range=':= 1 * 1 * nthoRubySize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3167,7 +3127,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3188,7 +3148,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoRubySize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoRubyFreq * _default_'/>
@@ -3211,7 +3171,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
@@ -3239,7 +3199,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
@@ -3256,7 +3216,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3282,7 +3242,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoPeridotSize * _default_' range=':= 1 * 1 * nthoPeridotSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3300,7 +3260,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3321,7 +3281,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoPeridotSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoPeridotFreq * _default_'/>
@@ -3344,7 +3304,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
@@ -3372,7 +3332,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
@@ -3389,7 +3349,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3415,7 +3375,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoSapphireSize * _default_' range=':= 1 * 1 * nthoSapphireSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3433,7 +3393,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3454,7 +3414,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoSapphireSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoSapphireFreq * _default_'/>
@@ -3477,7 +3437,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
@@ -3505,7 +3465,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
@@ -3522,7 +3482,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3548,7 +3508,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoPlatinumSize * _default_' range=':= 1 * 1 * nthoPlatinumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3566,7 +3526,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3587,7 +3547,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoPlatinumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoPlatinumFreq * _default_'/>
@@ -3610,7 +3570,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
@@ -3638,7 +3598,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
@@ -3655,7 +3615,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3681,7 +3641,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoFerrousSize * _default_' range=':= 1 * 1 * nthoFerrousSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3699,7 +3659,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3720,7 +3680,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoFerrousSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoFerrousFreq * _default_'/>
@@ -3743,7 +3703,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
@@ -3771,7 +3731,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
@@ -3788,7 +3748,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3814,7 +3774,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoPigIronSize * _default_' range=':= 1 * 1 * nthoPigIronSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3832,7 +3792,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3853,7 +3813,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoPigIronSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoPigIronFreq * _default_'/>
@@ -3876,7 +3836,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
@@ -3904,7 +3864,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
@@ -3921,7 +3881,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3947,7 +3907,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoIridiumSize * _default_' range=':= 1 * 1 * nthoIridiumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -3965,7 +3925,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -3986,7 +3946,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoIridiumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoIridiumFreq * _default_'/>
@@ -4009,7 +3969,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
@@ -4037,7 +3997,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
@@ -4054,7 +4014,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4080,7 +4040,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoOsmiumSize * _default_' range=':= 1 * 1 * nthoOsmiumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4098,7 +4058,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4119,7 +4079,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoOsmiumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoOsmiumFreq * _default_'/>
@@ -4142,7 +4102,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
@@ -4170,7 +4130,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
@@ -4187,7 +4147,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4213,7 +4173,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoSulfurSize * _default_' range=':= 1 * 1 * nthoSulfurSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4231,7 +4191,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4252,7 +4212,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoSulfurSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoSulfurFreq * _default_'/>
@@ -4275,7 +4235,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
@@ -4303,7 +4263,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
@@ -4320,7 +4280,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4346,7 +4306,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoTitaniumSize * _default_' range=':= 1 * 1 * nthoTitaniumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4364,7 +4324,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4385,7 +4345,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoTitaniumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoTitaniumFreq * _default_'/>
@@ -4408,7 +4368,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
@@ -4436,7 +4396,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
@@ -4453,7 +4413,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4479,7 +4439,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoMithrilSize * _default_' range=':= 1 * 1 * nthoMithrilSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4497,7 +4457,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4518,7 +4478,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoMithrilSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoMithrilFreq * _default_'/>
@@ -4541,7 +4501,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
@@ -4569,7 +4529,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
@@ -4586,7 +4546,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4612,7 +4572,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoAdamantiumSize * _default_' range=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4630,7 +4590,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4651,7 +4611,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoAdamantiumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoAdamantiumFreq * _default_'/>
@@ -4674,7 +4634,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
@@ -4702,7 +4662,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
@@ -4719,7 +4679,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4745,7 +4705,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoRutileSize * _default_' range=':= 1 * 1 * nthoRutileSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4763,7 +4723,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4784,7 +4744,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoRutileSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoRutileFreq * _default_'/>
@@ -4807,7 +4767,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
@@ -4835,7 +4795,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
@@ -4852,7 +4812,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4878,7 +4838,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoTungstenSize * _default_' range=':= 1 * 1 * nthoTungstenSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -4896,7 +4856,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -4917,7 +4877,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoTungstenSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoTungstenFreq * _default_'/>
@@ -4940,7 +4900,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
@@ -4968,7 +4928,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
@@ -4985,7 +4945,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5011,7 +4971,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoAmberSize * _default_' range=':= 1 * 1 * nthoAmberSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -5029,7 +4989,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5050,7 +5010,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoAmberSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoAmberFreq * _default_'/>
@@ -5073,7 +5033,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
@@ -5101,7 +5061,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
@@ -5118,7 +5078,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5144,7 +5104,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoTennantiteSize * _default_' range=':= 1 * 1 * nthoTennantiteSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -5162,7 +5122,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5183,7 +5143,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoTennantiteSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoTennantiteFreq * _default_'/>
@@ -5206,7 +5166,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
@@ -5234,7 +5194,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
@@ -5251,7 +5211,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5277,7 +5237,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoSaltSize * _default_' range=':= 1 * 1 * nthoSaltSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -5295,7 +5255,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5316,7 +5276,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoSaltSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoSaltFreq * _default_'/>
@@ -5339,7 +5299,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
@@ -5367,7 +5327,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
@@ -5384,7 +5344,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5410,7 +5370,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoSaltpeterSize * _default_' range=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -5428,7 +5388,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5449,7 +5409,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoSaltpeterSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoSaltpeterFreq * _default_'/>
@@ -5472,7 +5432,7 @@ Saltpeter, Magnesium
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
@@ -5500,7 +5460,7 @@ Saltpeter, Magnesium
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
@@ -5517,7 +5477,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5543,7 +5503,7 @@ Saltpeter, Magnesium
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1 * nthoMagnesiumSize * _default_' range=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 120' range=':= 120' type='uniform' scaleTo='SeaLevel'/>
@@ -5561,7 +5521,7 @@ Saltpeter, Magnesium
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x600268FF</WireframeColor>
+                            <WireframeColor>0x60BD4125</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:netherrack'/>
@@ -5582,7 +5542,7 @@ Saltpeter, Magnesium
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x600268FF</WireframeColor>
+                        <WireframeColor>0x60BD4125</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * nthoMagnesiumSize * _default_'/>
                         <Setting name='Height' avg=':= 120' range=':= 120' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1 * nthoMagnesiumFreq * _default_'/>

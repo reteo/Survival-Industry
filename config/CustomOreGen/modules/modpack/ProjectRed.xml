@@ -352,23 +352,6 @@ Basalt
             <IfCondition condition=':= ?COGActive'>
                 
                 <!-- Starting Original Overworld Ore Removal -->
-                <Substitute name='predOverworldOreSubstitute0' block='minecraft:stone'>
-                    <Description>
-                        Replace vanilla-generated ore clusters.
-                    </Description>
-                    <Comment>
-                        The global option deferredPopulationRange must be large enough to catch all ore clusters (>= 32).
-                    </Comment>
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:0' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:1' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:2' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:3' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:4' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:5' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.ore:6' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.stone:0' />
-                    <Replaces block='ProjRed|Exploration:projectred.exploration.stone:3' />
-                </Substitute>
                 <!-- Original Overworld Ore Removal Complete -->
                 
                 <!-- Adding ores --> 
@@ -380,12 +363,12 @@ Basalt
                 
                     
                     <!-- Begin Ruby Ore Configuration -->
-                    <Veins name='predRubyBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore' inherits='PresetPipeVeins' seed='0x5B26'>
+                    <Veins name='predRubyBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
@@ -398,12 +381,12 @@ Basalt
                     
                     
                     <!-- Begin Ruby Pipe Configuration -->
-                    <Veins name= 'predRubyBasePipe' block='minecraft:stone' inherits='predRubyBaseVeins' seed='0x5B26'>
+                    <Veins name= 'predRubyBasePipe' block='minecraft:stone' inherits='predRubyBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 1 * predRubySize * _default_' range=':= 0.5 * 1 * 1 * predRubySize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 1 * predRubySize * _default_' range=':= 0.5 * 1 * 1 * predRubySize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -431,7 +414,7 @@ Basalt
                             Similar to the deposits produced by StandardGen distributions.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predRubySize * _default_' range=':= 1 * 1 * predRubySize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -457,7 +440,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.4 * predRubySize * _default_' range=':= 1 * 0.4 * predRubySize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.4 * predRubySize * _default_' range=':= 1 * 0.4 * predRubySize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 15' range=':= 5' type='uniform' scaleTo='SeaLevel'/>
@@ -476,7 +459,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -498,7 +481,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 7/8 * predRubySize * _default_'/>
                         <Setting name='Height' avg=':= 24' range=':= 24' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.1 * predRubyFreq * _default_'/>
@@ -519,12 +502,12 @@ Basalt
                 
                     
                     <!-- Begin Sapphire Ore Configuration -->
-                    <Veins name='predSapphireBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:1' inherits='PresetPipeVeins' seed='0x8EF1'>
+                    <Veins name='predSapphireBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:1' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
@@ -537,12 +520,12 @@ Basalt
                     
                     
                     <!-- Begin Sapphire Pipe Configuration -->
-                    <Veins name= 'predSapphireBasePipe' block='minecraft:stone' inherits='predSapphireBaseVeins' seed='0x8EF1'>
+                    <Veins name= 'predSapphireBasePipe' block='minecraft:stone' inherits='predSapphireBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 1 * predSapphireSize * _default_' range=':= 0.5 * 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 1 * predSapphireSize * _default_' range=':= 0.5 * 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -570,7 +553,7 @@ Basalt
                             Similar to the deposits produced by StandardGen distributions.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predSapphireSize * _default_' range=':= 1 * 1 * predSapphireSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -596,7 +579,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.4 * predSapphireSize * _default_' range=':= 1 * 0.4 * predSapphireSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.4 * predSapphireSize * _default_' range=':= 1 * 0.4 * predSapphireSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 15' range=':= 5' type='uniform' scaleTo='SeaLevel'/>
@@ -615,7 +598,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -637,7 +620,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 7/8 * predSapphireSize * _default_'/>
                         <Setting name='Height' avg=':= 24' range=':= 24' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.1 * predSapphireFreq * _default_'/>
@@ -658,12 +641,12 @@ Basalt
                 
                     
                     <!-- Begin Peridot Ore Configuration -->
-                    <Veins name='predPeridotBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:2' inherits='PresetPipeVeins' seed='0x4627'>
+                    <Veins name='predPeridotBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:2' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
@@ -676,12 +659,12 @@ Basalt
                     
                     
                     <!-- Begin Peridot Pipe Configuration -->
-                    <Veins name= 'predPeridotBasePipe' block='minecraft:stone' inherits='predPeridotBaseVeins' seed='0x4627'>
+                    <Veins name= 'predPeridotBasePipe' block='minecraft:stone' inherits='predPeridotBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 1 * predPeridotSize * _default_' range=':= 0.5 * 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 1 * predPeridotSize * _default_' range=':= 0.5 * 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -709,7 +692,7 @@ Basalt
                             Similar to the deposits produced by StandardGen distributions.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeHeight' avg=':= 3' range=':= 3' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predPeridotSize * _default_' range=':= 1 * 1 * predPeridotSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1.5 * _default_' range=':= _default_'/>
@@ -735,7 +718,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.4 * predPeridotSize * _default_' range=':= 1 * 0.4 * predPeridotSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.4 * predPeridotSize * _default_' range=':= 1 * 0.4 * predPeridotSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 15' range=':= 5' type='uniform' scaleTo='SeaLevel'/>
@@ -754,7 +737,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -776,7 +759,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 7/8 * predPeridotSize * _default_'/>
                         <Setting name='Height' avg=':= 24' range=':= 24' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.1 * predPeridotFreq * _default_'/>
@@ -797,12 +780,12 @@ Basalt
                 
                     
                     <!-- Begin Copper Ore Configuration -->
-                    <Veins name='predCopperBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:3' inherits='PresetPipeVeins' seed='0xD303'>
+                    <Veins name='predCopperBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:3' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.9 * predCopperSize * _default_' range=':= 1 * 0.9 * predCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 45' range=':= 10' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 0.9 * predCopperSize * _default_' range=':= 1 * 0.9 * predCopperSize * _default_'/>
@@ -817,12 +800,12 @@ Basalt
                     
                     
                     <!-- Begin Copper Pipe Configuration -->
-                    <Veins name= 'predCopperBasePipe' block='minecraft:stone' inherits='predCopperBaseVeins' seed='0xD303'>
+                    <Veins name= 'predCopperBasePipe' block='minecraft:stone' inherits='predCopperBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 0.9 * predCopperSize * _default_' range=':= 0.5 * 1 * 0.9 * predCopperSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 0.9 * predCopperSize * _default_' range=':= 0.5 * 1 * 0.9 * predCopperSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -839,12 +822,12 @@ Basalt
                     <!-- Begin Preferred Biome Distribution (Copper Pipe Veins) Settings -->
                     
                     <!-- Begin Copper Ore Configuration -->
-                    <Veins name='predCopperPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:3' inherits='predCopperBaseVeins' seed='0x4BFE'>
+                    <Veins name='predCopperPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:3' inherits='predCopperBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Jungle'/>
                     </Veins>
@@ -852,12 +835,12 @@ Basalt
                     
                     
                     <!-- Begin Copper Pipe Configuration -->
-                    <Veins name= 'predCopperPrefersPipe' block='minecraft:stone' inherits='predCopperPrefersVeins' seed='0x4BFE'>
+                    <Veins name= 'predCopperPrefersPipe' block='minecraft:stone' inherits='predCopperPrefersVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <BiomeType name='Jungle'/>
                     </Veins>
                     <!-- End Copper Pipe Configuration -->
@@ -883,7 +866,7 @@ Basalt
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.9 * predCopperSize * _default_' range=':= 1 * 0.9 * predCopperSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 45' range=':= 10' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 0.9 * predCopperSize * _default_' range=':= 1 * 0.9 * predCopperSize * _default_'/>
@@ -903,7 +886,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -918,7 +901,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Jungle'/>
                         
@@ -928,7 +911,7 @@ Basalt
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -956,7 +939,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.95 * predCopperSize * _default_' range=':= 1 * 0.95 * predCopperSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.95 * predCopperSize * _default_' range=':= 1 * 0.95 * predCopperSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
@@ -974,7 +957,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -996,7 +979,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * predCopperSize * _default_'/>
                         <Setting name='Height' avg=':= 57' range=':= 17' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 1.2 * predCopperFreq * _default_'/>
@@ -1017,12 +1000,12 @@ Basalt
                 
                     
                     <!-- Begin Tin Ore Configuration -->
-                    <Veins name='predTinBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:4' inherits='PresetPipeVeins' seed='0xDF00'>
+                    <Veins name='predTinBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:4' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.85 * predTinSize * _default_' range=':= 1 * 0.85 * predTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 30' range=':= 11' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 0.85 * predTinSize * _default_' range=':= 1 * 0.85 * predTinSize * _default_'/>
@@ -1037,12 +1020,12 @@ Basalt
                     
                     
                     <!-- Begin Tin Pipe Configuration -->
-                    <Veins name= 'predTinBasePipe' block='minecraft:stone' inherits='predTinBaseVeins' seed='0xDF00'>
+                    <Veins name= 'predTinBasePipe' block='minecraft:stone' inherits='predTinBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 0.85 * predTinSize * _default_' range=':= 0.5 * 1 * 0.85 * predTinSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 0.85 * predTinSize * _default_' range=':= 0.5 * 1 * 0.85 * predTinSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -1059,12 +1042,12 @@ Basalt
                     <!-- Begin Preferred Biome Distribution (Tin Pipe Veins) Settings -->
                     
                     <!-- Begin Tin Ore Configuration -->
-                    <Veins name='predTinPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:4' inherits='predTinBaseVeins' seed='0xA8C3'>
+                    <Veins name='predTinPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:4' inherits='predTinBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Plains'/>
                     </Veins>
@@ -1072,12 +1055,12 @@ Basalt
                     
                     
                     <!-- Begin Tin Pipe Configuration -->
-                    <Veins name= 'predTinPrefersPipe' block='minecraft:stone' inherits='predTinPrefersVeins' seed='0xA8C3'>
+                    <Veins name= 'predTinPrefersPipe' block='minecraft:stone' inherits='predTinPrefersVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <BiomeType name='Plains'/>
                     </Veins>
                     <!-- End Tin Pipe Configuration -->
@@ -1103,7 +1086,7 @@ Basalt
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.85 * predTinSize * _default_' range=':= 1 * 0.85 * predTinSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 30' range=':= 11' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 0.85 * predTinSize * _default_' range=':= 1 * 0.85 * predTinSize * _default_'/>
@@ -1123,7 +1106,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1138,7 +1121,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Plains'/>
                         
@@ -1148,7 +1131,7 @@ Basalt
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1176,7 +1159,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.9 * predTinSize * _default_' range=':= 1 * 0.9 * predTinSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.9 * predTinSize * _default_' range=':= 1 * 0.9 * predTinSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
@@ -1194,7 +1177,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1216,7 +1199,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * predTinSize * _default_'/>
                         <Setting name='Height' avg=':= 37' range=':= 17' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.75 * predTinFreq * _default_'/>
@@ -1237,12 +1220,12 @@ Basalt
                 
                     
                     <!-- Begin Silver Ore Configuration -->
-                    <Veins name='predSilverBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:5' inherits='PresetPipeVeins' seed='0xC9B0'>
+                    <Veins name='predSilverBaseVeins' block='ProjRed|Exploration:projectred.exploration.ore:5' inherits='PresetPipeVeins' seed='0x0xC6EE'>
                         <Description>
                             Short sparsely filled veins sloping up from near the bottom of the map.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.85 * predSilverSize * _default_' range=':= 1 * 0.85 * predSilverSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 20' range=':= 10' type='uniform' scaleTo='SeaLevel' />
                         <Setting name='SegmentRadius' avg=':= 1 * 0.85 * predSilverSize * _default_' range=':= 1 * 0.85 * predSilverSize * _default_'/>
@@ -1257,12 +1240,12 @@ Basalt
                     
                     
                     <!-- Begin Silver Pipe Configuration -->
-                    <Veins name= 'predSilverBasePipe' block='minecraft:stone' inherits='predSilverBaseVeins' seed='0xC9B0'>
+                    <Veins name= 'predSilverBasePipe' block='minecraft:stone' inherits='predSilverBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Fills center of each tube with Pipe material.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 0.5 * 1 * 0.85 * predSilverSize * _default_' range=':= 0.5 * 1 * 0.85 * predSilverSize * _default_'/>
                         <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 0.85 * predSilverSize * _default_' range=':= 0.5 * 1 * 0.85 * predSilverSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -1279,12 +1262,12 @@ Basalt
                     <!-- Begin Preferred Biome Distribution (Silver Pipe Veins) Settings -->
                     
                     <!-- Begin Silver Ore Configuration -->
-                    <Veins name='predSilverPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:5' inherits='predSilverBaseVeins' seed='0xBC75'>
+                    <Veins name='predSilverPrefersVeins' block='ProjRed|Exploration:projectred.exploration.ore:5' inherits='predSilverBaseVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Mountain'/>
                     </Veins>
@@ -1292,12 +1275,12 @@ Basalt
                     
                     
                     <!-- Begin Silver Pipe Configuration -->
-                    <Veins name= 'predSilverPrefersPipe' block='minecraft:stone' inherits='predSilverPrefersVeins' seed='0xBC75'>
+                    <Veins name= 'predSilverPrefersPipe' block='minecraft:stone' inherits='predSilverPrefersVeins' seed='0x0xC6EE'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <BiomeType name='Mountain'/>
                     </Veins>
                     <!-- End Silver Pipe Configuration -->
@@ -1323,7 +1306,7 @@ Basalt
                             Credit: based on feedback by dyrewulf from the MC forums.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 0.85 * predSilverSize * _default_' range=':= 1 * 0.85 * predSilverSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 20' range=':= 10' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 0.85 * predSilverSize * _default_' range=':= 1 * 0.85 * predSilverSize * _default_'/>
@@ -1343,7 +1326,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1358,7 +1341,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Mountain'/>
                         
@@ -1368,7 +1351,7 @@ Basalt
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1396,7 +1379,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 0.8 * predSilverSize * _default_' range=':= 1 * 0.8 * predSilverSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 0.8 * predSilverSize * _default_' range=':= 1 * 0.8 * predSilverSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 32' range=':= 32' type='uniform' scaleTo='SeaLevel'/>
@@ -1414,7 +1397,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1436,7 +1419,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 1 * predSilverSize * _default_'/>
                         <Setting name='Height' avg=':= 18' range=':= 12' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.15 * predSilverFreq * _default_'/>
@@ -1460,7 +1443,7 @@ Basalt
                             Single vertical veins that occur with no motherlodes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predElectrotineSize * _default_' range=':= 1 * 1 * predElectrotineSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -1471,7 +1454,7 @@ Basalt
                                 Single vertical veins that occur with no motherlodes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='uniform' scaleTo='SeaLevel' /> 
                             <Setting name='SegmentRadius' avg=':= 1 * 1 * predElectrotineSize * _default_' range=':= 1 * 1 * predElectrotineSize * _default_'/>
                             <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -1486,7 +1469,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Desert'/>
                         <Veins name='predElectrotinePrefersChildVeins' block='ProjRed|Exploration:projectred.exploration.ore:6' inherits='predElectrotineBaseChildVeins'>
@@ -1494,7 +1477,7 @@ Basalt
                                 Spawns 2 more times in preferred biomes.
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                             <BiomeType name='Desert'/>
                         </Veins>
@@ -1514,7 +1497,7 @@ Basalt
                             Similar to the deposits produced by StandardGen distributions.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeHeight' avg=':= 8' range=':= 8' type='uniform' scaleTo='SeaLevel' /> 
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predElectrotineSize * _default_' range=':= 1 * 1 * predElectrotineSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
@@ -1528,7 +1511,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='Desert'/>
                     </Veins>
@@ -1551,7 +1534,7 @@ Basalt
                             the ore.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='CloudRadius' avg=':= 1 * 1.2 * predElectrotineSize * _default_' range=':= 1 * 1.2 * predElectrotineSize * _default_'/>
                         <Setting name='CloudThickness' avg=':= 1 * 1.2 * predElectrotineSize * _default_' range=':= 1 * 1.2 * predElectrotineSize * _default_'/>
                         <Setting name='CloudHeight' avg=':= 8' range=':= 8' type='uniform' scaleTo='SeaLevel'/>
@@ -1569,7 +1552,7 @@ Basalt
                                 deposits that would otherwise be very difficult to find. 
                             </Description>
                             <DrawWireframe>:=drawWireframes</DrawWireframe>
-                            <WireframeColor>0x60B2FD1F</WireframeColor>
+                            <WireframeColor>0x6048D26A</WireframeColor>
                             <Replaces block='minecraft:dirt'/>
                             <Replaces block='minecraft:sandstone'/>
                             <Replaces block='minecraft:stone'/>
@@ -1591,7 +1574,7 @@ Basalt
                             This mimics vanilla ore generation.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='Size' avg=':= 1 * 7/8 * predElectrotineSize * _default_'/>
                         <Setting name='Height' avg=':= 8' range=':= 8' type='uniform'/> 
                         <Setting name='Frequency' avg=':= 1 * 0.4 * predElectrotineFreq * _default_'/>
@@ -1615,7 +1598,7 @@ Basalt
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predMarbleSize * _default_' range=':= 1 * 1 * predMarbleSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 128' range=':= 128' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predMarbleSize * _default_' range=':= 1 * 1 * predMarbleSize * _default_'/>
@@ -1630,7 +1613,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='mountain'/>
                     </Veins>
@@ -1652,7 +1635,7 @@ Basalt
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeSize' avg=':= 1 * 1 * predBasaltSize * _default_' range=':= 1 * 1 * predBasaltSize * _default_'/>
                         <Setting name='MotherlodeHeight' avg=':= 128' range=':= 128' type='uniform' scaleTo='SeaLevel'/> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * predBasaltSize * _default_' range=':= 1 * 1 * predBasaltSize * _default_'/>
@@ -1667,7 +1650,7 @@ Basalt
                             Spawns 2 more times in preferred biomes.
                         </Description>
                         <DrawWireframe>:=drawWireframes</DrawWireframe>
-                        <WireframeColor>0x60B2FD1F</WireframeColor>
+                        <WireframeColor>0x6048D26A</WireframeColor>
                         <Setting name='MotherlodeFrequency' avg=':= 2 * _default_'/>
                         <BiomeType name='mountain'/>
                     </Veins>
