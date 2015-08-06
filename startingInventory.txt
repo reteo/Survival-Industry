@@ -1,0 +1,6 @@
+minecraft:stone_pickaxe, 1
+minecraft:stone_shovel, 1
+minecraft:stone_sword, 1
+minecraft:stone_axe, 1
+minecraft:apple, 16
+minecraft:torch, 16
