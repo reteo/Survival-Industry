@@ -914,7 +914,7 @@ Nether Quartz
                     <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel' /> 
                     <Setting name='SegmentRadius' avg=':= 1 * 1 * vnlaRedstoneSize * _default_' range=':= 1 * 1 * vnlaRedstoneSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                    <Setting name='MotherlodeFrequency' avg=':=  1 * 1.3 * vnlaRedstoneFreq * _default_'/>
+                    <Setting name='MotherlodeFrequency' avg=':=  1 * 0.4 * vnlaRedstoneFreq * _default_'/>
                     <Replaces block='minecraft:stone'/>
                     <Replaces block='minecraft:sandstone'/>
                     <Veins name='vnlaRedstoneBaseChildVeins' block='minecraft:redstone_ore' inherits='PresetVerticalVeins'>
@@ -926,7 +926,7 @@ Nether Quartz
                         <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * vnlaRedstoneSize * _default_' range=':= 1 * 1 * vnlaRedstoneSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                        <Setting name='MotherlodeFrequency' avg=':= 1 * 1.3 * vnlaRedstoneFreq * 3 * _default_'/>
+                        <Setting name='MotherlodeFrequency' avg=':= 1 * 0.4 * vnlaRedstoneFreq * 3 * _default_'/>
                         <Replaces block='minecraft:stone'/>
                         <Replaces block='minecraft:sandstone'/>
                     </Veins>
@@ -970,7 +970,7 @@ Nether Quartz
                     <Setting name='MotherlodeHeight' avg=':= _default_' range=':= _default_' type='normal' scaleTo='SeaLevel' /> 
                     <Setting name='MotherlodeSize' avg=':= 1 * 1 * vnlaRedstoneSize * _default_' range=':= 1 * 1 * vnlaRedstoneSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                    <Setting name='MotherlodeFrequency' avg=':= 1 * 1.3 * vnlaRedstoneFreq * _default_'/>
+                    <Setting name='MotherlodeFrequency' avg=':= 1 * 0.4 * vnlaRedstoneFreq * _default_'/>
                     <Replaces block='minecraft:stone'/>
                     <Replaces block='minecraft:sandstone'/>
                 </Veins>
@@ -1208,7 +1208,7 @@ Nether Quartz
                     <Setting name='MotherlodeHeight' avg=':= 4' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                     <Setting name='SegmentRadius' avg=':= 1 * 1 * vnlaLapisLazuliSize * _default_' range=':= 1 * 1 * vnlaLapisLazuliSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                    <Setting name='MotherlodeFrequency' avg=':=  1 * 1 * vnlaLapisLazuliFreq * _default_'/>
+                    <Setting name='MotherlodeFrequency' avg=':=  1 * 0.4 * vnlaLapisLazuliFreq * _default_'/>
                     <Setting name='BranchLength' avg=':= 36/64 * _default_' range=':= 12 * _default_'/>
                     <Setting name='BranchInclination' avg=':= -_default_' range=':= 0'/>
                     <Replaces block='minecraft:stone'/>
@@ -1221,7 +1221,7 @@ Nether Quartz
                         <Setting name='MotherlodeHeight' avg=':= 4' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                         <Setting name='SegmentRadius' avg=':= 1 * 1 * vnlaLapisLazuliSize * _default_' range=':= 1 * 1 * vnlaLapisLazuliSize * _default_'/>
                         <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                        <Setting name='MotherlodeFrequency' avg=':= 1 * 1 * vnlaLapisLazuliFreq * 3 * _default_'/>
+                        <Setting name='MotherlodeFrequency' avg=':= 1 * 0.4 * vnlaLapisLazuliFreq * 3 * _default_'/>
                         <Setting name='BranchLength' avg=':= 36/64 * _default_' range=':= 12 * _default_'/>
                         <Setting name='BranchInclination' avg=':= -_default_' range=':= 0'/>
                         <Replaces block='minecraft:stone'/>
@@ -1266,7 +1266,7 @@ Nether Quartz
                     <Setting name='MotherlodeHeight' avg=':= 4' range=':= 8' type='normal' scaleTo='SeaLevel' /> 
                     <Setting name='MotherlodeSize' avg=':= 1 * 1 * vnlaLapisLazuliSize * _default_' range=':= 1 * 1 * vnlaLapisLazuliSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
-                    <Setting name='MotherlodeFrequency' avg=':= 1 * 1 * vnlaLapisLazuliFreq * _default_'/>
+                    <Setting name='MotherlodeFrequency' avg=':= 1 * 0.4 * vnlaLapisLazuliFreq * _default_'/>
                     <Replaces block='minecraft:stone'/>
                 </Veins>
                 
