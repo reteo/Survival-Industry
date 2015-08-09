@@ -9,10 +9,10 @@ Nether Quartz
 
 ================================================================ -->
 
-    
-    <!-- Starting Custom Ore Gen Configuration. -->
+    <!-- Starting Configuration for Custom Ore Generation. -->
     <ConfigSection>
-         
+    
+        
         <!-- Setup Screen Configuration -->
         <ConfigSection>
             <OptionDisplayGroup name='groupVanillaMinecraft' displayName='Vanilla Minecraft' displayState='shown'> 
@@ -1498,7 +1498,6 @@ Nether Quartz
         </IfCondition>
         <!-- Overworld Setup Complete -->
 
-
         <!-- Setup Nether -->
         <IfCondition condition=':= dimension.generator = "HellRandomLevelSource"'>
             
@@ -1629,11 +1628,9 @@ Nether Quartz
         </IfCondition>
         <!-- Nether Setup Complete -->
 
-
- 
-
+    
     </ConfigSection>
-    <!-- Custom Ore Gen Configuration Complete! -->
+    <!-- Configuration for Custom Ore Generation Complete! -->
 
 
 

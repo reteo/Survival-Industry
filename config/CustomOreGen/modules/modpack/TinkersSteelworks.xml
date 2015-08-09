@@ -10,8 +10,8 @@ Limestone
 
     <!-- Mod detection -->
     <IfModInstalled name="TSteelworks">
-        
-        <!-- Starting Custom Ore Gen Configuration. -->
+    
+        <!-- Starting Configuration for Custom Ore Generation. -->
         <ConfigSection>
         
             
@@ -99,12 +99,9 @@ Limestone
             </IfCondition>
             <!-- Overworld Setup Complete -->
 
-
- 
- 
         
         </ConfigSection>
-        <!-- Custom Ore Gen Configuration Complete! -->
+        <!-- Configuration for Custom Ore Generation Complete! -->
     
     </IfModInstalled> 
  
