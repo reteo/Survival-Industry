@@ -11,9 +11,39 @@
    configuration. */
    
 recipes.removeShaped(<advancedgenetics:combustiongeneratoridle>);
+recipes.removeShaped(<BuildCraft|Builders:machineBlock>);
+recipes.removeShaped(<BuildCraft|Core:engineBlock:0>);
+recipes.removeShaped(<BuildCraft|Core:engineBlock:1>);
+recipes.removeShaped(<BuildCraft|Core:engineBlock:2>);
+recipes.removeShaped(<BuildCraft|Core:engineBlock:3>);
+
+
+/* It's important to notify the player when something's been disabled. */
+
 <advancedgenetics:combustiongeneratoridle>.addTooltip(format.yellow("All non-RotaryCraft engines"));
 <advancedgenetics:combustiongeneratoridle>.addTooltip(format.yellow("have been disabled in the"));
 <advancedgenetics:combustiongeneratoridle>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<BuildCraft|Core:engineBlock:0>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<BuildCraft|Core:engineBlock:0>.addTooltip(format.yellow("have been disabled by the"));
+<BuildCraft|Core:engineBlock:0>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<BuildCraft|Core:engineBlock:1>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<BuildCraft|Core:engineBlock:1>.addTooltip(format.yellow("have been disabled by the"));
+<BuildCraft|Core:engineBlock:1>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<BuildCraft|Core:engineBlock:2>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<BuildCraft|Core:engineBlock:2>.addTooltip(format.yellow("have been disabled by the"));
+<BuildCraft|Core:engineBlock:2>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("have been disabled by the"));
+<BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("This quarry has been disabled"));
+<BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
+
+
 
 
 /* Next, we want to remove loot that can allow a player to bypass progression.
