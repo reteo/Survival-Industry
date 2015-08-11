@@ -590,13 +590,13 @@ Fluorite, Yellow Fluorite
                     <Replaces block='ReactorCraft:reactorcraft_block_ore:7' />
                     <Replaces block='ReactorCraft:reactorcraft_block_ore:8' />
                     <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
-                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:0' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:1' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:2' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:3' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:4' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:5' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:6' />
+                    <Replaces block='ReactorCraft:reactorcraft_block_fluoriteore:7' />
                 </Substitute>
                 <!-- Original Overworld Ore Removal Complete -->
                 
@@ -1455,7 +1455,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Pink Fluorite -->
                 <IfCondition condition=':= recrPinkFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrPinkFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrPinkFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:1' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1470,7 +1470,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Pink Fluorite Layered Veins) Settings -->
-                    <Veins name='recrPinkFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrPinkFluoriteBaseVeins'>
+                    <Veins name='recrPinkFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:1' inherits='recrPinkFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1492,7 +1492,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Orange Fluorite -->
                 <IfCondition condition=':= recrOrangeFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrOrangeFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrOrangeFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:2' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1507,7 +1507,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Orange Fluorite Layered Veins) Settings -->
-                    <Veins name='recrOrangeFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrOrangeFluoriteBaseVeins'>
+                    <Veins name='recrOrangeFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:2' inherits='recrOrangeFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1529,7 +1529,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Magenta Fluorite -->
                 <IfCondition condition=':= recrMagentaFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrMagentaFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrMagentaFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:3' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1544,7 +1544,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Magenta Fluorite Layered Veins) Settings -->
-                    <Veins name='recrMagentaFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrMagentaFluoriteBaseVeins'>
+                    <Veins name='recrMagentaFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:3' inherits='recrMagentaFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1566,7 +1566,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Green Fluorite -->
                 <IfCondition condition=':= recrGreenFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrGreenFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrGreenFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:4' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1581,7 +1581,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Green Fluorite Layered Veins) Settings -->
-                    <Veins name='recrGreenFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrGreenFluoriteBaseVeins'>
+                    <Veins name='recrGreenFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:4' inherits='recrGreenFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1603,7 +1603,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Red Fluorite -->
                 <IfCondition condition=':= recrRedFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrRedFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrRedFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:5' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1618,7 +1618,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Red Fluorite Layered Veins) Settings -->
-                    <Veins name='recrRedFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrRedFluoriteBaseVeins'>
+                    <Veins name='recrRedFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:5' inherits='recrRedFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1640,7 +1640,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of White Fluorite -->
                 <IfCondition condition=':= recrWhiteFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrWhiteFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrWhiteFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:6' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1655,7 +1655,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (White Fluorite Layered Veins) Settings -->
-                    <Veins name='recrWhiteFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrWhiteFluoriteBaseVeins'>
+                    <Veins name='recrWhiteFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:6' inherits='recrWhiteFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
@@ -1677,7 +1677,7 @@ Fluorite, Yellow Fluorite
                 <!-- Begin Layered Veins distribution of Yellow Fluorite -->
                 <IfCondition condition=':= recrYellowFluoriteDist = "layeredVeins"'>
                 
-                    <Veins name='recrYellowFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='PresetLayeredVeins'>
+                    <Veins name='recrYellowFluoriteBaseVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:7' inherits='PresetLayeredVeins'>
                         <Description>
                             Small, fairly rare motherlodes with 2-4 horizontal veins each.
                         </Description>
@@ -1692,7 +1692,7 @@ Fluorite, Yellow Fluorite
                     </Veins>
                     
                     <!-- Begin Preferred Biome Distribution (Yellow Fluorite Layered Veins) Settings -->
-                    <Veins name='recrYellowFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore' inherits='recrYellowFluoriteBaseVeins'>
+                    <Veins name='recrYellowFluoritePrefersVeins' block='ReactorCraft:reactorcraft_block_fluoriteore:7' inherits='recrYellowFluoriteBaseVeins'>
                         <Description>
                             Spawns 2 more times in preferred biomes.
                         </Description>
