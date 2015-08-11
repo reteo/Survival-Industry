@@ -1095,6 +1095,7 @@ Nether Quartz
                     <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 0.6 * vnlaDiamondSize * _default_' range=':= 0.5 * 1 * 0.6 * vnlaDiamondSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1 * _default_' range=':= _default_'/>
                     <Replaces block='minecraft:stone'/>
+                    <Replaces block='minecraft:diamond_ore'/>
                     <Replaces block='minecraft:dirt'/>
                     <Replaces block='minecraft:stone'/>
                     <Replaces block='minecraft:gravel'/>
@@ -1390,6 +1391,7 @@ Nether Quartz
                     <Setting name='SegmentRadius' avg=':= 0.5 * 1 * 0.85 * vnlaEmeraldSize * _default_' range=':= 0.5 * 1 * 0.85 * vnlaEmeraldSize * _default_'/>
                     <Setting name='OreDensity' avg=':= 1 * 1.2 * _default_' range=':= _default_'/>
                     <Replaces block='minecraft:stone'/>
+                    <Replaces block='minecraft:emerald_ore'/>
                     <Replaces block='minecraft:dirt'/>
                     <Replaces block='minecraft:stone'/>
                     <Replaces block='minecraft:gravel'/>
