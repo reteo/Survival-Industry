@@ -33,9 +33,9 @@
                 <OptionChoice name='apenCertusQuartzDist'  displayState='shown' displayGroup='groupAppliedEnergistics'>
                     <Description> Controls how Certus Quartz is generated </Description>
                     <DisplayName>Applied Energistics Certus Quartz</DisplayName>
-                    <Choice value='LayeredVeins' displayValue='Layered Veins'>
+                    <Choice value='SparseVeins' displayValue='Sparse Veins'>
                         <Description>
-                            Small, fairly rare motherlodes with 2-4 horizontal veins each.
+                            Large veins filled very lightly with ore.
                         </Description>
                     </Choice>
                     <Choice value='Vanilla' displayValue='Vanilla'>
@@ -92,37 +92,43 @@
 
             <!-- Begin Certus Quartz Generation -->
 
-            <!-- Starting LayeredVeins Preset for Certus Quartz. -->
+            <!-- Starting SparseVeins Preset for Certus Quartz. -->
             <ConfigSection>
-                <IfCondition condition=':= apenCertusQuartzDist = "LayeredVeins"'>
-                    <Veins name='apenCertusQuartzVeins'  inherits='PresetLayeredVeins' drawWireframe='true' wireframeColor='0x609BBEC2' drawBoundBox='false' boundBoxColor='0x609BBEC2'>
+                <IfCondition condition=':= apenCertusQuartzDist = "SparseVeins"'>
+                    <Veins name='apenCertusQuartzVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x609BBEC2' drawBoundBox='false' boundBoxColor='0x609BBEC2'>
                         <Description>
-                            Small, fairly rare motherlodes with  2-4
-                            horizontal veins each.
+                            Large veins filled very lightly with  ore.
+                            Because they contain less ore  per volume,
+                            these veins are  relatively wide and long.
+                            Mining the  ore from them is time
+                            consuming  compared to solid ore veins.
+                            They  are also more difficult to follow,
+                            since it is harder to get an idea of
+                            their direction while mining.
                         </Description>
                         <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' />
                         <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' />
                         <Replaces block='minecraft:stone' weight='1.0' />
                         <Biome name='.*'  />
-                        <Setting name='MotherlodeFrequency' avg=':= 0.173 * _default_ * apenCertusQuartzFreq ' range=':=  1 * _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
-                        <Setting name='MotherlodeSize' avg=':= 0.173 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='MotherlodeFrequency' avg=':= 1.123 * _default_ * apenCertusQuartzFreq ' range=':=  1 * _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                        <Setting name='MotherlodeSize' avg=':= 1.040 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='MotherlodeHeight' avg=':= 43 ' range=':=  26 ' type='normal' scaleTo='base' />
                         <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='BranchFrequency' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='BranchInclination' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
-                        <Setting name='BranchLength' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
+                        <Setting name='BranchLength' avg=':= 1.040 * _default_ ' range=':=  1 * _default_ ' type='normal' />
                         <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' scaleTo='base' />
                         <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='SegmentLength' avg=':= _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='SegmentAngle' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
-                        <Setting name='SegmentRadius' avg=':= _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='SegmentRadius' avg=':= 1.040 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='OreDensity' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='OreRadiusMult' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                     </Veins>
 
                     <!-- Beginning "Preferred" configuration. -->
-                    <Veins name='apenCertusQuartzPreferredVeins'  inherits='PresetLayeredVeins' drawWireframe='true' wireframeColor='0x609BBEC2' drawBoundBox='false' boundBoxColor='0x609BBEC2'>
+                    <Veins name='apenCertusQuartzPreferredVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x609BBEC2' drawBoundBox='false' boundBoxColor='0x609BBEC2'>
                         <Description>
                             Ore generation is doubled in  preferred
                             biomes.
@@ -130,20 +136,20 @@
                         <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' />
                         <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' />
                         <Replaces block='minecraft:stone' weight='1.0' />
-                        <Biome name='Desert'  />
-                        <Setting name='MotherlodeFrequency' avg=':= 0.173 * _default_ * apenCertusQuartzFreq ' range=':=  1 * _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
-                        <Setting name='MotherlodeSize' avg=':= 0.173 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
+                        <BiomeType name='Desert'  />
+                        <Setting name='MotherlodeFrequency' avg=':= 1.123 * _default_ * apenCertusQuartzFreq ' range=':=  1 * _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                        <Setting name='MotherlodeSize' avg=':= 1.040 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='MotherlodeHeight' avg=':= 43 ' range=':=  26 ' type='normal' scaleTo='base' />
                         <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='BranchFrequency' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='BranchInclination' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
-                        <Setting name='BranchLength' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
+                        <Setting name='BranchLength' avg=':= 1.040 * _default_ ' range=':=  1 * _default_ ' type='normal' />
                         <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' scaleTo='base' />
                         <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='SegmentLength' avg=':= _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='SegmentAngle' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
-                        <Setting name='SegmentRadius' avg=':= _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='SegmentRadius' avg=':= 1.040 * _default_ * apenCertusQuartzSize ' range=':=  1 * _default_ * apenCertusQuartzSize ' type='normal' />
                         <Setting name='OreDensity' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='OreRadiusMult' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                     </Veins>
@@ -151,7 +157,7 @@
 
                 </IfCondition>
             </ConfigSection>
-            <!-- LayeredVeins Preset for Certus Quartz is complete. -->
+            <!-- SparseVeins Preset for Certus Quartz is complete. -->
 
 
             <!-- Starting Vanilla Preset for Certus Quartz. -->
@@ -166,8 +172,8 @@
                         <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' />
                         <Replaces block='minecraft:stone' weight='1.0' />
                         <Biome name='.*'  />
-                        <Setting name='Size' avg=':= 6 * apenCertusQuartzSize ' range=':=  2 * apenCertusQuartzSize ' type='normal' />
-                        <Setting name='Frequency' avg=':= 1.588 * apenCertusQuartzFreq ' range=':=  1 * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                        <Setting name='Size' avg=':= 7 * apenCertusQuartzSize ' range=':=  2 * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='Frequency' avg=':= 2.4 * apenCertusQuartzFreq ' range=':=  0 * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
                         <Setting name='Height' avg=':= 43 ' range=':=  26 ' type='normal' scaleTo='base' />
                         <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                     </StandardGen>
@@ -197,9 +203,9 @@
                         <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' />
                         <Replaces block='minecraft:stone' weight='1.0' />
                         <Biome name='.*'  />
-                        <Setting name='CloudRadius' avg=':= 0.416 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
-                        <Setting name='CloudThickness' avg=':= 0.416 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' scaleTo='base' />
-                        <Setting name='DistributionFrequency' avg=':= 0.173  * _default_ * apenCertusQuartzFreq ' range=':=  _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                        <Setting name='CloudRadius' avg=':= 0.516 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='CloudThickness' avg=':= 0.516 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' scaleTo='base' />
+                        <Setting name='DistributionFrequency' avg=':= 0.266  * _default_ * apenCertusQuartzFreq ' range=':=  _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
                         <Setting name='CloudHeight' avg=':= 43 ' range=':=  26 ' type='normal' scaleTo='base' />
                         <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
@@ -243,10 +249,10 @@
                         <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' />
                         <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' />
                         <Replaces block='minecraft:stone' weight='1.0' />
-                        <Biome name='Desert'  />
-                        <Setting name='CloudRadius' avg=':= 0.416 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
-                        <Setting name='CloudThickness' avg=':= 0.416 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' scaleTo='base' />
-                        <Setting name='DistributionFrequency' avg=':= 0.173  * _default_ * apenCertusQuartzFreq ' range=':=  _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                        <BiomeType name='Desert'  />
+                        <Setting name='CloudRadius' avg=':= 0.516 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' />
+                        <Setting name='CloudThickness' avg=':= 0.516 * _default_ * apenCertusQuartzSize ' range=':=  _default_ * apenCertusQuartzSize ' type='normal' scaleTo='base' />
+                        <Setting name='DistributionFrequency' avg=':= 0.266  * _default_ * apenCertusQuartzFreq ' range=':=  _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
                         <Setting name='CloudHeight' avg=':= 43 ' range=':=  26 ' type='normal' scaleTo='base' />
                         <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
                         <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':=  _default_ ' type='normal' />
