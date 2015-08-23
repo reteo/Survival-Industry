@@ -131,7 +131,7 @@
 
             <!-- Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predCopperDist'  displayState='shown' displayGroup='groupProjectRed'>
+                <OptionChoice name='predCopperDist' default='none'  displayState='shown' displayGroup='groupProjectRed'>
                     <Description> Controls how Copper is generated </Description>
                     <DisplayName>Project Red Copper</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -165,7 +165,7 @@
 
             <!-- Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predTinDist'  displayState='shown' displayGroup='groupProjectRed'>
+                <OptionChoice name='predTinDist' default='none'  displayState='shown' displayGroup='groupProjectRed'>
                     <Description> Controls how Tin is generated </Description>
                     <DisplayName>Project Red Tin</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -199,7 +199,7 @@
 
             <!-- Silver Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predSilverDist'  displayState='shown' displayGroup='groupProjectRed'>
+                <OptionChoice name='predSilverDist' default='none'  displayState='shown' displayGroup='groupProjectRed'>
                     <Description> Controls how Silver is generated </Description>
                     <DisplayName>Project Red Silver</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -267,7 +267,7 @@
 
             <!-- Marble Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predMarbleDist'  displayState='shown' displayGroup='groupProjectRed'>
+                <OptionChoice name='predMarbleDist' default='none'  displayState='shown' displayGroup='groupProjectRed'>
                     <Description> Controls how Marble is generated </Description>
                     <DisplayName>Project Red Marble</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

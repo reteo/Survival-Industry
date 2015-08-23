@@ -167,7 +167,7 @@
 
             <!-- Aluminum Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='elcrAluminumDist'  displayState='shown' displayGroup='groupElectriCraft'>
+                <OptionChoice name='elcrAluminumDist' default='none'  displayState='shown' displayGroup='groupElectriCraft'>
                     <Description> Controls how Aluminum is generated </Description>
                     <DisplayName>ElectriCraft Aluminum</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

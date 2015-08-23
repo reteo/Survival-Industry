@@ -32,7 +32,7 @@
 
             <!-- Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='thfoCopperDist'  displayState='shown' displayGroup='groupThermalFoundation'>
+                <OptionChoice name='thfoCopperDist' default='none'  displayState='shown' displayGroup='groupThermalFoundation'>
                     <Description> Controls how Copper is generated </Description>
                     <DisplayName>Thermal Foundation Copper</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -66,7 +66,7 @@
 
             <!-- Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='thfoTinDist'  displayState='shown' displayGroup='groupThermalFoundation'>
+                <OptionChoice name='thfoTinDist' default='none'  displayState='shown' displayGroup='groupThermalFoundation'>
                     <Description> Controls how Tin is generated </Description>
                     <DisplayName>Thermal Foundation Tin</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -100,7 +100,7 @@
 
             <!-- Silver Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='thfoSilverDist'  displayState='shown' displayGroup='groupThermalFoundation'>
+                <OptionChoice name='thfoSilverDist' default='none'  displayState='shown' displayGroup='groupThermalFoundation'>
                     <Description> Controls how Silver is generated </Description>
                     <DisplayName>Thermal Foundation Silver</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -168,7 +168,7 @@
 
             <!-- Ferrous Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='thfoFerrousDist'  displayState='shown' displayGroup='groupThermalFoundation'>
+                <OptionChoice name='thfoFerrousDist' default='none'  displayState='shown' displayGroup='groupThermalFoundation'>
                     <Description> Controls how Ferrous is generated </Description>
                     <DisplayName>Thermal Foundation Ferrous</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -202,7 +202,7 @@
 
             <!-- Shiny Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='thfoShinyDist'  displayState='shown' displayGroup='groupThermalFoundation'>
+                <OptionChoice name='thfoShinyDist' default='none'  displayState='shown' displayGroup='groupThermalFoundation'>
                     <Description> Controls how Shiny is generated </Description>
                     <DisplayName>Thermal Foundation Shiny</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

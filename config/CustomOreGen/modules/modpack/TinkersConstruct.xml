@@ -33,7 +33,7 @@
 
             <!-- Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoCopperDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoCopperDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Copper is generated </Description>
                     <DisplayName>Tinkers Construct Copper</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -67,7 +67,7 @@
 
             <!-- Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoTinDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoTinDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Tin is generated </Description>
                     <DisplayName>Tinkers Construct Tin</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -135,7 +135,7 @@
 
             <!-- Iron Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoIronGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoIronGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Iron Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Iron Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -169,7 +169,7 @@
 
             <!-- Gold Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoGoldGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoGoldGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Gold Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Gold Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -203,7 +203,7 @@
 
             <!-- Copper Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoCopperGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoCopperGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Copper Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Copper Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -237,7 +237,7 @@
 
             <!-- Tin Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoTinGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoTinGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Tin Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Tin Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -271,7 +271,7 @@
 
             <!-- Aluminum Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoAluminumGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoAluminumGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Aluminum Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Aluminum Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -373,7 +373,7 @@
 
             <!-- Nether Cobalt Gravel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='ticoNetherCobaltGravelDist'  displayState='shown' displayGroup='groupTinkersConstruct'>
+                <OptionChoice name='ticoNetherCobaltGravelDist' default='none'  displayState='shown' displayGroup='groupTinkersConstruct'>
                     <Description> Controls how Nether Cobalt Gravel is generated </Description>
                     <DisplayName>Tinkers Construct Nether Cobalt Gravel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

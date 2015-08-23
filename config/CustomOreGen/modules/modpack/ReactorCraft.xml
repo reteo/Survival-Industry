@@ -135,7 +135,7 @@
 
             <!-- Silver Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='recrSilverDist'  displayState='shown' displayGroup='groupReactorCraft'>
+                <OptionChoice name='recrSilverDist' default='none'  displayState='shown' displayGroup='groupReactorCraft'>
                     <Description> Controls how Silver is generated </Description>
                     <DisplayName>ReactorCraft Silver</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
