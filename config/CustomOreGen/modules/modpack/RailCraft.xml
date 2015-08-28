@@ -58,7 +58,7 @@
 
             <!-- Poor Iron Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrPoorIronDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrPoorIronDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Poor Iron is generated </Description>
                     <DisplayName>RailCraft Poor Iron</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -92,7 +92,7 @@
 
             <!-- Poor Gold Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrPoorGoldDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrPoorGoldDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Poor Gold is generated </Description>
                     <DisplayName>RailCraft Poor Gold</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -126,7 +126,7 @@
 
             <!-- Poor Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrPoorCopperDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrPoorCopperDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Poor Copper is generated </Description>
                     <DisplayName>RailCraft Poor Copper</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -160,7 +160,7 @@
 
             <!-- Poor Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrPoorTinDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrPoorTinDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Poor Tin is generated </Description>
                     <DisplayName>RailCraft Poor Tin</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -194,7 +194,7 @@
 
             <!-- Poor Lead Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrPoorLeadDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrPoorLeadDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Poor Lead is generated </Description>
                     <DisplayName>RailCraft Poor Lead</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -1124,7 +1124,7 @@
                             <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
                             <Setting name='MotherlodeFrequency' avg=':= 2.801 * _default_ * rlcrSaltpeterFreq ' range=':= _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 75 ' range=':= 25 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= 0 ' range=':= 0 ' type='normal' />
@@ -1168,7 +1168,7 @@
                             <Setting name='CloudRadius' avg=':= 1.375 * _default_ * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.375 * _default_ * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.892  * _default_ * rlcrSaltpeterFreq ' range=':= _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 75 ' range=':= 25 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1220,7 +1220,7 @@
                             <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
                             <Setting name='Size' avg=':= 1 * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 64 * rlcrSaltpeterFreq ' range=':= _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 75 ' range=':= 25 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>

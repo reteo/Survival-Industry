@@ -136,7 +136,7 @@
 
             <!-- Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predCopperDist' default='none'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
+                <OptionChoice name='predCopperDist'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
                     <Description> Controls how Copper is generated </Description>
                     <DisplayName>Project Red Copper</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -170,7 +170,7 @@
 
             <!-- Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predTinDist' default='none'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
+                <OptionChoice name='predTinDist'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
                     <Description> Controls how Tin is generated </Description>
                     <DisplayName>Project Red Tin</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -204,7 +204,7 @@
 
             <!-- Silver Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='predSilverDist' default='none'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
+                <OptionChoice name='predSilverDist'  displayState=':= if(?enableProjectRed, "shown", "hidden")' displayGroup='groupProjectRed'>
                     <Description> Controls how Silver is generated </Description>
                     <DisplayName>Project Red Silver</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
