@@ -251,26 +251,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='thfoOverworldBlockSubstitute0' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore")'> <Replaces block='ThermalFoundation:Ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore:1")'> <Replaces block='ThermalFoundation:Ore:1' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore:2")'> <Replaces block='ThermalFoundation:Ore:2' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore:3")'> <Replaces block='ThermalFoundation:Ore:3' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore:4")'> <Replaces block='ThermalFoundation:Ore:4' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ThermalFoundation:Ore:5")'> <Replaces block='ThermalFoundation:Ore:5' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->

@@ -338,20 +338,6 @@
 
         <!-- Starting Original "Overworld" Block Removal -->
 
-        <IfCondition condition=':= ?blockExists("minecraft:sand")'>
-            <Substitute name='vnlaOverworldBlockSubstitute2' block='minecraft:sand'>
-                <Description>
-                    Replace vanilla-generated ore clusters.
-                </Description>
-                <Comment>
-                    The global option deferredPopulationRange  must be
-                    large enough to catch all ore  clusters (>= 32).
-                </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:clay")'> <Replaces block='minecraft:clay' weight='1.0' /> </IfCondition>
-            </Substitute>
-        </IfCondition>
-
-
         <IfCondition condition=':= ?blockExists("minecraft:stone")'>
             <Substitute name='vnlaOverworldBlockSubstitute3' block='minecraft:stone'>
                 <Description>
@@ -361,13 +347,7 @@
                     The global option deferredPopulationRange  must be
                     large enough to catch all ore  clusters (>= 32).
                 </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <Replaces block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <Replaces block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
                 <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <Replaces block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <Replaces block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <Replaces block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <Replaces block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <Replaces block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
             </Substitute>
         </IfCondition>
 
@@ -1466,20 +1446,6 @@
     <IfCondition condition=':= dimension.generator = "HellRandomLevelSource"'>
 
         <!-- Starting Original "Nether" Block Removal -->
-
-        <IfCondition condition=':= ?blockExists("minecraft:netherrack")'>
-            <Substitute name='vnlaNetherBlockSubstitute0' block='minecraft:netherrack'>
-                <Description>
-                    Replace vanilla-generated ore clusters.
-                </Description>
-                <Comment>
-                    The global option deferredPopulationRange  must be
-                    large enough to catch all ore  clusters (>= 32).
-                </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <Replaces block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
-            </Substitute>
-        </IfCondition>
-
         <!-- Original "Nether" Block Removal Complete -->
 
         <!-- Adding blocks -->

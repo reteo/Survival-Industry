@@ -79,21 +79,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='mchmOverworldBlockSubstitute0' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("minechem:tile.oreUranium")'> <Replaces block='minechem:tile.oreUranium' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->

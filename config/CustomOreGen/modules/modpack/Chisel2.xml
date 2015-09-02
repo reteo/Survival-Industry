@@ -190,25 +190,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='chslOverworldBlockSubstitute0' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("chisel:andesite")'> <Replaces block='chisel:andesite' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("chisel:diorite")'> <Replaces block='chisel:diorite' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("chisel:granite")'> <Replaces block='chisel:granite' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("chisel:limestone")'> <Replaces block='chisel:limestone' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("chisel:marble")'> <Replaces block='chisel:marble' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->

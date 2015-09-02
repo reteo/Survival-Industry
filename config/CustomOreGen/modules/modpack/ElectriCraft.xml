@@ -250,26 +250,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='elcrOverworldBlockSubstitute0' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <Replaces block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <Replaces block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <Replaces block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <Replaces block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <Replaces block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <Replaces block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->

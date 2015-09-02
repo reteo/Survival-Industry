@@ -316,28 +316,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='predOverworldBlockSubstitute0' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:1")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:1' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:2")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:2' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:3")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:3' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:4")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:4' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:5")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:5' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.ore:6")'> <Replaces block='ProjRed|Exploration:projectred.exploration.ore:6' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("ProjRed|Exploration:projectred.exploration.stone")'> <Replaces block='ProjRed|Exploration:projectred.exploration.stone' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->

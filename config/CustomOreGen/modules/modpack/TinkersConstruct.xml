@@ -422,42 +422,6 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:gravel")'>
-                    <Substitute name='ticoOverworldBlockSubstitute0' block='minecraft:gravel'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre")'> <Replaces block='TConstruct:GravelOre' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre:1")'> <Replaces block='TConstruct:GravelOre:1' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre:2")'> <Replaces block='TConstruct:GravelOre:2' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre:3")'> <Replaces block='TConstruct:GravelOre:3' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre:4")'> <Replaces block='TConstruct:GravelOre:4' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
-
-                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-                    <Substitute name='ticoOverworldBlockSubstitute1' block='minecraft:stone'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("TConstruct:SearedBrick:3")'> <Replaces block='TConstruct:SearedBrick:3' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:SearedBrick:4")'> <Replaces block='TConstruct:SearedBrick:4' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:SearedBrick:5")'> <Replaces block='TConstruct:SearedBrick:5' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->
@@ -1429,37 +1393,6 @@
             <IfCondition condition=':= dimension.generator = "HellRandomLevelSource"'>
 
                 <!-- Starting Original "Nether" Block Removal -->
-
-                <IfCondition condition=':= ?blockExists("minecraft:gravel")'>
-                    <Substitute name='ticoNetherBlockSubstitute0' block='minecraft:gravel'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("TConstruct:GravelOre:5")'> <Replaces block='TConstruct:GravelOre:5' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
-
-                <IfCondition condition=':= ?blockExists("minecraft:netherrack")'>
-                    <Substitute name='ticoNetherBlockSubstitute1' block='minecraft:netherrack'>
-                        <Description>
-                            Replace vanilla-generated ore clusters.
-                        </Description>
-                        <Comment>
-                            The global option  deferredPopulationRange
-                            must be large  enough to catch all ore
-                            clusters (>=  32).
-                        </Comment>
-                        <IfCondition condition=':= ?blockExists("TConstruct:SearedBrick:1")'> <Replaces block='TConstruct:SearedBrick:1' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("TConstruct:SearedBrick:2")'> <Replaces block='TConstruct:SearedBrick:2' weight='1.0' /> </IfCondition>
-                    </Substitute>
-                </IfCondition>
-
                 <!-- Original "Nether" Block Removal Complete -->
 
                 <!-- Adding blocks -->
