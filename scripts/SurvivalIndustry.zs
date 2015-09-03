@@ -109,3 +109,23 @@ vanilla.loot.removeChestLoot("mineshaftCorridor", <Railcraft:cube:2>);
    This needs to change. */
 
 recipes.addShaped(<TConstruct:MetalBlock:6>, [[<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>],  [<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>], [<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>]]);
+
+/* Next, ore flowers, as by default, are useless outside of ore detection.  Let's make
+   dyes out of them... */
+
+recipes.addShapeless(<minecraft:dye:1>, [<OreFlowers:ore_flowers:3>]);
+recipes.addShapeless(<minecraft:dye:2>, [<OreFlowers:ore_flowers:1>]);
+recipes.addShapeless(<minecraft:dye:2>, [<OreFlowers:ore_flowers3>]);
+recipes.addShapeless(<minecraft:dye:2>, [<OreFlowers:ore_flowers2:5>]);
+recipes.addShapeless(<minecraft:dye:5>, [<OreFlowers:ore_flowers:5>]);
+recipes.addShapeless(<minecraft:dye:5>, [<OreFlowers:ore_flowers:6>]);
+recipes.addShapeless(<minecraft:dye:5>, [<OreFlowers:ore_flowers2:1>]);
+recipes.addShapeless(<minecraft:dye:7>, [<OreFlowers:ore_flowers>]);
+recipes.addShapeless(<minecraft:dye:7>, [<OreFlowers:ore_flowers:2>]);
+recipes.addShapeless(<minecraft:dye:7>, [<OreFlowers:ore_flowers:7>]);
+recipes.addShapeless(<minecraft:dye:11>, [<OreFlowers:ore_flowers:4>]);
+recipes.addShapeless(<minecraft:dye:11>, [<OreFlowers:ore_flowers2>]);
+recipes.addShapeless(<minecraft:dye:13>, [<OreFlowers:ore_flowers2:2>]);
+recipes.addShapeless(<minecraft:dye:13>, [<OreFlowers:ore_flowers2:4>]);
+recipes.addShapeless(<minecraft:dye:13>, [<OreFlowers:ore_flowers2:7>]);
+recipes.addShapeless(<minecraft:dye:14>, [<OreFlowers:ore_flowers2:6>]);
