@@ -43,9 +43,6 @@ recipes.removeShaped(<BuildCraft|Core:engineBlock:3>);
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("This quarry has been disabled"));
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
 
-
-
-
 /* Next, we want to remove loot that can allow a player to bypass progression.
    Ores, ingots, blocks, and dusts are examples of this issue. */
 
@@ -106,3 +103,9 @@ vanilla.loot.removeChestLoot("villageBlacksmith", <Railcraft:tool.steel.axe>);
 vanilla.loot.removeChestLoot("villageBlacksmith", <Railcraft:ingot>);
 vanilla.loot.removeChestLoot("mineshaftCorridor", <Railcraft:cube:2>);
 
+/* Now, there are some recipes that need to happen. */
+
+/* First, ElectriCraft aluminum ingots don't seem to have a block recipe.
+   This needs to change. */
+
+recipes.addShaped(<TConstruct:MetalBlock:6>, [[<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>],  [<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>], [<ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>, <ElectriCraft:electricraft_item_ingots:4>]]);
