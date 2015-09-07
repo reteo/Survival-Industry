@@ -35,7 +35,7 @@
 
             <!-- Uranium Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='mchmUraniumDist'  displayState=':= if(?enableMineChem, "shown", "hidden")' displayGroup='groupMineChem'>
+                <OptionChoice name='mchmUraniumDist' default='none'  displayState=':= if(?enableMineChem, "shown", "hidden")' displayGroup='groupMineChem'>
                     <Description> Controls how Uranium is generated </Description>
                     <DisplayName>MineChem Uranium</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
