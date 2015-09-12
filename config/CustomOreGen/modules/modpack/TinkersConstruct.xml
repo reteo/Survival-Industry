@@ -1036,7 +1036,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * ticoCopperGravelFreq ' range=':= 1.583 * _default_ * ticoCopperGravelFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 1.080 * _default_ * ticoCopperGravelSize ' range=':= 1.080 * _default_ * ticoCopperGravelSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 68 ' range=':= 28 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 68 ' range=':= 28 ' type='uniform' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1080,7 +1080,7 @@
                             <Setting name='CloudRadius' avg=':= 1.177 * _default_ * ticoCopperGravelSize ' range=':= 1.177 * _default_ * ticoCopperGravelSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.177 * _default_ * ticoCopperGravelSize ' range=':= 1.177 * _default_ * ticoCopperGravelSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.385 * _default_ * ticoCopperGravelFreq ' range=':= 1.385 * _default_ * ticoCopperGravelFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 68 ' range=':= 28 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 68 ' range=':= 28 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1131,7 +1131,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 8.000 * ticoCopperGravelSize ' range=':= _default_ * ticoCopperGravelSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 10.000 * ticoCopperGravelFreq ' range=':= _default_ * ticoCopperGravelFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 68 ' range=':= 28 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 68 ' range=':= 28 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1412,7 +1412,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * ticoCobaltFreq ' range=':= 0.867 * _default_ * ticoCobaltFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * ticoCobaltSize ' range=':= 0.976 * _default_ * ticoCobaltSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1455,7 +1455,7 @@
                             <Setting name='CloudRadius' avg=':= 0.871 * _default_ * ticoCobaltSize ' range=':= 0.871 * _default_ * ticoCobaltSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.871 * _default_ * ticoCobaltSize ' range=':= 0.871 * _default_ * ticoCobaltSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 0.758 * _default_ * ticoCobaltFreq ' range=':= 0.758 * _default_ * ticoCobaltFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1506,7 +1506,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * ticoCobaltSize ' range=':= _default_ * ticoCobaltSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 8.000 * ticoCobaltFreq ' range=':= _default_ * ticoCobaltFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1531,7 +1531,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * ticoArditeFreq ' range=':= 0.867 * _default_ * ticoArditeFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * ticoArditeSize ' range=':= 0.976 * _default_ * ticoArditeSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1574,7 +1574,7 @@
                             <Setting name='CloudRadius' avg=':= 0.871 * _default_ * ticoArditeSize ' range=':= 0.871 * _default_ * ticoArditeSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.871 * _default_ * ticoArditeSize ' range=':= 0.871 * _default_ * ticoArditeSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 0.758 * _default_ * ticoArditeFreq ' range=':= 0.758 * _default_ * ticoArditeFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1625,7 +1625,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * ticoArditeSize ' range=':= _default_ * ticoArditeSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 8.000 * ticoArditeFreq ' range=':= _default_ * ticoArditeFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1651,7 +1651,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * ticoNetherCobaltGravelFreq ' range=':= 0.867 * _default_ * ticoNetherCobaltGravelFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * ticoNetherCobaltGravelSize ' range=':= 0.976 * _default_ * ticoNetherCobaltGravelSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1695,7 +1695,7 @@
                             <Setting name='CloudRadius' avg=':= 0.871 * _default_ * ticoNetherCobaltGravelSize ' range=':= 0.871 * _default_ * ticoNetherCobaltGravelSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.871 * _default_ * ticoNetherCobaltGravelSize ' range=':= 0.871 * _default_ * ticoNetherCobaltGravelSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 0.758 * _default_ * ticoNetherCobaltGravelFreq ' range=':= 0.758 * _default_ * ticoNetherCobaltGravelFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1747,7 +1747,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * ticoNetherCobaltGravelSize ' range=':= _default_ * ticoNetherCobaltGravelSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 8.000 * ticoNetherCobaltGravelFreq ' range=':= _default_ * ticoNetherCobaltGravelFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
