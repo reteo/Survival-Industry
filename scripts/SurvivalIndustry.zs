@@ -16,6 +16,7 @@ recipes.removeShaped(<BuildCraft|Core:engineBlock:0>);
 recipes.removeShaped(<BuildCraft|Core:engineBlock:1>);
 recipes.removeShaped(<BuildCraft|Core:engineBlock:2>);
 recipes.removeShaped(<BuildCraft|Core:engineBlock:3>);
+recipes.removeShaped(<rftools:endergenicBlock:0>);
 
 
 /* It's important to notify the player when something's been disabled. */
@@ -40,8 +41,23 @@ recipes.removeShaped(<BuildCraft|Core:engineBlock:3>);
 <BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("have been disabled by the"));
 <BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("Survival Industry modpack."));
 
+<rftools:endergenicBlock:0>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<rftools:endergenicBlock:0>.addTooltip(format.yellow("have been disabled by the"));
+<rftools:endergenicBlock:0>.addTooltip(format.yellow("Survival Industry modpack."));
+
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("This quarry has been disabled"));
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
+
+/* Now, the ore dictionary needs to be fixed so that the coal from the fossils mod will
+   be useful as coal. */
+
+val coalFuel = <ore:fuelCoal>;
+val coalItem = <ore:itemCoal>;
+val coalBase = <ore:coal>;
+
+coalFuel.add(<minecraft:coal:2>);
+coalItem.add(<minecraft:coal:2>);
+coalBase.add(<minecraft:coal:2>);
 
 /* Next, we want to remove loot that can allow a player to bypass progression.
    Ores, ingots, blocks, and dusts are examples of this issue. */
