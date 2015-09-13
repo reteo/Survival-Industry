@@ -138,7 +138,7 @@
 
             <!-- Nickel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='elcrNickelDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+                <OptionChoice name='elcrNickelDist' default='none'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
                     <Description> Controls how Nickel is generated </Description>
                     <DisplayName>ElectriCraft Nickel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -206,7 +206,7 @@
 
             <!-- Platinum Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='elcrPlatinumDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+                <OptionChoice name='elcrPlatinumDist' default='none'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
                     <Description> Controls how Platinum is generated </Description>
                     <DisplayName>ElectriCraft Platinum</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
