@@ -60,7 +60,8 @@ coalItem.add(<minecraft:coal:2>);
 coalBase.add(<minecraft:coal:2>);
 
 /* Next, we want to remove loot that can allow a player to bypass progression.
-   Ores, ingots, blocks, and dusts are examples of this issue. */
+   Ores, ingots, blocks, and dusts are examples of this issue.  While we're at
+   it, let's pull items the player can't use... just to be nice. */
 
 /* First, the dungeon chest. */
 vanilla.loot.removeChestLoot("dungeonChest", <minecraft:iron_ingot>);
