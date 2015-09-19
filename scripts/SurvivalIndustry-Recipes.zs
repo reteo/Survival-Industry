@@ -1,6 +1,7 @@
 /* There are some recipes that need to happen. */
 
 // Set the oredicted materials.
+val stone = <ore:stone>;
 val iron = <ore:ingotIron>;
 val fluix = <ore:crystalFluix>;
 val glass = <ore:blockGlass>;
@@ -113,9 +114,13 @@ recipes.removeShaped(<EnderStorage:enderChest>);
 recipes.removeShaped(<EnderStorage:enderChest:4096>);
 recipes.removeShaped(<EnderStorage:enderPouch>);
 
+// Adding Vanilla Saddles
+recipes.removeShaped(<minecraft:saddle>);
    
-// Now, let's make the appropriate gated recipes.
+// Adding craftable End Portal Stones
+recipes.removeShaped(<minecraft:end_portal_frame>);
 
+// Now, let's make the appropriate gated recipes.
 // Applied Energistics Gating
 recipes.addShaped(<appliedenergistics2:tile.BlockInscriber>, [[iron, stickypiston, iron], [fluix, null, bedrock], [iron, stickypiston, iron]]);
 
@@ -146,3 +151,9 @@ recipes.addShaped(<ExtraUtilities:decorativeBlock1:1>, [[riftflux, obsidian, rif
 recipes.addShaped(<EnderStorage:enderChest>, [[blazerod, wool, blazerod],[enderobsidian, chest, enderobsidian],[blazerod, enderpearl, blazerod]]);
 recipes.addShaped(<EnderStorage:enderChest:4096>, [[blazerod, wool, blazerod],[enderobsidian, cauldron, enderobsidian],[blazerod, enderpearl, blazerod]]);
 recipes.addShaped(<EnderStorage:enderPouch>, [[blazepowder, leather, blazepowder],[leather, enderobsidian, leather],[blazepowder, wool, blazepowder]]);
+
+// Adding Vanilla Saddles
+recipes.addShaped(<minecraft:saddle>, [[leather, leather, leather],[leather, leather, leather],[iron, null, iron]]);
+
+// Adding craftable End Portal Stones
+recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
