@@ -114,8 +114,11 @@ recipes.removeShaped(<EnderStorage:enderChest>);
 recipes.removeShaped(<EnderStorage:enderChest:4096>);
 recipes.removeShaped(<EnderStorage:enderPouch>);
 
-// Adding Vanilla Saddles
+// Adding Vanilla Saddles and Horse Armor
 recipes.removeShaped(<minecraft:saddle>);
+recipes.removeShaped(<minecraft:iron_horse_armor>);
+recipes.removeShaped(<minecraft:golden_horse_armor>);
+recipes.removeShaped(<minecraft:diamond_horse_armor>);
    
 // Adding craftable End Portal Stones
 recipes.removeShaped(<minecraft:end_portal_frame>);
@@ -154,6 +157,9 @@ recipes.addShaped(<EnderStorage:enderPouch>, [[blazepowder, leather, blazepowder
 
 // Adding Vanilla Saddles
 recipes.addShaped(<minecraft:saddle>, [[leather, leather, leather],[leather, leather, leather],[iron, null, iron]]);
+recipes.addShaped(<minecraft:iron_horse_armor>, [[iron, iron, iron],[iron, iron, iron],[iron, null, iron]]);
+recipes.addShaped(<minecraft:golden_horse_armor>, [[gold, gold, gold],[gold, gold, gold],[gold, null, gold]]);
+recipes.addShaped(<minecraft:diamond_horse_armor>, [[diamond, diamond, diamond],[diamond, diamond, diamond],[diamond, null, diamond]]);
 
 // Adding craftable End Portal Stones
 recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
