@@ -1,0 +1,43 @@
+{
+  "_name": "fossil.Gallimimus",
+  "drops": [
+    {
+      "function": "all",
+      "functions": [
+        {
+          "function": "remove",
+          "id": "minecraft:iron_ingot"
+        }
+      ]
+    },
+    {
+      "function": "all",
+      "functions": [
+        {
+          "function": "remove",
+          "id": "minecraft:gold_ingot"
+        }
+      ]
+    },
+    {
+      "function": "all",
+      "functions": [
+        {
+          "function": "remove",
+          "id": "minecraft:gold_nugget"
+        }
+      ]
+    },
+    {
+      "function": "all",
+      "functions": [
+        {
+          "function": "remove",
+          "id": "minecraft:redstone"
+        }
+      ]
+    }
+  ],
+  "pre_stats": [],
+  "stats": []
+}
