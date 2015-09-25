@@ -1136,6 +1136,52 @@
             <IfCondition condition=':= dimension.generator = "HellRandomLevelSource"'>
 
                 <!-- Starting Original "Nether" Block Removal -->
+
+                <IfCondition condition=':= ?blockExists("minecraft:netherrack")'>
+                    <Substitute name='nthoNetherBlockSubstitute0' block='minecraft:netherrack'>
+                        <Description>
+                            Replace vanilla-generated ore clusters.
+                        </Description>
+                        <Comment>
+                            The global option  deferredPopulationRange
+                            must be large  enough to catch all ore
+                            clusters (>=  32).
+                        </Comment>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0")'> <Replaces block='NetherOres:tile.netherores.ore.0' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:1")'> <Replaces block='NetherOres:tile.netherores.ore.0:1' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:10")'> <Replaces block='NetherOres:tile.netherores.ore.0:10' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:11")'> <Replaces block='NetherOres:tile.netherores.ore.0:11' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:12")'> <Replaces block='NetherOres:tile.netherores.ore.0:12' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:13")'> <Replaces block='NetherOres:tile.netherores.ore.0:13' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:14")'> <Replaces block='NetherOres:tile.netherores.ore.0:14' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:15")'> <Replaces block='NetherOres:tile.netherores.ore.0:15' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:2")'> <Replaces block='NetherOres:tile.netherores.ore.0:2' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:3")'> <Replaces block='NetherOres:tile.netherores.ore.0:3' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:4")'> <Replaces block='NetherOres:tile.netherores.ore.0:4' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:5")'> <Replaces block='NetherOres:tile.netherores.ore.0:5' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:6")'> <Replaces block='NetherOres:tile.netherores.ore.0:6' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:7")'> <Replaces block='NetherOres:tile.netherores.ore.0:7' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:8")'> <Replaces block='NetherOres:tile.netherores.ore.0:8' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:9")'> <Replaces block='NetherOres:tile.netherores.ore.0:9' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:0")'> <Replaces block='NetherOres:tile.netherores.ore.1:0' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:1")'> <Replaces block='NetherOres:tile.netherores.ore.1:1' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:10")'> <Replaces block='NetherOres:tile.netherores.ore.1:10' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:11")'> <Replaces block='NetherOres:tile.netherores.ore.1:11' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:12")'> <Replaces block='NetherOres:tile.netherores.ore.1:12' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:13")'> <Replaces block='NetherOres:tile.netherores.ore.1:13' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:14")'> <Replaces block='NetherOres:tile.netherores.ore.1:14' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:15")'> <Replaces block='NetherOres:tile.netherores.ore.1:15' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:2")'> <Replaces block='NetherOres:tile.netherores.ore.1:2' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:3")'> <Replaces block='NetherOres:tile.netherores.ore.1:3' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:4")'> <Replaces block='NetherOres:tile.netherores.ore.1:4' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:5")'> <Replaces block='NetherOres:tile.netherores.ore.1:5' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:6")'> <Replaces block='NetherOres:tile.netherores.ore.1:6' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:7")'> <Replaces block='NetherOres:tile.netherores.ore.1:7' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:8")'> <Replaces block='NetherOres:tile.netherores.ore.1:8' weight='1.0' /> </IfCondition>
+                        <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:9")'> <Replaces block='NetherOres:tile.netherores.ore.1:9' weight='1.0' /> </IfCondition>
+                    </Substitute>
+                </IfCondition>
+
                 <!-- Original "Nether" Block Removal Complete -->
 
                 <!-- Adding blocks -->
