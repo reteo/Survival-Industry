@@ -21,6 +21,8 @@ val blazepowder = <ore:itemBlazePowder>;
 val blazerod = <ore:itemBlazeRod>;
 val chest = <ore:chestWood>;
 val enderobsidian = <ore:blockEnderObsidian>;
+val stick = <ore:stickWood>;
+val ironstick = <ore:rodIron>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -35,6 +37,12 @@ val book = <minecraft:book>;
 val riftflux = <mod_Invasion:riftFlux>;
 val water = <minecraft:water_bucket>.transformReplace(<minecraft:bucket>);
 val cauldron = <minecraft:cauldron>;
+val oakplanks = <minecraft:planks>;
+val spruceplanks = <minecraft:planks:1>;
+val birchplanks = <minecraft:planks:2>;
+val jungleplanks = <minecraft:planks:3>;
+val acaciaplanks = <minecraft:planks:4>;
+val darkoakplanks = <minecraft:planks:5>;
 
 /* First, ElectriCraft and RotaryCraft aluminum ingots don't seem to
    have block recipes.  To fix this, we'll change the block recipe to
@@ -119,6 +127,15 @@ recipes.removeShaped(<minecraft:saddle>);
 recipes.removeShaped(<minecraft:iron_horse_armor>);
 recipes.removeShaped(<minecraft:golden_horse_armor>);
 recipes.removeShaped(<minecraft:diamond_horse_armor>);
+
+// Changing Lattices to avoid conflicting with RotaryCraft gears
+recipes.removeShaped(<GardenStuff:lattice>);
+recipes.removeShaped(<GardenStuff:lattice_wood>);
+recipes.removeShaped(<GardenStuff:lattice_wood:1>);
+recipes.removeShaped(<GardenStuff:lattice_wood:2>);
+recipes.removeShaped(<GardenStuff:lattice_wood:3>);
+recipes.removeShaped(<GardenStuff:lattice_wood:4>);
+recipes.removeShaped(<GardenStuff:lattice_wood:5>);
    
 // Adding craftable End Portal Stones
 recipes.removeShaped(<minecraft:end_portal_frame>);
@@ -163,3 +180,12 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [[diamond, diamond, diamond],
 
 // Adding craftable End Portal Stones
 recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
+
+// Adding changed lattice recipes
+recipes.addShaped(<GardenStuff:lattice>, [[null, ironstick, null],[ironstick, iron, ironstick],[null, ironstick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood>, [[null, stick, null],[stick, oakplanks, stick],[null, stick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood:1>, [[null, stick, null],[stick, spruceplanks, stick],[null, stick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood:2>, [[null, stick, null],[stick, birchplanks, stick],[null, stick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood:3>, [[null, stick, null],[stick, jungleplanks, stick],[null, stick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood:4>, [[null, stick, null],[stick, acaciaplanks, stick],[null, stick, null]]);
+recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, darkoakplanks, stick],[null, stick, null]]);
