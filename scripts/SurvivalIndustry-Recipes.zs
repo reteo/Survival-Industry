@@ -5,6 +5,7 @@ val stone = <ore:stone>;
 val iron = <ore:ingotIron>;
 val fluix = <ore:crystalFluix>;
 val glass = <ore:blockGlass>;
+val glasspane = <ore:paneGlass>;
 val green = <ore:dyeGreen>;
 val enderpearl = <ore:pearlEnder>;
 val emerald = <ore:gemEmerald>;
@@ -23,6 +24,7 @@ val chest = <ore:chestWood>;
 val enderobsidian = <ore:blockEnderObsidian>;
 val stick = <ore:stickWood>;
 val ironstick = <ore:rodIron>;
+val tin = <ore:ingotTin>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -91,8 +93,8 @@ recipes.addShapeless(<minecraft:dye:14>, [<OreFlowers:ore_flowers2:6>]);
    use that to gate the mad science? */
    
 // Before setting recipes, the old ones need to be cleared.
-// Applied Energistics
-recipes.removeShaped(<appliedenergistics2:tile.BlockInscriber>);
+// Gendustry
+recipes.removeShaped(<gendustry:MutagenTank>);
 
 // Fossils & Archaeology
 recipes.removeShaped(<fossil:cultureVat>);
@@ -141,8 +143,8 @@ recipes.removeShaped(<GardenStuff:lattice_wood:5>);
 recipes.removeShaped(<minecraft:end_portal_frame>);
 
 // Now, let's make the appropriate gated recipes.
-// Applied Energistics Gating
-recipes.addShaped(<appliedenergistics2:tile.BlockInscriber>, [[iron, stickypiston, iron], [fluix, null, bedrock], [iron, stickypiston, iron]]);
+// Gendustry
+recipes.addShaped(<gendustry:MutagenTank>, [[tin, glasspane, tin],[tin, glasspane, tin],[tin, bedrock, tin]]);
 
 // Fossils & Archaeology Gating
 recipes.addShaped(<fossil:cultureVat>, [[glass, green, glass],[glass, water, glass],[iron, bedrock, iron]]);
@@ -191,7 +193,4 @@ recipes.addShaped(<GardenStuff:lattice_wood:4>, [[null, stick, null],[stick, aca
 recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, darkoakplanks, stick],[null, stick, null]]);
 
 // Adding recipe to make canola oil (vegetable oil)
-recipes.addShapeless(<VeganOption:oilVegetable>, [<minecraft:heavy_weighted_pressure_plate>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
-recipes.addShapeless(<VeganOption:oilVegetable>, [<harvestcraft:juicerItem>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
-recipes.addShapeless(<VeganOption:oilVegetable> * 9, [<minecraft:heavy_weighted_pressure_plate>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
-recipes.addShapeless(<VeganOption:oilVegetable> * 9, [<harvestcraft:juicerItem>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
+recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
