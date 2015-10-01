@@ -189,3 +189,9 @@ recipes.addShaped(<GardenStuff:lattice_wood:2>, [[null, stick, null],[stick, bir
 recipes.addShaped(<GardenStuff:lattice_wood:3>, [[null, stick, null],[stick, jungleplanks, stick],[null, stick, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood:4>, [[null, stick, null],[stick, acaciaplanks, stick],[null, stick, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, darkoakplanks, stick],[null, stick, null]]);
+
+// Adding recipe to make canola oil (vegetable oil)
+recipes.addShapeless(<VeganOption:oilVegetable>, [<minecraft:heavy_weighted_pressure_plate>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
+recipes.addShapeless(<VeganOption:oilVegetable>, [<harvestcraft:juicerItem>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
+recipes.addShapeless(<VeganOption:oilVegetable> * 9, [<minecraft:heavy_weighted_pressure_plate>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
+recipes.addShapeless(<VeganOption:oilVegetable> * 9, [<harvestcraft:juicerItem>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
