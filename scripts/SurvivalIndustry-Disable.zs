@@ -34,9 +34,19 @@ recipes.removeShaped(<rftools:endergenicBlock:0>);
 <BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("have been disabled by the"));
 <BuildCraft|Core:engineBlock:3>.addTooltip(format.yellow("Survival Industry modpack."));
 
+<appliedenergistics2:tile.BlockVibrationChamber>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<appliedenergistics2:tile.BlockVibrationChamber>.addTooltip(format.yellow("have been disabled by the"));
+<appliedenergistics2:tile.BlockVibrationChamber>.addTooltip(format.yellow("Survival Industry modpack."));
+
+<extracells:vibrantchamberfluid>.addTooltip(format.yellow("All non-RotaryCraft engines"));
+<extracells:vibrantchamberfluid>.addTooltip(format.yellow("have been disabled by the"));
+<extracells:vibrantchamberfluid>.addTooltip(format.yellow("Survival Industry modpack."));
+
 <rftools:endergenicBlock:0>.addTooltip(format.yellow("All non-RotaryCraft engines"));
 <rftools:endergenicBlock:0>.addTooltip(format.yellow("have been disabled by the"));
 <rftools:endergenicBlock:0>.addTooltip(format.yellow("Survival Industry modpack."));
+
+
 
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("This quarry has been disabled"));
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
