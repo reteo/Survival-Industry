@@ -25,6 +25,8 @@ val enderobsidian = <ore:blockEnderObsidian>;
 val stick = <ore:stickWood>;
 val ironstick = <ore:rodIron>;
 val tin = <ore:ingotTin>;
+val cobalt = <ore:ingotCobalt>;
+val ardite = <ore:ingotArdite>
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -52,6 +54,8 @@ val darkoakplanks = <minecraft:planks:5>;
 
 recipes.removeShaped(<TConstruct:MetalBlock:6>);
 recipes.addShaped(<TConstruct:MetalBlock:6>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+recipes.addShaped(<TConstruct:MetalBlock>, [[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt]]);
+recipes.addShaped(<TConstruct:MetalBlock:1>, [[ardite,ardite,ardite],[ardite,ardite,ardite],[ardite,ardite,ardite]]);
 
 /* Next, ore flowers, as by default, are useless outside of ore
    detection.  Let's make dyes out of them... */
