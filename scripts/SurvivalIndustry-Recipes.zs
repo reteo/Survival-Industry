@@ -26,7 +26,7 @@ val stick = <ore:stickWood>;
 val ironstick = <ore:rodIron>;
 val tin = <ore:ingotTin>;
 val cobalt = <ore:ingotCobalt>;
-val ardite = <ore:ingotArdite>
+val ardite = <ore:ingotArdite>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
