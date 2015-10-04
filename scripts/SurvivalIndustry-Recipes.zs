@@ -27,6 +27,8 @@ val ironstick = <ore:rodIron>;
 val tin = <ore:ingotTin>;
 val cobalt = <ore:ingotCobalt>;
 val ardite = <ore:ingotArdite>;
+val wood = <ore:logWood>;
+val planks = <ore:plankWood>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -80,7 +82,6 @@ recipes.addShapeless(<minecraft:dye:7>, [<OreFlowers:ore_flowers:7>]);
 
 // Dandelion Yellow
 recipes.addShapeless(<minecraft:dye:11>, [<OreFlowers:ore_flowers:4>]);
-recipes.addShapeless(<minecraft:dye:11>, [<OreFlowers:ore_flowers2>]);
 
 // Magenta
 recipes.addShapeless(<minecraft:dye:13>, [<OreFlowers:ore_flowers2:2>]);
@@ -89,6 +90,9 @@ recipes.addShapeless(<minecraft:dye:13>, [<OreFlowers:ore_flowers2:7>]);
 
 // Orange
 recipes.addShapeless(<minecraft:dye:14>, [<OreFlowers:ore_flowers2:6>]);
+
+// Indian mustard is actually mustard.
+recipes.addShapeless(<harvestcraft:mustardseedItem>, [<OreFlowers:ore_flowers2>]);
 
 
 /* Now, one of the features of Survival Industry is the mad science.
@@ -198,3 +202,6 @@ recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, dar
 
 // Adding recipe to make canola oil (vegetable oil)
 recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
+
+// Adding changed wooden shield recipes
+recipes.addShaped(<battlegear2:shield.wood>, [[null, planks, null],[planks, wood, planks],[null, planks, null]]);
