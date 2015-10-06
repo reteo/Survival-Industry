@@ -201,6 +201,7 @@ recipes.addShaped(<GardenStuff:lattice_wood:4>, [[null, stick, null],[stick, aca
 recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, darkoakplanks, stick],[null, stick, null]]);
 
 // Adding recipe to make canola oil (vegetable oil)
+recipes.addShapeless(<VeganOption:oilVegetable>, [<ore:presserOil>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
 recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
 
 // Adding changed wooden shield recipes
