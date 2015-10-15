@@ -9,10 +9,46 @@
     "slipperiness": 0.6,
     "tool_data": [
       {
+        "_meta": 0,
         "tool": "pickaxe",
-        "level": 2
+        "level": 5
+      },
+      {
+        "_meta": 1,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 2,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 3,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 4,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 5,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 6,
+        "tool": "pickaxe",
+        "level": 5
+      },
+      {
+        "_meta": 7,
+        "tool": "pickaxe",
+        "level": 5
       }
-    ]
+      ]
   },
   "break_speed": [],
   "drops": [],
