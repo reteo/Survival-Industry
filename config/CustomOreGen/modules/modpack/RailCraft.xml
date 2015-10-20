@@ -228,7 +228,7 @@
 
             <!-- Saltpeter Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrSaltpeterDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrSaltpeterDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Saltpeter is generated </Description>
                     <DisplayName>RailCraft Saltpeter</DisplayName>
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
@@ -296,7 +296,7 @@
 
             <!-- Sulfur Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrSulfurDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrSulfurDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Sulfur is generated </Description>
                     <DisplayName>RailCraft Sulfur</DisplayName>
                     <Choice value='PipeVeins' displayValue='Pipe Veins'>
