@@ -67,7 +67,7 @@
 
             <!-- Copper Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='frstCopperDist' default='none'  displayState=':= if(?enableForestry, "shown", "hidden")' displayGroup='groupForestry'>
+                <OptionChoice name='frstCopperDist'  displayState=':= if(?enableForestry, "shown", "hidden")' displayGroup='groupForestry'>
                     <Description> Controls how Copper is generated </Description>
                     <DisplayName>Forestry Copper</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -101,7 +101,7 @@
 
             <!-- Tin Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='frstTinDist' default='none'  displayState=':= if(?enableForestry, "shown", "hidden")' displayGroup='groupForestry'>
+                <OptionChoice name='frstTinDist'  displayState=':= if(?enableForestry, "shown", "hidden")' displayGroup='groupForestry'>
                     <Description> Controls how Tin is generated </Description>
                     <DisplayName>Forestry Tin</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

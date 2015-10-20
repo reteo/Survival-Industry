@@ -412,17 +412,14 @@
     <Import file='modules/modpack/AppliedEnergistics.xml'/>
     <Import file='modules/modpack/MineChem.xml'/>
     <Import file='modules/modpack/PamsHarvestCraft.xml'/>
-    <Import file='modules/modpack/ThermalFoundation.xml'/>
     <Import file='modules/modpack/Forestry.xml'/>
     
     <!-- These are useful for their original ores, but not essential. -->
     <Import file='modules/modpack/RailCraft.xml'/>
     <Import file='modules/modpack/ProjectRed.xml'/>
-    <Import file='modules/modpack/TinkersConstruct.xml'/>
     
     <!-- These mods include stone; we do not want stone overwriting useful
          ores, so they'll be generated last. -->
-    <Import file='modules/modpack/TinkersSteelworks.xml'/>
     <Import file='modules/modpack/Chisel2.xml'/>
     <Import file='modules/modpack/FossilsandArchaeology.xml'/>
 

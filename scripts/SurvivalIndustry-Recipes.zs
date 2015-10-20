@@ -53,12 +53,14 @@ val darkoakplanks = <minecraft:planks:5>;
 /* First, ElectriCraft and RotaryCraft aluminum ingots don't seem to
    have block recipes.  To fix this, we'll change the block recipe to
    use the Ore Dictionary. */
-
+/*
 recipes.removeShaped(<TConstruct:MetalBlock:6>);
-recipes.addShaped(<TConstruct:MetalBlock:6>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+*/
+recipes.addShaped(<customitems:aluminum_block>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+/*
 recipes.addShaped(<TConstruct:MetalBlock>, [[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt]]);
 recipes.addShaped(<TConstruct:MetalBlock:1>, [[ardite,ardite,ardite],[ardite,ardite,ardite],[ardite,ardite,ardite]]);
-
+*/
 /* Next, ore flowers, as by default, are useless outside of ore
    detection.  Let's make dyes out of them... */
 
