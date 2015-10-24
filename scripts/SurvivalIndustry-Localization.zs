@@ -71,12 +71,12 @@ game.setLocalization("en_US", "fluid.platinum.molten", "Molten Platinum");
 
 /* Next, let's change the mining levels' names for WAILA Harvestability */
 
-game.setLocalization("en_US", "gui.partcrafter.mining1", "Wood");
-game.setLocalization("en_US", "gui.partcrafter.mining2", "Stone");
-game.setLocalization("en_US", "gui.partcrafter.mining3", "Copper");
-game.setLocalization("en_US", "gui.partcrafter.mining4", "Bronze");
-game.setLocalization("en_US", "gui.partcrafter.mining5", "Iron");
-game.setLocalization("en_US", "gui.partcrafter.mining6", "Steel");
-game.setLocalization("en_US", "gui.partcrafter.mining7", "Diamond");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel1", "Base");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel2", "Entry");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel3", "Low");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel4", "Mid");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel5", "High");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel6", "Extreme");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel7", "Top");
 
-game.setLocalization("en_US", "wailaharvestability.harvestlevel", "Tool Level : ");
+game.setLocalization("en_US", "wailaharvestability.harvestlevel", "Mining Level : ");
