@@ -1,4 +1,4 @@
-`{
+{
     "creativeTabs":[
 	    {
 	        "tabLabel": "Custom Pickaxes",
@@ -16,15 +16,6 @@
 
     ], 
     "pickaxes":[
-        {
-            "name":"Golden Pickaxe",
-            "textureName":"gold_pickaxe",
-            "harvestLevel":0,
-            "maxUses":32,
-            "efficiencyOnProperMaterial":12,
-            "damageVsEntity":0,
-            "enchantability":22
-        },
         {
             "name":"Iron Pickaxe",
             "textureName":"iron_pickaxe",
@@ -78,15 +69,6 @@
             "efficiencyOnProperMaterial":7.75,
             "damageVsEntity":2.75,
             "enchantability":14
-        },
-        {
-            "name":"Steel Pickaxe",
-            "textureName":"railcraft_steel_pickaxe",
-            "harvestLevel":5,
-            "maxUses":500,
-            "efficiencyOnProperMaterial":7,
-            "damageVsEntity":2,
-            "enchantability":9
         },
         {
             "name":"Diamond Pickaxe",
