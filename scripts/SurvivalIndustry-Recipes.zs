@@ -3,6 +3,7 @@
 // Set the oredicted materials.
 val stone = <ore:stone>;
 val iron = <ore:ingotIron>;
+val copper = <ore:ingotCopper>;
 val fluix = <ore:crystalFluix>;
 val glass = <ore:blockGlass>;
 val glasspane = <ore:paneGlass>;
@@ -49,6 +50,8 @@ val birchplanks = <minecraft:planks:2>;
 val jungleplanks = <minecraft:planks:3>;
 val acaciaplanks = <minecraft:planks:4>;
 val darkoakplanks = <minecraft:planks:5>;
+val metallurgymachineframe = <Metallurgy:machine.frame>;
+val furnace = <minecraft:furnace>;
 
 /* First, ElectriCraft and RotaryCraft aluminum ingots don't seem to
    have block recipes.  To fix this, we'll change the block recipe to
@@ -207,3 +210,9 @@ recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecra
 
 // Adding changed wooden shield recipes
 recipes.addShaped(<battlegear2:shield.wood>, [[null, planks, null],[planks, wood, planks],[null, planks, null]]);
+
+/* The Metallurgy "Machine Frame" requires iron, but bronze needs to be made before iron can be mined.  This machine's recipe will need to change. */
+recipes.removeShaped(<Metallurgy:machine.frame>);
+recipes.addShaped(<Metallurgy:machine.frame>, [[stone, copper, stone],[copper, stone, copper],[stone, copper, stone]]);
+recipes.removeShaped(<Metallurgy:crusher>);
+recipes.addShaped(<Metallurgy:crusher>, [[copper, copper, copper],[stone, metallurgymachineframe, stone],[stone, furnace, stone]]);
