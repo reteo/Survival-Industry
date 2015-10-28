@@ -60,6 +60,11 @@ val furnace = <minecraft:furnace>;
 recipes.removeShaped(<TConstruct:MetalBlock:6>);
 */
 recipes.addShaped(<customitems:aluminum_block>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+recipes.addShapeless(<ElectriCraft:electricraft_item_ingots:4> * 9, [<customitems:aluminum_block>]);
+
+recipes.addShapeless(<minecraft:stick> * 4, [<ore:plankWood>, <ore:plankWood>]);
+
+
 /*
 recipes.addShaped(<TConstruct:MetalBlock>, [[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt]]);
 recipes.addShaped(<TConstruct:MetalBlock:1>, [[ardite,ardite,ardite],[ardite,ardite,ardite],[ardite,ardite,ardite]]);
@@ -195,6 +200,9 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [[diamond, diamond, diamond],
 
 // Adding craftable End Portal Stones
 recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
+
+// Adding iron rod recipe, since Tinker's Construct is no longer used.
+recipes.addShapedMirrored(<customitems:iron_rod>, [[null, null, iron],[null, iron, null],[iron, null, null]]);
 
 // Adding changed lattice recipes
 recipes.addShaped(<GardenStuff:lattice>, [[null, ironstick, null],[ironstick, iron, ironstick],[null, ironstick, null]]);

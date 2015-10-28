@@ -1,11 +1,4 @@
-`{
-    "creativeTabs":[
-	    {
-	        "tabLabel": "Custom Blocks",
-	        "iconItem": "customitems:aluminum_block"
-	    }
-
-    ],
+{
     "blocks":[
 	{
             "name": "Aluminum Block",
@@ -15,44 +8,5 @@
             "hardness": 2,
             "resistance": 5
         }
-    ],
-    "items":[ 
-
-    ],
-    "foods":[
-
-    ], 
-    "pickaxes":[
-    
-    ],
-    "axes":[
-
-    ],
-    "shovels":[
-
-    ],
-    "hoes":[
-
-    ],
-    "swords":[
-
-    ],
-    "helmets":[
-
-    ],
-    "chestplates":[
-
-    ],
-    "leggings":[
-
-    ],
-    "boots":[
-
-    ],        
-    "fluids":[
-
-    ],
-    "crops":[
-
     ]
 }
