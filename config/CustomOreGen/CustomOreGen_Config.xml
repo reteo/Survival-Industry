@@ -396,6 +396,9 @@
     <!-- Vanilla Minecraft should always have top priority. -->
     <Import file='modules/modpack/VanillaMinecraft.xml'/>
     
+    <!-- Metallurgy's also in the mining progression, so it's next. -->
+    <Import file='modules/modpack/Metallurgy4.xml'/>
+    
     <!-- After vanilla's nether quartz, these ores should be highly
          prioritized in the Nether. -->
     <Import file='modules/modpack/NetherOres.xml'/>
@@ -428,17 +431,6 @@
          NOTE: to override a default config, remove the corresponding
          directive (and optionally add something to 'modules/custom')
     -->
-
-    <Import file='modules/default/ThermalFoundation.xml'/>
-    <Import file='modules/default/ExtraCaves.xml'/>
-    <Import file='modules/default/IndustrialCraft2.xml'/>
-    <Import file='modules/default/Dartcraft.xml'/>
-    <Import file='modules/default/Factorization.xml'/>
-    <Import file='modules/default/Galacticraft.xml'/>
-    <Import file='modules/default/Mekanism.xml'/>
-    <Import file='modules/default/Steamcraft.xml'/>
-    <Import file='modules/default/Gregtech.xml'/>
-    <Import file='modules/default/Gregtech6.xml'/>
 
     <!-- ***************** Import Mod-provided configs ********************* -->
     <!-- NOTE: mods will overwrite these configs upon each load -->
