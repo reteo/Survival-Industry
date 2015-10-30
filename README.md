@@ -13,5 +13,3 @@ The world is now a much more challenging place. But you're up to the challenge. 
 ---
 
 This page is the github for this modpack.  The modpack itself cannot be distributed outside of the Feed the Beast launcher, but here you can find the configuration files used in the pack. Additionally, this will be the official issue tracker for the modpack.
-
-Testing
