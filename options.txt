@@ -1,1 +1,0 @@
-resourcePacks:["SurvivalIndustry.zip","msi_conversion-25.05.2015.zip","SnowSong1.4_1.7.x.zip","rhapsodia-0.5-alpha.zip"]
