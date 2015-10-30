@@ -1,0 +1,12 @@
+{
+    "blocks":[
+	{
+            "name": "Aluminum Block",
+            "textureName": "aluminum_block",
+            "material": "aluminum",
+            "toolClass":"pickaxe",
+            "hardness": 2,
+            "resistance": 5
+        }
+    ]
+}

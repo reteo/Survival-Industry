@@ -377,7 +377,7 @@
 
             <!-- Lead Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='nthoLeadDist'  displayState=':= if(?enableNetherOres, "shown", "hidden")' displayGroup='groupNetherOres'>
+                <OptionChoice name='nthoLeadDist' default='none'  displayState=':= if(?enableNetherOres, "shown", "hidden")' displayGroup='groupNetherOres'>
                     <Description> Controls how Lead is generated </Description>
                     <DisplayName>Nether Ores Lead</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -649,7 +649,7 @@
 
             <!-- Steel Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='nthoSteelDist'  displayState=':= if(?enableNetherOres, "shown", "hidden")' displayGroup='groupNetherOres'>
+                <OptionChoice name='nthoSteelDist' default='none'  displayState=':= if(?enableNetherOres, "shown", "hidden")' displayGroup='groupNetherOres'>
                     <Description> Controls how Steel is generated </Description>
                     <DisplayName>Nether Ores Steel</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>

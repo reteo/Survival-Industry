@@ -3,6 +3,7 @@
 // Set the oredicted materials.
 val stone = <ore:stone>;
 val iron = <ore:ingotIron>;
+val copper = <ore:ingotCopper>;
 val fluix = <ore:crystalFluix>;
 val glass = <ore:blockGlass>;
 val glasspane = <ore:paneGlass>;
@@ -49,16 +50,25 @@ val birchplanks = <minecraft:planks:2>;
 val jungleplanks = <minecraft:planks:3>;
 val acaciaplanks = <minecraft:planks:4>;
 val darkoakplanks = <minecraft:planks:5>;
+val metallurgymachineframe = <Metallurgy:machine.frame>;
+val furnace = <minecraft:furnace>;
 
 /* First, ElectriCraft and RotaryCraft aluminum ingots don't seem to
    have block recipes.  To fix this, we'll change the block recipe to
    use the Ore Dictionary. */
-
+/*
 recipes.removeShaped(<TConstruct:MetalBlock:6>);
-recipes.addShaped(<TConstruct:MetalBlock:6>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+*/
+recipes.addShaped(<customitems:aluminum_block>, [[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum],[aluminum,aluminum,aluminum]]);
+recipes.addShapeless(<ElectriCraft:electricraft_item_ingots:4> * 9, [<customitems:aluminum_block>]);
+
+recipes.addShapeless(<minecraft:stick> * 4, [<ore:plankWood>, <ore:plankWood>]);
+
+
+/*
 recipes.addShaped(<TConstruct:MetalBlock>, [[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt],[cobalt,cobalt,cobalt]]);
 recipes.addShaped(<TConstruct:MetalBlock:1>, [[ardite,ardite,ardite],[ardite,ardite,ardite],[ardite,ardite,ardite]]);
-
+*/
 /* Next, ore flowers, as by default, are useless outside of ore
    detection.  Let's make dyes out of them... */
 
@@ -191,6 +201,9 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [[diamond, diamond, diamond],
 // Adding craftable End Portal Stones
 recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
 
+// Adding iron rod recipe, since Tinker's Construct is no longer used.
+recipes.addShapedMirrored(<customitems:iron_rod>, [[null, null, iron],[null, iron, null],[iron, null, null]]);
+
 // Adding changed lattice recipes
 recipes.addShaped(<GardenStuff:lattice>, [[null, ironstick, null],[ironstick, iron, ironstick],[null, ironstick, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood>, [[null, stick, null],[stick, oakplanks, stick],[null, stick, null]]);
@@ -205,3 +218,9 @@ recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecra
 
 // Adding changed wooden shield recipes
 recipes.addShaped(<battlegear2:shield.wood>, [[null, planks, null],[planks, wood, planks],[null, planks, null]]);
+
+/* The Metallurgy "Machine Frame" requires iron, but bronze needs to be made before iron can be mined.  This machine's recipe will need to change. */
+recipes.removeShaped(<Metallurgy:machine.frame>);
+recipes.addShaped(<Metallurgy:machine.frame>, [[stone, copper, stone],[copper, stone, copper],[stone, copper, stone]]);
+recipes.removeShaped(<Metallurgy:crusher>);
+recipes.addShaped(<Metallurgy:crusher>, [[copper, copper, copper],[stone, metallurgymachineframe, stone],[stone, furnace, stone]]);

@@ -396,6 +396,9 @@
     <!-- Vanilla Minecraft should always have top priority. -->
     <Import file='modules/modpack/VanillaMinecraft.xml'/>
     
+    <!-- Metallurgy's also in the mining progression, so it's next. -->
+    <Import file='modules/modpack/Metallurgy4.xml'/>
+    
     <!-- After vanilla's nether quartz, these ores should be highly
          prioritized in the Nether. -->
     <Import file='modules/modpack/NetherOres.xml'/>
@@ -412,17 +415,14 @@
     <Import file='modules/modpack/AppliedEnergistics.xml'/>
     <Import file='modules/modpack/MineChem.xml'/>
     <Import file='modules/modpack/PamsHarvestCraft.xml'/>
-    <Import file='modules/modpack/ThermalFoundation.xml'/>
     <Import file='modules/modpack/Forestry.xml'/>
     
     <!-- These are useful for their original ores, but not essential. -->
     <Import file='modules/modpack/RailCraft.xml'/>
     <Import file='modules/modpack/ProjectRed.xml'/>
-    <Import file='modules/modpack/TinkersConstruct.xml'/>
     
     <!-- These mods include stone; we do not want stone overwriting useful
          ores, so they'll be generated last. -->
-    <Import file='modules/modpack/TinkersSteelworks.xml'/>
     <Import file='modules/modpack/Chisel2.xml'/>
     <Import file='modules/modpack/FossilsandArchaeology.xml'/>
 
@@ -431,16 +431,6 @@
          NOTE: to override a default config, remove the corresponding
          directive (and optionally add something to 'modules/custom')
     -->
-
-    <Import file='modules/default/ExtraCaves.xml'/>
-    <Import file='modules/default/IndustrialCraft2.xml'/>
-    <Import file='modules/default/Dartcraft.xml'/>
-    <Import file='modules/default/Factorization.xml'/>
-    <Import file='modules/default/Galacticraft.xml'/>
-    <Import file='modules/default/Mekanism.xml'/>
-    <Import file='modules/default/Steamcraft.xml'/>
-    <Import file='modules/default/Gregtech.xml'/>
-    <Import file='modules/default/Gregtech6.xml'/>
 
     <!-- ***************** Import Mod-provided configs ********************* -->
     <!-- NOTE: mods will overwrite these configs upon each load -->
