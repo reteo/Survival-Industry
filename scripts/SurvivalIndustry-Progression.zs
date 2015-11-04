@@ -83,10 +83,15 @@
 <Metallurgy:platinum.pickaxe:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
 	/* Axe */
 <ProjRed|Exploration:projectred.exploration.axeruby:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
+<ProjRed|Exploration:projectred.exploration.axeruby:*>.addTooltip(format.green("This is a lumber axe."));
 <ProjRed|Exploration:projectred.exploration.axesapphire:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
+<ProjRed|Exploration:projectred.exploration.axesapphire:*>.addTooltip(format.green("This is a lumber axe."));
 <ProjRed|Exploration:projectred.exploration.axeperidot:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
+<ProjRed|Exploration:projectred.exploration.axeperidot:*>.addTooltip(format.green("This is a lumber axe."));
 <Metallurgy:steel.axe:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
+<Metallurgy:steel.axe:*>.addTooltip(format.green("This is a lumber axe."));
 <Metallurgy:platinum.axe:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
+<Metallurgy:platinum.axe:*>.addTooltip(format.green("This is a lumber axe."));
 	/* Shovel */
 <ProjRed|Exploration:projectred.exploration.shovelruby:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
 <ProjRed|Exploration:projectred.exploration.shovelsapphire:*>.addTooltip("Harvest Level: " + format.red("Extreme Level"));
@@ -101,6 +106,7 @@
 <fossil:scarabPickAxe:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 	/* Axe */
 <minecraft:diamond_axe:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
+<minecraft:diamond_axe:*>.addTooltip(format.green("This is a lumber axe."));
 <ExtraUtilities:defoliageAxe:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 <fossil:scarabAxe:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 	/* Shovel */
@@ -113,6 +119,7 @@
 <RotaryCraft:rotarycraft_item_bedpick>.addTooltip("Harvest Level: " + format.aqua("All Levels"));
 	/* Axe */
 <RotaryCraft:rotarycraft_item_bedaxe>.addTooltip("Harvest Level: " + format.aqua("All Levels"));
+<RotaryCraft:rotarycraft_item_bedaxe>.addTooltip(format.red("This axe kills forests."));
 	/* Shovel */
 <RotaryCraft:rotarycraft_item_bedshovel>.addTooltip("Harvest Level: " + format.aqua("All Levels"));
 
