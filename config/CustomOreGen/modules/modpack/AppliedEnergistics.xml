@@ -7,7 +7,7 @@
 <!-- A high-end matter-to-data conversion mod that requires both
      certus quartz and nether quartz to do its thing.  Note, charged
      quartz is mixed in with the non-charged quartz at a ratio of
-     1:10. -->
+     1:10.  Configuration by Reteo. -->
 
 
 
@@ -104,7 +104,7 @@
                             </Description>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartz")'> <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' /> </IfCondition>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartzCharged")'> <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 3.355 * _default_ * apenCertusQuartzFreq ' range=':= 3.355 * _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * apenCertusQuartzSize ' range=':= 0 * _default_ * apenCertusQuartzSize ' type='normal' />
@@ -137,10 +137,10 @@
                             </Description>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartz")'> <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' /> </IfCondition>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartzCharged")'> <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 4 * apenCertusQuartzSize ' range=':= _default_ * apenCertusQuartzSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 15 * apenCertusQuartzFreq ' range=':= _default_ * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 2.000 * apenCertusQuartzSize ' range=':= 2.000 * apenCertusQuartzSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 7.500 * apenCertusQuartzFreq ' range=':= 7.500 * apenCertusQuartzFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 43 ' range=':= 26 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -169,7 +169,7 @@
                             </Description>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartz")'> <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' /> </IfCondition>
                             <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartzCharged")'> <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.095 * _default_ * apenCertusQuartzSize ' range=':= 1.095 * _default_ * apenCertusQuartzSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.095 * _default_ * apenCertusQuartzSize ' range=':= 1.095 * _default_ * apenCertusQuartzSize ' type='normal' scaleTo='base' />
@@ -204,8 +204,8 @@
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartz")'> <OreBlock block='appliedenergistics2:tile.OreQuartz' weight='0.90' /> </IfCondition>
                                 <IfCondition condition=':= ?blockExists("appliedenergistics2:tile.OreQuartzCharged")'> <OreBlock block='appliedenergistics2:tile.OreQuartzCharged' weight='0.10' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>

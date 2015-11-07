@@ -5,7 +5,8 @@
      ================================================================= -->
 
 
-<!-- This is a set of configurations for vanilla minecraft. -->
+<!-- This is a set of configurations for vanilla minecraft.
+     Configuration by Reteo. -->
 
 
 
@@ -347,7 +348,7 @@
                     The global option deferredPopulationRange  must be
                     large enough to catch all ore  clusters (>= 32).
                 </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:clay")'> <Replaces block='minecraft:clay' weight='1.0' /> </IfCondition>
+                <Replaces block='minecraft:clay' weight='1.0' />
             </Substitute>
         </IfCondition>
 
@@ -361,13 +362,13 @@
                     The global option deferredPopulationRange  must be
                     large enough to catch all ore  clusters (>= 32).
                 </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <Replaces block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <Replaces block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <Replaces block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <Replaces block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <Replaces block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <Replaces block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <Replaces block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
+                <Replaces block='minecraft:coal_ore' weight='1.0' />
+                <Replaces block='minecraft:diamond_ore' weight='1.0' />
+                <Replaces block='minecraft:emerald_ore' weight='1.0' />
+                <Replaces block='minecraft:gold_ore' weight='1.0' />
+                <Replaces block='minecraft:iron_ore' weight='1.0' />
+                <Replaces block='minecraft:lapis_ore' weight='1.0' />
+                <Replaces block='minecraft:redstone_ore' weight='1.0' />
             </Substitute>
         </IfCondition>
 
@@ -387,9 +388,9 @@
                         StandardGen distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:clay")'> <OreBlock block='minecraft:clay' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:sand")'> <Replaces block='minecraft:sand' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:gravel")'> <Replaces block='minecraft:gravel' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='sand' weight='1.0' />
+                    <ReplacesOre block='gravel' weight='1.0' />
+                    <ReplacesOre block='dirt' weight='1.0' />
                     <Biome name='.*'  />
                     <Biome name='Ocean'  weight='-1' />
                     <Biome name='Desert'  weight='-1' />
@@ -418,9 +419,9 @@
                         biomes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:clay")'> <OreBlock block='minecraft:clay' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:sand")'> <Replaces block='minecraft:sand' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:gravel")'> <Replaces block='minecraft:gravel' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='sand' weight='1.0' />
+                    <ReplacesOre block='gravel' weight='1.0' />
+                    <ReplacesOre block='dirt' weight='1.0' />
                     <BiomeType name='Swamp'  />
                     <BiomeType name='Beach'  />
                     <BiomeType name='River'  />
@@ -469,7 +470,7 @@
                         mining.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 7.748 * _default_ * vnlaCoalFreq ' range=':= 7.748 * _default_ * vnlaCoalFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaCoalSize ' range=':= 0 * _default_ * vnlaCoalSize ' type='normal' />
@@ -509,7 +510,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 1.664 * _default_ * vnlaCoalSize ' range=':= 1.664 * _default_ * vnlaCoalSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.664 * _default_ * vnlaCoalSize ' range=':= 1.664 * _default_ * vnlaCoalSize ' type='normal' scaleTo='base' />
@@ -540,8 +541,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -558,10 +559,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 16.000 * vnlaCoalSize ' range=':= _default_ * vnlaCoalSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 20.000 * vnlaCoalFreq ' range=':= _default_ * vnlaCoalFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 8.000 * vnlaCoalSize ' range=':= 8.000 * vnlaCoalSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 10.000 * vnlaCoalFreq ' range=':= 10.000 * vnlaCoalFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 64 ' range=':= 64 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -587,7 +588,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 1.664 * _default_ * vnlaCoalSize ' range=':= 1.664 * _default_ * vnlaCoalSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.664 * _default_ * vnlaCoalSize ' range=':= 1.664 * _default_ * vnlaCoalSize ' type='normal' scaleTo='base' />
@@ -618,8 +619,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:coal_ore")'> <OreBlock block='minecraft:coal_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -640,7 +641,7 @@
                         horizontal veins each.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <OreBlock block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 2.238 * _default_ * vnlaIronFreq ' range=':= 2.238 * _default_ * vnlaIronFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 1.144 * _default_ * vnlaIronSize ' range=':= 1.144 * _default_ * vnlaIronSize ' type='normal' />
@@ -672,10 +673,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <OreBlock block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 8.000 * vnlaIronSize ' range=':= _default_ * vnlaIronSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 20.000 * vnlaIronFreq ' range=':= _default_ * vnlaIronFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 4.000 * vnlaIronSize ' range=':= 4.000 * vnlaIronSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 10.000 * vnlaIronFreq ' range=':= 10.000 * vnlaIronFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 32 ' range=':= 32 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -701,7 +702,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <OreBlock block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 1.399 * _default_ * vnlaIronSize ' range=':= 1.399 * _default_ * vnlaIronSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.399 * _default_ * vnlaIronSize ' range=':= 1.399 * _default_ * vnlaIronSize ' type='normal' scaleTo='base' />
@@ -732,8 +733,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:iron_ore")'> <OreBlock block='minecraft:iron_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -754,7 +755,7 @@
                         horizontal veins each.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <OreBlock block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 0.708 * _default_ * vnlaGoldFreq ' range=':= 0.708 * _default_ * vnlaGoldFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0.944 * _default_ * vnlaGoldSize ' range=':= 0.944 * _default_ * vnlaGoldSize ' type='normal' />
@@ -786,10 +787,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <OreBlock block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 8.000 * vnlaGoldSize ' range=':= _default_ * vnlaGoldSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 2.000 * vnlaGoldFreq ' range=':= _default_ * vnlaGoldFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 4.000 * vnlaGoldSize ' range=':= 4.000 * vnlaGoldSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 1.000 * vnlaGoldFreq ' range=':= 1.000 * vnlaGoldFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 16 ' range=':= 16 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -815,7 +816,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <OreBlock block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 0.787 * _default_ * vnlaGoldSize ' range=':= 0.787 * _default_ * vnlaGoldSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 0.787 * _default_ * vnlaGoldSize ' range=':= 0.787 * _default_ * vnlaGoldSize ' type='normal' scaleTo='base' />
@@ -846,8 +847,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:gold_ore")'> <OreBlock block='minecraft:gold_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -868,7 +869,7 @@
                         motherlodes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 2.406 * _default_ * vnlaRedstoneFreq ' range=':= 2.406 * _default_ * vnlaRedstoneFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaRedstoneSize ' range=':= 0 * _default_ * vnlaRedstoneSize ' type='normal' />
@@ -894,7 +895,7 @@
                         biomes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Desert'  />
                     <Setting name='MotherlodeFrequency' avg=':= 2.406 * _default_ * vnlaRedstoneFreq ' range=':= 2.406 * _default_ * vnlaRedstoneFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaRedstoneSize ' range=':= 0 * _default_ * vnlaRedstoneSize ' type='normal' />
@@ -928,10 +929,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 7.000 * vnlaRedstoneSize ' range=':= _default_ * vnlaRedstoneSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 8.000 * vnlaRedstoneFreq ' range=':= _default_ * vnlaRedstoneFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 3.500 * vnlaRedstoneSize ' range=':= 3.500 * vnlaRedstoneSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 4.000 * vnlaRedstoneFreq ' range=':= 4.000 * vnlaRedstoneFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 8 ' range=':= 8 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -957,7 +958,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 1.076 * _default_ * vnlaRedstoneSize ' range=':= 1.076 * _default_ * vnlaRedstoneSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.076 * _default_ * vnlaRedstoneSize ' range=':= 1.076 * _default_ * vnlaRedstoneSize ' type='normal' scaleTo='base' />
@@ -988,8 +989,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
 
@@ -1000,7 +1001,7 @@
                         biomes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Desert'  />
                     <Setting name='CloudRadius' avg=':= 1.076 * _default_ * vnlaRedstoneSize ' range=':= 1.076 * _default_ * vnlaRedstoneSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.076 * _default_ * vnlaRedstoneSize ' range=':= 1.076 * _default_ * vnlaRedstoneSize ' type='normal' scaleTo='base' />
@@ -1018,8 +1019,8 @@
                             biomes.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:redstone_ore")'> <OreBlock block='minecraft:redstone_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
                 <!-- "Preferred" configuration complete. -->
@@ -1042,7 +1043,7 @@
                         near the bottom of the map.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <OreBlock block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 0.714 * _default_ * vnlaDiamondFreq ' range=':= 0.714 * _default_ * vnlaDiamondFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaDiamondSize ' range=':= 0 * _default_ * vnlaDiamondSize ' type='normal' />
@@ -1064,8 +1065,8 @@
                 <!-- Configuring contained material. -->
                 <Veins name='vnlaDiamondVeinsPipe'  inherits='vnlaDiamondVeins' seed='0x197B' drawWireframe='true' wireframeColor='0x608BF4E3' drawBoundBox='false' boundBoxColor='0x608BF4E3'>
                     <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <Replaces block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
+                    <Replaces block='minecraft:diamond_ore' weight='1.0' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaDiamondSize  * 0.5 ' range=':= 0 * _default_ * vnlaDiamondSize  * 0.5 ' type='normal' />
                     <Setting name='SegmentRadius' avg=':= 0.919 * _default_ * vnlaDiamondSize  * 0.5 ' range=':= 0.919 * _default_ * vnlaDiamondSize  * 0.5 ' type='normal' />
                     <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
@@ -1084,10 +1085,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <OreBlock block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 7.000 * vnlaDiamondSize ' range=':= _default_ * vnlaDiamondSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 1.000 * vnlaDiamondFreq ' range=':= _default_ * vnlaDiamondFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 3.500 * vnlaDiamondSize ' range=':= 3.500 * vnlaDiamondSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 0.500 * vnlaDiamondFreq ' range=':= 0.500 * vnlaDiamondFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 8 ' range=':= 8 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -1113,7 +1114,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <OreBlock block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 0.640 * _default_ * vnlaDiamondSize ' range=':= 0.640 * _default_ * vnlaDiamondSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 0.640 * _default_ * vnlaDiamondSize ' range=':= 0.640 * _default_ * vnlaDiamondSize ' type='normal' scaleTo='base' />
@@ -1144,8 +1145,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:diamond_ore")'> <OreBlock block='minecraft:diamond_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -1166,7 +1167,7 @@
                         motherlodes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 0.787 * _default_ * vnlaLapisLazuliFreq ' range=':= 0.787 * _default_ * vnlaLapisLazuliFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaLapisLazuliSize ' range=':= 0 * _default_ * vnlaLapisLazuliSize ' type='normal' />
@@ -1192,7 +1193,7 @@
                         biomes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Ocean'  />
                     <Setting name='MotherlodeFrequency' avg=':= 0.787 * _default_ * vnlaLapisLazuliFreq ' range=':= 0.787 * _default_ * vnlaLapisLazuliFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaLapisLazuliSize ' range=':= 0 * _default_ * vnlaLapisLazuliSize ' type='normal' />
@@ -1226,10 +1227,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 6.000 * vnlaLapisLazuliSize ' range=':= _default_ * vnlaLapisLazuliSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 1.000 * vnlaLapisLazuliFreq ' range=':= _default_ * vnlaLapisLazuliFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 3.000 * vnlaLapisLazuliSize ' range=':= 3.000 * vnlaLapisLazuliSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 0.500 * vnlaLapisLazuliFreq ' range=':= 0.500 * vnlaLapisLazuliFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 16 ' range=':= 0 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -1255,7 +1256,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 0.616 * _default_ * vnlaLapisLazuliSize ' range=':= 0.616 * _default_ * vnlaLapisLazuliSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 0.616 * _default_ * vnlaLapisLazuliSize ' range=':= 0.616 * _default_ * vnlaLapisLazuliSize ' type='normal' scaleTo='base' />
@@ -1286,8 +1287,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
 
@@ -1298,7 +1299,7 @@
                         biomes.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Ocean'  />
                     <Setting name='CloudRadius' avg=':= 0.616 * _default_ * vnlaLapisLazuliSize ' range=':= 0.616 * _default_ * vnlaLapisLazuliSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 0.616 * _default_ * vnlaLapisLazuliSize ' range=':= 0.616 * _default_ * vnlaLapisLazuliSize ' type='normal' scaleTo='base' />
@@ -1316,8 +1317,8 @@
                             biomes.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:lapis_ore")'> <OreBlock block='minecraft:lapis_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
                 <!-- "Preferred" configuration complete. -->
@@ -1340,7 +1341,7 @@
                         near the bottom of the map.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <OreBlock block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Mountain'  />
                     <Setting name='MotherlodeFrequency' avg=':= 1.145 * _default_ * vnlaEmeraldFreq ' range=':= 1.145 * _default_ * vnlaEmeraldFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaEmeraldSize ' range=':= 0 * _default_ * vnlaEmeraldSize ' type='normal' />
@@ -1362,8 +1363,8 @@
                 <!-- Configuring contained material. -->
                 <Veins name='vnlaEmeraldVeinsPipe'  inherits='vnlaEmeraldVeins' seed='0x54B3' drawWireframe='true' wireframeColor='0x606CE391' drawBoundBox='false' boundBoxColor='0x606CE391'>
                     <IfCondition condition=':= ?blockExists("minecraft:monster_egg")'> <OreBlock block='minecraft:monster_egg' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <Replaces block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
+                    <Replaces block='minecraft:emerald_ore' weight='1.0' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaEmeraldSize  * 0.5 ' range=':= 0 * _default_ * vnlaEmeraldSize  * 0.5 ' type='normal' />
                     <Setting name='SegmentRadius' avg=':= 1.035 * _default_ * vnlaEmeraldSize  * 0.5 ' range=':= 1.035 * _default_ * vnlaEmeraldSize  * 0.5 ' type='normal' />
                     <Setting name='OreDensity' avg=':= 1.0 ' range=':= 0 ' type='normal' />
@@ -1382,10 +1383,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <OreBlock block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Mountain'  />
-                    <Setting name='Size' avg=':= 2.000 * vnlaEmeraldSize ' range=':= _default_ * vnlaEmeraldSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 9.000 * vnlaEmeraldFreq ' range=':= _default_ * vnlaEmeraldFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 1.000 * vnlaEmeraldSize ' range=':= 1.000 * vnlaEmeraldSize ' type='normal' />
+                    <Setting name='Frequency' avg=':= 4.500 * vnlaEmeraldFreq ' range=':= 4.500 * vnlaEmeraldFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 16 ' range=':= 12 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -1411,7 +1412,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <OreBlock block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                    <ReplacesOre block='stone' weight='1.0' />
                     <BiomeType name='Mountain'  />
                     <Setting name='CloudRadius' avg=':= 0.810 * _default_ * vnlaEmeraldSize ' range=':= 0.810 * _default_ * vnlaEmeraldSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 0.810 * _default_ * vnlaEmeraldSize ' range=':= 0.810 * _default_ * vnlaEmeraldSize ' type='normal' scaleTo='base' />
@@ -1442,8 +1443,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:emerald_ore")'> <OreBlock block='minecraft:emerald_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>
@@ -1476,7 +1477,7 @@
                     The global option deferredPopulationRange  must be
                     large enough to catch all ore  clusters (>= 32).
                 </Comment>
-                <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <Replaces block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
+                <Replaces block='minecraft:quartz_ore' weight='1.0' />
             </Substitute>
         </IfCondition>
 
@@ -1495,7 +1496,7 @@
                         horizontal veins each.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <OreBlock block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:netherrack")'> <Replaces block='minecraft:netherrack' weight='1.0' /> </IfCondition>
+                    <Replaces block='minecraft:netherrack' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='MotherlodeFrequency' avg=':= 6.247 * _default_ * vnlaNetherQuartzFreq ' range=':= 6.247 * _default_ * vnlaNetherQuartzFreq ' type='normal' scaleTo='base' />
                     <Setting name='MotherlodeSize' avg=':= 0 * _default_ * vnlaNetherQuartzSize ' range=':= 0 * _default_ * vnlaNetherQuartzSize ' type='normal' />
@@ -1527,10 +1528,10 @@
                         distributions.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <OreBlock block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:netherrack")'> <Replaces block='minecraft:netherrack' weight='1.0' /> </IfCondition>
+                    <Replaces block='minecraft:netherrack' weight='1.0' />
                     <Biome name='.*'  />
-                    <Setting name='Size' avg=':= 16.000 * vnlaNetherQuartzSize ' range=':= _default_ * vnlaNetherQuartzSize ' type='normal' />
-                    <Setting name='Frequency' avg=':= 13.000 * vnlaNetherQuartzFreq ' range=':= _default_ * vnlaNetherQuartzFreq ' type='normal' scaleTo='base' />
+                    <Setting name='Size' avg=':= 8.000 * vnlaNetherQuartzSize ' range=':= 8.000 * vnlaNetherQuartzSize ' type='uniform' />
+                    <Setting name='Frequency' avg=':= 6.500 * vnlaNetherQuartzFreq ' range=':= 6.500 * vnlaNetherQuartzFreq ' type='normal' scaleTo='base' />
                     <Setting name='Height' avg=':= 59 ' range=':= 49 ' type='normal' scaleTo='base' />
                     <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                 </StandardGen>
@@ -1556,7 +1557,7 @@
                         time actually  mining the ore.
                     </Description>
                     <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <OreBlock block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
-                    <IfCondition condition=':= ?blockExists("minecraft:netherrack")'> <Replaces block='minecraft:netherrack' weight='1.0' /> </IfCondition>
+                    <Replaces block='minecraft:netherrack' weight='1.0' />
                     <Biome name='.*'  />
                     <Setting name='CloudRadius' avg=':= 1.494 * _default_ * vnlaNetherQuartzSize ' range=':= 1.494 * _default_ * vnlaNetherQuartzSize ' type='normal' />
                     <Setting name='CloudThickness' avg=':= 1.494 * _default_ * vnlaNetherQuartzSize ' range=':= 1.494 * _default_ * vnlaNetherQuartzSize ' type='normal' scaleTo='base' />
@@ -1587,8 +1588,8 @@
                             scaled  by that.
                         </Description>
                         <IfCondition condition=':= ?blockExists("minecraft:quartz_ore")'> <OreBlock block='minecraft:quartz_ore' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                        <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                        <Replaces block='minecraft:dirt' weight='1.0' />
+                        <Replaces block='minecraft:sandstone' weight='1.0' />
                     </Veins>
                 </Cloud>
             </IfCondition>

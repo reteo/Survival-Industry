@@ -6,7 +6,7 @@
 
 <!-- An expansion to Rotarycraft, this mod adds oregen appropriate to
      the formation of various wires with different electrical
-     advantages/disadvantages. -->
+     advantages/disadvantages.  Configuration by Reteo. -->
 
 
 
@@ -206,7 +206,7 @@
 
             <!-- Platinum Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='elcrPlatinumDist'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
+                <OptionChoice name='elcrPlatinumDist' default='none'  displayState=':= if(?enableElectriCraft, "shown", "hidden")' displayGroup='groupElectriCraft'>
                     <Description> Controls how Platinum is generated </Description>
                     <DisplayName>ElectriCraft Platinum</DisplayName>
                     <Choice value='LayeredVeins' displayValue='Layered Veins'>
@@ -250,6 +250,26 @@
             <IfCondition condition=':= ?COGActive'>
 
                 <!-- Starting Original "Overworld" Block Removal -->
+
+                <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+                    <Substitute name='elcrOverworldBlockSubstitute0' block='minecraft:stone'>
+                        <Description>
+                            Replace vanilla-generated ore clusters.
+                        </Description>
+                        <Comment>
+                            The global option  deferredPopulationRange
+                            must be large  enough to catch all ore
+                            clusters (>=  32).
+                        </Comment>
+                        <Replaces block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+                        <Replaces block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+                        <Replaces block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+                        <Replaces block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+                        <Replaces block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+                        <Replaces block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+                    </Substitute>
+                </IfCondition>
+
                 <!-- Original "Overworld" Block Removal Complete -->
 
                 <!-- Adding blocks -->
@@ -265,7 +285,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrCopperFreq ' range=':= 1.226 * _default_ * elcrCopperFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrCopperSize ' range=':= 1.035 * _default_ * elcrCopperSize ' type='normal' />
@@ -297,10 +317,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 6.000 * elcrCopperSize ' range=':= _default_ * elcrCopperSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 8.000 * elcrCopperFreq ' range=':= _default_ * elcrCopperFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 3.000 * elcrCopperSize ' range=':= 3.000 * elcrCopperSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 4.000 * elcrCopperFreq ' range=':= 4.000 * elcrCopperFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 48 ' range=':= 16 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -328,7 +348,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.036 * _default_ * elcrCopperSize ' range=':= 1.036 * _default_ * elcrCopperSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.036 * _default_ * elcrCopperSize ' range=':= 1.036 * _default_ * elcrCopperSize ' type='normal' scaleTo='base' />
@@ -362,8 +382,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -384,7 +404,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrTinFreq ' range=':= 1.416 * _default_ * elcrTinFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 1.060 * _default_ * elcrTinSize ' range=':= 1.060 * _default_ * elcrTinSize ' type='normal' />
@@ -416,10 +436,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 8.000 * elcrTinSize ' range=':= _default_ * elcrTinSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 8.000 * elcrTinFreq ' range=':= _default_ * elcrTinFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 4.000 * elcrTinSize ' range=':= 4.000 * elcrTinSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 4.000 * elcrTinFreq ' range=':= 4.000 * elcrTinFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 60 ' range=':= 12 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -447,7 +467,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.113 * _default_ * elcrTinSize ' range=':= 1.113 * _default_ * elcrTinSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.113 * _default_ * elcrTinSize ' range=':= 1.113 * _default_ * elcrTinSize ' type='normal' scaleTo='base' />
@@ -481,8 +501,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -503,7 +523,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrSilverFreq ' range=':= 0.867 * _default_ * elcrSilverFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.976 * _default_ * elcrSilverSize ' range=':= 0.976 * _default_ * elcrSilverSize ' type='normal' />
@@ -535,10 +555,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 6.000 * elcrSilverSize ' range=':= _default_ * elcrSilverSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 4.000 * elcrSilverFreq ' range=':= _default_ * elcrSilverFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 3.000 * elcrSilverSize ' range=':= 3.000 * elcrSilverSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 2.000 * elcrSilverFreq ' range=':= 2.000 * elcrSilverFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 19 ' range=':= 13 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -566,7 +586,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.871 * _default_ * elcrSilverSize ' range=':= 0.871 * _default_ * elcrSilverSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.871 * _default_ * elcrSilverSize ' range=':= 0.871 * _default_ * elcrSilverSize ' type='normal' scaleTo='base' />
@@ -600,8 +620,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -622,7 +642,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrNickelFreq ' range=':= 1.226 * _default_ * elcrNickelFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 1.035 * _default_ * elcrNickelSize ' range=':= 1.035 * _default_ * elcrNickelSize ' type='normal' />
@@ -654,10 +674,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 8.000 * elcrNickelSize ' range=':= _default_ * elcrNickelSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 6.000 * elcrNickelFreq ' range=':= _default_ * elcrNickelFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 4.000 * elcrNickelSize ' range=':= 4.000 * elcrNickelSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 3.000 * elcrNickelFreq ' range=':= 3.000 * elcrNickelFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -685,7 +705,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.036 * _default_ * elcrNickelSize ' range=':= 1.036 * _default_ * elcrNickelSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.036 * _default_ * elcrNickelSize ' range=':= 1.036 * _default_ * elcrNickelSize ' type='normal' scaleTo='base' />
@@ -719,8 +739,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -741,7 +761,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * elcrAluminumFreq ' range=':= 1.583 * _default_ * elcrAluminumFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 1.080 * _default_ * elcrAluminumSize ' range=':= 1.080 * _default_ * elcrAluminumSize ' type='normal' />
@@ -773,10 +793,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 8.000 * elcrAluminumSize ' range=':= _default_ * elcrAluminumSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 10.000 * elcrAluminumFreq ' range=':= _default_ * elcrAluminumFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 4.000 * elcrAluminumSize ' range=':= 4.000 * elcrAluminumSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 5.000 * elcrAluminumFreq ' range=':= 5.000 * elcrAluminumFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 94 ' range=':= 34 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -804,7 +824,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.177 * _default_ * elcrAluminumSize ' range=':= 1.177 * _default_ * elcrAluminumSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.177 * _default_ * elcrAluminumSize ' range=':= 1.177 * _default_ * elcrAluminumSize ' type='normal' scaleTo='base' />
@@ -838,8 +858,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -860,7 +880,7 @@
                                 2-4 horizontal veins each.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrPlatinumFreq ' range=':= 0.500 * _default_ * elcrPlatinumFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * elcrPlatinumSize ' range=':= 0.891 * _default_ * elcrPlatinumSize ' type='normal' />
@@ -892,10 +912,10 @@
                                 distributions.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 4.000 * elcrPlatinumSize ' range=':= _default_ * elcrPlatinumSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 2.000 * elcrPlatinumFreq ' range=':= _default_ * elcrPlatinumFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Size' avg=':= 2.000 * elcrPlatinumSize ' range=':= 2.000 * elcrPlatinumSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 1.000 * elcrPlatinumFreq ' range=':= 1.000 * elcrPlatinumFreq ' type='normal' scaleTo='base' />
                             <Setting name='Height' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
@@ -923,7 +943,7 @@
                                 actually mining  the ore.
                             </Description>
                             <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                            <IfCondition condition=':= ?blockExists("minecraft:stone")'> <Replaces block='minecraft:stone' weight='1.0' /> </IfCondition>
+                            <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.662 * _default_ * elcrPlatinumSize ' range=':= 0.662 * _default_ * elcrPlatinumSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.662 * _default_ * elcrPlatinumSize ' range=':= 0.662 * _default_ * elcrPlatinumSize ' type='normal' scaleTo='base' />
@@ -957,8 +977,8 @@
                                     already be scaled by that.
                                 </Description>
                                 <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:dirt")'> <Replaces block='minecraft:dirt' weight='1.0' /> </IfCondition>
-                                <IfCondition condition=':= ?blockExists("minecraft:sandstone")'> <Replaces block='minecraft:sandstone' weight='1.0' /> </IfCondition>
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
