@@ -181,3 +181,10 @@ shaped=
 	mc:iron_ingot ae2:ItemMaterial.CertusQuartzCrystalCharged mc:iron_ingot,
 	_ mc:iron_ingot _
 	-> ae2:BlockSkyCompass
+
+ore=ae2:ItemMaterial.CertusQuartzCrystal -> crystalCertusQuartz
+ore=ae2:ItemMaterial.FluixCrystal -> crystalFluix
+ore=ae2:ItemMaterial.PurifiedFluixCrystal -> crystalPureFluix
+ore=ae2:ItemMaterial.NetherQuartzDust -> dustNetherQuartz
+ore=ae2:ItemMaterial.CertusQuartzDust -> dustCertusQuartz
+ore=ae2:ItemMaterial.FluixDust -> dustFluix
