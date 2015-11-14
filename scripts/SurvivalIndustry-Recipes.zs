@@ -224,3 +224,11 @@ recipes.removeShaped(<Metallurgy:machine.frame>);
 recipes.addShaped(<Metallurgy:machine.frame>, [[stone, copper, stone],[copper, stone, copper],[stone, copper, stone]]);
 recipes.removeShaped(<Metallurgy:crusher>);
 recipes.addShaped(<Metallurgy:crusher>, [[copper, copper, copper],[stone, metallurgymachineframe, stone],[stone, furnace, stone]]);
+
+/* Before we get into casting metals to bow nature to our will, we will need more mundane things. Like clay and flint.
+   This adds clay-based recipes for the Harvestcraft cooking wares that otherwise require metals, and a flint-based cutting board.
+*/
+recipes.addShaped(<harvestcraft:potItem>,[[stick,<minecraft:hardened_clay>,<minecraft:hardened_clay>],[null,<minecraft:hardened_clay>,<minecraft:hardened_clay>]]);
+recipes.addShaped(<harvestcraft:skilletItem>,[[<minecraft:hardened_clay>,null,null],[null,<minecraft:hardened_clay>,null],[null,null,stick]]);
+recipes.addShaped(<harvestcraft:saucepanItem>,[[<minecraft:hardened_clay>],[stick]]);
+recipes.addShaped(<harvestcraft:cuttingboardItem>,[[<minecraft:flint>,null,null],[null,stick,null],[null,null,planks]]);
