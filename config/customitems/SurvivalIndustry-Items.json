@@ -3,7 +3,7 @@
     {
             "name":"Iron Rod",
             "textureName":"iron_rod",
-            "maxstackSize": 1-64
+            "maxstackSize": 64
         }
     ]
 }
