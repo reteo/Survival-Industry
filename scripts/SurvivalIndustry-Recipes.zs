@@ -30,6 +30,11 @@ val cobalt = <ore:ingotCobalt>;
 val ardite = <ore:ingotArdite>;
 val wood = <ore:logWood>;
 val planks = <ore:plankWood>;
+val brick = <ore:ingotBrick>;
+val flint = <ore:itemFlint>;
+val sand = <ore:sand>;
+
+
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -52,6 +57,8 @@ val acaciaplanks = <minecraft:planks:4>;
 val darkoakplanks = <minecraft:planks:5>;
 val metallurgymachineframe = <Metallurgy:machine.frame>;
 val furnace = <minecraft:furnace>;
+val magmacream = <minecraft:magma_cream>;
+val bricks = <minecraft:brick_block>;
 
 /* First, ElectriCraft and RotaryCraft aluminum ingots don't seem to
    have block recipes.  To fix this, we'll change the block recipe to
@@ -215,8 +222,14 @@ recipes.addShaped(<GardenStuff:lattice_wood:5>, [[null, stick, null],[stick, dar
 
 // Adding recipe to make canola oil (vegetable oil)
 recipes.addShapeless(<VeganOption:oilVegetable> * 7, [<ore:presserOil>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola:1>]);
+recipes.addShapeless(<VeganOption:oilVegetable>, [<ore:presserOil>, <minecraft:glass_bottle>, <RotaryCraft:rotarycraft_item_canola>]);
+
+
+/* These definitions were added later. */
+
 
 // Adding changed wooden shield recipes
+recipes.removeShaped(<battlegear2:shield.wood>);
 recipes.addShaped(<battlegear2:shield.wood>, [[null, planks, null],[planks, wood, planks],[null, planks, null]]);
 
 /* The Metallurgy "Machine Frame" requires iron, but bronze needs to be made before iron can be mined.  This machine's recipe will need to change. */
@@ -226,9 +239,12 @@ recipes.removeShaped(<Metallurgy:crusher>);
 recipes.addShaped(<Metallurgy:crusher>, [[copper, copper, copper],[stone, metallurgymachineframe, stone],[stone, furnace, stone]]);
 
 /* Before we get into casting metals to bow nature to our will, we will need more mundane things. Like clay and flint.
-   This adds clay-based recipes for the Harvestcraft cooking wares that otherwise require metals, and a flint-based cutting board.
-*/
-recipes.addShaped(<harvestcraft:potItem>,[[stick,<minecraft:hardened_clay>,<minecraft:hardened_clay>],[null,<minecraft:hardened_clay>,<minecraft:hardened_clay>]]);
-recipes.addShaped(<harvestcraft:skilletItem>,[[<minecraft:hardened_clay>,null,null],[null,<minecraft:hardened_clay>,null],[null,null,stick]]);
-recipes.addShaped(<harvestcraft:saucepanItem>,[[<minecraft:hardened_clay>],[stick]]);
-recipes.addShaped(<harvestcraft:cuttingboardItem>,[[<minecraft:flint>,null,null],[null,stick,null],[null,null,planks]]);
+   This adds clay-based recipes for the Harvestcraft cooking wares that otherwise require metals, and a flint-based cutting board. */
+recipes.addShaped(<harvestcraft:potItem>,[[stick,brick,brick],[null,brick,brick]]);
+recipes.addShaped(<harvestcraft:skilletItem>,[[brick,null,null],[null,brick,null],[null,null,stick]]);
+recipes.addShaped(<harvestcraft:saucepanItem>,[[brick],[stick]]);
+recipes.addShaped(<harvestcraft:cuttingboardItem>,[[flint,null,null],[null,stick,null],[null,null,planks]]);
+
+/* Since steel is needed before diamond can be mined, let's remove dependence on the Nether for the Railcraft blast furnace. */
+recipes.removeShaped(<Railcraft:machine.alpha:12>);
+recipes.addShaped(<Railcraft:machine.alpha:12>,[[sand,bricks,sand],[bricks,magmacream,bricks],[sand,bricks,sand]]);
