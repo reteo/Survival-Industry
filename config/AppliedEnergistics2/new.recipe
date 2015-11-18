@@ -47,6 +47,12 @@ press=
 
 # Other New stuff
 
+#shaped=
+#	mc:iron_ingot mc:iron_ingot mc:iron_ingot,
+#	mc:iron_ingot mc:furnace mc:iron_ingot,
+#	mc:iron_ingot ae2:BlockEnergyAcceptor mc:iron_ingot
+#	-> ae2:BlockVibrationChamber
+
 shaped=
 	mc:iron_ingot ae2:BlockChest mc:iron_ingot,
 	cable ae2:ItemMaterial.Cell16kPart cable,
@@ -181,10 +187,3 @@ shaped=
 	mc:iron_ingot ae2:ItemMaterial.CertusQuartzCrystalCharged mc:iron_ingot,
 	_ mc:iron_ingot _
 	-> ae2:BlockSkyCompass
-
-ore=ae2:ItemMaterial.CertusQuartzCrystal -> crystalCertusQuartz
-ore=ae2:ItemMaterial.FluixCrystal -> crystalFluix
-ore=ae2:ItemMaterial.PurifiedFluixCrystal -> crystalPureFluix
-ore=ae2:ItemMaterial.NetherQuartzDust -> dustNetherQuartz
-ore=ae2:ItemMaterial.CertusQuartzDust -> dustCertusQuartz
-ore=ae2:ItemMaterial.FluixDust -> dustFluix
