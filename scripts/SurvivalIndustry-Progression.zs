@@ -1,4 +1,3 @@
-
 /* All pickaxes should indicate their harvest level in the tooltip. */
 /* --- Base Level --- */
 	/* Pickaxe */

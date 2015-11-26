@@ -3,6 +3,7 @@
 // Set the oredicted materials.
 val stone = <ore:stone>;
 val iron = <ore:ingotIron>;
+val ironbars = <ore:barsIron>;
 val copper = <ore:ingotCopper>;
 val fluix = <ore:crystalFluix>;
 val glass = <ore:blockGlass>;
@@ -24,7 +25,6 @@ val blazerod = <ore:itemBlazeRod>;
 val chest = <ore:chestWood>;
 val enderobsidian = <ore:blockEnderObsidian>;
 val stick = <ore:stickWood>;
-val ironstick = <ore:rodIron>;
 val tin = <ore:ingotTin>;
 val cobalt = <ore:ingotCobalt>;
 val ardite = <ore:ingotArdite>;
@@ -208,11 +208,8 @@ recipes.addShaped(<minecraft:diamond_horse_armor>, [[diamond, diamond, diamond],
 // Adding craftable End Portal Stones
 recipes.addShaped(<minecraft:end_portal_frame>, [[enderobsidian, null, enderobsidian],[enderobsidian, enderobsidian, enderobsidian],[stone, stone, stone]]);
 
-// Adding iron rod recipe, since Tinker's Construct is no longer used.
-recipes.addShapedMirrored(<customitems:iron_rod>, [[null, null, iron],[null, iron, null],[iron, null, null]]);
-
 // Adding changed lattice recipes
-recipes.addShaped(<GardenStuff:lattice>, [[null, ironstick, null],[ironstick, iron, ironstick],[null, ironstick, null]]);
+recipes.addShaped(<GardenStuff:lattice>, [[null, ironbars, null],[ironbars, iron, ironbars],[null, ironbars, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood>, [[null, stick, null],[stick, oakplanks, stick],[null, stick, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood:1>, [[null, stick, null],[stick, spruceplanks, stick],[null, stick, null]]);
 recipes.addShaped(<GardenStuff:lattice_wood:2>, [[null, stick, null],[stick, birchplanks, stick],[null, stick, null]]);
