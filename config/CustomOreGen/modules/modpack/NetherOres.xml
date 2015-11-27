@@ -1543,7 +1543,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0")'> <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 4.900 * _default_ * nthoCoalFreq ' range=':= 4.900 * _default_ * nthoCoalFreq ' type='normal' scaleTo='base' />
@@ -1585,7 +1585,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0")'> <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.512 * _default_ * nthoCoalSize ' range=':= 1.512 * _default_ * nthoCoalSize ' type='normal' />
@@ -1619,9 +1619,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0")'> <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1637,7 +1639,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0")'> <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 8.000 * nthoCoalSize ' range=':= 8.000 * nthoCoalSize ' type='normal' />
@@ -1662,7 +1664,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:1")'> <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.935 * _default_ * nthoDiamondFreq ' range=':= 0.935 * _default_ * nthoDiamondFreq ' type='normal' scaleTo='base' />
@@ -1684,7 +1686,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoDiamondVeinsPipe'  inherits='nthoDiamondVeins' seed='0xAA9C' drawWireframe='true' wireframeColor='0x608BF4E3' drawBoundBox='false' boundBoxColor='0x608BF4E3'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.0:1' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoDiamondSize  * 0.5 ' range=':= 0 * _default_ * nthoDiamondSize  * 0.5 ' type='normal' />
@@ -1714,7 +1716,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:1")'> <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * nthoDiamondSize ' range=':= 0.837 * _default_ * nthoDiamondSize ' type='normal' />
@@ -1748,9 +1750,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:1")'> <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1766,7 +1770,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:1")'> <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * nthoDiamondSize ' range=':= 1.500 * nthoDiamondSize ' type='normal' />
@@ -1791,7 +1795,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:2")'> <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * nthoGoldFreq ' range=':= 1.226 * _default_ * nthoGoldFreq ' type='normal' scaleTo='base' />
@@ -1833,7 +1837,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:2")'> <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.183 * _default_ * nthoGoldSize ' range=':= 1.183 * _default_ * nthoGoldSize ' type='normal' />
@@ -1867,9 +1871,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:2")'> <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1885,7 +1891,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:2")'> <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoGoldSize ' range=':= 3.000 * nthoGoldSize ' type='normal' />
@@ -1910,7 +1916,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:3")'> <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * nthoIronFreq ' range=':= 1.416 * _default_ * nthoIronFreq ' type='normal' scaleTo='base' />
@@ -1952,7 +1958,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:3")'> <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * nthoIronSize ' range=':= 1.271 * _default_ * nthoIronSize ' type='normal' />
@@ -1986,9 +1992,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:3")'> <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2004,7 +2012,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:3")'> <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoIronSize ' range=':= 4.000 * nthoIronSize ' type='normal' />
@@ -2029,7 +2037,7 @@
                                 Single vertical veins that occur  with
                                 no motherlodes.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:4")'> <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.929 * _default_ * nthoLapisLazuliFreq ' range=':= 1.929 * _default_ * nthoLapisLazuliFreq ' type='normal' scaleTo='base' />
@@ -2072,7 +2080,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:4")'> <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.101 * _default_ * nthoLapisLazuliSize ' range=':= 1.101 * _default_ * nthoLapisLazuliSize ' type='normal' />
@@ -2106,9 +2114,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:4")'> <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2125,7 +2135,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:4")'> <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoLapisLazuliSize ' range=':= 3.000 * nthoLapisLazuliSize ' type='normal' />
@@ -2150,7 +2160,7 @@
                                 Single vertical veins that occur  with
                                 no motherlodes.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:5")'> <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 2.227 * _default_ * nthoRedstoneFreq ' range=':= 2.227 * _default_ * nthoRedstoneFreq ' type='normal' scaleTo='base' />
@@ -2192,7 +2202,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:5")'> <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.183 * _default_ * nthoRedstoneSize ' range=':= 1.183 * _default_ * nthoRedstoneSize ' type='normal' />
@@ -2226,9 +2236,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:5")'> <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2244,7 +2256,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:5")'> <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoRedstoneSize ' range=':= 4.000 * nthoRedstoneSize ' type='normal' />
@@ -2269,7 +2281,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:6")'> <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * nthoCopperFreq ' range=':= 1.416 * _default_ * nthoCopperFreq ' type='normal' scaleTo='base' />
@@ -2311,7 +2323,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:6")'> <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * nthoCopperSize ' range=':= 1.271 * _default_ * nthoCopperSize ' type='normal' />
@@ -2345,9 +2357,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:6")'> <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2363,7 +2377,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:6")'> <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoCopperSize ' range=':= 4.000 * nthoCopperSize ' type='normal' />
@@ -2388,7 +2402,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:7")'> <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * nthoTinFreq ' range=':= 1.416 * _default_ * nthoTinFreq ' type='normal' scaleTo='base' />
@@ -2430,7 +2444,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:7")'> <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * nthoTinSize ' range=':= 1.271 * _default_ * nthoTinSize ' type='normal' />
@@ -2464,9 +2478,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:7")'> <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2482,7 +2498,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:7")'> <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoTinSize ' range=':= 4.000 * nthoTinSize ' type='normal' />
@@ -2507,7 +2523,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:8")'> <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.661 * _default_ * nthoEmeraldFreq ' range=':= 0.661 * _default_ * nthoEmeraldFreq ' type='normal' scaleTo='base' />
@@ -2529,7 +2545,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoEmeraldVeinsPipe'  inherits='nthoEmeraldVeins' seed='0x907F' drawWireframe='true' wireframeColor='0x606CE391' drawBoundBox='false' boundBoxColor='0x606CE391'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.0:8' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoEmeraldSize  * 0.5 ' range=':= 0 * _default_ * nthoEmeraldSize  * 0.5 ' type='normal' />
@@ -2559,7 +2575,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:8")'> <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * nthoEmeraldSize ' range=':= 0.703 * _default_ * nthoEmeraldSize ' type='normal' />
@@ -2593,9 +2609,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:8")'> <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2611,7 +2629,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:8")'> <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.000 * nthoEmeraldSize ' range=':= 1.000 * nthoEmeraldSize ' type='normal' />
@@ -2636,7 +2654,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:9")'> <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * nthoSilverFreq ' range=':= 0.867 * _default_ * nthoSilverFreq ' type='normal' scaleTo='base' />
@@ -2678,7 +2696,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:9")'> <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.995 * _default_ * nthoSilverSize ' range=':= 0.995 * _default_ * nthoSilverSize ' type='normal' />
@@ -2712,9 +2730,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:9")'> <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2730,7 +2750,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:9")'> <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoSilverSize ' range=':= 2.000 * nthoSilverSize ' type='normal' />
@@ -2755,7 +2775,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:10")'> <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.062 * _default_ * nthoLeadFreq ' range=':= 1.062 * _default_ * nthoLeadFreq ' type='normal' scaleTo='base' />
@@ -2797,7 +2817,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:10")'> <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.101 * _default_ * nthoLeadSize ' range=':= 1.101 * _default_ * nthoLeadSize ' type='normal' />
@@ -2831,9 +2851,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:10")'> <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2849,7 +2871,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:10")'> <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoLeadSize ' range=':= 3.000 * nthoLeadSize ' type='normal' />
@@ -2881,7 +2903,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:11")'> <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.061 * _default_ * nthoUraniumFreq ' range=':= 1.061 * _default_ * nthoUraniumFreq ' type='normal' scaleTo='base' />
@@ -2923,7 +2945,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:11")'> <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * nthoUraniumSize ' range=':= 0.703 * _default_ * nthoUraniumSize ' type='normal' />
@@ -2957,9 +2979,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:11")'> <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2975,7 +2999,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:11")'> <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.000 * nthoUraniumSize ' range=':= 1.000 * nthoUraniumSize ' type='normal' />
@@ -3000,7 +3024,7 @@
                                 Single vertical veins that occur  with
                                 no motherlodes.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:12")'> <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.818 * _default_ * nthoNikoliteFreq ' range=':= 1.818 * _default_ * nthoNikoliteFreq ' type='normal' scaleTo='base' />
@@ -3042,7 +3066,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:12")'> <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.069 * _default_ * nthoNikoliteSize ' range=':= 1.069 * _default_ * nthoNikoliteSize ' type='normal' />
@@ -3076,9 +3100,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:12")'> <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3094,7 +3120,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:12")'> <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoNikoliteSize ' range=':= 2.000 * nthoNikoliteSize ' type='normal' />
@@ -3119,7 +3145,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:13")'> <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.145 * _default_ * nthoRubyFreq ' range=':= 1.145 * _default_ * nthoRubyFreq ' type='normal' scaleTo='base' />
@@ -3141,7 +3167,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoRubyVeinsPipe'  inherits='nthoRubyVeins' seed='0xD0DC' drawWireframe='true' wireframeColor='0x60D10415' drawBoundBox='false' boundBoxColor='0x60D10415'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.0:13' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoRubySize  * 0.5 ' range=':= 0 * _default_ * nthoRubySize  * 0.5 ' type='normal' />
@@ -3171,7 +3197,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:13")'> <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.926 * _default_ * nthoRubySize ' range=':= 0.926 * _default_ * nthoRubySize ' type='normal' />
@@ -3205,9 +3231,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:13")'> <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3223,7 +3251,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:13")'> <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * nthoRubySize ' range=':= 1.500 * nthoRubySize ' type='normal' />
@@ -3248,7 +3276,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:14")'> <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.145 * _default_ * nthoPeridotFreq ' range=':= 1.145 * _default_ * nthoPeridotFreq ' type='normal' scaleTo='base' />
@@ -3270,7 +3298,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoPeridotVeinsPipe'  inherits='nthoPeridotVeins' seed='0x6CA7' drawWireframe='true' wireframeColor='0x6054A228' drawBoundBox='false' boundBoxColor='0x6054A228'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.0:14' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoPeridotSize  * 0.5 ' range=':= 0 * _default_ * nthoPeridotSize  * 0.5 ' type='normal' />
@@ -3300,7 +3328,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:14")'> <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.926 * _default_ * nthoPeridotSize ' range=':= 0.926 * _default_ * nthoPeridotSize ' type='normal' />
@@ -3334,9 +3362,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:14")'> <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3352,7 +3382,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:14")'> <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * nthoPeridotSize ' range=':= 1.500 * nthoPeridotSize ' type='normal' />
@@ -3377,7 +3407,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:15")'> <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.145 * _default_ * nthoSapphireFreq ' range=':= 1.145 * _default_ * nthoSapphireFreq ' type='normal' scaleTo='base' />
@@ -3399,7 +3429,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoSapphireVeinsPipe'  inherits='nthoSapphireVeins' seed='0x83DD' drawWireframe='true' wireframeColor='0x60554DB4' drawBoundBox='false' boundBoxColor='0x60554DB4'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.0:15' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoSapphireSize  * 0.5 ' range=':= 0 * _default_ * nthoSapphireSize  * 0.5 ' type='normal' />
@@ -3429,7 +3459,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:15")'> <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.926 * _default_ * nthoSapphireSize ' range=':= 0.926 * _default_ * nthoSapphireSize ' type='normal' />
@@ -3463,9 +3493,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:15")'> <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3481,7 +3513,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.0:15")'> <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.0:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * nthoSapphireSize ' range=':= 1.500 * nthoSapphireSize ' type='normal' />
@@ -3506,7 +3538,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1")'> <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.306 * _default_ * nthoPlatinumFreq ' range=':= 0.306 * _default_ * nthoPlatinumFreq ' type='normal' scaleTo='base' />
@@ -3548,7 +3580,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1")'> <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.592 * _default_ * nthoPlatinumSize ' range=':= 0.592 * _default_ * nthoPlatinumSize ' type='normal' />
@@ -3582,9 +3614,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1")'> <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3600,7 +3634,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1")'> <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * nthoPlatinumSize ' range=':= 1.500 * nthoPlatinumSize ' type='normal' />
@@ -3625,7 +3659,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:1")'> <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * nthoNickelFreq ' range=':= 0.867 * _default_ * nthoNickelFreq ' type='normal' scaleTo='base' />
@@ -3667,7 +3701,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:1")'> <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.995 * _default_ * nthoNickelSize ' range=':= 0.995 * _default_ * nthoNickelSize ' type='normal' />
@@ -3701,9 +3735,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:1")'> <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3719,7 +3755,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:1")'> <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoNickelSize ' range=':= 3.000 * nthoNickelSize ' type='normal' />
@@ -3744,7 +3780,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:2")'> <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * nthoSteelFreq ' range=':= 0.613 * _default_ * nthoSteelFreq ' type='normal' scaleTo='base' />
@@ -3786,7 +3822,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:2")'> <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * nthoSteelSize ' range=':= 0.837 * _default_ * nthoSteelSize ' type='normal' />
@@ -3820,9 +3856,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:2")'> <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3838,7 +3876,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:2")'> <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoSteelSize ' range=':= 2.000 * nthoSteelSize ' type='normal' />
@@ -3865,7 +3903,7 @@
                                 produced by StandardGen
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:3")'> <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.313 * _default_ * nthoIridiumFreq ' range=':= 0.313 * _default_ * nthoIridiumFreq ' type='normal' scaleTo='base' />
@@ -3907,7 +3945,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:3")'> <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.535 * _default_ * nthoIridiumSize ' range=':= 0.535 * _default_ * nthoIridiumSize ' type='normal' />
@@ -3941,9 +3979,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:3")'> <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3959,7 +3999,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:3")'> <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.000 * nthoIridiumSize ' range=':= 1.000 * nthoIridiumSize ' type='normal' />
@@ -3984,7 +4024,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:4")'> <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.324 * _default_ * nthoOsmiumFreq ' range=':= 1.324 * _default_ * nthoOsmiumFreq ' type='normal' scaleTo='base' />
@@ -4026,7 +4066,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:4")'> <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.230 * _default_ * nthoOsmiumSize ' range=':= 1.230 * _default_ * nthoOsmiumSize ' type='normal' />
@@ -4060,9 +4100,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:4")'> <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4078,7 +4120,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:4")'> <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.500 * nthoOsmiumSize ' range=':= 3.500 * nthoOsmiumSize ' type='normal' />
@@ -4103,7 +4145,7 @@
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:5")'> <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 3.240 * _default_ * nthoSulfurFreq ' range=':= 3.240 * _default_ * nthoSulfurFreq ' type='normal' scaleTo='base' />
@@ -4125,7 +4167,7 @@
 
                         <!-- Configuring contained material. -->
                         <Veins name='nthoSulfurVeinsPipe'  inherits='nthoSulfurVeins' seed='0xCB5E' drawWireframe='true' wireframeColor='0x60FDFD11' drawBoundBox='false' boundBoxColor='0x60FDFD11'>
-                            <IfCondition condition=':= ?blockExists("minecraft:lava")'> <OreBlock block='minecraft:lava' weight='1.0' /> </IfCondition>
+                            <OreBlock block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Replaces block='NetherOres:tile.netherores.ore.1:5' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * nthoSulfurSize  * 0.5 ' range=':= 0 * _default_ * nthoSulfurSize  * 0.5 ' type='normal' />
@@ -4155,7 +4197,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:5")'> <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.557 * _default_ * nthoSulfurSize ' range=':= 1.557 * _default_ * nthoSulfurSize ' type='normal' />
@@ -4189,9 +4231,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:5")'> <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4207,7 +4251,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:5")'> <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 6.000 * nthoSulfurSize ' range=':= 6.000 * nthoSulfurSize ' type='normal' />
@@ -4232,7 +4276,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:6")'> <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * nthoTitaniumFreq ' range=':= 0.433 * _default_ * nthoTitaniumFreq ' type='normal' scaleTo='base' />
@@ -4274,7 +4318,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:6")'> <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * nthoTitaniumSize ' range=':= 0.703 * _default_ * nthoTitaniumSize ' type='normal' />
@@ -4308,9 +4352,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:6")'> <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4326,7 +4372,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:6")'> <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.000 * nthoTitaniumSize ' range=':= 1.000 * nthoTitaniumSize ' type='normal' />
@@ -4351,7 +4397,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:7")'> <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.062 * _default_ * nthoMithrilFreq ' range=':= 1.062 * _default_ * nthoMithrilFreq ' type='normal' scaleTo='base' />
@@ -4393,7 +4439,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:7")'> <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.101 * _default_ * nthoMithrilSize ' range=':= 1.101 * _default_ * nthoMithrilSize ' type='normal' />
@@ -4427,9 +4473,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:7")'> <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4445,7 +4493,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:7")'> <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoMithrilSize ' range=':= 3.000 * nthoMithrilSize ' type='normal' />
@@ -4470,7 +4518,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:8")'> <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.791 * _default_ * nthoAdamantiumFreq ' range=':= 0.791 * _default_ * nthoAdamantiumFreq ' type='normal' scaleTo='base' />
@@ -4512,7 +4560,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:8")'> <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.951 * _default_ * nthoAdamantiumSize ' range=':= 0.951 * _default_ * nthoAdamantiumSize ' type='normal' />
@@ -4546,9 +4594,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:8")'> <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4565,7 +4615,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:8")'> <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoAdamantiumSize ' range=':= 2.000 * nthoAdamantiumSize ' type='normal' />
@@ -4590,7 +4640,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:9")'> <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * nthoRutileFreq ' range=':= 0.613 * _default_ * nthoRutileFreq ' type='normal' scaleTo='base' />
@@ -4632,7 +4682,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:9")'> <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * nthoRutileSize ' range=':= 0.837 * _default_ * nthoRutileSize ' type='normal' />
@@ -4666,9 +4716,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:9")'> <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4684,7 +4736,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:9")'> <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoRutileSize ' range=':= 2.000 * nthoRutileSize ' type='normal' />
@@ -4709,7 +4761,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:10")'> <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * nthoTungstenFreq ' range=':= 1.416 * _default_ * nthoTungstenFreq ' type='normal' scaleTo='base' />
@@ -4751,7 +4803,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:10")'> <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * nthoTungstenSize ' range=':= 1.271 * _default_ * nthoTungstenSize ' type='normal' />
@@ -4785,9 +4837,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:10")'> <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4803,7 +4857,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:10")'> <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:10' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoTungstenSize ' range=':= 4.000 * nthoTungstenSize ' type='normal' />
@@ -4835,7 +4889,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:11")'> <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 2.372 * _default_ * nthoAmberFreq ' range=':= 2.372 * _default_ * nthoAmberFreq ' type='normal' scaleTo='base' />
@@ -4877,7 +4931,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:11")'> <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.052 * _default_ * nthoAmberSize ' range=':= 1.052 * _default_ * nthoAmberSize ' type='normal' />
@@ -4911,9 +4965,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:11")'> <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4929,7 +4985,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:11")'> <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:11' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * nthoAmberSize ' range=':= 3.000 * nthoAmberSize ' type='normal' />
@@ -4954,7 +5010,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:12")'> <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * nthoTennantiteFreq ' range=':= 1.416 * _default_ * nthoTennantiteFreq ' type='normal' scaleTo='base' />
@@ -4996,7 +5052,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:12")'> <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * nthoTennantiteSize ' range=':= 1.271 * _default_ * nthoTennantiteSize ' type='normal' />
@@ -5030,9 +5086,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:12")'> <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5049,7 +5107,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:12")'> <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:12' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * nthoTennantiteSize ' range=':= 4.000 * nthoTennantiteSize ' type='normal' />
@@ -5081,7 +5139,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:13")'> <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 2.166 * _default_ * nthoSaltFreq ' range=':= 2.166 * _default_ * nthoSaltFreq ' type='normal' scaleTo='base' />
@@ -5123,7 +5181,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:13")'> <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.005 * _default_ * nthoSaltSize ' range=':= 1.005 * _default_ * nthoSaltSize ' type='normal' />
@@ -5157,9 +5215,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:13")'> <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5175,7 +5235,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:13")'> <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:13' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.500 * nthoSaltSize ' range=':= 2.500 * nthoSaltSize ' type='normal' />
@@ -5207,7 +5267,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:14")'> <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 2.122 * _default_ * nthoSaltpeterFreq ' range=':= 2.122 * _default_ * nthoSaltpeterFreq ' type='normal' scaleTo='base' />
@@ -5249,7 +5309,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:14")'> <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.995 * _default_ * nthoSaltpeterSize ' range=':= 0.995 * _default_ * nthoSaltpeterSize ' type='normal' />
@@ -5283,9 +5343,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:14")'> <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5301,7 +5363,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:14")'> <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:14' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * nthoSaltpeterSize ' range=':= 2.000 * nthoSaltpeterSize ' type='normal' />
@@ -5333,7 +5395,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:15")'> <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.937 * _default_ * nthoMagnesiumFreq ' range=':= 1.937 * _default_ * nthoMagnesiumFreq ' type='normal' scaleTo='base' />
@@ -5375,7 +5437,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:15")'> <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.951 * _default_ * nthoMagnesiumSize ' range=':= 0.951 * _default_ * nthoMagnesiumSize ' type='normal' />
@@ -5409,9 +5471,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:15")'> <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5427,7 +5491,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("NetherOres:tile.netherores.ore.1:15")'> <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' /> </IfCondition>
+                            <OreBlock block='NetherOres:tile.netherores.ore.1:15' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.500 * nthoMagnesiumSize ' range=':= 2.500 * nthoMagnesiumSize ' type='normal' />

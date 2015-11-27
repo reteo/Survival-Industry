@@ -410,7 +410,7 @@
 
             <!-- Manganese Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='mtlgManganeseDist'  displayState=':= if(?enableMetallurgy4, "shown", "hidden")' displayGroup='groupMetallurgy4'>
+                <OptionChoice name='mtlgManganeseDist' default='none'  displayState=':= if(?enableMetallurgy4, "shown", "hidden")' displayGroup='groupMetallurgy4'>
                     <Description> Controls how Manganese is generated </Description>
                     <DisplayName>Metallurgy 4 Manganese</DisplayName>
                     <IfCondition condition=':= (?blockExists("Metallurgy:base.ore:2")) '>
@@ -1683,7 +1683,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore")'> <OreBlock block='Metallurgy:utility.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgSulfurFreq ' range=':= 1.733 * _default_ * mtlgSulfurFreq ' type='normal' scaleTo='base' />
@@ -1725,7 +1725,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore")'> <OreBlock block='Metallurgy:utility.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgSulfurSize ' range=':= 0.899 * _default_ * mtlgSulfurSize ' type='normal' />
@@ -1759,9 +1759,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore")'> <OreBlock block='Metallurgy:utility.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1777,7 +1779,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore")'> <OreBlock block='Metallurgy:utility.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgSulfurSize ' range=':= 2.000 * mtlgSulfurSize ' type='normal' />
@@ -1809,7 +1811,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:1")'> <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgPhosphoriteFreq ' range=':= 1.733 * _default_ * mtlgPhosphoriteFreq ' type='normal' scaleTo='base' />
@@ -1851,7 +1853,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:1")'> <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgPhosphoriteSize ' range=':= 0.899 * _default_ * mtlgPhosphoriteSize ' type='normal' />
@@ -1885,9 +1887,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:1")'> <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1904,7 +1908,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:1")'> <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgPhosphoriteSize ' range=':= 2.000 * mtlgPhosphoriteSize ' type='normal' />
@@ -1936,7 +1940,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:2")'> <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgSaltpeterFreq ' range=':= 1.733 * _default_ * mtlgSaltpeterFreq ' type='normal' scaleTo='base' />
@@ -1978,7 +1982,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:2")'> <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgSaltpeterSize ' range=':= 0.899 * _default_ * mtlgSaltpeterSize ' type='normal' />
@@ -2012,9 +2016,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:2")'> <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2030,7 +2036,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:2")'> <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgSaltpeterSize ' range=':= 2.000 * mtlgSaltpeterSize ' type='normal' />
@@ -2062,7 +2068,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:3")'> <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgMagnesiumFreq ' range=':= 1.733 * _default_ * mtlgMagnesiumFreq ' type='normal' scaleTo='base' />
@@ -2104,7 +2110,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:3")'> <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgMagnesiumSize ' range=':= 0.899 * _default_ * mtlgMagnesiumSize ' type='normal' />
@@ -2138,9 +2144,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:3")'> <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2156,7 +2164,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:3")'> <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgMagnesiumSize ' range=':= 2.000 * mtlgMagnesiumSize ' type='normal' />
@@ -2188,7 +2196,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:4")'> <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgBitumenFreq ' range=':= 1.733 * _default_ * mtlgBitumenFreq ' type='normal' scaleTo='base' />
@@ -2230,7 +2238,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:4")'> <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgBitumenSize ' range=':= 0.899 * _default_ * mtlgBitumenSize ' type='normal' />
@@ -2264,9 +2272,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:4")'> <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2282,7 +2292,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:4")'> <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgBitumenSize ' range=':= 2.000 * mtlgBitumenSize ' type='normal' />
@@ -2314,7 +2324,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:5")'> <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.733 * _default_ * mtlgPotashFreq ' range=':= 1.733 * _default_ * mtlgPotashFreq ' type='normal' scaleTo='base' />
@@ -2356,7 +2366,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:5")'> <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgPotashSize ' range=':= 0.899 * _default_ * mtlgPotashSize ' type='normal' />
@@ -2390,9 +2400,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:5")'> <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2408,7 +2420,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:utility.ore:5")'> <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:utility.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgPotashSize ' range=':= 2.000 * mtlgPotashSize ' type='normal' />
@@ -2433,7 +2445,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore")'> <OreBlock block='Metallurgy:base.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.501 * _default_ * mtlgCopperFreq ' range=':= 1.501 * _default_ * mtlgCopperFreq ' type='normal' scaleTo='base' />
@@ -2475,7 +2487,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore")'> <OreBlock block='Metallurgy:base.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.309 * _default_ * mtlgCopperSize ' range=':= 1.309 * _default_ * mtlgCopperSize ' type='normal' />
@@ -2509,9 +2521,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:base.ore")'> <OreBlock block='Metallurgy:base.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:base.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2527,7 +2541,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore")'> <OreBlock block='Metallurgy:base.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgCopperSize ' range=':= 3.000 * mtlgCopperSize ' type='normal' />
@@ -2552,7 +2566,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:1")'> <OreBlock block='Metallurgy:base.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.480 * _default_ * mtlgTinFreq ' range=':= 1.480 * _default_ * mtlgTinFreq ' type='normal' scaleTo='base' />
@@ -2594,7 +2608,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:1")'> <OreBlock block='Metallurgy:base.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.300 * _default_ * mtlgTinSize ' range=':= 1.300 * _default_ * mtlgTinSize ' type='normal' />
@@ -2628,9 +2642,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:1")'> <OreBlock block='Metallurgy:base.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:base.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2646,7 +2662,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:1")'> <OreBlock block='Metallurgy:base.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 5.000 * mtlgTinSize ' range=':= 5.000 * mtlgTinSize ' type='normal' />
@@ -2671,7 +2687,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:2")'> <OreBlock block='Metallurgy:base.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.791 * _default_ * mtlgManganeseFreq ' range=':= 0.791 * _default_ * mtlgManganeseFreq ' type='normal' scaleTo='base' />
@@ -2713,7 +2729,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:2")'> <OreBlock block='Metallurgy:base.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.951 * _default_ * mtlgManganeseSize ' range=':= 0.951 * _default_ * mtlgManganeseSize ' type='normal' />
@@ -2747,9 +2763,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:2")'> <OreBlock block='Metallurgy:base.ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:base.ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2765,7 +2783,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:base.ore:2")'> <OreBlock block='Metallurgy:base.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:base.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgManganeseSize ' range=':= 2.000 * mtlgManganeseSize ' type='normal' />
@@ -2790,7 +2808,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore")'> <OreBlock block='Metallurgy:precious.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.969 * _default_ * mtlgZincFreq ' range=':= 0.969 * _default_ * mtlgZincFreq ' type='normal' scaleTo='base' />
@@ -2832,7 +2850,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore")'> <OreBlock block='Metallurgy:precious.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mtlgZincSize ' range=':= 1.052 * _default_ * mtlgZincSize ' type='normal' />
@@ -2866,9 +2884,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore")'> <OreBlock block='Metallurgy:precious.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:precious.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -2884,7 +2904,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore")'> <OreBlock block='Metallurgy:precious.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.500 * mtlgZincSize ' range=':= 2.500 * mtlgZincSize ' type='normal' />
@@ -2909,7 +2929,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:1")'> <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.969 * _default_ * mtlgSilverFreq ' range=':= 0.969 * _default_ * mtlgSilverFreq ' type='normal' scaleTo='base' />
@@ -2951,7 +2971,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:1")'> <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mtlgSilverSize ' range=':= 1.052 * _default_ * mtlgSilverSize ' type='normal' />
@@ -2985,9 +3005,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:1")'> <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3003,7 +3025,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:1")'> <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.500 * mtlgSilverSize ' range=':= 2.500 * mtlgSilverSize ' type='normal' />
@@ -3028,7 +3050,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:2")'> <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.531 * _default_ * mtlgPlatinumFreq ' range=':= 0.531 * _default_ * mtlgPlatinumFreq ' type='normal' scaleTo='base' />
@@ -3070,7 +3092,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:2")'> <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mtlgPlatinumSize ' range=':= 0.779 * _default_ * mtlgPlatinumSize ' type='normal' />
@@ -3104,9 +3126,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:2")'> <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3122,7 +3146,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:precious.ore:2")'> <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:precious.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgPlatinumSize ' range=':= 1.500 * mtlgPlatinumSize ' type='normal' />
@@ -3147,7 +3171,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore")'> <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.969 * _default_ * mtlgPromethiumFreq ' range=':= 0.969 * _default_ * mtlgPromethiumFreq ' type='normal' scaleTo='base' />
@@ -3189,7 +3213,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore")'> <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mtlgPromethiumSize ' range=':= 1.052 * _default_ * mtlgPromethiumSize ' type='normal' />
@@ -3223,9 +3247,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore")'> <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3242,7 +3268,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore")'> <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgPromethiumSize ' range=':= 3.000 * mtlgPromethiumSize ' type='normal' />
@@ -3267,7 +3293,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:1")'> <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.791 * _default_ * mtlgDeepIronFreq ' range=':= 0.791 * _default_ * mtlgDeepIronFreq ' type='normal' scaleTo='base' />
@@ -3309,7 +3335,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:1")'> <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.951 * _default_ * mtlgDeepIronSize ' range=':= 0.951 * _default_ * mtlgDeepIronSize ' type='normal' />
@@ -3343,9 +3369,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:1")'> <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3361,7 +3389,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:1")'> <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgDeepIronSize ' range=':= 2.000 * mtlgDeepIronSize ' type='normal' />
@@ -3386,7 +3414,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:2")'> <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.791 * _default_ * mtlgInfuscoliumFreq ' range=':= 0.791 * _default_ * mtlgInfuscoliumFreq ' type='normal' scaleTo='base' />
@@ -3428,7 +3456,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:2")'> <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.951 * _default_ * mtlgInfuscoliumSize ' range=':= 0.951 * _default_ * mtlgInfuscoliumSize ' type='normal' />
@@ -3462,9 +3490,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:2")'> <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3481,7 +3511,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:2")'> <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgInfuscoliumSize ' range=':= 2.000 * mtlgInfuscoliumSize ' type='normal' />
@@ -3506,7 +3536,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:4")'> <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * mtlgOureclaseFreq ' range=':= 0.613 * _default_ * mtlgOureclaseFreq ' type='normal' scaleTo='base' />
@@ -3548,7 +3578,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:4")'> <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mtlgOureclaseSize ' range=':= 0.837 * _default_ * mtlgOureclaseSize ' type='normal' />
@@ -3582,9 +3612,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:4")'> <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3600,7 +3632,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:4")'> <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgOureclaseSize ' range=':= 1.500 * mtlgOureclaseSize ' type='normal' />
@@ -3625,7 +3657,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:5")'> <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * mtlgAstralSilverFreq ' range=':= 0.613 * _default_ * mtlgAstralSilverFreq ' type='normal' scaleTo='base' />
@@ -3669,7 +3701,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:5")'> <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mtlgAstralSilverSize ' range=':= 0.837 * _default_ * mtlgAstralSilverSize ' type='normal' />
@@ -3703,9 +3735,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:5")'> <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3722,7 +3756,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:5")'> <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgAstralSilverSize ' range=':= 1.500 * mtlgAstralSilverSize ' type='normal' />
@@ -3747,7 +3781,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:6")'> <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.531 * _default_ * mtlgCarmotFreq ' range=':= 0.531 * _default_ * mtlgCarmotFreq ' type='normal' scaleTo='base' />
@@ -3789,7 +3823,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:6")'> <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mtlgCarmotSize ' range=':= 0.779 * _default_ * mtlgCarmotSize ' type='normal' />
@@ -3823,9 +3857,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:6")'> <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3841,7 +3877,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:6")'> <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:6' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgCarmotSize ' range=':= 1.500 * mtlgCarmotSize ' type='normal' />
@@ -3866,7 +3902,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:7")'> <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.531 * _default_ * mtlgMithrilFreq ' range=':= 0.531 * _default_ * mtlgMithrilFreq ' type='normal' scaleTo='base' />
@@ -3908,7 +3944,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:7")'> <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mtlgMithrilSize ' range=':= 0.779 * _default_ * mtlgMithrilSize ' type='normal' />
@@ -3942,9 +3978,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:7")'> <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -3960,7 +3998,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:7")'> <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:7' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgMithrilSize ' range=':= 1.500 * mtlgMithrilSize ' type='normal' />
@@ -3985,7 +4023,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:8")'> <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * mtlgRubraciumFreq ' range=':= 0.433 * _default_ * mtlgRubraciumFreq ' type='normal' scaleTo='base' />
@@ -4027,7 +4065,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:8")'> <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * mtlgRubraciumSize ' range=':= 0.703 * _default_ * mtlgRubraciumSize ' type='normal' />
@@ -4061,9 +4099,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:8")'> <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4079,7 +4119,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:8")'> <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:8' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgRubraciumSize ' range=':= 1.500 * mtlgRubraciumSize ' type='normal' />
@@ -4104,7 +4144,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:11")'> <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mtlgOrichalcumFreq ' range=':= 0.500 * _default_ * mtlgOrichalcumFreq ' type='normal' scaleTo='base' />
@@ -4146,7 +4186,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:11")'> <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.756 * _default_ * mtlgOrichalcumSize ' range=':= 0.756 * _default_ * mtlgOrichalcumSize ' type='normal' />
@@ -4180,9 +4220,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:11")'> <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4199,7 +4241,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:11")'> <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:11' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgOrichalcumSize ' range=':= 2.000 * mtlgOrichalcumSize ' type='normal' />
@@ -4224,7 +4266,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:13")'> <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * mtlgAdamantineFreq ' range=':= 0.433 * _default_ * mtlgAdamantineFreq ' type='normal' scaleTo='base' />
@@ -4266,7 +4308,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:13")'> <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * mtlgAdamantineSize ' range=':= 0.703 * _default_ * mtlgAdamantineSize ' type='normal' />
@@ -4300,9 +4342,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:13")'> <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4319,7 +4363,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:13")'> <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:13' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgAdamantineSize ' range=':= 1.500 * mtlgAdamantineSize ' type='normal' />
@@ -4344,7 +4388,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:14")'> <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * mtlgAtlarusFreq ' range=':= 0.433 * _default_ * mtlgAtlarusFreq ' type='normal' scaleTo='base' />
@@ -4386,7 +4430,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:14")'> <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * mtlgAtlarusSize ' range=':= 0.703 * _default_ * mtlgAtlarusSize ' type='normal' />
@@ -4420,9 +4464,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:14")'> <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4438,7 +4484,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:fantasy.ore:14")'> <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:fantasy.ore:14' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgAtlarusSize ' range=':= 1.500 * mtlgAtlarusSize ' type='normal' />
@@ -4480,7 +4526,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore")'> <OreBlock block='Metallurgy:nether.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.300 * _default_ * mtlgIgnatiusFreq ' range=':= 1.300 * _default_ * mtlgIgnatiusFreq ' type='normal' scaleTo='base' />
@@ -4522,7 +4568,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore")'> <OreBlock block='Metallurgy:nether.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.218 * _default_ * mtlgIgnatiusSize ' range=':= 1.218 * _default_ * mtlgIgnatiusSize ' type='normal' />
@@ -4556,9 +4602,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore")'> <OreBlock block='Metallurgy:nether.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4574,7 +4622,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore")'> <OreBlock block='Metallurgy:nether.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgIgnatiusSize ' range=':= 3.000 * mtlgIgnatiusSize ' type='normal' />
@@ -4599,7 +4647,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:1")'> <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.147 * _default_ * mtlgShadowIronFreq ' range=':= 1.147 * _default_ * mtlgShadowIronFreq ' type='normal' scaleTo='base' />
@@ -4641,7 +4689,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:1")'> <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.144 * _default_ * mtlgShadowIronSize ' range=':= 1.144 * _default_ * mtlgShadowIronSize ' type='normal' />
@@ -4675,9 +4723,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:1")'> <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4694,7 +4744,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:1")'> <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:1' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgShadowIronSize ' range=':= 3.000 * mtlgShadowIronSize ' type='normal' />
@@ -4719,7 +4769,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:2")'> <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.062 * _default_ * mtlgLemuriteFreq ' range=':= 1.062 * _default_ * mtlgLemuriteFreq ' type='normal' scaleTo='base' />
@@ -4761,7 +4811,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:2")'> <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.101 * _default_ * mtlgLemuriteSize ' range=':= 1.101 * _default_ * mtlgLemuriteSize ' type='normal' />
@@ -4795,9 +4845,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:2")'> <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4813,7 +4865,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:2")'> <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:2' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgLemuriteSize ' range=':= 3.000 * mtlgLemuriteSize ' type='normal' />
@@ -4838,7 +4890,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:3")'> <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.969 * _default_ * mtlgMidasiumFreq ' range=':= 0.969 * _default_ * mtlgMidasiumFreq ' type='normal' scaleTo='base' />
@@ -4880,7 +4932,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:3")'> <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.052 * _default_ * mtlgMidasiumSize ' range=':= 1.052 * _default_ * mtlgMidasiumSize ' type='normal' />
@@ -4914,9 +4966,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:3")'> <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -4932,7 +4986,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:3")'> <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:3' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * mtlgMidasiumSize ' range=':= 3.000 * mtlgMidasiumSize ' type='normal' />
@@ -4957,7 +5011,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:4")'> <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.936 * _default_ * mtlgVyroxeresFreq ' range=':= 0.936 * _default_ * mtlgVyroxeresFreq ' type='normal' scaleTo='base' />
@@ -4999,7 +5053,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:4")'> <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.034 * _default_ * mtlgVyroxeresSize ' range=':= 1.034 * _default_ * mtlgVyroxeresSize ' type='normal' />
@@ -5033,9 +5087,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:4")'> <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5051,7 +5107,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:4")'> <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:4' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.500 * mtlgVyroxeresSize ' range=':= 3.500 * mtlgVyroxeresSize ' type='normal' />
@@ -5076,7 +5132,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:5")'> <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.708 * _default_ * mtlgCeruclaseFreq ' range=':= 0.708 * _default_ * mtlgCeruclaseFreq ' type='normal' scaleTo='base' />
@@ -5118,7 +5174,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:5")'> <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.899 * _default_ * mtlgCeruclaseSize ' range=':= 0.899 * _default_ * mtlgCeruclaseSize ' type='normal' />
@@ -5152,9 +5208,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:5")'> <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5170,7 +5228,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:5")'> <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgCeruclaseSize ' range=':= 2.000 * mtlgCeruclaseSize ' type='normal' />
@@ -5195,7 +5253,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:6")'> <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * mtlgAlduoriteFreq ' range=':= 0.613 * _default_ * mtlgAlduoriteFreq ' type='normal' scaleTo='base' />
@@ -5237,7 +5295,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:6")'> <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mtlgAlduoriteSize ' range=':= 0.837 * _default_ * mtlgAlduoriteSize ' type='normal' />
@@ -5271,9 +5329,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:6")'> <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5289,7 +5349,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:6")'> <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:6' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgAlduoriteSize ' range=':= 2.000 * mtlgAlduoriteSize ' type='normal' />
@@ -5314,7 +5374,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:7")'> <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.613 * _default_ * mtlgKalendriteFreq ' range=':= 0.613 * _default_ * mtlgKalendriteFreq ' type='normal' scaleTo='base' />
@@ -5356,7 +5416,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:7")'> <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.837 * _default_ * mtlgKalendriteSize ' range=':= 0.837 * _default_ * mtlgKalendriteSize ' type='normal' />
@@ -5390,9 +5450,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:7")'> <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5409,7 +5471,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:7")'> <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:7' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgKalendriteSize ' range=':= 2.000 * mtlgKalendriteSize ' type='normal' />
@@ -5434,7 +5496,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:8")'> <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * mtlgVulcaniteFreq ' range=':= 0.433 * _default_ * mtlgVulcaniteFreq ' type='normal' scaleTo='base' />
@@ -5476,7 +5538,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:8")'> <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * mtlgVulcaniteSize ' range=':= 0.703 * _default_ * mtlgVulcaniteSize ' type='normal' />
@@ -5510,9 +5572,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:8")'> <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5528,7 +5592,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:8")'> <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:8' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgVulcaniteSize ' range=':= 1.500 * mtlgVulcaniteSize ' type='normal' />
@@ -5553,7 +5617,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:9")'> <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.433 * _default_ * mtlgSanguiniteFreq ' range=':= 0.433 * _default_ * mtlgSanguiniteFreq ' type='normal' scaleTo='base' />
@@ -5595,7 +5659,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:9")'> <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.703 * _default_ * mtlgSanguiniteSize ' range=':= 0.703 * _default_ * mtlgSanguiniteSize ' type='normal' />
@@ -5629,9 +5693,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:9")'> <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5648,7 +5714,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:nether.ore:9")'> <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:nether.ore:9' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgSanguiniteSize ' range=':= 1.500 * mtlgSanguiniteSize ' type='normal' />
@@ -5690,7 +5756,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore")'> <OreBlock block='Metallurgy:ender.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * mtlgEximiteFreq ' range=':= 0.867 * _default_ * mtlgEximiteFreq ' type='normal' scaleTo='base' />
@@ -5732,7 +5798,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore")'> <OreBlock block='Metallurgy:ender.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.995 * _default_ * mtlgEximiteSize ' range=':= 0.995 * _default_ * mtlgEximiteSize ' type='normal' />
@@ -5766,9 +5832,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore")'> <OreBlock block='Metallurgy:ender.ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:ender.ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5784,7 +5852,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore")'> <OreBlock block='Metallurgy:ender.ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * mtlgEximiteSize ' range=':= 2.000 * mtlgEximiteSize ' type='normal' />
@@ -5809,7 +5877,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore:1")'> <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.531 * _default_ * mtlgMeutoiteFreq ' range=':= 0.531 * _default_ * mtlgMeutoiteFreq ' type='normal' scaleTo='base' />
@@ -5851,7 +5919,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore:1")'> <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.779 * _default_ * mtlgMeutoiteSize ' range=':= 0.779 * _default_ * mtlgMeutoiteSize ' type='normal' />
@@ -5885,9 +5953,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore:1")'> <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -5903,7 +5973,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("Metallurgy:ender.ore:1")'> <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='Metallurgy:ender.ore:1' weight='1.0' />
                             <Replaces block='minecraft:end_stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.500 * mtlgMeutoiteSize ' range=':= 1.500 * mtlgMeutoiteSize ' type='normal' />

@@ -356,7 +356,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrCopperFreq ' range=':= 1.226 * _default_ * elcrCopperFreq ' type='normal' scaleTo='base' />
@@ -398,7 +398,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrCopperSize ' range=':= 1.183 * _default_ * elcrCopperSize ' type='normal' />
@@ -432,9 +432,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -450,7 +452,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore")'> <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * elcrCopperSize ' range=':= 3.000 * elcrCopperSize ' type='normal' />
@@ -475,7 +477,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * elcrTinFreq ' range=':= 1.416 * _default_ * elcrTinFreq ' type='normal' scaleTo='base' />
@@ -517,7 +519,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * elcrTinSize ' range=':= 1.271 * _default_ * elcrTinSize ' type='normal' />
@@ -551,9 +553,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -569,7 +573,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:1")'> <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:1' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * elcrTinSize ' range=':= 4.000 * elcrTinSize ' type='normal' />
@@ -594,7 +598,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.867 * _default_ * elcrSilverFreq ' range=':= 0.867 * _default_ * elcrSilverFreq ' type='normal' scaleTo='base' />
@@ -636,7 +640,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.995 * _default_ * elcrSilverSize ' range=':= 0.995 * _default_ * elcrSilverSize ' type='normal' />
@@ -670,9 +674,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -688,7 +694,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:2")'> <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:2' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * elcrSilverSize ' range=':= 3.000 * elcrSilverSize ' type='normal' />
@@ -713,7 +719,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.226 * _default_ * elcrNickelFreq ' range=':= 1.226 * _default_ * elcrNickelFreq ' type='normal' scaleTo='base' />
@@ -755,7 +761,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.183 * _default_ * elcrNickelSize ' range=':= 1.183 * _default_ * elcrNickelSize ' type='normal' />
@@ -789,9 +795,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -807,7 +815,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:3")'> <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:3' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * elcrNickelSize ' range=':= 4.000 * elcrNickelSize ' type='normal' />
@@ -832,7 +840,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.583 * _default_ * elcrAluminumFreq ' range=':= 1.583 * _default_ * elcrAluminumFreq ' type='normal' scaleTo='base' />
@@ -874,7 +882,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.344 * _default_ * elcrAluminumSize ' range=':= 1.344 * _default_ * elcrAluminumSize ' type='normal' />
@@ -908,9 +916,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -926,7 +936,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:4")'> <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * elcrAluminumSize ' range=':= 4.000 * elcrAluminumSize ' type='normal' />
@@ -951,7 +961,7 @@
                                 Small, fairly rare motherlodes  with
                                 2-4 horizontal veins each.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * elcrPlatinumFreq ' range=':= 0.500 * _default_ * elcrPlatinumFreq ' type='normal' scaleTo='base' />
@@ -993,7 +1003,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 0.756 * _default_ * elcrPlatinumSize ' range=':= 0.756 * _default_ * elcrPlatinumSize ' type='normal' />
@@ -1027,9 +1037,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1045,7 +1057,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("ElectriCraft:electricraft_block_ore:5")'> <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' /> </IfCondition>
+                            <OreBlock block='ElectriCraft:electricraft_block_ore:5' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.000 * elcrPlatinumSize ' range=':= 2.000 * elcrPlatinumSize ' type='normal' />

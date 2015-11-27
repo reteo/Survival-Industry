@@ -113,7 +113,7 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("harvestcraft:salt")'> <OreBlock block='harvestcraft:salt' weight='1.0' /> </IfCondition>
+                            <OreBlock block='harvestcraft:salt' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 5.305 * _default_ * hvstSaltFreq ' range=':= 5.305 * _default_ * hvstSaltFreq ' type='normal' scaleTo='base' />
@@ -155,7 +155,7 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("harvestcraft:salt")'> <OreBlock block='harvestcraft:salt' weight='1.0' /> </IfCondition>
+                            <OreBlock block='harvestcraft:salt' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='CloudRadius' avg=':= 1.573 * _default_ * hvstSaltSize ' range=':= 1.573 * _default_ * hvstSaltSize ' type='normal' />
@@ -189,9 +189,11 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <IfCondition condition=':= ?blockExists("harvestcraft:salt")'> <OreBlock block='harvestcraft:salt' weight='1.0' /> </IfCondition>
-                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <OreBlock block='harvestcraft:salt' weight='1.0' />
+                                <ReplacesOre block='dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <ReplacesOre block='gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -207,7 +209,7 @@
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <IfCondition condition=':= ?blockExists("harvestcraft:salt")'> <OreBlock block='harvestcraft:salt' weight='1.0' /> </IfCondition>
+                            <OreBlock block='harvestcraft:salt' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 2.500 * hvstSaltSize ' range=':= 2.500 * hvstSaltSize ' type='normal' />
