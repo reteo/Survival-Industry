@@ -410,6 +410,14 @@
     <!--
               This is the load order for ores in Survival Industry.
     -->
+    
+    <!-- Let's add colossal caves with lava lakes. -->
+    <Import file='modules/modpack/SpecialRules.xml'/>
+    
+    <!-- These mods include stone. -->
+    <Import file='modules/modpack/Chisel2.xml'/>
+    <Import file='modules/modpack/FossilsandArchaeology.xml'/>
+    
         
     <!-- Vanilla Minecraft should always have top priority. -->
     <Import file='modules/modpack/VanillaMinecraft.xml'/>
@@ -438,11 +446,6 @@
     <!-- These are useful for their original ores, but not essential. -->
     <Import file='modules/modpack/RailCraft.xml'/>
     <Import file='modules/modpack/ProjectRed.xml'/>
-    
-    <!-- These mods include stone; we do not want stone overwriting useful
-         ores, so they'll be generated last. -->
-    <Import file='modules/modpack/Chisel2.xml'/>
-    <Import file='modules/modpack/FossilsandArchaeology.xml'/>
 
     <!-- ******************** Import Standard Configs ********************** -->
     <!--
