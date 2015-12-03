@@ -1,0 +1,10 @@
+{
+    "foods": [
+        {
+            "name": "harvestcraft:coffeeItem",
+            "meta": 0,
+            "hunger": 2,
+            "saturationModifier": 0.1
+        }
+    ]
+} 
