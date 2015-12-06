@@ -1,0 +1,29 @@
+ 
+Requests:
+
+Coffee has hunger --- solved.
+Aluminum block --- solved.
+	Was solved, change to SquidUtils?  Need to try it out.
+Wood shield, wood lattis, and wood gear all have same recipe.  --- Solved.
+
+
+Gating mad science.
+
+Mods:
+	Fossils & Archaeology: Culture Vat & Analyzer
+	RFTools: Dimension (builder/enscriber), Matter (transmitter/receiver)
+	Advanced Genetics: Basic dictionary key component to all key machines.
+	Minechem: Atomic manipulator needed for all machines.
+	Invasion mod: Phase crystal key ingredient.
+
+
+Gating the End. (New material based off of Reactorcraft?) (Cherenkov Rift?)
+	Extra Utilities: key ingredient is ender infused obsidian, uses rift flux
+	Ender storage: chest, tank, pouch
+	End Portal stone: can be made, use a lot of ender infused obsidian.
+
+
+Meh, add recipes to things that don't have them.
+	saddle
+	horse armor (iron, gold, diamond)
+	

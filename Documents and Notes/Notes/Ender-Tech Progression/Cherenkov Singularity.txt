@@ -1,0 +1,26 @@
+Cherenkov radiation, also known as Vavilov–Cherenkov radiation,[a] is electromagnetic radiation emitted when a charged particle (such as an electron) passes through a dielectric medium at a speed greater than the phase velocity of light in that medium.
+
+A dielectric material (dielectric for short) is an electrical insulator that can be polarized by an applied electric field. When a dielectric is placed in an electric field, electric charges do not flow through the material as they do in a conductor, but only slightly shift from their average equilibrium positions causing dielectric polarization.
+
+Ender pearl is a pearl filled with raw ender, which is considered to be a liquid by the Vegan Option.  Can raw ender be a dielectric material?  If so, the radiation from plutonium could stimulate Cherenkov radiation, possibly resulting in a pure blue glow from an ender pearl, likely centering around the plutonium pellet.  
+	* Green glow?  Classic radiation color.
+		Naah, WP search for cherenkov always shows shades of blue.
+
+This can be used in place of the Ender Pearl in "ender tech".
+
+* Ender Tools mod could be a good source of ender tech to fill out the ender tech tree.
+* Ender Portal---NO, needs player to be committed to finishing game.  Check to see if portals can be made.
+	* yes, can be made.  Check to see if existing portal stones can be removed to prevent premature end game.
+		* Configuration made, still needs testing.
+
+No, ender portal should stay with the flux rift requirement.
+
+Ender tech:
+* Any machine or furniture with "Ender" in the name.
+* Any instant transport technology.
+
+Enhanced Portals 3... ender tech?  Maybe.  Need to check for balance.
+	Probably.  Will have to check for possible balance issues.
+
+RFTools dimension tech?  Likely.  Also need to chekc balance.
+
