@@ -1,0 +1,10 @@
+"cherenkov_singularity" {
+    I:burnTime=0
+    B:canBeDropped=true
+    S:creativeTab=misc
+    B:enabled=true
+    I:maxDamage=0
+    I:stacksize=1
+    S:texture=cherenkov_singularity
+    S:tooltip=
+}

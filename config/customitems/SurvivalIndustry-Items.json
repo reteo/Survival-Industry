@@ -1,9 +1,0 @@
-{
-    "items":[
-    {
-            "name":"Iron Rod",
-            "textureName":"iron_rod",
-            "maxstackSize": 64
-        }
-    ]
-}
