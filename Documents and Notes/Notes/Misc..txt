@@ -2,7 +2,7 @@
 Requests:
 
 Coffee has hunger --- solved.
-Aluminum block --- solved.
+Aluminum block (since EC doesn't provide the block for storage) --- solved.
 	Was solved, change to SquidUtils?  Need to try it out.
 Wood shield, wood lattis, and wood gear all have same recipe.  --- Solved.
 
