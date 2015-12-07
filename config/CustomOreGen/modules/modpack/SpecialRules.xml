@@ -83,7 +83,7 @@
                 <DisplayName>Special Rules Mantle Size</DisplayName>
             </OptionNumeric>
             <!-- EDITED: Added new slider to set the lava level in caves. -->
-            <OptionNumeric name='spruMantleLevel' default='12'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionNumeric name='spruMantleLevel' default='16'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> How high should the mantle be? </Description>
                 <DisplayName>Special Rules Mantle Level</DisplayName>
             </OptionNumeric>
@@ -126,7 +126,7 @@
 
         <!-- Igneous Dikes Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruIgneousDikesDist' default='none'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruIgneousDikesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> Controls how Igneous Dikes is generated </Description>
                 <DisplayName>Special Rules Igneous Dikes</DisplayName>
                 <IfCondition condition=':= (?blockExists("minecraft:lava")) '>
