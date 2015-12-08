@@ -1,4 +1,4 @@
-/* Ztones
+/* Ztones (Chizzle Z-Tizzle v. 1.2)
    Tweaks and Alterations */
    
 // Remove recipes

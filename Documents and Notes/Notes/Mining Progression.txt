@@ -1,0 +1,191 @@
+New Progression
+
+0: Base (gray)
+	Tools:
+		minecraft:wooden_pickaxe
+		minecraft:golden_pickaxe
+		betterstorage:cardboardPickaxe
+
+	Blocks/Ore:
+		No changes
+
+
+1: Entry (white)
+	Tools:
+		minecraft:stone_pickaxe
+
+	Blocks/Ore:
+		Aluminum
+		Coal
+		Copper
+		Salt
+		Phosphorite
+		Sulfur
+		Saltpeter
+		Magnesium
+		Bitumen
+		Potash
+		Lapis
+		Ammonium
+		Calcite
+		Amber
+		Magnetite
+	
+2: Low (green)
+	Tools: 
+		Metallurgy:electrum.pickaxe
+		Metallurgy:copper.pickaxe
+		Metallurgy:silver.pickaxe
+		Metallurgy:brass.pickaxe
+	
+	Blocks/Ore:
+		Tin
+		Zinc
+	
+3: Mid (yellow)
+	Tools: 
+		Metallurgy:hepatizon.pickaxe
+		Metallurgy:angmallen.pickaxe
+
+	Blocks/Ore:
+		Iron
+		Nickel
+		Invar
+
+4: High (orange)
+	Tools:
+		appliedenergistics2:item.ToolCertusQuartzPickaxe
+		appliedenergistics2:item.ToolNetherQuartzPickaxe
+		Metallurgy:bronze.pickaxe
+		Forestry:bronzePickaxe
+		minecraft:iron_pickaxe
+		Metallurgy:damascus.steel.pickaxe
+
+	Blocks/Ore:
+		Cadmium
+		Indium
+		Electrotine
+		Fossil
+		Gold
+		Nikolite
+		Osmium
+		Rutile
+		Silver
+		Steel
+		Tungsten
+		Uranium/Pitchblende
+		Platinum
+		Redstone
+		Thorium
+		Mithril
+
+
+5: Extreme (red)
+	Tools:
+		ProjRed|Exploration:projectred.exploration.pickaxeperidot
+		ProjRed|Exploration:projectred.exploration.pickaxeruby
+		ProjRed|Exploration:projectred.exploration.pickaxesapphire
+		Railcraft:tool.steel.pickaxe
+		RotaryCraft:rotarycraft_item_steelpick
+		Metallurgy:platinum.pickaxe
+
+	Blocks/Ore:
+		Certus Quartz
+		Diamond
+		Emerald
+		Firestone
+		Adamantium
+		Peridot
+		Ruby
+		Sapphire
+		Titanium
+		Nether Quartz
+
+6: Top (purple)
+	Tools:
+		fossil:scarabPickaxe
+		ExtraUtilities:destructionpickaxe
+		minecraft:diamond_pickaxe
+
+	Blocks/Ore:
+		Obsidian
+
+
+
+
+Metallurgy Notes:
+
+Ores:
+     Copper: Metallurgy:base.ore
+     Tin: Metallurgy:base.ore:1
+     Zinc: Metallurgy:precious.ore
+     Silver: Metallurgy:precious.ore
+     Platinum: Metallurgy:precious.ore
+     Sulfur: Metallurgy:utility.ore
+     Phosphorite: Metallurgy:utility.ore
+     Saltpeter: Metallurgy:utility.ore
+     Magnesium: Metallurgy:utility.ore
+     Bitumen: Metallurgy:utility.ore
+     Potash: Metallurgy:utility.ore
+
+Manganese: (Remove; steel should always be made with carbon)
+     Ore: 1328:2 - Metallurgy:base.ore:2
+     Block: 1329:2 - Metallurgy:base.block:2
+     Brick: 1330:2 - Metallurgy:base.brick:2
+     Molten: 1333 - Metallurgy:manganese.molten
+     Dust: 5095:2 - Metallurgy:base.dust:2
+     Ingot: 5107 - Metallurgy:manganese.ingot
+     Bucket: 5206:6 - Metallurgy:molten.bucket:6
+     Crushed: 6438 - aobd:crushedManganese
+     Dimlet: 6119:100 - rftools:knownDimlet:100
+
+Alloys:
+     Bronze
+     Damascus Steel
+     Angmallen
+     Hepatizon
+     Brass
+     Electrum
+
+Mining Order:
+     1 - Copper:
+          Pick:
+               Silver
+               Gold
+               Brass
+          Ore:
+               Zinc
+               Copper
+               Tin
+               Phosphorite
+               Sulfur
+               Saltpeter
+               Magnesium
+               Bitumen
+               Potash
+     2 - Tin:
+          Pick:
+               Copper
+               Electrum
+     3 - Iron:
+          Pick:
+               Angmallen
+               Hepatizon
+     4 - Steel:
+          Pick:
+               Bronze
+               Iron
+          Ore:
+               Silver
+               Platinum
+     5 - Gems:
+          Pick:
+               Damascus Steel
+               Steel
+               Platinum
+          Ore:
+               
+     6 - Obsidian:
+          Pick:
+               Diamond
+          Ore:
