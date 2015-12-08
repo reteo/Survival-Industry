@@ -1,0 +1,56 @@
+ 
+Balance between hardcore and trivial.
+
+Challenges:
+1: Mobs shouldn't be predictable.  After playing AI war, did some research on Emergent Behavior Theory. (https://dev.arcengames.com/designing-emergent-ai-part-1-an-introduction/)  Nifty stuff.
+   * Different mobs approach the player (zombie Awareness), attack the player (special AI), or affect the player (special mobs) in different ways.  These can interact in a way that makes them look smarter.
+   * Mobs are now way too hard.
+     * No new mobs.
+     * No advanced mobs (infernal/mutant)
+     * Natural Absorption: can take occasional hits without permanent damage.
+     * Battlegear: shields can take hits.
+       * Crashes in interaction with Inventory Tweaks.  Remove BG?  We'll see.
+     * Despite difficulty, a pit trap with ExU wooden spikes at the bottom seems to become a party spot for mobs once one or two zombies get stuck there.  Maybe disable attraction to dying zombies?  Plenty of other mechanics to keep zombies coming to where they can get that pesky player.
+
+2: Stockpiling a stack of steaks shouldn't stave off starvation.  (wow... say that five times fast...)
+   * Hunger Overhaul means more food is required to survive.  Also people die from starving, instead of just wasting away. (Not sure I like that part... we'll see)
+   * Spice of Life means more variety in the diet.  Useful in enforcing more active role in producing food.
+     * 0 hunger from eating too much?  Not very realistic.
+     * Remove saturation from morsels?
+       * 218 different "morsel" types of food.  All would have to be configured manually.  No thanks.
+   * Agricraft can mutate, allowing creation of missing seeds from two different ones.
+   * Harder wildlife adds seasons and lifecycles.  Conservation can become important.
+   * Repose removes a lot of need to jump, conserving hunger.
+
+No, Repose seems to block the completion of tree lifecycles, and for some reason, kills small creatures.
+
+3: Fast Industry is a no-no.  Humanity took many thousands of years to reach the Industrial revolution... it would seem silly for a player to be able to do so by just digging down to diamond level, and just start harvesting everything.
+   * Custom Ore Gen is a no-brainer; might as well showcase my hard work while I make a modpack, right?
+   * Iguana's Tinker Tweaks can provide an expanded mining order.
+
+*** TiC is no longer supporting 1.7.10; need replacements.
+
+Clay buckets: [SBM] Wooden Buckets
+Wood armor: ???
+3x3 mining?  Tool Utilities
+Right-click placement? Tool Utilities (Also Battlegear?)
+Ore mining levels: block properties
+Pickaxe mining levels?  SquidUtils
+Leveling modifiers?  Why not just use enchantment?
+Modifiers that can be manually added? Enchantment Table Plus
+Lumber axes?  Treecapitator.
+   * Perhaps we can set higher-tiered axes to chop whole trees?
+Huge swords? Tool Utilities (Area of Effect attacks)
+********************************
+
+4: Sleep mechanics
+   * Somnia can keep things happening while the player sleeps.  Also adds a fatigue mechanic.
+
+5: Survival mechanics
+   * EnviroMine adds thirst, temperature tolerance, and oxygen quality mechanics.
+     * Also adds sanity, but I think this would be better in a "Don't Starve" kind of game.
+
+No, trying to balance temperature alone would be a nightmare... especially when wearing armor or using torches.  Just skip EM for now; the game is hard enough.
+
+   * iguana's Tweaks includes a weight mechanic.
+     * nope, too grindy in the early game; minecarts and rails requires an iron level of mining before the grinding aspect can ease up.

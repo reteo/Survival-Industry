@@ -83,7 +83,7 @@
                 <DisplayName>Special Rules Mantle Size</DisplayName>
             </OptionNumeric>
             <!-- EDITED: Added new slider to set the lava level in caves. -->
-            <OptionNumeric name='spruMantleLevel' default='12'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionNumeric name='spruMantleLevel' default='16'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> How high should the mantle be? </Description>
                 <DisplayName>Special Rules Mantle Level</DisplayName>
             </OptionNumeric>
@@ -126,7 +126,7 @@
 
         <!-- Igneous Dikes Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruIgneousDikesDist' default='none'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruIgneousDikesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> Controls how Igneous Dikes is generated </Description>
                 <DisplayName>Special Rules Igneous Dikes</DisplayName>
                 <IfCondition condition=':= (?blockExists("minecraft:lava")) '>
@@ -151,6 +151,34 @@
             </OptionNumeric>
         </ConfigSection>
         <!-- Igneous Dikes Configuration UI Complete -->
+
+
+        <!-- Clear Portal Stones Configuration UI Starting -->
+        <ConfigSection>
+            <OptionChoice name='spruClearPortalStonesDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+                <Description> Replace End Portal Stones with Cobblestone </Description>
+                <DisplayName>Remove End Portal Stones</DisplayName>
+                <IfCondition condition=':= (?blockExists("minecraft:cobblestone")) '>
+
+                <Choice value='Substitution' displayValue='Yes'>
+                    <Description>
+                        Universal Block Replacement.
+                    </Description>
+                </Choice>
+                </IfCondition>
+
+                <Choice value='none' displayValue='No' description='Clear Portal Stones is not generated in the world.'/>
+            </OptionChoice>
+            <OptionNumeric name='spruClearPortalStonesFreq' default='1'  min='0' max='5' displayState=':= if(?advOptions, "shown", "hidden")' displayGroup='groupSpecialRules'>
+                <Description> Frequency multiplier for Special Rules Clear Portal Stones distributions </Description>
+                <DisplayName>Special Rules Clear Portal Stones Freq.</DisplayName>
+            </OptionNumeric>
+            <OptionNumeric name='spruClearPortalStonesSize' default='1'  min='0' max='5' displayState=':= if(?advOptions, "shown", "hidden")' displayGroup='groupSpecialRules'>
+                <Description> Size multiplier for Special Rules Clear Portal Stones distributions </Description>
+                <DisplayName>Special Rules Clear Portal Stones Size</DisplayName>
+            </OptionNumeric>
+        </ConfigSection>
+        <!-- Clear Portal Stones Configuration UI Complete -->
 
     </ConfigSection>
     <!-- Setup Screen Complete -->
@@ -300,6 +328,28 @@
         <!-- StrategicClouds Preset for Igneous Dikes is complete. -->
 
         <!-- End Igneous Dikes Generation -->
+
+
+        <!-- Begin Clear Portal Stones Generation -->
+
+        <!-- Starting Substitution Preset for Clear Portal Stones. -->
+        <ConfigSection>
+            <IfCondition condition=':= spruClearPortalStonesDist = "Substitution"'>
+                <Substitute name='spruClearPortalStonesSubstitute' >
+                    <Description>
+                        This is a global replacement of one block
+                        with another.  Height clamping is needed  to
+                        keep the substitution from being  universal.
+                    </Description>
+                    <OreBlock block='minecraft:cobblestone' weight='1.0' />
+                    <Replaces block='minecraft:end_portal_frame' weight='1.0' />
+                    <Biome name='.*'  />
+                </Substitute>
+            </IfCondition>
+        </ConfigSection>
+        <!-- Substitution Preset for Clear Portal Stones is complete. -->
+
+        <!-- End Clear Portal Stones Generation -->
 
         <!-- Finished adding blocks -->
 

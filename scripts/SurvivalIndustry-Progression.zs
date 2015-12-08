@@ -116,6 +116,8 @@ import mods.nei.NEI;
 <minecraft:diamond_shovel:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 <ExtraUtilities:erosionShovel:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 <fossil:scarabShovel:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
+	/* Ambiguous */
+<enderutilities:endertool:*>.addTooltip("Harvest Level: " + format.darkPurple("Top Level"));
 
 /* --- Bedrock Level --- */
 	/* Pickaxe */
