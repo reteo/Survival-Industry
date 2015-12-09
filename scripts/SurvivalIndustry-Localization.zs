@@ -80,3 +80,7 @@ game.setLocalization("en_US", "wailaharvestability.harvestlevel6", "Extreme");
 game.setLocalization("en_US", "wailaharvestability.harvestlevel7", "Top");
 
 game.setLocalization("en_US", "wailaharvestability.harvestlevel", "Mining Level : ");
+
+/* On to the names of custom items. */
+game.setLocalization("en_US", "item.cherenkov_singularity.name", "Cherenkov Singularity");
+game.setLocalization("en_US", "tile.aluminum_block.name", "Block of Aluminum");
