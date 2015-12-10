@@ -1,7 +1,7 @@
 <!-- =================================================================
      Custom Ore Generation "RailCraft" Module: This configuration
-     covers abyssal ores, poor iron, poor gold, poor copper, poor tin,
-     poor lead, sulfur, saltpeter, and firestone.
+     covers abyssal ores, poor iron, poor copper, poor lead, poor tin,
+     saltpeter, sulfur, poor gold, and firestone.
      ================================================================= -->
 
 
@@ -108,52 +108,6 @@
             <!-- Poor Iron Configuration UI Complete -->
 
 
-            <!-- Poor Gold Configuration UI Starting -->
-            <ConfigSection>
-                <OptionChoice name='rlcrPoorGoldDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Controls how Poor Gold is generated </Description>
-                    <DisplayName>RailCraft Poor Gold</DisplayName>
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
-
-                    <Choice value='SparseVeins' displayValue='Sparse Veins'>
-                        <Description>
-                            Large veins filled very lightly with ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
-
-                    <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
-                        <Description>
-                            Large irregular clouds filled lightly with ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
-
-                    <Choice value='Vanilla' displayValue='Vanilla'>
-                        <Description>
-                            Simulates Vanilla Minecraft.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <Choice value='none' displayValue='None' description='Poor Gold is not generated in the world.'/>
-                </OptionChoice>
-                <OptionNumeric name='rlcrPoorGoldFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Frequency multiplier for RailCraft Poor Gold distributions </Description>
-                    <DisplayName>RailCraft Poor Gold Freq.</DisplayName>
-                </OptionNumeric>
-                <OptionNumeric name='rlcrPoorGoldSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Size multiplier for RailCraft Poor Gold distributions </Description>
-                    <DisplayName>RailCraft Poor Gold Size</DisplayName>
-                </OptionNumeric>
-            </ConfigSection>
-            <!-- Poor Gold Configuration UI Complete -->
-
-
             <!-- Poor Copper Configuration UI Starting -->
             <ConfigSection>
                 <OptionChoice name='rlcrPoorCopperDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
@@ -198,52 +152,6 @@
                 </OptionNumeric>
             </ConfigSection>
             <!-- Poor Copper Configuration UI Complete -->
-
-
-            <!-- Poor Tin Configuration UI Starting -->
-            <ConfigSection>
-                <OptionChoice name='rlcrPoorTinDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Controls how Poor Tin is generated </Description>
-                    <DisplayName>RailCraft Poor Tin</DisplayName>
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
-
-                    <Choice value='SparseVeins' displayValue='Sparse Veins'>
-                        <Description>
-                            Large veins filled very lightly with ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
-
-                    <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
-                        <Description>
-                            Large irregular clouds filled lightly with ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
-
-                    <Choice value='Vanilla' displayValue='Vanilla'>
-                        <Description>
-                            Simulates Vanilla Minecraft.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <Choice value='none' displayValue='None' description='Poor Tin is not generated in the world.'/>
-                </OptionChoice>
-                <OptionNumeric name='rlcrPoorTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Frequency multiplier for RailCraft Poor Tin distributions </Description>
-                    <DisplayName>RailCraft Poor Tin Freq.</DisplayName>
-                </OptionNumeric>
-                <OptionNumeric name='rlcrPoorTinSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Size multiplier for RailCraft Poor Tin distributions </Description>
-                    <DisplayName>RailCraft Poor Tin Size</DisplayName>
-                </OptionNumeric>
-            </ConfigSection>
-            <!-- Poor Tin Configuration UI Complete -->
 
 
             <!-- Poor Lead Configuration UI Starting -->
@@ -292,9 +200,101 @@
             <!-- Poor Lead Configuration UI Complete -->
 
 
+            <!-- Poor Tin Configuration UI Starting -->
+            <ConfigSection>
+                <OptionChoice name='rlcrPoorTinDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Controls how Poor Tin is generated </Description>
+                    <DisplayName>RailCraft Poor Tin</DisplayName>
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
+
+                    <Choice value='SparseVeins' displayValue='Sparse Veins'>
+                        <Description>
+                            Large veins filled very lightly with ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
+
+                    <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+                        <Description>
+                            Large irregular clouds filled lightly with ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:10")) '>
+
+                    <Choice value='Vanilla' displayValue='Vanilla'>
+                        <Description>
+                            Simulates Vanilla Minecraft.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <Choice value='none' displayValue='None' description='Poor Tin is not generated in the world.'/>
+                </OptionChoice>
+                <OptionNumeric name='rlcrPoorTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Frequency multiplier for RailCraft Poor Tin distributions </Description>
+                    <DisplayName>RailCraft Poor Tin Freq.</DisplayName>
+                </OptionNumeric>
+                <OptionNumeric name='rlcrPoorTinSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Size multiplier for RailCraft Poor Tin distributions </Description>
+                    <DisplayName>RailCraft Poor Tin Size</DisplayName>
+                </OptionNumeric>
+            </ConfigSection>
+            <!-- Poor Tin Configuration UI Complete -->
+
+
+            <!-- Saltpeter Configuration UI Starting -->
+            <ConfigSection>
+                <OptionChoice name='rlcrSaltpeterDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Controls how Saltpeter is generated </Description>
+                    <DisplayName>RailCraft Saltpeter</DisplayName>
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+
+                    <Choice value='SparseVeins' displayValue='Sparse Veins'>
+                        <Description>
+                            Large veins filled very lightly with ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+
+                    <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+                        <Description>
+                            Large irregular clouds filled lightly with ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+
+                    <Choice value='Vanilla' displayValue='Vanilla'>
+                        <Description>
+                            Simulates Vanilla Minecraft.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <Choice value='none' displayValue='None' description='Saltpeter is not generated in the world.'/>
+                </OptionChoice>
+                <OptionNumeric name='rlcrSaltpeterFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Frequency multiplier for RailCraft Saltpeter distributions </Description>
+                    <DisplayName>RailCraft Saltpeter Freq.</DisplayName>
+                </OptionNumeric>
+                <OptionNumeric name='rlcrSaltpeterSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Size multiplier for RailCraft Saltpeter distributions </Description>
+                    <DisplayName>RailCraft Saltpeter Size</DisplayName>
+                </OptionNumeric>
+            </ConfigSection>
+            <!-- Saltpeter Configuration UI Complete -->
+
+
             <!-- Sulfur Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrSulfurDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                <OptionChoice name='rlcrSulfurDist'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
                     <Description> Controls how Sulfur is generated </Description>
                     <DisplayName>RailCraft Sulfur</DisplayName>
                     <IfCondition condition=':= (?blockExists("Railcraft:ore")) &amp; (?blockExists("minecraft:lava")) '>
@@ -338,12 +338,12 @@
             <!-- Sulfur Configuration UI Complete -->
 
 
-            <!-- Saltpeter Configuration UI Starting -->
+            <!-- Poor Gold Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='rlcrSaltpeterDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Controls how Saltpeter is generated </Description>
-                    <DisplayName>RailCraft Saltpeter</DisplayName>
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+                <OptionChoice name='rlcrPoorGoldDist' default='none'  displayState=':= if(?enableRailCraft, "shown", "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Controls how Poor Gold is generated </Description>
+                    <DisplayName>RailCraft Poor Gold</DisplayName>
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
 
                     <Choice value='SparseVeins' displayValue='Sparse Veins'>
                         <Description>
@@ -352,7 +352,7 @@
                     </Choice>
                     </IfCondition>
 
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
 
                     <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
                         <Description>
@@ -361,7 +361,7 @@
                     </Choice>
                     </IfCondition>
 
-                    <IfCondition condition=':= (?blockExists("Railcraft:ore:1")) '>
+                    <IfCondition condition=':= (?blockExists("Railcraft:ore:8")) '>
 
                     <Choice value='Vanilla' displayValue='Vanilla'>
                         <Description>
@@ -370,18 +370,18 @@
                     </Choice>
                     </IfCondition>
 
-                    <Choice value='none' displayValue='None' description='Saltpeter is not generated in the world.'/>
+                    <Choice value='none' displayValue='None' description='Poor Gold is not generated in the world.'/>
                 </OptionChoice>
-                <OptionNumeric name='rlcrSaltpeterFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Frequency multiplier for RailCraft Saltpeter distributions </Description>
-                    <DisplayName>RailCraft Saltpeter Freq.</DisplayName>
+                <OptionNumeric name='rlcrPoorGoldFreq' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Frequency multiplier for RailCraft Poor Gold distributions </Description>
+                    <DisplayName>RailCraft Poor Gold Freq.</DisplayName>
                 </OptionNumeric>
-                <OptionNumeric name='rlcrSaltpeterSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
-                    <Description> Size multiplier for RailCraft Saltpeter distributions </Description>
-                    <DisplayName>RailCraft Saltpeter Size</DisplayName>
+                <OptionNumeric name='rlcrPoorGoldSize' default='1'  min='0' max='5' displayState=':= if(?enableRailCraft, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupRailCraft'>
+                    <Description> Size multiplier for RailCraft Poor Gold distributions </Description>
+                    <DisplayName>RailCraft Poor Gold Size</DisplayName>
                 </OptionNumeric>
             </ConfigSection>
-            <!-- Saltpeter Configuration UI Complete -->
+            <!-- Poor Gold Configuration UI Complete -->
 
 
             <!-- Firestone Configuration UI Starting -->
@@ -451,7 +451,7 @@
                 <!-- Starting Geode Preset for Abyssal Ores. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrAbyssalOresDist = "Geode"'>
-                        <Veins name='rlcrAbyssalOresGeodeShell'  inherits='PresetSmallDeposits' seed='0x9668' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
+                        <Veins name='rlcrAbyssalOresGeodeShell'  inherits='PresetSmallDeposits' seed='0x9668' branchType='Bezier' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
                             <Description>
                                 Multi-layered deposit.  On the
                                 outside is a shell, usually made  of
@@ -463,8 +463,8 @@
                             </Description>
                             <OreBlock block='Railcraft:cube:6' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
-                            <ReplacesOre block='dirt' weight='1.0' />
-                            <ReplacesOre block='gravel' weight='1.0' />
+                            <Replaces block='minecraft:dirt' weight='1.0' />
+                            <Replaces block='minecraft:gravel' weight='1.0' />
                             <ReplacesOre block='sand' weight='1.0' />
                             <Replaces block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:water' weight='1.0' />
@@ -478,7 +478,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </Veins>
-                        <Veins name='rlcrAbyssalOresGeodeOre'  inherits='rlcrAbyssalOresGeodeShell' seed='0x9668' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
+                        <Veins name='rlcrAbyssalOresGeodeOre'  inherits='rlcrAbyssalOresGeodeShell' branchType='Bezier' seed='0x9668' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
                             <Description>
                                 Multi-layered deposit.  On the
                                 outside is a shell, usually made  of
@@ -492,8 +492,8 @@
                             <OreBlock block='Railcraft:ore:3' weight='0.0167' />
                             <OreBlock block='Railcraft:ore:4' weight='0.05' />
                             <ReplacesOre block='stone' weight='1.0' />
-                            <ReplacesOre block='dirt' weight='1.0' />
-                            <ReplacesOre block='gravel' weight='1.0' />
+                            <Replaces block='minecraft:dirt' weight='1.0' />
+                            <Replaces block='minecraft:gravel' weight='1.0' />
                             <ReplacesOre block='sand' weight='1.0' />
                             <Replaces block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:water' weight='1.0' />
@@ -501,7 +501,7 @@
                             <Replaces block='Railcraft:cube:6' weight='1.0' />
                             <Setting name='MotherlodeSize' avg=':= _default_ * 0.5' range=':= _default_ * 0.5' type='uniform' />
                         </Veins>
-                        <Veins name='rlcrAbyssalOresGeodeBubble'  inherits='rlcrAbyssalOresGeodeOre' seed='0x9668' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
+                        <Veins name='rlcrAbyssalOresGeodeBubble'  inherits='rlcrAbyssalOresGeodeOre' branchType='Bezier' seed='0x9668' drawWireframe='true' wireframeColor='0x60000000' drawBoundBox='false' boundBoxColor='0x60000000'>
                             <Description>
                                 Multi-layered deposit.  On the
                                 outside is a shell, usually made  of
@@ -517,8 +517,8 @@
                             <Replaces block='Railcraft:ore:3' weight='1.0' />
                             <Replaces block='Railcraft:ore:4' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
-                            <ReplacesOre block='dirt' weight='1.0' />
-                            <ReplacesOre block='gravel' weight='1.0' />
+                            <Replaces block='minecraft:dirt' weight='1.0' />
+                            <Replaces block='minecraft:gravel' weight='1.0' />
                             <ReplacesOre block='sand' weight='1.0' />
                             <Replaces block='minecraft:lava' weight='1.0' />
                             <Replaces block='minecraft:water' weight='1.0' />
@@ -539,7 +539,7 @@
                 <!-- Starting SparseVeins Preset for Poor Iron. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrPoorIronDist = "SparseVeins"'>
-                        <Veins name='rlcrPoorIronVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60DDC2AF' drawBoundBox='false' boundBoxColor='0x60DDC2AF'>
+                        <Veins name='rlcrPoorIronVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60DDC2AF' drawBoundBox='false' boundBoxColor='0x60DDC2AF'>
                             <Description>
                                 Large veins filled very lightly  with
                                 ore.  Because they contain  less ore
@@ -566,6 +566,7 @@
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorIronSize ' range=':= _default_ * rlcrPoorIronSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentRadius' avg=':= 1.769 * _default_ * rlcrPoorIronSize ' range=':= 1.769 * _default_ * rlcrPoorIronSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -606,7 +607,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrPoorIronHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60DDC2AF' drawBoundBox='false' boundBoxColor='0x60DDC2AF'>
+                            <Veins name='rlcrPoorIronHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60DDC2AF' drawBoundBox='false' boundBoxColor='0x60DDC2AF'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -628,10 +629,10 @@
                                     already be scaled by that.
                                 </Description>
                                 <OreBlock block='Railcraft:ore:7' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -662,140 +663,12 @@
                 <!-- End Poor Iron Generation -->
 
 
-                <!-- Begin Poor Gold Generation -->
-
-                <!-- Starting SparseVeins Preset for Poor Gold. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorGoldDist = "SparseVeins"'>
-                        <Veins name='rlcrPoorGoldVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
-                            <Description>
-                                Large veins filled very lightly  with
-                                ore.  Because they contain  less ore
-                                per volume, these veins  are
-                                relatively wide and long.  Mining the
-                                ore from them is time  consuming
-                                compared to solid ore  veins.  They
-                                are also more  difficult to follow,
-                                since it is  harder to get an idea of
-                                their  direction while mining.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * rlcrPoorGoldFreq ' range=':= 2.450 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorGoldSize ' range=':= 0 * _default_ * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchLength' avg=':= 1.565 * _default_ ' range=':= 1.565 * _default_ ' type='normal' />
-                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorGoldSize ' range=':= _default_ * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentRadius' avg=':= 1.251 * _default_ * rlcrPoorGoldSize ' range=':= 1.251 * _default_ * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Veins>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- SparseVeins Preset for Poor Gold is complete. -->
-
-
-                <!-- Starting StrategicClouds Preset for Poor Gold. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorGoldDist = "StrategicClouds"'>
-                        <Cloud name='rlcrPoorGoldCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
-                            <Description>
-                                Large irregular clouds filled  lightly
-                                with ore.  These are  huge, spanning
-                                several adjacent  chunks, and
-                                consequently rather  rare.  They
-                                contain a sizeable  amount of ore, but
-                                it takes some  time and effort to mine
-                                due to  low density. The intent for
-                                strategic clouds is that the  player
-                                will need to actively  search for one
-                                and then set up a  semi-permanent
-                                mining base and  spend some time
-                                actually mining  the ore.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.143 * _default_ * rlcrPoorGoldFreq ' range=':= 1.143 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrPoorGoldHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
-                                <Description>
-                                    Single blocks, generously
-                                    scattered through all heights
-                                    (density is about that of  vanilla
-                                    iron ore). They will  replace dirt
-                                    and sandstone  (but not grass or
-                                    sand), so  they can be found
-                                    nearer to  the surface than most
-                                    ores.  Intened to be used as a
-                                    child  distribution for large,
-                                    rare  strategic deposits that
-                                    would  otherwise be very difficult
-                                    to find.  Note that the  frequency
-                                    is multiplied by  ground level to
-                                    maintain a  constant density, but
-                                    not by  ore frequency because it
-                                    is  assumed that the frequency of
-                                    the parent distribution will
-                                    already be scaled by that.
-                                </Description>
-                                <OreBlock block='Railcraft:ore:8' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
-                                <Replaces block='minecraft:sandstone' weight='1.0' />
-                                <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
-                            </Veins>
-                        </Cloud>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- StrategicClouds Preset for Poor Gold is complete. -->
-
-
-                <!-- Starting Vanilla Preset for Poor Gold. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorGoldDist = "Vanilla"'>
-                        <StandardGen name='rlcrPoorGoldStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
-                            <Description>
-                                A master preset for standardgen  ore
-                                distributions.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 0.500 * rlcrPoorGoldSize ' range=':= 0.500 * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 16.000 * rlcrPoorGoldFreq ' range=':= 16.000 * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </StandardGen>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- Vanilla Preset for Poor Gold is complete. -->
-
-                <!-- End Poor Gold Generation -->
-
-
                 <!-- Begin Poor Copper Generation -->
 
                 <!-- Starting SparseVeins Preset for Poor Copper. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrPoorCopperDist = "SparseVeins"'>
-                        <Veins name='rlcrPoorCopperVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+                        <Veins name='rlcrPoorCopperVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
                             <Description>
                                 Large veins filled very lightly  with
                                 ore.  Because they contain  less ore
@@ -822,6 +695,7 @@
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorCopperSize ' range=':= _default_ * rlcrPoorCopperSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentRadius' avg=':= 1.623 * _default_ * rlcrPoorCopperSize ' range=':= 1.623 * _default_ * rlcrPoorCopperSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -862,7 +736,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrPoorCopperHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+                            <Veins name='rlcrPoorCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -884,10 +758,10 @@
                                     already be scaled by that.
                                 </Description>
                                 <OreBlock block='Railcraft:ore:9' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -919,140 +793,12 @@
                 <!-- End Poor Copper Generation -->
 
 
-                <!-- Begin Poor Tin Generation -->
-
-                <!-- Starting SparseVeins Preset for Poor Tin. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorTinDist = "SparseVeins"'>
-                        <Veins name='rlcrPoorTinVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
-                            <Description>
-                                Large veins filled very lightly  with
-                                ore.  Because they contain  less ore
-                                per volume, these veins  are
-                                relatively wide and long.  Mining the
-                                ore from them is time  consuming
-                                compared to solid ore  veins.  They
-                                are also more  difficult to follow,
-                                since it is  harder to get an idea of
-                                their  direction while mining.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrPoorTinFreq ' range=':= 3.465 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorTinSize ' range=':= 0 * _default_ * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchLength' avg=':= 1.861 * _default_ ' range=':= 1.861 * _default_ ' type='normal' />
-                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorTinSize ' range=':= _default_ * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentRadius' avg=':= 1.364 * _default_ * rlcrPoorTinSize ' range=':= 1.364 * _default_ * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Veins>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- SparseVeins Preset for Poor Tin is complete. -->
-
-
-                <!-- Starting StrategicClouds Preset for Poor Tin. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorTinDist = "StrategicClouds"'>
-                        <Cloud name='rlcrPoorTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
-                            <Description>
-                                Large irregular clouds filled  lightly
-                                with ore.  These are  huge, spanning
-                                several adjacent  chunks, and
-                                consequently rather  rare.  They
-                                contain a sizeable  amount of ore, but
-                                it takes some  time and effort to mine
-                                due to  low density. The intent for
-                                strategic clouds is that the  player
-                                will need to actively  search for one
-                                and then set up a  semi-permanent
-                                mining base and  spend some time
-                                actually mining  the ore.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrPoorTinFreq ' range=':= 1.616 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrPoorTinHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
-                                <Description>
-                                    Single blocks, generously
-                                    scattered through all heights
-                                    (density is about that of  vanilla
-                                    iron ore). They will  replace dirt
-                                    and sandstone  (but not grass or
-                                    sand), so  they can be found
-                                    nearer to  the surface than most
-                                    ores.  Intened to be used as a
-                                    child  distribution for large,
-                                    rare  strategic deposits that
-                                    would  otherwise be very difficult
-                                    to find.  Note that the  frequency
-                                    is multiplied by  ground level to
-                                    maintain a  constant density, but
-                                    not by  ore frequency because it
-                                    is  assumed that the frequency of
-                                    the parent distribution will
-                                    already be scaled by that.
-                                </Description>
-                                <OreBlock block='Railcraft:ore:10' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
-                                <Replaces block='minecraft:sandstone' weight='1.0' />
-                                <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
-                            </Veins>
-                        </Cloud>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- StrategicClouds Preset for Poor Tin is complete. -->
-
-
-                <!-- Starting Vanilla Preset for Poor Tin. -->
-                <ConfigSection>
-                    <IfCondition condition=':= rlcrPoorTinDist = "Vanilla"'>
-                        <StandardGen name='rlcrPoorTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
-                            <Description>
-                                A master preset for standardgen  ore
-                                distributions.
-                            </Description>
-                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 1.000 * rlcrPoorTinSize ' range=':= 1.000 * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 16.000 * rlcrPoorTinFreq ' range=':= 16.000 * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </StandardGen>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- Vanilla Preset for Poor Tin is complete. -->
-
-                <!-- End Poor Tin Generation -->
-
-
                 <!-- Begin Poor Lead Generation -->
 
                 <!-- Starting SparseVeins Preset for Poor Lead. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrPoorLeadDist = "SparseVeins"'>
-                        <Veins name='rlcrPoorLeadVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+                        <Veins name='rlcrPoorLeadVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
                             <Description>
                                 Large veins filled very lightly  with
                                 ore.  Because they contain  less ore
@@ -1079,6 +825,7 @@
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorLeadSize ' range=':= _default_ * rlcrPoorLeadSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentRadius' avg=':= 1.565 * _default_ * rlcrPoorLeadSize ' range=':= 1.565 * _default_ * rlcrPoorLeadSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1119,7 +866,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrPoorLeadHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+                            <Veins name='rlcrPoorLeadHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -1141,10 +888,10 @@
                                     already be scaled by that.
                                 </Description>
                                 <OreBlock block='Railcraft:ore:11' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1175,12 +922,273 @@
                 <!-- End Poor Lead Generation -->
 
 
+                <!-- Begin Poor Tin Generation -->
+
+                <!-- Starting SparseVeins Preset for Poor Tin. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrPoorTinDist = "SparseVeins"'>
+                        <Veins name='rlcrPoorTinVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                            <Description>
+                                Large veins filled very lightly  with
+                                ore.  Because they contain  less ore
+                                per volume, these veins  are
+                                relatively wide and long.  Mining the
+                                ore from them is time  consuming
+                                compared to solid ore  veins.  They
+                                are also more  difficult to follow,
+                                since it is  harder to get an idea of
+                                their  direction while mining.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrPoorTinFreq ' range=':= 3.465 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorTinSize ' range=':= 0 * _default_ * rlcrPoorTinSize ' type='normal' />
+                            <Setting name='MotherlodeHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchLength' avg=':= 1.861 * _default_ ' range=':= 1.861 * _default_ ' type='normal' />
+                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorTinSize ' range=':= _default_ * rlcrPoorTinSize ' type='normal' />
+                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentRadius' avg=':= 1.364 * _default_ * rlcrPoorTinSize ' range=':= 1.364 * _default_ * rlcrPoorTinSize ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Veins>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- SparseVeins Preset for Poor Tin is complete. -->
+
+
+                <!-- Starting StrategicClouds Preset for Poor Tin. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrPoorTinDist = "StrategicClouds"'>
+                        <Cloud name='rlcrPoorTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                            <Description>
+                                Large irregular clouds filled  lightly
+                                with ore.  These are  huge, spanning
+                                several adjacent  chunks, and
+                                consequently rather  rare.  They
+                                contain a sizeable  amount of ore, but
+                                it takes some  time and effort to mine
+                                due to  low density. The intent for
+                                strategic clouds is that the  player
+                                will need to actively  search for one
+                                and then set up a  semi-permanent
+                                mining base and  spend some time
+                                actually mining  the ore.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrPoorTinFreq ' range=':= 1.616 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Veins name='rlcrPoorTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                                <Description>
+                                    Single blocks, generously
+                                    scattered through all heights
+                                    (density is about that of  vanilla
+                                    iron ore). They will  replace dirt
+                                    and sandstone  (but not grass or
+                                    sand), so  they can be found
+                                    nearer to  the surface than most
+                                    ores.  Intened to be used as a
+                                    child  distribution for large,
+                                    rare  strategic deposits that
+                                    would  otherwise be very difficult
+                                    to find.  Note that the  frequency
+                                    is multiplied by  ground level to
+                                    maintain a  constant density, but
+                                    not by  ore frequency because it
+                                    is  assumed that the frequency of
+                                    the parent distribution will
+                                    already be scaled by that.
+                                </Description>
+                                <OreBlock block='Railcraft:ore:10' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
+                            </Veins>
+                        </Cloud>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- StrategicClouds Preset for Poor Tin is complete. -->
+
+
+                <!-- Starting Vanilla Preset for Poor Tin. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrPoorTinDist = "Vanilla"'>
+                        <StandardGen name='rlcrPoorTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                            <Description>
+                                A master preset for standardgen  ore
+                                distributions.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:10' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='Size' avg=':= 1.000 * rlcrPoorTinSize ' range=':= 1.000 * rlcrPoorTinSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 16.000 * rlcrPoorTinFreq ' range=':= 16.000 * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </StandardGen>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- Vanilla Preset for Poor Tin is complete. -->
+
+                <!-- End Poor Tin Generation -->
+
+
+                <!-- Begin Saltpeter Generation -->
+
+                <!-- Starting SparseVeins Preset for Saltpeter. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrSaltpeterDist = "SparseVeins"'>
+                        <Veins name='rlcrSaltpeterVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                            <Description>
+                                Large veins filled very lightly  with
+                                ore.  Because they contain  less ore
+                                per volume, these veins  are
+                                relatively wide and long.  Mining the
+                                ore from them is time  consuming
+                                compared to solid ore  veins.  They
+                                are also more  difficult to follow,
+                                since it is  harder to get an idea of
+                                their  direction while mining.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
+                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
+                            <Replaces block='minecraft:sandstone' weight='1.0' />
+                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
+                            <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrSaltpeterFreq ' range=':= 3.465 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrSaltpeterSize ' range=':= 0 * _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchLength' avg=':= 1.861 * _default_ ' range=':= 1.861 * _default_ ' type='normal' />
+                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentLength' avg=':= _default_ * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentRadius' avg=':= 1.364 * _default_ * rlcrSaltpeterSize ' range=':= 1.364 * _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Veins>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- SparseVeins Preset for Saltpeter is complete. -->
+
+
+                <!-- Starting StrategicClouds Preset for Saltpeter. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrSaltpeterDist = "StrategicClouds"'>
+                        <Cloud name='rlcrSaltpeterCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                            <Description>
+                                Large irregular clouds filled  lightly
+                                with ore.  These are  huge, spanning
+                                several adjacent  chunks, and
+                                consequently rather  rare.  They
+                                contain a sizeable  amount of ore, but
+                                it takes some  time and effort to mine
+                                due to  low density. The intent for
+                                strategic clouds is that the  player
+                                will need to actively  search for one
+                                and then set up a  semi-permanent
+                                mining base and  spend some time
+                                actually mining  the ore.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
+                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
+                            <Replaces block='minecraft:sandstone' weight='1.0' />
+                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
+                            <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrSaltpeterFreq ' range=':= 1.616 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Veins name='rlcrSaltpeterHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                                <Description>
+                                    Single blocks, generously
+                                    scattered through all heights
+                                    (density is about that of  vanilla
+                                    iron ore). They will  replace dirt
+                                    and sandstone  (but not grass or
+                                    sand), so  they can be found
+                                    nearer to  the surface than most
+                                    ores.  Intened to be used as a
+                                    child  distribution for large,
+                                    rare  strategic deposits that
+                                    would  otherwise be very difficult
+                                    to find.  Note that the  frequency
+                                    is multiplied by  ground level to
+                                    maintain a  constant density, but
+                                    not by  ore frequency because it
+                                    is  assumed that the frequency of
+                                    the parent distribution will
+                                    already be scaled by that.
+                                </Description>
+                                <OreBlock block='Railcraft:ore:1' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
+                                <Replaces block='minecraft:sandstone' weight='1.0' />
+                                <ReplacesOre block='stone' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
+                            </Veins>
+                        </Cloud>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- StrategicClouds Preset for Saltpeter is complete. -->
+
+
+                <!-- Starting Vanilla Preset for Saltpeter. -->
+                <ConfigSection>
+                    <IfCondition condition=':= rlcrSaltpeterDist = "Vanilla"'>
+                        <StandardGen name='rlcrSaltpeterStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                            <Description>
+                                A master preset for standardgen  ore
+                                distributions.
+                            </Description>
+                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
+                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
+                            <Replaces block='minecraft:sandstone' weight='1.0' />
+                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
+                            <Setting name='Size' avg=':= 0.500 * rlcrSaltpeterSize ' range=':= 0.500 * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 32.000 * rlcrSaltpeterFreq ' range=':= 32.000 * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </StandardGen>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- Vanilla Preset for Saltpeter is complete. -->
+
+                <!-- End Saltpeter Generation -->
+
+
                 <!-- Begin Sulfur Generation -->
 
                 <!-- Starting PipeVeins Preset for Sulfur. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrSulfurDist = "PipeVeins"'>
-                        <Veins name='rlcrSulfurVeins'  inherits='PresetPipeVeins' seed='0xEE54' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
+                        <Veins name='rlcrSulfurVeins'  inherits='PresetPipeVeins' branchType='Bezier' seed='0xEE54' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
                             <Description>
                                 Short sparsely filled veins  sloping
                                 up from near the bottom  of the map.
@@ -1200,13 +1208,14 @@
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentLength' avg=':= _default_ * rlcrSulfurSize ' range=':= _default_ * rlcrSulfurSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentRadius' avg=':= 1.143 * _default_ * rlcrSulfurSize ' range=':= 1.143 * _default_ * rlcrSulfurSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </Veins>
 
                         <!-- Configuring contained material. -->
-                        <Veins name='rlcrSulfurVeinsPipe'  inherits='rlcrSulfurVeins' seed='0xEE54' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
+                        <Veins name='rlcrSulfurVeinsPipe'  inherits='rlcrSulfurVeins' branchType='Bezier' seed='0xEE54' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
                             <OreBlock block='minecraft:lava' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Replaces block='Railcraft:ore' weight='1.0' />
@@ -1250,7 +1259,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrSulfurHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
+                            <Veins name='rlcrSulfurHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FFE25C' drawBoundBox='false' boundBoxColor='0x60FFE25C'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -1272,10 +1281,10 @@
                                     already be scaled by that.
                                 </Description>
                                 <OreBlock block='Railcraft:ore' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1306,12 +1315,12 @@
                 <!-- End Sulfur Generation -->
 
 
-                <!-- Begin Saltpeter Generation -->
+                <!-- Begin Poor Gold Generation -->
 
-                <!-- Starting SparseVeins Preset for Saltpeter. -->
+                <!-- Starting SparseVeins Preset for Poor Gold. -->
                 <ConfigSection>
-                    <IfCondition condition=':= rlcrSaltpeterDist = "SparseVeins"'>
-                        <Veins name='rlcrSaltpeterVeins'  inherits='PresetSparseVeins' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                    <IfCondition condition=':= rlcrPoorGoldDist = "SparseVeins"'>
+                        <Veins name='rlcrPoorGoldVeins'  inherits='PresetSparseVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
                             <Description>
                                 Large veins filled very lightly  with
                                 ore.  Because they contain  less ore
@@ -1323,35 +1332,35 @@
                                 since it is  harder to get an idea of
                                 their  direction while mining.
                             </Description>
-                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
-                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
-                            <Replaces block='minecraft:sandstone' weight='1.0' />
-                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
-                            <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrSaltpeterFreq ' range=':= 3.465 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrSaltpeterSize ' range=':= 0 * _default_ * rlcrSaltpeterSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * rlcrPoorGoldFreq ' range=':= 2.450 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorGoldSize ' range=':= 0 * _default_ * rlcrPoorGoldSize ' type='normal' />
+                            <Setting name='MotherlodeHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchLength' avg=':= 1.861 * _default_ ' range=':= 1.861 * _default_ ' type='normal' />
+                            <Setting name='BranchLength' avg=':= 1.565 * _default_ ' range=':= 1.565 * _default_ ' type='normal' />
                             <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentLength' avg=':= _default_ * rlcrSaltpeterSize ' range=':= _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='SegmentLength' avg=':= _default_ * rlcrPoorGoldSize ' range=':= _default_ * rlcrPoorGoldSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentRadius' avg=':= 1.364 * _default_ * rlcrSaltpeterSize ' range=':= 1.364 * _default_ * rlcrSaltpeterSize ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentRadius' avg=':= 1.251 * _default_ * rlcrPoorGoldSize ' range=':= 1.251 * _default_ * rlcrPoorGoldSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </Veins>
                     </IfCondition>
                 </ConfigSection>
-                <!-- SparseVeins Preset for Saltpeter is complete. -->
+                <!-- SparseVeins Preset for Poor Gold is complete. -->
 
 
-                <!-- Starting StrategicClouds Preset for Saltpeter. -->
+                <!-- Starting StrategicClouds Preset for Poor Gold. -->
                 <ConfigSection>
-                    <IfCondition condition=':= rlcrSaltpeterDist = "StrategicClouds"'>
-                        <Cloud name='rlcrSaltpeterCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                    <IfCondition condition=':= rlcrPoorGoldDist = "StrategicClouds"'>
+                        <Cloud name='rlcrPoorGoldCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
                             <Description>
                                 Large irregular clouds filled  lightly
                                 with ore.  These are  huge, spanning
@@ -1366,21 +1375,20 @@
                                 mining base and  spend some time
                                 actually mining  the ore.
                             </Description>
-                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
-                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
-                            <Replaces block='minecraft:sandstone' weight='1.0' />
-                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
-                            <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrSaltpeterFreq ' range=':= 1.616 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='CloudRadius' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 1.143 * _default_ * rlcrPoorGoldFreq ' range=':= 1.143 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrSaltpeterHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                            <Veins name='rlcrPoorGoldHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -1401,40 +1409,39 @@
                                     the parent distribution will
                                     already be scaled by that.
                                 </Description>
-                                <OreBlock block='Railcraft:ore:1' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <OreBlock block='Railcraft:ore:8' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
                 </ConfigSection>
-                <!-- StrategicClouds Preset for Saltpeter is complete. -->
+                <!-- StrategicClouds Preset for Poor Gold is complete. -->
 
 
-                <!-- Starting Vanilla Preset for Saltpeter. -->
+                <!-- Starting Vanilla Preset for Poor Gold. -->
                 <ConfigSection>
-                    <IfCondition condition=':= rlcrSaltpeterDist = "Vanilla"'>
-                        <StandardGen name='rlcrSaltpeterStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CED0BA' drawBoundBox='false' boundBoxColor='0x60CED0BA'>
+                    <IfCondition condition=':= rlcrPoorGoldDist = "Vanilla"'>
+                        <StandardGen name='rlcrPoorGoldStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EAEF57' drawBoundBox='false' boundBoxColor='0x60EAEF57'>
                             <Description>
                                 A master preset for standardgen  ore
                                 distributions.
                             </Description>
-                            <OreBlock block='Railcraft:ore:1' weight='1.0' />
-                            <Replaces block='Replaces:minecraft:sand' weight='1.0' />
-                            <Replaces block='minecraft:sandstone' weight='1.0' />
-                            <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
-                            <Setting name='Size' avg=':= 0.500 * rlcrSaltpeterSize ' range=':= 0.500 * rlcrSaltpeterSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 32.000 * rlcrSaltpeterFreq ' range=':= 32.000 * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <OreBlock block='Railcraft:ore:8' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='Size' avg=':= 0.500 * rlcrPoorGoldSize ' range=':= 0.500 * rlcrPoorGoldSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 16.000 * rlcrPoorGoldFreq ' range=':= 16.000 * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
                 </ConfigSection>
-                <!-- Vanilla Preset for Saltpeter is complete. -->
+                <!-- Vanilla Preset for Poor Gold is complete. -->
 
-                <!-- End Saltpeter Generation -->
+                <!-- End Poor Gold Generation -->
 
                 <!-- Finished adding blocks -->
 
@@ -1459,7 +1466,7 @@
                 <!-- Starting SmallDeposits Preset for Firestone. -->
                 <ConfigSection>
                     <IfCondition condition=':= rlcrFirestoneDist = "SmallDeposits"'>
-                        <Veins name='rlcrFirestoneVeins'  inherits='PresetSmallDeposits' drawWireframe='true' wireframeColor='0x60C64E0D' drawBoundBox='false' boundBoxColor='0x60C64E0D'>
+                        <Veins name='rlcrFirestoneVeins'  inherits='PresetSmallDeposits' branchType='Bezier' drawWireframe='true' wireframeColor='0x60C64E0D' drawBoundBox='false' boundBoxColor='0x60C64E0D'>
                             <Description>
                                 Small motherlodes without any
                                 branches.  Similar to the  deposits
@@ -1481,6 +1488,7 @@
                             <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentLength' avg=':= _default_ * rlcrFirestoneSize ' range=':= _default_ * rlcrFirestoneSize ' type='normal' />
                             <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='SegmentRadius' avg=':= 0 * _default_ * rlcrFirestoneSize ' range=':= 0 * _default_ * rlcrFirestoneSize ' type='normal' />
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1521,7 +1529,7 @@
                             <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
                             <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Veins name='rlcrFirestoneHintVeins'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C64E0D' drawBoundBox='false' boundBoxColor='0x60C64E0D'>
+                            <Veins name='rlcrFirestoneHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60C64E0D' drawBoundBox='false' boundBoxColor='0x60C64E0D'>
                                 <Description>
                                     Single blocks, generously
                                     scattered through all heights
@@ -1543,10 +1551,10 @@
                                     already be scaled by that.
                                 </Description>
                                 <OreBlock block='Railcraft:ore:5' weight='1.0' />
-                                <ReplacesOre block='dirt' weight='1.0' />
+                                <Replaces block='minecraft:dirt' weight='1.0' />
                                 <Replaces block='minecraft:sandstone' weight='1.0' />
                                 <ReplacesOre block='stone' weight='1.0' />
-                                <ReplacesOre block='gravel' weight='1.0' />
+                                <Replaces block='minecraft:gravel' weight='1.0' />
                             </Veins>
                         </Cloud>
                     </IfCondition>
@@ -1595,9 +1603,9 @@
 
 
 <!-- =================================================================
-     This file was made using the Sprocket Configuration Generator.
-     If you wish to make your own configurations for a mod not
-     currently supported by Custom Ore Generation, and you don't want
-     the hassle of writing XML, you can find the generator script at
-     its GitHub page: http://https://github.com/reteo/Sprocket
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
      ================================================================= -->
