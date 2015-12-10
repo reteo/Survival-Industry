@@ -1,7 +1,7 @@
 <!-- =================================================================
      Custom Ore Generation "Special Rules" Module: This configuration
-     covers mantle, water table, igneous dikes, and supplemental
-     caves.
+     covers supplemental caves, mantle, water table, igneous dikes,
+     and clear portal stones.
      ================================================================= -->
 
 
@@ -60,7 +60,7 @@
 
         <!-- Mantle Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruMantleDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruMantleDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> Controls how Mantle is generated </Description>
                 <DisplayName>Special Rules Mantle</DisplayName>
                 <IfCondition condition=':= (?blockExists("minecraft:lava")) '>
@@ -83,7 +83,7 @@
                 <DisplayName>Special Rules Mantle Size</DisplayName>
             </OptionNumeric>
             <!-- EDITED: Added new slider to set the lava level in caves. -->
-            <OptionNumeric name='spruMantleLevel' default='16'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionNumeric name='spruMantleLevel' default='14'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> How high should the mantle be? </Description>
                 <DisplayName>Special Rules Mantle Level</DisplayName>
             </OptionNumeric>
@@ -126,7 +126,7 @@
 
         <!-- Igneous Dikes Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruIgneousDikesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruIgneousDikesDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> Controls how Igneous Dikes is generated </Description>
                 <DisplayName>Special Rules Igneous Dikes</DisplayName>
                 <IfCondition condition=':= (?blockExists("minecraft:lava")) '>
@@ -202,7 +202,7 @@
         <!-- Starting CustomVeins Preset for Supplemental Caves. -->
         <ConfigSection>
             <IfCondition condition=':= spruSupplementalCavesDist = "CustomVeins"'>
-                <Veins name='spruSupplementalCavesVeins'  minHeight='0'  maxHeight='60'   branchType='Bezier' drawWireframe='true' wireframeColor='0x60888888' drawBoundBox='false' boundBoxColor='0x60888888'>
+                <Veins name='spruSupplementalCavesVeins'   branchType='Bezier' drawWireframe='true' wireframeColor='0x60888888' drawBoundBox='false' boundBoxColor='0x60888888'>
                     <!-- EDITED: Changed description to match the original -->
                     <Description>
                         Very large veins intended for generating caves, supplementary to the vanilla cave generator.
@@ -245,7 +245,7 @@
         <!-- Starting Substitution Preset for Mantle. -->
         <ConfigSection>
             <IfCondition condition=':= spruMantleDist = "Substitution"'>
-                <Substitute name='spruMantleSubstitute'  minHeight='0'  maxHeight='8' >
+                <Substitute name='spruMantleSubstitute'  minHeight='0'  maxHeight='16' >
                     <Description>
                         This is a global replacement of one block
                         with another.  Height clamping is needed  to
@@ -366,9 +366,9 @@
 
 
 <!-- =================================================================
-     This file was made using the Sprocket Configuration Generator.
-     If you wish to make your own configurations for a mod not
-     currently supported by Custom Ore Generation, and you don't want
-     the hassle of writing XML, you can find the generator script at
-     its GitHub page: http://https://github.com/reteo/Sprocket
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
      ================================================================= -->
