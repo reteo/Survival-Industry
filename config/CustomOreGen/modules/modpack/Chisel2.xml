@@ -1,6 +1,6 @@
 <!-- =================================================================
      Custom Ore Generation "Chisel 2" Module: This configuration
-     covers limestone, marble, andesite, diorite, and granite.
+     covers andesite, diorite, granite, limestone, and marble.
      ================================================================= -->
 
 
@@ -33,98 +33,6 @@
                 <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Chisel 2 ores.'/>
                 <Choice value=':= ?false' displayValue='No' description='Chisel 2 ores will be handled by the mod itself.'/>
             </OptionChoice>
-
-            <!-- Limestone Configuration UI Starting -->
-            <ConfigSection>
-                <OptionChoice name='chslLimestoneDist'  displayState=':= if(?enableChisel2, "shown", "hidden")' displayGroup='groupChisel2'>
-                    <Description> Controls how Limestone is generated </Description>
-                    <DisplayName>Chisel 2 Limestone</DisplayName>
-                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
-
-                    <Choice value='StratumClouds' displayValue='Strata'>
-                        <Description>
-                            Wide, thin, and flat disks of ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
-
-                    <Choice value='LayeredVeins' displayValue='Layered Veins'>
-                        <Description>
-                            Small, fairly rare motherlodes with 2-4 horizontal veins each.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
-
-                    <Choice value='Vanilla' displayValue='Vanilla'>
-                        <Description>
-                            Simulates Vanilla Minecraft.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <Choice value='none' displayValue='None' description='Limestone is not generated in the world.'/>
-                </OptionChoice>
-                <OptionNumeric name='chslLimestoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
-                    <Description> Frequency multiplier for Chisel 2 Limestone distributions </Description>
-                    <DisplayName>Chisel 2 Limestone Freq.</DisplayName>
-                </OptionNumeric>
-                <OptionNumeric name='chslLimestoneSize' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
-                    <Description> Size multiplier for Chisel 2 Limestone distributions </Description>
-                    <DisplayName>Chisel 2 Limestone Size</DisplayName>
-                </OptionNumeric>
-            </ConfigSection>
-            <!-- Limestone Configuration UI Complete -->
-
-
-            <!-- Marble Configuration UI Starting -->
-            <ConfigSection>
-                <OptionChoice name='chslMarbleDist'  displayState=':= if(?enableChisel2, "shown", "hidden")' displayGroup='groupChisel2'>
-                    <Description> Controls how Marble is generated </Description>
-                    <DisplayName>Chisel 2 Marble</DisplayName>
-                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
-
-                    <Choice value='StratumClouds' displayValue='Strata'>
-                        <Description>
-                            Wide, thin, and flat disks of ore.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
-
-                    <Choice value='LayeredVeins' displayValue='Layered Veins'>
-                        <Description>
-                            Small, fairly rare motherlodes with 2-4 horizontal veins each.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
-
-                    <Choice value='Vanilla' displayValue='Vanilla'>
-                        <Description>
-                            Simulates Vanilla Minecraft.
-                        </Description>
-                    </Choice>
-                    </IfCondition>
-
-                    <Choice value='none' displayValue='None' description='Marble is not generated in the world.'/>
-                </OptionChoice>
-                <OptionNumeric name='chslMarbleFreq' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
-                    <Description> Frequency multiplier for Chisel 2 Marble distributions </Description>
-                    <DisplayName>Chisel 2 Marble Freq.</DisplayName>
-                </OptionNumeric>
-                <OptionNumeric name='chslMarbleSize' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
-                    <Description> Size multiplier for Chisel 2 Marble distributions </Description>
-                    <DisplayName>Chisel 2 Marble Size</DisplayName>
-                </OptionNumeric>
-            </ConfigSection>
-            <!-- Marble Configuration UI Complete -->
-
 
             <!-- Andesite Configuration UI Starting -->
             <ConfigSection>
@@ -263,6 +171,98 @@
             </ConfigSection>
             <!-- Granite Configuration UI Complete -->
 
+
+            <!-- Limestone Configuration UI Starting -->
+            <ConfigSection>
+                <OptionChoice name='chslLimestoneDist'  displayState=':= if(?enableChisel2, "shown", "hidden")' displayGroup='groupChisel2'>
+                    <Description> Controls how Limestone is generated </Description>
+                    <DisplayName>Chisel 2 Limestone</DisplayName>
+                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
+
+                    <Choice value='StratumClouds' displayValue='Strata'>
+                        <Description>
+                            Wide, thin, and flat disks of ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
+
+                    <Choice value='LayeredVeins' displayValue='Layered Veins'>
+                        <Description>
+                            Small, fairly rare motherlodes with 2-4 horizontal veins each.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("chisel:limestone")) '>
+
+                    <Choice value='Vanilla' displayValue='Vanilla'>
+                        <Description>
+                            Simulates Vanilla Minecraft.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <Choice value='none' displayValue='None' description='Limestone is not generated in the world.'/>
+                </OptionChoice>
+                <OptionNumeric name='chslLimestoneFreq' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
+                    <Description> Frequency multiplier for Chisel 2 Limestone distributions </Description>
+                    <DisplayName>Chisel 2 Limestone Freq.</DisplayName>
+                </OptionNumeric>
+                <OptionNumeric name='chslLimestoneSize' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
+                    <Description> Size multiplier for Chisel 2 Limestone distributions </Description>
+                    <DisplayName>Chisel 2 Limestone Size</DisplayName>
+                </OptionNumeric>
+            </ConfigSection>
+            <!-- Limestone Configuration UI Complete -->
+
+
+            <!-- Marble Configuration UI Starting -->
+            <ConfigSection>
+                <OptionChoice name='chslMarbleDist'  displayState=':= if(?enableChisel2, "shown", "hidden")' displayGroup='groupChisel2'>
+                    <Description> Controls how Marble is generated </Description>
+                    <DisplayName>Chisel 2 Marble</DisplayName>
+                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
+
+                    <Choice value='StratumClouds' displayValue='Strata'>
+                        <Description>
+                            Wide, thin, and flat disks of ore.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
+
+                    <Choice value='LayeredVeins' displayValue='Layered Veins'>
+                        <Description>
+                            Small, fairly rare motherlodes with 2-4 horizontal veins each.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <IfCondition condition=':= (?blockExists("chisel:marble")) '>
+
+                    <Choice value='Vanilla' displayValue='Vanilla'>
+                        <Description>
+                            Simulates Vanilla Minecraft.
+                        </Description>
+                    </Choice>
+                    </IfCondition>
+
+                    <Choice value='none' displayValue='None' description='Marble is not generated in the world.'/>
+                </OptionChoice>
+                <OptionNumeric name='chslMarbleFreq' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
+                    <Description> Frequency multiplier for Chisel 2 Marble distributions </Description>
+                    <DisplayName>Chisel 2 Marble Freq.</DisplayName>
+                </OptionNumeric>
+                <OptionNumeric name='chslMarbleSize' default='1'  min='0' max='5' displayState=':= if(?enableChisel2, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupChisel2'>
+                    <Description> Size multiplier for Chisel 2 Marble distributions </Description>
+                    <DisplayName>Chisel 2 Marble Size</DisplayName>
+                </OptionNumeric>
+            </ConfigSection>
+            <!-- Marble Configuration UI Complete -->
+
         </ConfigSection>
         <!-- Setup Screen Complete -->
 
@@ -280,180 +280,6 @@
 
                 <!-- Adding blocks -->
 
-                <!-- Begin Limestone Generation -->
-
-                <!-- Starting StratumClouds Preset for Limestone. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslLimestoneDist = "StratumClouds"'>
-                        <Cloud name='chslLimestoneCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
-                            <Description>
-                                Wide, thin, and flat disks of  ore.
-                                Primarily, this  distribution is meant
-                                to provide  realistic distribution of
-                                stone  in a strata formation.
-                            </Description>
-                            <OreBlock block='chisel:limestone' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.252 * _default_ * chslLimestoneSize ' range=':= 1.252 * _default_ * chslLimestoneSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.252 * _default_ * chslLimestoneSize ' range=':= 1.252 * _default_ * chslLimestoneSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.567 * _default_ * chslLimestoneFreq ' range=':= 1.567 * _default_ * chslLimestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Cloud>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- StratumClouds Preset for Limestone is complete. -->
-
-
-                <!-- Starting LayeredVeins Preset for Limestone. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslLimestoneDist = "LayeredVeins"'>
-                        <Veins name='chslLimestoneVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
-                            <Description>
-                                Small, fairly rare motherlodes  with
-                                2-4 horizontal veins each.
-                            </Description>
-                            <OreBlock block='chisel:limestone' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='MotherlodeFrequency' avg=':= 2.348 * _default_ * chslLimestoneFreq ' range=':= 2.348 * _default_ * chslLimestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 1.153 * _default_ * chslLimestoneSize ' range=':= 1.153 * _default_ * chslLimestoneSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchLength' avg=':= 1.532 * _default_ ' range=':= 1.532 * _default_ ' type='normal' />
-                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentLength' avg=':= _default_ * chslLimestoneSize ' range=':= _default_ * chslLimestoneSize ' type='normal' />
-                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentRadius' avg=':= 1.238 * _default_ * chslLimestoneSize ' range=':= 1.238 * _default_ * chslLimestoneSize ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Veins>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- LayeredVeins Preset for Limestone is complete. -->
-
-
-                <!-- Starting Vanilla Preset for Limestone. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslLimestoneDist = "Vanilla"'>
-                        <StandardGen name='chslLimestoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
-                            <Description>
-                                A master preset for standardgen  ore
-                                distributions.
-                            </Description>
-                            <OreBlock block='chisel:limestone' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 11.000 * chslLimestoneSize ' range=':= 11.000 * chslLimestoneSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 4.000 * chslLimestoneFreq ' range=':= 4.000 * chslLimestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </StandardGen>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- Vanilla Preset for Limestone is complete. -->
-
-                <!-- End Limestone Generation -->
-
-
-                <!-- Begin Marble Generation -->
-
-                <!-- Starting StratumClouds Preset for Marble. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslMarbleDist = "StratumClouds"'>
-                        <Cloud name='chslMarbleCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
-                            <Description>
-                                Wide, thin, and flat disks of  ore.
-                                Primarily, this  distribution is meant
-                                to provide  realistic distribution of
-                                stone  in a strata formation.
-                            </Description>
-                            <OreBlock block='chisel:marble' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.211 * _default_ * chslMarbleSize ' range=':= 1.211 * _default_ * chslMarbleSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.211 * _default_ * chslMarbleSize ' range=':= 1.211 * _default_ * chslMarbleSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.466 * _default_ * chslMarbleFreq ' range=':= 1.466 * _default_ * chslMarbleFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Cloud>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- StratumClouds Preset for Marble is complete. -->
-
-
-                <!-- Starting LayeredVeins Preset for Marble. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslMarbleDist = "LayeredVeins"'>
-                        <Veins name='chslMarbleVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
-                            <Description>
-                                Small, fairly rare motherlodes  with
-                                2-4 horizontal veins each.
-                            </Description>
-                            <OreBlock block='chisel:marble' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * chslMarbleFreq ' range=':= 2.196 * _default_ * chslMarbleFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * chslMarbleSize ' range=':= 1.140 * _default_ * chslMarbleSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
-                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
-                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentLength' avg=':= _default_ * chslMarbleSize ' range=':= _default_ * chslMarbleSize ' type='normal' />
-                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * chslMarbleSize ' range=':= 1.217 * _default_ * chslMarbleSize ' type='normal' />
-                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </Veins>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- LayeredVeins Preset for Marble is complete. -->
-
-
-                <!-- Starting Vanilla Preset for Marble. -->
-                <ConfigSection>
-                    <IfCondition condition=':= chslMarbleDist = "Vanilla"'>
-                        <StandardGen name='chslMarbleStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
-                            <Description>
-                                A master preset for standardgen  ore
-                                distributions.
-                            </Description>
-                            <OreBlock block='chisel:marble' weight='1.0' />
-                            <ReplacesOre block='stone' weight='1.0' />
-                            <Biome name='.*'  />
-                            <Setting name='Size' avg=':= 11.000 * chslMarbleSize ' range=':= 11.000 * chslMarbleSize ' type='normal' />
-                            <Setting name='Frequency' avg=':= 3.500 * chslMarbleFreq ' range=':= 3.500 * chslMarbleFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
-                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-                        </StandardGen>
-                    </IfCondition>
-                </ConfigSection>
-                <!-- Vanilla Preset for Marble is complete. -->
-
-                <!-- End Marble Generation -->
-
-
                 <!-- Begin Andesite Generation -->
 
                 <!-- Starting StratumClouds Preset for Andesite. -->
@@ -469,9 +295,9 @@
                             <OreBlock block='chisel:andesite' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.156 * _default_ * chslAndesiteSize ' range=':= 1.156 * _default_ * chslAndesiteSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.156 * _default_ * chslAndesiteSize ' range=':= 1.156 * _default_ * chslAndesiteSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.336 * _default_ * chslAndesiteFreq ' range=':= 1.336 * _default_ * chslAndesiteFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudRadius' avg=':= 1.512 * _default_ * chslAndesiteSize ' range=':= 1.512 * _default_ * chslAndesiteSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.512 * _default_ * chslAndesiteSize ' range=':= 1.512 * _default_ * chslAndesiteSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 2.286 * _default_ * chslAndesiteFreq ' range=':= 2.286 * _default_ * chslAndesiteFreq ' type='normal' scaleTo='base' />
                             <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -556,9 +382,9 @@
                             <OreBlock block='chisel:diorite' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.156 * _default_ * chslDioriteSize ' range=':= 1.156 * _default_ * chslDioriteSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.156 * _default_ * chslDioriteSize ' range=':= 1.156 * _default_ * chslDioriteSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.336 * _default_ * chslDioriteFreq ' range=':= 1.336 * _default_ * chslDioriteFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudRadius' avg=':= 1.512 * _default_ * chslDioriteSize ' range=':= 1.512 * _default_ * chslDioriteSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.512 * _default_ * chslDioriteSize ' range=':= 1.512 * _default_ * chslDioriteSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 2.286 * _default_ * chslDioriteFreq ' range=':= 2.286 * _default_ * chslDioriteFreq ' type='normal' scaleTo='base' />
                             <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -643,9 +469,9 @@
                             <OreBlock block='chisel:granite' weight='1.0' />
                             <ReplacesOre block='stone' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='CloudRadius' avg=':= 1.156 * _default_ * chslGraniteSize ' range=':= 1.156 * _default_ * chslGraniteSize ' type='normal' />
-                            <Setting name='CloudThickness' avg=':= 1.156 * _default_ * chslGraniteSize ' range=':= 1.156 * _default_ * chslGraniteSize ' type='normal' scaleTo='base' />
-                            <Setting name='DistributionFrequency' avg=':= 1.336 * _default_ * chslGraniteFreq ' range=':= 1.336 * _default_ * chslGraniteFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudRadius' avg=':= 1.512 * _default_ * chslGraniteSize ' range=':= 1.512 * _default_ * chslGraniteSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.512 * _default_ * chslGraniteSize ' range=':= 1.512 * _default_ * chslGraniteSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 2.286 * _default_ * chslGraniteFreq ' range=':= 2.286 * _default_ * chslGraniteFreq ' type='normal' scaleTo='base' />
                             <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -713,6 +539,180 @@
                 <!-- Vanilla Preset for Granite is complete. -->
 
                 <!-- End Granite Generation -->
+
+
+                <!-- Begin Limestone Generation -->
+
+                <!-- Starting StratumClouds Preset for Limestone. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslLimestoneDist = "StratumClouds"'>
+                        <Cloud name='chslLimestoneCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
+                            <Description>
+                                Wide, thin, and flat disks of  ore.
+                                Primarily, this  distribution is meant
+                                to provide  realistic distribution of
+                                stone  in a strata formation.
+                            </Description>
+                            <OreBlock block='chisel:limestone' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='CloudRadius' avg=':= 1.637 * _default_ * chslLimestoneSize ' range=':= 1.637 * _default_ * chslLimestoneSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.637 * _default_ * chslLimestoneSize ' range=':= 1.637 * _default_ * chslLimestoneSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 2.680 * _default_ * chslLimestoneFreq ' range=':= 2.680 * _default_ * chslLimestoneFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Cloud>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- StratumClouds Preset for Limestone is complete. -->
+
+
+                <!-- Starting LayeredVeins Preset for Limestone. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslLimestoneDist = "LayeredVeins"'>
+                        <Veins name='chslLimestoneVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
+                            <Description>
+                                Small, fairly rare motherlodes  with
+                                2-4 horizontal veins each.
+                            </Description>
+                            <OreBlock block='chisel:limestone' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='MotherlodeFrequency' avg=':= 2.348 * _default_ * chslLimestoneFreq ' range=':= 2.348 * _default_ * chslLimestoneFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 1.153 * _default_ * chslLimestoneSize ' range=':= 1.153 * _default_ * chslLimestoneSize ' type='normal' />
+                            <Setting name='MotherlodeHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchLength' avg=':= 1.532 * _default_ ' range=':= 1.532 * _default_ ' type='normal' />
+                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentLength' avg=':= _default_ * chslLimestoneSize ' range=':= _default_ * chslLimestoneSize ' type='normal' />
+                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentRadius' avg=':= 1.238 * _default_ * chslLimestoneSize ' range=':= 1.238 * _default_ * chslLimestoneSize ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Veins>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- LayeredVeins Preset for Limestone is complete. -->
+
+
+                <!-- Starting Vanilla Preset for Limestone. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslLimestoneDist = "Vanilla"'>
+                        <StandardGen name='chslLimestoneStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60A5A28F' drawBoundBox='false' boundBoxColor='0x60A5A28F'>
+                            <Description>
+                                A master preset for standardgen  ore
+                                distributions.
+                            </Description>
+                            <OreBlock block='chisel:limestone' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='Size' avg=':= 11.000 * chslLimestoneSize ' range=':= 11.000 * chslLimestoneSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 4.000 * chslLimestoneFreq ' range=':= 4.000 * chslLimestoneFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </StandardGen>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- Vanilla Preset for Limestone is complete. -->
+
+                <!-- End Limestone Generation -->
+
+
+                <!-- Begin Marble Generation -->
+
+                <!-- Starting StratumClouds Preset for Marble. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslMarbleDist = "StratumClouds"'>
+                        <Cloud name='chslMarbleCloud'  inherits='PresetStratum' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
+                            <Description>
+                                Wide, thin, and flat disks of  ore.
+                                Primarily, this  distribution is meant
+                                to provide  realistic distribution of
+                                stone  in a strata formation.
+                            </Description>
+                            <OreBlock block='chisel:marble' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='CloudRadius' avg=':= 1.583 * _default_ * chslMarbleSize ' range=':= 1.583 * _default_ * chslMarbleSize ' type='normal' />
+                            <Setting name='CloudThickness' avg=':= 1.583 * _default_ * chslMarbleSize ' range=':= 1.583 * _default_ * chslMarbleSize ' type='normal' scaleTo='base' />
+                            <Setting name='DistributionFrequency' avg=':= 2.507 * _default_ * chslMarbleFreq ' range=':= 2.507 * _default_ * chslMarbleFreq ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Cloud>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- StratumClouds Preset for Marble is complete. -->
+
+
+                <!-- Starting LayeredVeins Preset for Marble. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslMarbleDist = "LayeredVeins"'>
+                        <Veins name='chslMarbleVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
+                            <Description>
+                                Small, fairly rare motherlodes  with
+                                2-4 horizontal veins each.
+                            </Description>
+                            <OreBlock block='chisel:marble' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * chslMarbleFreq ' range=':= 2.196 * _default_ * chslMarbleFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * chslMarbleSize ' range=':= 1.140 * _default_ * chslMarbleSize ' type='normal' />
+                            <Setting name='MotherlodeHeight' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
+                            <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+                            <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentLength' avg=':= _default_ * chslMarbleSize ' range=':= _default_ * chslMarbleSize ' type='normal' />
+                            <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * chslMarbleSize ' range=':= 1.217 * _default_ * chslMarbleSize ' type='normal' />
+                            <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                            <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </Veins>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- LayeredVeins Preset for Marble is complete. -->
+
+
+                <!-- Starting Vanilla Preset for Marble. -->
+                <ConfigSection>
+                    <IfCondition condition=':= chslMarbleDist = "Vanilla"'>
+                        <StandardGen name='chslMarbleStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60CECECE' drawBoundBox='false' boundBoxColor='0x60CECECE'>
+                            <Description>
+                                A master preset for standardgen  ore
+                                distributions.
+                            </Description>
+                            <OreBlock block='chisel:marble' weight='1.0' />
+                            <ReplacesOre block='stone' weight='1.0' />
+                            <Biome name='.*'  />
+                            <Setting name='Size' avg=':= 11.000 * chslMarbleSize ' range=':= 11.000 * chslMarbleSize ' type='normal' />
+                            <Setting name='Frequency' avg=':= 3.500 * chslMarbleFreq ' range=':= 3.500 * chslMarbleFreq ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 67 ' range=':= 61 ' type='uniform' scaleTo='base' />
+                            <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+                        </StandardGen>
+                    </IfCondition>
+                </ConfigSection>
+                <!-- Vanilla Preset for Marble is complete. -->
+
+                <!-- End Marble Generation -->
 
                 <!-- Finished adding blocks -->
 

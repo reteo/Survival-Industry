@@ -36,7 +36,7 @@
 
             <!-- Salt Configuration UI Starting -->
             <ConfigSection>
-                <OptionChoice name='hvstSaltDist' default='none'  displayState=':= if(?enablePamsHarvestCraft, "shown", "hidden")' displayGroup='groupPamsHarvestCraft'>
+                <OptionChoice name='hvstSaltDist'  displayState=':= if(?enablePamsHarvestCraft, "shown", "hidden")' displayGroup='groupPamsHarvestCraft'>
                     <Description> Controls how Salt is generated </Description>
                     <DisplayName>Pams HarvestCraft Salt</DisplayName>
                     <IfCondition condition=':= (?blockExists("harvestcraft:salt")) '>
