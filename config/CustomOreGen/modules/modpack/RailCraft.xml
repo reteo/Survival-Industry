@@ -556,7 +556,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 9.801 * _default_ * rlcrPoorIronFreq ' range=':= 9.801 * _default_ * rlcrPoorIronFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorIronSize ' range=':= 0 * _default_ * rlcrPoorIronSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -600,7 +600,7 @@
                             <Setting name='CloudRadius' avg=':= 2.138 * _default_ * rlcrPoorIronSize ' range=':= 2.138 * _default_ * rlcrPoorIronSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 2.138 * _default_ * rlcrPoorIronSize ' range=':= 2.138 * _default_ * rlcrPoorIronSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 4.571 * _default_ * rlcrPoorIronFreq ' range=':= 4.571 * _default_ * rlcrPoorIronFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -653,7 +653,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 8.000 * rlcrPoorIronSize ' range=':= 8.000 * rlcrPoorIronSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 16.000 * rlcrPoorIronFreq ' range=':= 16.000 * rlcrPoorIronFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 40 ' range=':= 4 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -685,7 +685,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 2.450 * _default_ * rlcrPoorGoldFreq ' range=':= 2.450 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorGoldSize ' range=':= 0 * _default_ * rlcrPoorGoldSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -729,7 +729,7 @@
                             <Setting name='CloudRadius' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.069 * _default_ * rlcrPoorGoldSize ' range=':= 1.069 * _default_ * rlcrPoorGoldSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.143 * _default_ * rlcrPoorGoldFreq ' range=':= 1.143 * _default_ * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -782,7 +782,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 0.500 * rlcrPoorGoldSize ' range=':= 0.500 * rlcrPoorGoldSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 16.000 * rlcrPoorGoldFreq ' range=':= 16.000 * rlcrPoorGoldFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 15 ' range=':= 1 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -814,7 +814,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 6.930 * _default_ * rlcrPoorCopperFreq ' range=':= 6.930 * _default_ * rlcrPoorCopperFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorCopperSize ' range=':= 0 * _default_ * rlcrPoorCopperSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -858,7 +858,7 @@
                             <Setting name='CloudRadius' avg=':= 1.798 * _default_ * rlcrPoorCopperSize ' range=':= 1.798 * _default_ * rlcrPoorCopperSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.798 * _default_ * rlcrPoorCopperSize ' range=':= 1.798 * _default_ * rlcrPoorCopperSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 3.232 * _default_ * rlcrPoorCopperFreq ' range=':= 3.232 * _default_ * rlcrPoorCopperFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -912,7 +912,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 4.000 * rlcrPoorCopperSize ' range=':= 4.000 * rlcrPoorCopperSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 16.000 * rlcrPoorCopperFreq ' range=':= 16.000 * rlcrPoorCopperFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 60 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -944,7 +944,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrPoorTinFreq ' range=':= 3.465 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorTinSize ' range=':= 0 * _default_ * rlcrPoorTinSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -988,7 +988,7 @@
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrPoorTinSize ' range=':= 1.271 * _default_ * rlcrPoorTinSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrPoorTinFreq ' range=':= 1.616 * _default_ * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1041,7 +1041,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 1.000 * rlcrPoorTinSize ' range=':= 1.000 * rlcrPoorTinSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 16.000 * rlcrPoorTinFreq ' range=':= 16.000 * rlcrPoorTinFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 50 ' range=':= 2 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1073,7 +1073,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 6.002 * _default_ * rlcrPoorLeadFreq ' range=':= 6.002 * _default_ * rlcrPoorLeadFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrPoorLeadSize ' range=':= 0 * _default_ * rlcrPoorLeadSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1117,7 +1117,7 @@
                             <Setting name='CloudRadius' avg=':= 1.673 * _default_ * rlcrPoorLeadSize ' range=':= 1.673 * _default_ * rlcrPoorLeadSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.673 * _default_ * rlcrPoorLeadSize ' range=':= 1.673 * _default_ * rlcrPoorLeadSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 2.799 * _default_ * rlcrPoorLeadFreq ' range=':= 2.799 * _default_ * rlcrPoorLeadFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1170,7 +1170,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 3.000 * rlcrPoorLeadSize ' range=':= 3.000 * rlcrPoorLeadSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 16.000 * rlcrPoorLeadFreq ' range=':= 16.000 * rlcrPoorLeadFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 30 ' range=':= 3 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1195,7 +1195,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 1.707 * _default_ * rlcrSulfurFreq ' range=':= 1.707 * _default_ * rlcrSulfurFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrSulfurSize ' range=':= 0 * _default_ * rlcrSulfurSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1249,7 +1249,7 @@
                             <Setting name='CloudRadius' avg=':= 1.130 * _default_ * rlcrSulfurSize ' range=':= 1.130 * _default_ * rlcrSulfurSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.130 * _default_ * rlcrSulfurSize ' range=':= 1.130 * _default_ * rlcrSulfurSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.278 * _default_ * rlcrSulfurFreq ' range=':= 1.278 * _default_ * rlcrSulfurFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1302,7 +1302,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 5.000 * rlcrSulfurSize ' range=':= 5.000 * rlcrSulfurSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 2.000 * rlcrSulfurFreq ' range=':= 2.000 * rlcrSulfurFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 11 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1335,7 +1335,7 @@
                             <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
                             <Setting name='MotherlodeFrequency' avg=':= 3.465 * _default_ * rlcrSaltpeterFreq ' range=':= 3.465 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0 * _default_ * rlcrSaltpeterSize ' range=':= 0 * _default_ * rlcrSaltpeterSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1380,7 +1380,7 @@
                             <Setting name='CloudRadius' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 1.271 * _default_ * rlcrSaltpeterSize ' range=':= 1.271 * _default_ * rlcrSaltpeterSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 1.616 * _default_ * rlcrSaltpeterFreq ' range=':= 1.616 * _default_ * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1434,7 +1434,7 @@
                             <BiomeType name='Desert'  minRainfall='0' maxRainfall='0.1' minTemperature='1.5' maxTemperature='2.0' />
                             <Setting name='Size' avg=':= 0.500 * rlcrSaltpeterSize ' range=':= 0.500 * rlcrSaltpeterSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 32.000 * rlcrSaltpeterFreq ' range=':= 32.000 * rlcrSaltpeterFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 64 ' range=':= 5 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
@@ -1478,7 +1478,7 @@
                             <Biome name='.*'  />
                             <Setting name='MotherlodeFrequency' avg=':= 0.055 * _default_ * rlcrFirestoneFreq ' range=':= 0.055 * _default_ * rlcrFirestoneFreq ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeSize' avg=':= 0.980 * _default_ * rlcrFirestoneSize ' range=':= 0.980 * _default_ * rlcrFirestoneSize ' type='normal' />
-                            <Setting name='MotherlodeHeight' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeHeight' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='position' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1522,7 +1522,7 @@
                             <Setting name='CloudRadius' avg=':= 0.449 * _default_ * rlcrFirestoneSize ' range=':= 0.449 * _default_ * rlcrFirestoneSize ' type='normal' />
                             <Setting name='CloudThickness' avg=':= 0.449 * _default_ * rlcrFirestoneSize ' range=':= 0.449 * _default_ * rlcrFirestoneSize ' type='normal' scaleTo='base' />
                             <Setting name='DistributionFrequency' avg=':= 0.202 * _default_ * rlcrFirestoneFreq ' range=':= 0.202 * _default_ * rlcrFirestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='CloudHeight' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='base' />
+                            <Setting name='CloudHeight' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
@@ -1575,7 +1575,7 @@
                             <Biome name='.*'  />
                             <Setting name='Size' avg=':= 0.500 * rlcrFirestoneSize ' range=':= 0.500 * rlcrFirestoneSize ' type='normal' />
                             <Setting name='Frequency' avg=':= 0.500 * rlcrFirestoneFreq ' range=':= 0.500 * rlcrFirestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='Height' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='base' />
+                            <Setting name='Height' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='position' />
                             <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                         </StandardGen>
                     </IfCondition>
