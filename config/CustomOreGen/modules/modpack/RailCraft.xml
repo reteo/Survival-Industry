@@ -1476,8 +1476,8 @@
                             <OreBlock block='Railcraft:ore:5' weight='1.0' />
                             <Replaces block='minecraft:netherrack' weight='1.0' />
                             <Biome name='.*'  />
-                            <Setting name='MotherlodeFrequency' avg=':= 0.221 * _default_ * rlcrFirestoneFreq ' range=':= 0.221 * _default_ * rlcrFirestoneFreq ' type='normal' scaleTo='base' />
-                            <Setting name='MotherlodeSize' avg=':= 0.778 * _default_ * rlcrFirestoneSize ' range=':= 0.778 * _default_ * rlcrFirestoneSize ' type='normal' />
+                            <Setting name='MotherlodeFrequency' avg=':= 0.055 * _default_ * rlcrFirestoneFreq ' range=':= 0.055 * _default_ * rlcrFirestoneFreq ' type='normal' scaleTo='base' />
+                            <Setting name='MotherlodeSize' avg=':= 0.980 * _default_ * rlcrFirestoneSize ' range=':= 0.980 * _default_ * rlcrFirestoneSize ' type='normal' />
                             <Setting name='MotherlodeHeight' avg=':= 16 ' range=':= 15 ' type='normal' scaleTo='base' />
                             <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
                             <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
