@@ -1,0 +1,694 @@
+{
+  "settings": {
+    "PatchRotarycraftSteelTools": true,
+    "UpdateToolMaterials": true,
+    "UpdateTools": true,
+    "RotaryCraftSteelmaking": true
+  },
+  "toolMaterials": {
+    "GOLD": {
+      "harvestLevel": 0,
+      "durability": 131,
+      "efficiency": 4.0,
+      "damage": 0.0,
+      "enchantability": 5
+    },
+    "EMERALD": {
+      "harvestLevel": 6,
+      "durability": 1561,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "RUBY": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "SAPPHIRE": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "PERIDOT": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 7.75,
+      "damage": 2.75,
+      "enchantability": 14
+    },
+    "BRONZE": {
+      "harvestLevel": 4,
+      "durability": 250,
+      "efficiency": 6.0,
+      "damage": 1.0,
+      "enchantability": 14
+    },
+    "STEEL": {
+      "harvestLevel": 5,
+      "durability": 750,
+      "efficiency": 7.0,
+      "damage": 3.0,
+      "enchantability": 18
+    },
+    "RAILCRAFT_STEEL": {
+      "harvestLevel": 5,
+      "durability": 750,
+      "efficiency": 7.0,
+      "damage": 3.0,
+      "enchantability": 18
+    },
+    "WOOD": {
+      "harvestLevel": 0,
+      "durability": 59,
+      "efficiency": 2.0,
+      "damage": 0.0,
+      "enchantability": 15
+    },
+    "FLINT": {
+      "harvestLevel": 1,
+      "durability": 160,
+      "efficiency": 5.0,
+      "damage": 1.0,
+      "enchantability": 10
+    },
+    "SILVER": {
+      "harvestLevel": 2,
+      "durability": 25,
+      "efficiency": 16.0,
+      "damage": 1.0,
+      "enchantability": 20
+    },
+    "BEDROCK": {
+      "harvestLevel": 255,
+      "durability": 0,
+      "efficiency": 8.0,
+      "damage": 4.0,
+      "enchantability": 8
+    },
+    "COPPER": {
+      "harvestLevel": 2,
+      "durability": 180,
+      "efficiency": 5.0,
+      "damage": 1.0,
+      "enchantability": 5
+    },
+    "IRON": {
+      "harvestLevel": 4,
+      "durability": 250,
+      "efficiency": 6.0,
+      "damage": 2.0,
+      "enchantability": 14
+    },
+    "ELECTRUM": {
+      "harvestLevel": 2,
+      "durability": 100,
+      "efficiency": 20.0,
+      "damage": 0.0,
+      "enchantability": 30
+    },
+    "STONE": {
+      "harvestLevel": 1,
+      "durability": 131,
+      "efficiency": 4.0,
+      "damage": 0.0,
+      "enchantability": 5
+    },
+    "enderutilities.enderalloyadvanced": {
+      "harvestLevel": 6,
+      "durability": 2560,
+      "efficiency": 12.0,
+      "damage": 4.0,
+      "enchantability": 15
+    },
+    "Scarab": {
+      "harvestLevel": 6,
+      "durability": 1861,
+      "efficiency": 8.0,
+      "damage": 4.0,
+      "enchantability": 25
+    }
+  },
+  "blocks": {
+    "blockCdInAg": {
+      "refClass": "BlockCdInAg",
+      "hardness": 10.0,
+      "blastresistance": 15.0,
+      "tool": "pickaxe",
+      "harvestlevel": 1,
+      "material": "iron",
+      "tab": "si.core",
+      "condition": "ReactorCraft"
+    },
+    "blockMetalGeneric": {
+      "refClass": "SIMetalBlock",
+      "hardness": 10.0,
+      "blastresistance": 10.0,
+      "tool": "pickaxe",
+      "harvestlevel": 1,
+      "material": "iron",
+      "tab": "si.core",
+      "placer": "SIMetalBlockPlacer",
+      "condition": ""
+    },
+    "blockPitchblende": {
+      "refClass": "BlockPitchblende",
+      "hardness": 30.0,
+      "blastresistance": 45.0,
+      "tool": "pickaxe",
+      "harvestlevel": 1,
+      "material": "iron",
+      "tab": "si.core",
+      "condition": "ReactorCraft"
+    }
+  },
+  "items": {
+    "itemCTEnblem": {
+      "refClass": "SICoreItem",
+      "stackSize": 1,
+      "condition": ""
+    },
+    "ingotGeneric": {
+      "refClass": "SIIngotGeneric",
+      "stackSize": 64,
+      "tab": "si.core",
+      "condition": ""
+    },
+    "itemCrucible": {
+      "refClass": "ItemCrucible",
+      "stackSize": 64,
+      "tab": "si.core",
+      "condition": ""
+    },
+    "itemIngotMold": {
+      "refClass": "ItemIngotMold",
+      "stackSize": 64,
+      "tab": "si.core",
+      "condition": ""
+    },
+    "itemCherenkovsingularity": {
+      "refClass": "SICoreItem",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": ""
+    }
+  },
+  "metalblocks": [
+    {
+      "value": "bronze",
+      "condition": "!Metallurgy"
+    },
+    {
+      "value": "electrum",
+      "condition": "!Metallurgy"
+    },
+    {
+      "value": "steel",
+      "condition": "!Metallurgy"
+    },
+    {
+      "value": "aluminum",
+      "condition": "RotaryCraft"
+    },
+    {
+      "value": "cadmium",
+      "condition": "ReactorCraft"
+    },
+    {
+      "value": "indium",
+      "condition": "ReactorCraft"
+    },
+    {
+      "value": "platinum",
+      "condition": "ElectriCraft,!Metallurgy"
+    }
+  ],
+  "metalingots": [
+    {
+      "value": "bronze",
+      "condition": "!Metallurgy"
+    },
+    {
+      "value": "electrum",
+      "condition": "!Metallurgy"
+    },
+    {
+      "value": "steel",
+      "condition": "!Metallurgy"
+    }
+  ],
+  "itemstacksubstitutes": {
+    "RoC:ingotIndium": "RotaryCraft:rotarycraft_item_modingots:51",
+    "RoC:ingotPlatinum": "RotaryCraft:rotarycraft_item_modingots:44",
+    "ReC:itemPlutonium": "ReactorCraft:reactorcraft_item_plutonium:0",
+    "RoC:ingotCadmium": "RotaryCraft:rotarycraft_item_modingots:50",
+    "RoC:ingotAluminum": "RotaryCraft:rotarycraft_item_modingots:6",
+    "RoC:ingotPitchblende": "RotaryCraft:rotarycraft_item_modingots:49",
+    "ReC:ingotCdInAg": "ReactorCraft:reactorcraft_item_crafting:3"
+  },
+  "shapelessrecipes": [
+    {
+      "result": {
+        "name": "RoC:ingotAluminum",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "blockAluminum",
+          "stackSize": 1
+        }
+      ],
+      "condition": "RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "RoC:ingotIndium",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "blockIndium",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "RoC:ingotPlatinum",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "blockPlatinum",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "RoC:ingotPitchblende",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "blockUranium",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "RoC:ingotCadmium",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "blockCadmium",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "ReC:ingotCdInAg",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "si.core:blockCdInAg",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:itemCherenkovsingularity",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "ReC:itemPlutonium",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:ender_pearl",
+          "stackSize": 1
+        }
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:itemIngotMold",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:sand",
+          "stackSize": 1
+        }
+      ],
+      "condition": ""
+    },
+    {
+      "result": {
+        "name": "minecraft:stick",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "si.core:itemIngotMold",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:stick",
+          "stackSize": 1
+        }
+      ],
+      "condition": ""
+    },
+    {
+      "result": {
+        "name": "si.core:itemCrucible",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:clay",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:sand",
+          "stackSize": 1
+        }
+      ],
+      "condition": ""
+    }
+  ],
+  "shapedrecipes": [
+    {
+      "result": {
+        "name": "si.core:blockPitchblende",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotUranium",
+          "ingotUranium",
+          "ingotUranium"
+        ],
+        [
+          "ingotUranium",
+          "ingotUranium",
+          "ingotUranium"
+        ],
+        [
+          "ingotUranium",
+          "ingotUranium",
+          "ingotUranium"
+        ]
+      ],
+      "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:blockCdInAg",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg"
+        ],
+        [
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg"
+        ],
+        [
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg",
+          "ReC:ingotCdInAg"
+        ]
+      ],
+      "condition": "ReactorCraft"
+    }
+  ],
+  "oredict": [
+    {
+      "mod": "si.core",
+      "item": "blockPitchblende",
+      "meta": 0,
+      "entry": "blockUranium"
+    }
+  ],
+  "alloymap": [
+    {
+      "one": "ingotCopper",
+      "two": "ingotTin",
+      "result": "ingotBronze",
+      "amount": 2,
+      "modcondition": ""
+    },
+    {
+      "one": "ingotSilver",
+      "two": "ingotGold",
+      "result": "ingotElectrum",
+      "amount": 2,
+      "modcondition": ""
+    },
+    {
+      "one": "ingotIron",
+      "two": "itemCoal",
+      "result": "ingotSteel",
+      "amount": 1,
+      "modcondition": "!RotaryCraft,!Railcraft"
+    },
+    {
+      "one": "oreIron",
+      "result": "ingotIron",
+      "amount": 1,
+      "modcondition": ""
+    },
+    {
+      "one": "oreTin",
+      "result": "ingotTin",
+      "amount": 1,
+      "modcondition": ""
+    },
+    {
+      "one": "oreCopper",
+      "result": "ingotCopper",
+      "amount": 1,
+      "modcondition": ""
+    },
+    {
+      "one": "oreGold",
+      "result": "ingotGold",
+      "amount": 1,
+      "modcondition": ""
+    },
+    {
+      "one": "oreAluminum",
+      "result": "ingotAluminium",
+      "amount": 1,
+      "modcondition": ""
+    },
+    {
+      "one": "oreSilver",
+      "result": "ingotSilver",
+      "amount": 1,
+      "modcondition": ""
+    }
+  ],
+  "blockproperties": {
+    "minecraft:lit_redstone_ore": {
+      "harvestlevel": {
+        "0": 2
+      }
+    },
+    "Railcraft:ore": {
+      "harvestlevel": {
+        "0": 1,
+        "1": 1,
+        "2": 5,
+        "3": 5,
+        "4": 2,
+        "5": 5,
+        "7": 3,
+        "8": 4,
+        "9": 1,
+        "10": 2,
+        "11": 2
+      }
+    },
+    "minecraft:quartz_ore": {
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "appliedenergistics2:tile.OreQuartz": {
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "minechem:tile.oreUranium": {
+      "harvestlevel": {
+        "0": 4
+      }
+    },
+    "ElectriCraft:electricraft_block_ore": {
+      "harvestlevel": {
+        "0": 1,
+        "1": 2,
+        "2": 4,
+        "3": 3,
+        "4": 1,
+        "5": 4
+      }
+    },
+    "NetherOres:tile.netherores.ore.0": {
+      "harvestlevel": {
+        "0": 4,
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 1,
+        "6": 5,
+        "7": 4,
+        "8": 5,
+        "9": 4,
+        "10": 4,
+        "11": 2,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 2
+      }
+    },
+    "minecraft:coal_ore": {
+      "harvestlevel": {
+        "0": 1
+      }
+    },
+    "ReactorCraft:reactorcraft_block_ore": {
+      "harvestlevel": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 4
+      }
+    },
+    "minecraft:diamond_ore": {
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "minecraft:lapis_ore": {
+      "harvestlevel": {
+        "0": 2
+      }
+    },
+    "appliedenergistics2:tile.OreQuartzCharged": {
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "Forestry:resources:1": {
+      "harvestlevel": {
+        "0": 1
+      }
+    },
+    "Forestry:resources:2": {
+      "harvestlevel": {
+        "0": 2
+      }
+    },
+    "minecraft:gold_ore": {
+      "harvestlevel": {
+        "0": 4
+      }
+    },
+    "ProjRed|Exploration:projectred.exploration.ore:0": {
+      "harvestlevel": {
+        "0": 5,
+        "1": 5,
+        "2": 5,
+        "3": 1,
+        "4": 2,
+        "5": 4,
+        "6": 4
+      }
+    },
+    "minecraft:redstone_ore": {
+      "harvestlevel": {
+        "0": 2
+      }
+    },
+    "fossil:fossil": {
+      "harvestlevel": {
+        "0": 4
+      }
+    },
+    "Forestry:resources": {
+      "harvestlevel": {
+        "0": 1,
+        "1": 1,
+        "2": 2
+      }
+    },
+    "minecraft:iron_ore": {
+      "harvestlevel": {
+        "0": 3
+      }
+    },
+    "ReactorCraft:reactorcraft_block_fluoriteore": {
+      "harvestlevel": {
+        "0": 5,
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5,
+        "5": 5,
+        "6": 5,
+        "7": 5
+      }
+    },
+    "minecraft:emerald_ore": {
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "minecraft:obsidian": {
+      "harvestlevel": {
+        "0": 6
+      }
+    }
+  },
+  "harvestlevelcolors": {
+    "0": "GRAY",
+    "1": "WHITE",
+    "2": "GREEN",
+    "3": "YELLOW",
+    "4": "GOLD",
+    "5": "RED",
+    "6": "DARK_PURPLE",
+    "255": "AQUA"
+  }
+}
