@@ -35,11 +35,13 @@ val brick = <ore:ingotBrick>;
 val flint = <ore:itemFlint>;
 val sand = <ore:sand>;
 val redstoneblock = <ore:blockRedstone>;
+val slime = <ore:slimeball>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
 val piston = <minecraft:piston>;
 val bedrock = <minecraft:bedrock>;
+val bedrockdust = <RotaryCraft:rotarycraft_item_powders:4>;
 val relicscrap = <fossil:relicScrap>;
 val biofossil = <fossil:bioFossil>;
 val machineframe = <rftools:machineFrame>;
@@ -62,6 +64,7 @@ val bricks = <minecraft:brick_block>;
 val cherenkov = <si.core:itemCherenkovsingularity>;
 val thread = <minecraft:string>;
 val arrow = <minecraft:arrow>;
+val blankhead = <VeganOption:mobHeadBlank>;
 
 
 // recipes.addShapeless(<minecraft:stick> * 4, [<ore:plankWood>, <ore:plankWood>]);
@@ -272,3 +275,7 @@ recipes.addShaped(<harvestcraft:cuttingboardItem>,[[flint,null,null],[null,stick
 /* Since steel is needed before diamond can be mined, let's remove dependence on the Nether for the Railcraft blast furnace. */
 recipes.removeShaped(<Railcraft:machine.alpha:12>);
 recipes.addShaped(<Railcraft:machine.alpha:12>,[[sand,bricks,sand],[bricks,magmacream,bricks],[sand,bricks,sand]]);
+
+/* The Vegan Option Wither Skull recipe is making nether stars too easy to obtain.  Replacing the black dye with bedrock dust should remove this shortcut. */
+recipes.removeShaped(<minecraft:skull:1>);
+recipes.addShaped(<minecraft:skull:1>,[[bedrockdust,slime,bedrockdust],[slime,blankhead,slime],[bedrockdust,slime,bedrockdust]]);
