@@ -1,9 +1,17 @@
 {
   "settings": {
+    "SetToolMaterials": true,
+    "AddItems": true,
     "PatchRotarycraftSteelTools": true,
+    "AddRecipes": true,
+    "AddOredictEntries": true,
+    "UpdateBlockProperties": true,
     "UpdateToolMaterials": true,
     "UpdateTools": true,
-    "RotaryCraftSteelmaking": true
+    "LibraryOnlyMode": false,
+    "AddBlocks": true,
+    "RotaryCraftSteelmaking": true,
+    "RunWorldGeneration": true
   },
   "toolMaterials": {
     "GOLD": {
@@ -20,25 +28,39 @@
       "damage": 3.0,
       "enchantability": 10
     },
-    "RUBY": {
-      "harvestLevel": 5,
-      "durability": 512,
+    "Scarab": {
+      "harvestLevel": 6,
+      "durability": 1861,
       "efficiency": 8.0,
-      "damage": 3.0,
-      "enchantability": 10
+      "damage": 4.0,
+      "enchantability": 25
     },
-    "SAPPHIRE": {
-      "harvestLevel": 5,
-      "durability": 512,
-      "efficiency": 8.0,
-      "damage": 3.0,
-      "enchantability": 10
+    "WOOD": {
+      "harvestLevel": 0,
+      "durability": 59,
+      "efficiency": 2.0,
+      "damage": 0.0,
+      "enchantability": 15
     },
-    "PERIDOT": {
-      "harvestLevel": 5,
-      "durability": 512,
-      "efficiency": 7.75,
-      "damage": 2.75,
+    "SILVER": {
+      "harvestLevel": 2,
+      "durability": 25,
+      "efficiency": 16.0,
+      "damage": 1.0,
+      "enchantability": 20
+    },
+    "COPPER": {
+      "harvestLevel": 2,
+      "durability": 180,
+      "efficiency": 5.0,
+      "damage": 1.0,
+      "enchantability": 5
+    },
+    "IRON": {
+      "harvestLevel": 4,
+      "durability": 250,
+      "efficiency": 6.0,
+      "damage": 2.0,
       "enchantability": 14
     },
     "BRONZE": {
@@ -62,47 +84,19 @@
       "damage": 3.0,
       "enchantability": 18
     },
-    "WOOD": {
-      "harvestLevel": 0,
-      "durability": 59,
-      "efficiency": 2.0,
-      "damage": 0.0,
+    "enderutilities.enderalloyadvanced": {
+      "harvestLevel": 6,
+      "durability": 2560,
+      "efficiency": 12.0,
+      "damage": 4.0,
       "enchantability": 15
     },
     "FLINT": {
       "harvestLevel": 1,
-      "durability": 160,
+      "durability": 175,
       "efficiency": 5.0,
       "damage": 1.0,
       "enchantability": 10
-    },
-    "SILVER": {
-      "harvestLevel": 2,
-      "durability": 25,
-      "efficiency": 16.0,
-      "damage": 1.0,
-      "enchantability": 20
-    },
-    "BEDROCK": {
-      "harvestLevel": 255,
-      "durability": 0,
-      "efficiency": 8.0,
-      "damage": 4.0,
-      "enchantability": 8
-    },
-    "COPPER": {
-      "harvestLevel": 2,
-      "durability": 180,
-      "efficiency": 5.0,
-      "damage": 1.0,
-      "enchantability": 5
-    },
-    "IRON": {
-      "harvestLevel": 4,
-      "durability": 250,
-      "efficiency": 6.0,
-      "damage": 2.0,
-      "enchantability": 14
     },
     "ELECTRUM": {
       "harvestLevel": 2,
@@ -111,26 +105,33 @@
       "damage": 0.0,
       "enchantability": 30
     },
+    "RUBY": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "SAPPHIRE": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "PERIDOT": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 7.75,
+      "damage": 2.75,
+      "enchantability": 14
+    },
     "STONE": {
       "harvestLevel": 1,
       "durability": 131,
       "efficiency": 4.0,
       "damage": 0.0,
       "enchantability": 5
-    },
-    "enderutilities.enderalloyadvanced": {
-      "harvestLevel": 6,
-      "durability": 2560,
-      "efficiency": 12.0,
-      "damage": 4.0,
-      "enchantability": 15
-    },
-    "Scarab": {
-      "harvestLevel": 6,
-      "durability": 1861,
-      "efficiency": 8.0,
-      "damage": 4.0,
-      "enchantability": 25
     }
   },
   "blocks": {
@@ -152,8 +153,7 @@
       "harvestlevel": 1,
       "material": "iron",
       "tab": "si.core",
-      "placer": "SIMetalBlockPlacer",
-      "condition": ""
+      "placer": "SIMetalBlockPlacer"
     },
     "blockPitchblende": {
       "refClass": "BlockPitchblende",
@@ -164,40 +164,249 @@
       "material": "iron",
       "tab": "si.core",
       "condition": "ReactorCraft"
+    },
+    "oreCopper": {
+      "refClass": "SICoreBlock",
+      "hardness": 10.0,
+      "blastresistance": 15.0,
+      "tool": "pickaxe",
+      "harvestlevel": 1,
+      "material": "iron",
+      "tab": "si.core",
+      "condition": "!Electricraft,!Metallurgy"
+    },
+    "oreTin": {
+      "refClass": "SICoreBlock",
+      "hardness": 10.0,
+      "blastresistance": 15.0,
+      "tool": "pickaxe",
+      "harvestlevel": 2,
+      "material": "iron",
+      "tab": "si.core",
+      "condition": "!Electricraft,!Metallurgy"
+    },
+    "oreSilver": {
+      "refClass": "SICoreBlock",
+      "hardness": 10.0,
+      "blastresistance": 15.0,
+      "tool": "pickaxe",
+      "harvestlevel": 3,
+      "material": "iron",
+      "tab": "si.core",
+      "condition": "!Electricraft,!Metallurgy"
     }
   },
   "items": {
-    "itemCTEnblem": {
-      "refClass": "SICoreItem",
+    "toolSwordBronze": {
+      "refClass": "SIToolSword",
       "stackSize": 1,
-      "condition": ""
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "toolShovelSteel": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "toolSwordSteel": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
     },
     "ingotGeneric": {
       "refClass": "SIIngotGeneric",
       "stackSize": 64,
+      "tab": "si.core"
+    },
+    "toolPickaxeBronze": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
       "tab": "si.core",
-      "condition": ""
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "toolPickaxeSteel": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "toolAxeSteel": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "toolHoeSteel": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "toolAxeFlint": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "toolHoeFlint": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "toolSwordFlint": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "toolShovelBronze": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "toolSwordCopper": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "toolShovelFlint": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "toolAxeBronze": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "toolPickaxeFlint": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "toolHoeCopper": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
     },
     "itemCrucible": {
       "refClass": "ItemCrucible",
       "stackSize": 64,
-      "tab": "si.core",
-      "condition": ""
+      "tab": "si.core"
     },
     "itemIngotMold": {
       "refClass": "ItemIngotMold",
       "stackSize": 64,
+      "tab": "si.core"
+    },
+    "toolPickaxeCopper": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
       "tab": "si.core",
-      "condition": ""
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "toolShovelCopper": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "toolHoeBronze": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "toolAxeCopper": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
     },
     "itemCherenkovsingularity": {
       "refClass": "SICoreItem",
       "stackSize": 1,
-      "tab": "si.core",
-      "condition": ""
+      "tab": "si.core"
     }
   },
   "metalblocks": [
+    {
+      "value": "copper",
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
+    {
+      "value": "tin",
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
     {
       "value": "bronze",
       "condition": "!Metallurgy"
@@ -225,9 +434,21 @@
     {
       "value": "platinum",
       "condition": "ElectriCraft,!Metallurgy"
+    },
+    {
+      "value": "silver",
+      "condition": "!Metallurgy"
     }
   ],
   "metalingots": [
+    {
+      "value": "copper",
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
+    {
+      "value": "tin",
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
     {
       "value": "bronze",
       "condition": "!Metallurgy"
@@ -239,6 +460,10 @@
     {
       "value": "steel",
       "condition": "!Metallurgy"
+    },
+    {
+      "value": "silver",
+      "condition": "!Metallurgy,!Electricraft"
     }
   ],
   "itemstacksubstitutes": {
@@ -348,6 +573,23 @@
     },
     {
       "result": {
+        "name": "si.core:itemCherenkovsingularity",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:nether_star",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:ender_pearl",
+          "stackSize": 1
+        }
+      ],
+      "condition": "!ReactorCraft"
+    },
+    {
+      "result": {
         "name": "si.core:itemIngotMold",
         "stackSize": 1
       },
@@ -356,8 +598,7 @@
           "name": "minecraft:sand",
           "stackSize": 1
         }
-      ],
-      "condition": ""
+      ]
     },
     {
       "result": {
@@ -373,8 +614,7 @@
           "name": "minecraft:stick",
           "stackSize": 1
         }
-      ],
-      "condition": ""
+      ]
     },
     {
       "result": {
@@ -390,8 +630,19 @@
           "name": "minecraft:sand",
           "stackSize": 1
         }
-      ],
-      "condition": ""
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:flint",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:gravel",
+          "stackSize": 2
+        }
+      ]
     }
   ],
   "shapedrecipes": [
@@ -442,6 +693,486 @@
         ]
       ],
       "condition": "ReactorCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolPickaxeCopper",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolAxeCopper",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          "ingotCopper"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolShovelCopper",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotCopper",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolHoeCopper",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolSwordCopper",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotCopper",
+          null
+        ],
+        [
+          null,
+          "ingotCopper",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolPickaxeBronze",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBronze",
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolAxeBronze",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          "ingotBronze"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolShovelBronze",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotBronze",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolHoeBronze",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolSwordBronze",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotBronze",
+          null
+        ],
+        [
+          null,
+          "ingotBronze",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:toolPickaxeSteel",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSteel",
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolAxeSteel",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          "ingotSteel"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolShovelSteel",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotSteel",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolHoeSteel",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolSwordSteel",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotSteel",
+          null
+        ],
+        [
+          null,
+          "ingotSteel",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolPickaxeFlint",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "itemFlint",
+          "itemFlint",
+          "itemFlint"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolAxeFlint",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "itemFlint",
+          "itemFlint"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          "itemFlint"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolShovelFlint",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "itemFlint",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolHoeFlint",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "itemFlint",
+          "itemFlint"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolSwordFlint",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "itemFlint",
+          null
+        ],
+        [
+          null,
+          "itemFlint",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "!Metallurgy,!RotaryCraft"
     }
   ],
   "oredict": [
@@ -450,6 +1181,24 @@
       "item": "blockPitchblende",
       "meta": 0,
       "entry": "blockUranium"
+    },
+    {
+      "mod": "si.core",
+      "item": "oreSilver",
+      "meta": 0,
+      "entry": "oreSilver"
+    },
+    {
+      "mod": "si.core",
+      "item": "oreCopper",
+      "meta": 0,
+      "entry": "oreCopper"
+    },
+    {
+      "mod": "si.core",
+      "item": "oreTin",
+      "meta": 0,
+      "entry": "oreTin"
     }
   ],
   "alloymap": [
@@ -457,58 +1206,50 @@
       "one": "ingotCopper",
       "two": "ingotTin",
       "result": "ingotBronze",
-      "amount": 2,
-      "modcondition": ""
+      "amount": 2
     },
     {
       "one": "ingotSilver",
       "two": "ingotGold",
       "result": "ingotElectrum",
-      "amount": 2,
-      "modcondition": ""
+      "amount": 2
     },
     {
       "one": "ingotIron",
       "two": "itemCoal",
       "result": "ingotSteel",
       "amount": 1,
-      "modcondition": "!RotaryCraft,!Railcraft"
+      "condition": "!RotaryCraft,!Railcraft"
     },
     {
       "one": "oreIron",
       "result": "ingotIron",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     },
     {
       "one": "oreTin",
       "result": "ingotTin",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     },
     {
       "one": "oreCopper",
       "result": "ingotCopper",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     },
     {
       "one": "oreGold",
       "result": "ingotGold",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     },
     {
       "one": "oreAluminum",
       "result": "ingotAluminium",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     },
     {
       "one": "oreSilver",
       "result": "ingotSilver",
-      "amount": 1,
-      "modcondition": ""
+      "amount": 1
     }
   ],
   "blockproperties": {
@@ -540,6 +1281,11 @@
     "appliedenergistics2:tile.OreQuartz": {
       "harvestlevel": {
         "0": 5
+      }
+    },
+    "appliedenergistics2:tile.BlockSkyStone": {
+      "harvestlevel": {
+        "0": 7
       }
     },
     "minechem:tile.oreUranium": {
@@ -668,7 +1414,18 @@
         "5": 5,
         "6": 5,
         "7": 5
-      }
+      
+        }
+     },
+     "Metallurgy:base.ore": {
+       "harvestlevel": {
+         "0": 1,
+         "1": 2
+       }
+     },
+     "Metallurgy:utility.ore": {
+       "harvestlevel": {
+         "4": 1}
     },
     "minecraft:emerald_ore": {
       "harvestlevel": {
@@ -690,5 +1447,40 @@
     "5": "RED",
     "6": "DARK_PURPLE",
     "255": "AQUA"
-  }
+  },
+  "oregeneration": [
+    {
+      "blocktogenerate": "si.core:oreSilver",
+      "blocktoreplace": "minecraft:stone",
+      "chancesperchunk": 3,
+      "veinsize": 5,
+      "dimension": 0,
+      "starty": 8,
+      "endy": 32,
+      "spread": 16,
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
+    {
+      "blocktogenerate": "si.core:oreTin",
+      "blocktoreplace": "minecraft:stone",
+      "chancesperchunk": 2,
+      "veinsize": 12,
+      "dimension": 0,
+      "starty": 24,
+      "endy": 48,
+      "spread": 16,
+      "condition": "!Metallurgy,!ElectriCraft"
+    },
+    {
+      "blocktogenerate": "si.core:oreCopper",
+      "blocktoreplace": "minecraft:stone",
+      "chancesperchunk": 2,
+      "veinsize": 18,
+      "dimension": 0,
+      "starty": 32,
+      "endy": 96,
+      "spread": 16,
+      "condition": "!Metallurgy,!ElectriCraft"
+    }
+  ]
 }
