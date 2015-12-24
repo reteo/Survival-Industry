@@ -41,6 +41,7 @@ New Progression
 	Blocks/Ore:
 		Tin
 		Zinc
+		Redstone
 	
 3: Mid (yellow)
 	Tools: 
@@ -75,7 +76,6 @@ New Progression
 		Tungsten
 		Uranium/Pitchblende
 		Platinum
-		Redstone
 		Thorium
 		Mithril
 
