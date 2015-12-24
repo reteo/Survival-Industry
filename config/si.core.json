@@ -269,7 +269,6 @@
       "refClass": "SIToolAxe",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "FLINT"
       }
@@ -278,7 +277,6 @@
       "refClass": "SIToolHoe",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "FLINT"
       }
@@ -287,7 +285,6 @@
       "refClass": "SIToolSword",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "FLINT"
       }
@@ -314,7 +311,6 @@
       "refClass": "SIToolShovel",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "FLINT"
       }
@@ -332,7 +328,6 @@
       "refClass": "SIToolPickaxe",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "FLINT"
       }
