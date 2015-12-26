@@ -166,6 +166,22 @@ recipes.removeShaped(<GardenStuff:lattice_wood:2>);
 recipes.removeShaped(<GardenStuff:lattice_wood:3>);
 recipes.removeShaped(<GardenStuff:lattice_wood:4>);
 recipes.removeShaped(<GardenStuff:lattice_wood:5>);
+
+// Removing Metallurgy brick recipes which conflict with others.
+recipes.removeShaped(<Metallurgy:base.brick>);
+recipes.removeShaped(<Metallurgy:base.brick:1>);
+recipes.removeShaped(<Metallurgy:base.brick:3>);
+recipes.removeShaped(<Metallurgy:base.brick:4>);
+recipes.removeShaped(<Metallurgy:base.brick:5>);
+recipes.removeShaped(<Metallurgy:base.brick:6>);
+recipes.removeShaped(<Metallurgy:base.brick:7>);
+recipes.removeShaped(<Metallurgy:precious.brick>);
+recipes.removeShaped(<Metallurgy:precious.brick:1>);
+recipes.removeShaped(<Metallurgy:precious.brick:2>);
+recipes.removeShaped(<Metallurgy:precious.brick:3>);
+recipes.removeShaped(<Metallurgy:precious.brick:4>);
+recipes.removeShaped(<Metallurgy:vanilla.brick:0>);
+recipes.removeShaped(<Metallurgy:vanilla.brick:1>);
    
 // Adding craftable End Portal Stones
 recipes.removeShaped(<minecraft:end_portal_frame>);
