@@ -36,6 +36,9 @@ val flint = <ore:itemFlint>;
 val sand = <ore:sand>;
 val redstoneblock = <ore:blockRedstone>;
 val slime = <ore:slimeball>;
+val quartzblock = <ore:blockQuartz>;
+val quartz = <ore:gemQuartz>;
+val lapisblock = <ore:blockLapis>;
 
 // Non-oredicted materials might as well be shortened as well.
 val stickypiston = <minecraft:sticky_piston>;
@@ -65,6 +68,7 @@ val cherenkov = <si.core:itemCherenkovsingularity>;
 val thread = <minecraft:string>;
 val arrow = <minecraft:arrow>;
 val blankhead = <VeganOption:mobHeadBlank>;
+val daylightsensor = <minecraft:daylight_detector>;
 
 
 // recipes.addShapeless(<minecraft:stick> * 4, [<ore:plankWood>, <ore:plankWood>]);
@@ -119,10 +123,13 @@ recipes.removeShaped(<fossil:cultureVat>);
 recipes.removeShaped(<fossil:analyzer>);
 
 // RFTools
-recipes.removeShaped(<rftools:dimensionBuilderBlock>);
-recipes.removeShaped(<rftools:dimensionEnscriberBlock>);
-recipes.removeShaped(<rftools:matterTransmitterBlock>);
-recipes.removeShaped(<rftools:matterReceiverBlock>);
+recipes.removeShaped(<rftools:machineFrame>);
+
+// Sync
+recipes.removeShaped(<Sync:Sync_ItemPlaceholder>);
+
+// Enhanced Portals
+recipes.removeShaped(<enhancedportals:frame>);
 
 // Advanced Genetics
 recipes.removeShaped(<advancedgenetics:basicdictionary>);
@@ -195,10 +202,13 @@ recipes.addShaped(<fossil:cultureVat>, [[glass, green, glass],[glass, water, gla
 recipes.addShaped(<fossil:analyzer>, [[iron, relicscrap, iron],[iron, biofossil, iron],[iron, bedrock, iron]]);
 
 // RFTools Gating
-recipes.addShaped(<rftools:dimensionBuilderBlock>, [[enderpearl, emerald, enderpearl],[diamond, machineframe, diamond],[gold, bedrock, gold]]);
-recipes.addShaped(<rftools:dimensionEnscriberBlock>, [[redstone, paper, redstone],[black, machineframe, black],[iron, bedrock, iron]]);
-recipes.addShaped(<rftools:matterTransmitterBlock>, [[enderpearl, enderpearl, enderpearl],[redstone, machineframe, redstone],[iron, bedrock, iron]]);
-recipes.addShaped(<rftools:matterReceiverBlock>, [[iron, bedrock, iron],[redstone, machineframe, redstone],[enderpearl, enderpearl, enderpearl]]);
+recipes.addShaped(<rftools:machineFrame>, [[iron, bedrockdust, iron],[goldnugget, null, goldnugget],[iron, bedrockdust, iron]]);
+
+// Sync Gating
+recipes.addShaped(<Sync:Sync_ItemPlaceholder>, [[daylightsensor, lapisblock, daylightsensor],[quartz, cherenkov, quartz],[emerald, redstoneblock, emerald]]);
+
+// Enhanced Portals Gating
+recipes.addShaped(<enhancedportals:frame>, [[bedrockdust, iron, bedrockdust],[iron, quartzblock, iron],[bedrockdust, iron, bedrockdust]]);
 
 // Advanced Genetics Gating
 recipes.addShaped(<advancedgenetics:basicdictionary>, [[null, cell, null],[cell, book, cell],[null, bedrock, null]]);
