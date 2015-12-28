@@ -202,7 +202,7 @@ Originally, this pack had Tinker's Construct.  Since then, the mod has been remo
 
 #### Storage
 
-The lowly chest can be useful, but sometimes, it can be a hassle to deal with.  It won't open if the lid is obstructed.  It can't be placed next to a double-chest.  This can make some unpleasant space issues in storage rooms, since you'll have a lot of empty space with nothing to put in it.  And chests can hold a limited number of stacks of items, which can be frustrating if all those stacks are the same item.  And let's not forget how messy chests can get over the course of play.  To sort this whole mess out, we're gonna need a few things.
+The lowly chest can be useful, but sometimes, it can be a hassle to deal with.  It won't open if the lid is obstructed.  It can't be placed next to a double-chest.  This can make some unpleasant space issues in storage rooms, since you'll have a lot of empty space with nothing to put in it.  And chests can hold a limited number of stacks of items, which can be frustrating if all those stacks are the same item.  To sort this whole mess out, we're gonna need a few things.
 
 First of all, larger chests would be nice.  And then, it would be nice if they opened in a different direction than just up.  And having a cheap storage multiblock would also help.  Better storage provides all this.
 
