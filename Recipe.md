@@ -160,7 +160,7 @@ To provide the variety of food needed to survive Spice of Life, we add Pam's Har
 
 Sometimes, however, it's not enough to simply have the crops available.  You need to have the crops on a regular basis, which means farming.
 
-Hunger Overhaul does actually help in this regard; the seed-collection mechanic simply requires you to use a hoe on unwatered ground, and you can harvest crops from farmland without breaking them by right-clicking on them.  However, Pam's crops cannot be collected in this way.  All throughout the world, however, you can find various "wild gardens" that contain three random crops each.  With enough exploration, you can amass a good collection of food and crops to plant for your personal garden.
+Hunger Overhaul does actually help in this regard; the seed-collection mechanic simply requires you to use a hoe on unwatered ground.  However, Pam's crops cannot be collected in this way.  All throughout the world, however, you can find various "wild gardens" that contain three random crops each.  With enough exploration, you can amass a good collection of food and crops to plant for your personal garden.  Once you start farming the foods, you can harvest crops from farmland without breaking them by right-clicking on them
 
 Now, the vanilla farming mechanic does provide a good yield, but it's slow and inefficient.  Because of Hunger Overhaul, crops take 4 times as long to mature, and bone meal and other fertilizers are less effective than in vanilla.  It sure would be nice to have a means of speeding up the harvest, right?  And what do you do if a specific recipe calls for a crop you were not able to find up to this point?
 
