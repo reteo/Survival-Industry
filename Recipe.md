@@ -21,11 +21,11 @@ So grab your sleeping bag, make your stone tools, and begin your journey. Becaus
 
 This modpack operates under a number of important rules.
 
-1: Maintain a good balance between hardcore and casual gameplay.  "Challenge" should be an accurate description.
-2: Provide the player with several tiers of play, as a way to encourage the player to expand their abilities and improve themselves without jumping straight to the endgame.
-3: Provide sufficient rewards at the endgame to make the challenge worth the effort.
-4: Limit the mods to provide one block per function.  This isn't always strictly adhered to, but it is close enough to avoid the "Kitchen Sink Pack" designation.
-5: Avoid the mainstream mods.  This is also a hit-or-miss proposition, but unlike most modpacks, this is not your usual "Redstone Flux" pack with Thermal Expansion, EnderIO, and MineFactory Reloaded.  The main tech mods are centered around RotaryCraft, and all power generation not provided by RotaryCraft is disabled for this pack.
+1. Maintain a good balance between hardcore and casual gameplay.  "Challenge" should be an accurate description.
+2. Provide the player with several tiers of play, as a way to encourage the player to expand their abilities and improve themselves without jumping straight to the endgame.
+3. Provide sufficient rewards at the endgame to make the challenge worth the effort.
+4. Limit the mods to provide one block per function.  This isn't always strictly adhered to, but it is close enough to avoid the "Kitchen Sink Pack" designation.
+5. Avoid the mainstream mods.  This is also a hit-or-miss proposition, but unlike most modpacks, this is not your usual "Redstone Flux" pack with Thermal Expansion, EnderIO, and MineFactory Reloaded.  The main tech mods are centered around RotaryCraft, and all power generation not provided by RotaryCraft is disabled for this pack.
 
 The modpack has five tiers of play, each gated behind a specific material.  Unlike most modpacks, these materials are not determined by the random number generator; they are behind your ability to build youself and your base to the point that the material can be collected and/or made.
 
