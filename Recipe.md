@@ -142,11 +142,11 @@ Small Boats provides three alternatives to the basic rowboat you can make as par
 
 Steve's Workshop provides the work table.  This table can have up to four modules, whether they're crafting tables or furnaces.  It also extends the efficiency of coal, as the fuel use is twice the time of a vanilla furnace.  Once you have the ability to use a friction heater, this table will no longer be as useful for smelting, but with four crafting tables, you can make some pretty complex things without losing place in parent recipes.
 
-The Vegan Option is a way of limiting your interaction with mobs.  It provides alternatives to just about every mob drop, short of the dragon egg or the nether star, using vanilla worldgen.  You will need to explore the world for this to be useful.
+The Vegan Option is a way of limiting your interaction with mobs.  It provides alternatives to just about every mob drop, short of the dragon egg or the nether star, using vanilla worldgen.  You will need to explore the world for this to be useful, but it can be valuable if you don't want to face the hordes at night.
 
 Because of the expanded mining progression, iron will not be available before you need to farm, and farming is the first thing you need to do after establishing your sleeping space.  To mitigate this issue, the wooden buckets mod has been added to the pack.  This mod allows you to use a wooden bucket to carry water where you want to place it.
 
-Speaking of the mining progression, there is a singular lack of mention of an alloying mechanic so far, which is important for making bronze, which is required before machines can be made.
+Speaking of the mining progression, there is a singular lack of mention of an alloying mechanic so far, which is important for making bronze, which is required before machines can be made.  Metallurgy adds the crusher, and AOBD allows all ores to be dusted for alloying.  However, there are two more options that are custom-made for this pack.
 
 Part of the Survival Industry core mod is a mechanic called "Backyard Metalcasting," in which ores are smelted and alloyed in the vanilla furnace using a clay crucible.  Crucibles are made using a block of clay and a block of sand, and then the formed crucible is fired in the furnace to make a finished crucible.  A crucible can hold two ingots of different metals for alloying, or one block of ore for smelting (smelting ore directly in the furnace has been disabled).  Once the filled crucible has been smelted, you then craft the glowing-hot crucible with a sand ingot mold (crafted using simply one block of sand) to make either one (in the case of ore smelting) or two (in the case of alloying) ingots of metal.  The sand mold is turned back into sand (broken to reveal the cooled ingots), and the crucible is not lost, so this mechanic is infinitely repeatable without the need for more materials (aside from the metals or ores).  However, keep in mind that filled crucibles cannot stack, so this alloying mechanic is mainly for early-game; anyone wanting larger-scale alloying should look elsewhere.
 
@@ -180,13 +180,15 @@ Harvesting trees can be a hassle.  So, Treecapitator has been added to the pack 
 
 The crafting table mechanic is pretty basic.  Nine slots to craft things in.  However, it would be nice to have a way to rotate the recipe in the table (perhaps you put things in the wrong way), or balance the materials on the table (make it so all placed materials are rearranged to have even amounts), or maybe just a quick way to clear the table without leaving it and dropping everything on the ground.  Crafting Tweaks adds three buttons that do just the above, making the crafting table just a little easier to work with.
 
-The anvil is also pretty basic.  Two slots, one for your tool, and one for a magic book.  That's good for most uses, but what else can we do with this that might help your tools?  Enter ToolUtilities.  This mod provides recipes for the anvil that can provide 1x3 mining, 3x3 mining, and area of effect attacking for weapons.
+Originally, this modpack had been designed with Tinker's Construct.  However, due to its makers no longer supporting it for Minecraft 1.7.10, the mod and all its addons have been removed from this pack.  This meant, however, that features like area of effect weapon strikes and 3x3 mining would no longer be available.  To help resolve this, ToolUtilities has been added to the modpack; this mod features upgrades to tools applied through the anvil; with experience and the appropriate ingredient, swords can have area of effect attacks, and pickaxes, shovels, and axes can have 3x1 and 3x3 mining.
 
 Speaking of mining, there is also the fact that anything interrupting your effort to mine something will mean you have to start all over again.  Against cobblestone, this isn't a big deal, but what about obsidian?  There you are, mining a block of obsidian, and you get accosted by a group of mods.  You dispatch them quickly and return to your task, but it's too late... you need to start all over.
 
 MultiMine is a mod that mitigates this problem, by making a block wait before slowly repairing itself when left alone.  That way, the busy player can defend themselves, and then pick up where they left off once they're back to that block of obsidian.  And if more than one player mines the block, it will mine faster!
 
 Finally, you're going to be taking a lot of damage over the course of the game, it would be nice if you can be forgiven for stupid stuff, right?  This is where we turn to Natural Absorption.  This mod provides an absorption health bar of two hearts (four damage) that will regenerate if you don't take any more damage, similar to how shields in games like Halo and Borderlands work.  It won't block anything major, but it is enough to keep you alive if you're down to half a heart in your main bar, and you fall one block too far, or you accidentally bump into a cactus.
+
+Later on, you can enchant your armor, giving yourself an increased number of hearts to your absorption modifier, allowing you to tank hits from entire hordes of mobs... for a time.  Trust me, however, even with three full rows of absorption, you won't survive a sustained assault, so make sure you don't do something that will have you in the thick of a mob, especially if you're dealing with pigmen or mobs that affect status (like cave spiders or witches).
 
 #### Redstone
 
@@ -198,7 +200,7 @@ No, not really.  Not when Project:Red does it better.  Project:Red includes a la
 
 Expanded Redstone is also in the pack, mainly as a way to expand world interaction.  Block placers, block breakers, configurable redstone clocks, several sensors, line-of-sight wireless redstone, and redstone math devices are a part of what this mod offers, and it expands what redstone can do in the physical world.
 
-Originally, this pack had Tinker's Construct.  Since then, the mod has been removed, since it is no longer supported.  One player had requested a replacement for the Tinker's Mechworks igniter, so it has been added.
+Due to the removal of Tinker's Construct, all of its addons had to be removed as well.  One player had requested a replacement for the Tinker's Mechworks igniter, so it has been added.
 
 #### Storage
 
