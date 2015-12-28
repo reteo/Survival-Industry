@@ -172,7 +172,7 @@ There is also the weed mechanic.  However. weeds are a mechanic that can be irri
 
 #### Mechanics
 
-With all the difficulties provided, it might help to have some game mechanics to counterbalance them, right?  Otherwide, we'll just have a hardcore pack.
+With all the difficulties provided, it might help to have some game mechanics to counterbalance them, right?  Otherwise, we'll just have a hardcore pack.
 
 By default, you do not have a way to sleep.  Sheep will mob you if you hurt one.  Starting Inventory mitigates the first night by providing you a sleeping bag from OpenBlocks to sleep.  This sleeping bag won't change your spawn, though, so making a bed will still be important to long-term survival, but the sleeping bag is a way to reset the fatigue timer.
 
