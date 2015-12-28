@@ -296,7 +296,7 @@ Outside of information display, there is also mods that change the user interfac
 
 Inventory Tweaks is the most minor, but it is far from the least important change.  This mod allows the player to automatically sort what's in their inventory, or in whatever chest they have open at the moment.
 
-Not Enoug Keys is an expansion on the controls configuration; it allows the player to export their keybindings, so that if something changes their settings, they can restore them exactly the way the player had them.
+Not Enough Keys is an expansion on the controls configuration; it allows the player to export their keybindings, so that if something changes their settings, they can restore them exactly the way the player had them.
 
 Right-click placement was an issue previously, just after removing Tinker's Construct from the recipe.  Two mods were chosen to fill in the holes left by that loss.
 
