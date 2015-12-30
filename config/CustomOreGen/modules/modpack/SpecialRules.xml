@@ -83,7 +83,7 @@
                 <DisplayName>Special Rules Mantle Size</DisplayName>
             </OptionNumeric>
             <!-- EDITED: Added new slider to set the lava level in caves. -->
-            <OptionNumeric name='spruMantleLevel' default='14'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionNumeric name='spruMantleLevel' default='10'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> How high should the mantle be? </Description>
                 <DisplayName>Special Rules Mantle Level</DisplayName>
             </OptionNumeric>
