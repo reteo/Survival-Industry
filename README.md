@@ -15,7 +15,7 @@ However, with all these challenges, you are not without your own advantages.
 * The engineering knowledge required is a heavily-simplified form of real-world engineering skills; if you know how to multiply and divide using a calculator, you should have all the skills necessary to learn the system.  And the technology has no limits. Once you reach the minimum requirements, increasing shaft speed will always increase the speed of the machines attached to it (except in the case of heat generation, but that just requires an increase in power). There are machines that can do just about everything, from farming, to mining, to base construction, to base defense. Power ranges from the minuscule DC Electric Engine to the immense output of a nuclear fusion reactor. You can tweak your genes, or convert useless junk into priceless materials. You can automate just about anything.
 * And as for the End... you can now make your very own End Portal once you advance far enough.  Indistinguishable from magic, indeed.
 
-So grab your sleeping bag, make your stone tools, and begin your journey. Because you're up to the challenge. And once you get started, you're more than capable of establishing your very own... Survival Industry. 
+So grab your sleeping bag, make your stone tools, and begin your journey. Because you're up to the challenge. And once you get started, you're more than capable of establishing your very own Survival Industry. 
 
 ---
 
