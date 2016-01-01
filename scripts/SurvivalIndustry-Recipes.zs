@@ -305,3 +305,7 @@ recipes.addShaped(<Railcraft:machine.alpha:12>,[[sand,bricks,sand],[bricks,magma
 /* The Vegan Option Wither Skull recipe is making nether stars too easy to obtain.  Replacing the black dye with bedrock dust should remove this shortcut. */
 recipes.removeShaped(<minecraft:skull:1>);
 recipes.addShaped(<minecraft:skull:1>,[[bedrockdust,slime,bedrockdust],[slime,blankhead,slime],[bedrockdust,slime,bedrockdust]]);
+
+/* There's no need for two types of hive and apiary.  Adding recipes to allow Forestry bee products to be used in addition to Pam's bee products. */
+recipes.addShapeless(<harvestcraft:honeycombchocolatebarItem>, [<ore:toolSaucepan>, <ore:foodChocolatebar>, <ore:beeComb>]);
+recipes.addShapeless(<harvestcraft:royaljellyItem>, [<ore:beeComb>]);
