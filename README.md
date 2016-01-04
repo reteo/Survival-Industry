@@ -17,6 +17,27 @@ However, with all these challenges, you are not without your own advantages.
 
 So grab your sleeping bag, make your stone tools, and begin your journey. Because you're up to the challenge. And once you get started, you're more than capable of establishing your very own Survival Industry. 
 
+-------
+
+Survival Industry is a sandbox modpack, made by the Synergy Mob, designed around several mechanics.
+
+* The hunger mechanic is centered around Hunger Overhaul, designed to make hunger a more important part of the modpack's design.
+  * The farming mechanic is centered around AgriCraft, Hunger Overhaul, and Harder Wildlife.  These add several mechanics that affect crop management including seasons, crossbreeding of crops, and longer-scale crop-growth.
+* The mob mechanic is centered around three mods, Special AI, Special Mobs, and Zombie Awareness; these mods work together to provide hostile mobs that behave in ways that would almost seem intelligent.
+* The mining mechanic used to be centered around Iguana's Tinker Tweaks and Tinker's Construct. This has since been changed to a custom mod designed specifically for this modpack, which handles the mining progression and ore smelting, while several other mods were added to duplicate the features lost when Tinker's Construct was removed.
+* The tech progression is based around RotaryCraft and ReactorCraft.  In fact, progressing in RotaryCraft is required to unlock the "Mad Science" tech tree, and ReactorCraft is required to unlock "Ender Tech."  There are machines that require Redstone Flux, but all RF engines have been disabled in favor of their RotaryCraft counterparts; RF can be generated using the Rotational Dynamo block from RotaryCraft.
+
+This game is designed to avoid specific modpack clichés, such as:
+
+* The Kitchen Sink Pack - Modpacks that are simply a large number of mods thrown together without any concern for balance or preference to specific mods.
+  * Survival Industry implements a "one block per function" rule, in which no major function can be handled by two or more machines.  This does not extend to minor features, such as pipes or containers.
+* The Redstone Flux Pack - Most tech mods tend to depend on Redstone Flux as the primary power mechanic, meaning other mods' power systems are simply incidental at best, or ignored at worst.
+  * Survival Industry uses RotaryCraft as the central power mechanic for the game.  This can provide a more challenging tech experience, but the result of the challenge is worth more than Redstone Flux is capable of, since machinery using shaft power have absolutely no limit on the speed they can attain.
+* The HQM Pack - Modpacks that make extensive use of a "play manual" to provide the plot to the game, and direct a player's energies toward a predetermined "end."
+  * Survival Industry *does* use gating, but this is minimal, and meant to keep entire mods in one of four categories: Earlygame (Agrarian), Midgame(Industrial), Lategame(Mad Science), and Endgame(Ender Tech).  Outside of these four gating mechanisms, it is the player's own imagination that directs their play.
+* The Hardcore Pack - Modpacks that pile on the difficulties in the hopes that the hardcore players will find the game a supreme challenge.
+  Survival Industry seeks to make the game harder, but attempts to balance it with mitigating factors.  It also provides rewards for the player who does step up to the challenge, and advance through the game's progression; as they can have downright *powerful* tools at their disposal once they reach endgame.
+
 ---
 
 This page is the github for this modpack.  The modpack itself cannot be distributed outside of the Feed the Beast launcher, but here you can find the configuration files used in the pack. Additionally, this will be the official issue tracker for the modpack.
