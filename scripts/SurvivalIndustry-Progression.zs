@@ -19,8 +19,8 @@ recipes.removeShaped(<Metallurgy:base.brick:2>);
 
 /* *** Remove Grinding of Manganese Dust *** */
 mods.appeng.Grinder.removeRecipe(<Metallurgy:base.dust:2>);
-mods.metallurgy.Crusher.removeRecipe(<Metallurgy:base.dust:2>);
-mods.railcraft.RockCrusher.removeRecipe(<aobd:crushedManganese>);
+// mods.metallurgy.Crusher.removeRecipe(<Metallurgy:base.dust:2>);
+// mods.railcraft.RockCrusher.removeRecipe(<aobd:crushedManganese>);
 
 /* *** Remove Smelting of Manganese Ingots *** */
 recipes.removeShapeless(<Metallurgy:manganese.ingot>);
