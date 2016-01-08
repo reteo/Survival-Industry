@@ -1,8 +1,8 @@
 <!-- =================================================================
      Custom Ore Generation "Vanilla Minecraft" Module: This
-     configuration covers coal, iron, mountain iron, gold, mountain
-     gold, redstone, mountain redstone, diamond, lapis lazuli,
-     mountain lapis lazuli, emerald, and nether quartz.
+     configuration covers clay, coal, iron, mountain iron, gold,
+     mountain gold, redstone, mountain redstone, diamond, lapis
+     lazuli, mountain lapis lazuli, emerald, and nether quartz.
      ================================================================= -->
 
 
@@ -26,6 +26,34 @@
         Distribution options for Vanilla Minecraft Ores.
       </Description>
     </OptionDisplayGroup>
+
+    <!-- Clay Configuration UI Starting -->
+    <ConfigSection>
+      <OptionChoice name='vnlaClayDist'  displayState=':= "shown"' displayGroup='groupVanillaMinecraft'>
+        <Description> Controls how Clay is generated </Description>
+        <DisplayName>Vanilla Minecraft Clay</DisplayName>
+        <IfCondition condition=':= (?blockExists("minecraft:clay")) '>
+
+        <Choice value='SmallDeposits' displayValue='Small Deposits'>
+          <Description>
+            Small motherlodes without any branches.
+          </Description>
+        </Choice>
+        </IfCondition>
+
+        <Choice value='none' displayValue='None' description='Clay is not generated in the world.'/>
+      </OptionChoice>
+      <OptionNumeric name='vnlaClayFreq' default='1'  min='0' max='5' displayState=':= if(?advOptions, "shown", "hidden")' displayGroup='groupVanillaMinecraft'>
+        <Description> Frequency multiplier for Vanilla Minecraft Clay distributions </Description>
+        <DisplayName>Vanilla Minecraft Clay Freq.</DisplayName>
+      </OptionNumeric>
+      <OptionNumeric name='vnlaClaySize' default='1'  min='0' max='5' displayState=':= if(?advOptions, "shown", "hidden")' displayGroup='groupVanillaMinecraft'>
+        <Description> Size multiplier for Vanilla Minecraft Clay distributions </Description>
+        <DisplayName>Vanilla Minecraft Clay Size</DisplayName>
+      </OptionNumeric>
+    </ConfigSection>
+    <!-- Clay Configuration UI Complete -->
+
 
     <!-- Coal Configuration UI Starting -->
     <ConfigSection>
@@ -591,8 +619,22 @@
 
     <!-- Starting Original "Overworld" Block Removal -->
 
+    <IfCondition condition=':= ?blockExists("minecraft:sand")'>
+      <Substitute name='vnlaOverworldBlockSubstitute2' block='minecraft:sand'>
+        <Description>
+          Replace vanilla-generated ore clusters.
+        </Description>
+        <Comment>
+          The global option deferredPopulationRange  must be large
+          enough to catch all ore  clusters (>= 32).
+        </Comment>
+        <Replaces block='minecraft:clay' weight='1.0' />
+      </Substitute>
+    </IfCondition>
+
+
     <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-      <Substitute name='vnlaOverworldBlockSubstitute0' block='minecraft:stone'>
+      <Substitute name='vnlaOverworldBlockSubstitute3' block='minecraft:stone'>
         <Description>
           Replace vanilla-generated ore clusters.
         </Description>
@@ -613,6 +655,83 @@
     <!-- Original "Overworld" Block Removal Complete -->
 
     <!-- Adding blocks -->
+
+    <!-- Begin Clay Generation -->
+
+    <!-- Starting SmallDeposits Preset for Clay. -->
+    <ConfigSection>
+      <IfCondition condition=':= vnlaClayDist = "SmallDeposits"'>
+        <Veins name='vnlaClayVeins'  inherits='PresetSmallDeposits' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A5A9B9' drawBoundBox='false' boundBoxColor='0x60A5A9B9'>
+          <Description>
+            Small motherlodes without any branches.  Similar to the
+            deposits produced by  StandardGen distributions.
+          </Description>
+          <OreBlock block='minecraft:clay' weight='1.0' />
+          <ReplacesOre block='sand' weight='1.0' />
+          <Replaces block='minecraft:gravel' weight='1.0' />
+          <Replaces block='minecraft:dirt' weight='1.0' />
+          <Biome name='.*'  />
+          <Biome name='Ocean'  weight='-1' />
+          <Biome name='Desert'  weight='-1' />
+          <Biome name='Mountain'  weight='-1' />
+          <Setting name='MotherlodeFrequency' avg=':= 1.252 * _default_ * vnlaClayFreq ' range=':= 1.252 * _default_ * vnlaClayFreq ' type='normal' scaleTo='base' />
+          <Setting name='MotherlodeSize' avg=':= 1.648 * _default_ * vnlaClaySize ' range=':= 1.648 * _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 10 ' type='uniform' scaleTo='seaLevel' />
+          <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchLength' avg=':= 0 * _default_ ' range=':= 0 * _default_ ' type='normal' />
+          <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+          <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentLength' avg=':= _default_ * vnlaClaySize ' range=':= _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentRadius' avg=':= 0 * _default_ * vnlaClaySize ' range=':= 0 * _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+        </Veins>
+
+        <!-- Beginning "Preferred" configuration. -->
+        <Veins name='vnlaClayPreferredVeins'  inherits='PresetSmallDeposits' branchType='Bezier' drawWireframe='true' wireframeColor='0x60A5A9B9' drawBoundBox='false' boundBoxColor='0x60A5A9B9'>
+          <Description>
+            Ore generation is doubled in preferred  biomes.
+          </Description>
+          <OreBlock block='minecraft:clay' weight='1.0' />
+          <ReplacesOre block='sand' weight='1.0' />
+          <Replaces block='minecraft:gravel' weight='1.0' />
+          <Replaces block='minecraft:dirt' weight='1.0' />
+          <BiomeType name='Swamp'  />
+          <BiomeType name='Beach'  />
+          <BiomeType name='River'  />
+          <Biome name='Ocean'  weight='-1' />
+          <Biome name='Desert'  weight='-1' />
+          <Biome name='Mountain'  weight='-1' />
+          <Setting name='MotherlodeFrequency' avg=':= 1.252 * _default_ * vnlaClayFreq ' range=':= 1.252 * _default_ * vnlaClayFreq ' type='normal' scaleTo='base' />
+          <Setting name='MotherlodeSize' avg=':= 1.648 * _default_ * vnlaClaySize ' range=':= 1.648 * _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='MotherlodeHeight' avg=':= 64 ' range=':= 10 ' type='uniform' scaleTo='seaLevel' />
+          <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='BranchLength' avg=':= 0 * _default_ ' range=':= 0 * _default_ ' type='normal' />
+          <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+          <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentLength' avg=':= _default_ * vnlaClaySize ' range=':= _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='SegmentRadius' avg=':= 0 * _default_ * vnlaClaySize ' range=':= 0 * _default_ * vnlaClaySize ' type='normal' />
+          <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+          <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+        </Veins>
+        <!-- "Preferred" configuration complete. -->
+
+      </IfCondition>
+    </ConfigSection>
+    <!-- SmallDeposits Preset for Clay is complete. -->
+
+    <!-- End Clay Generation -->
+
 
     <!-- Begin Coal Generation -->
 
