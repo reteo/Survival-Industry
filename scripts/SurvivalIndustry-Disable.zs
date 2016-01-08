@@ -78,22 +78,21 @@ NEI.hide(<extracells:vibrantchamberfluid>);
 
 // Royal Jelly is only used to make new queens.  Forestry does that through breeding bees.
 recipes.removeShapeless(<harvestcraft:royaljellyItem>);
-// NEI.hide(<harvestcraft:royaljellyItem:0>);
-
+NEI.hide(<harvestcraft:royaljellyItem:0>);
 
 // Pam's apiaries removed in favor of Forestry apiaries.
 recipes.removeShaped(<harvestcraft:apiary>);
-// NEI.hide(<harvestcraft:apiary:0>);
+NEI.hide(<harvestcraft:apiary:0>);
 
 // Pam's queens removed in favor of Forestry queens.
-// NEI.hide(<harvestcraft:queenbeeItem:*>);
+NEI.hide(<harvestcraft:queenbeeItem:*>);
 
 // Pam's honeycomb removed in favor of Forestry honeycombs.
-// NEI.hide(<harvestcraft:honeycombItem>);
+NEI.hide(<harvestcraft:honeycombItem>);
 <ore:beeComb>.remove(<harvestcraft:honeycombItem>);
 
 // Pam's honey removed in favor of Forestry honey.
-// NEI.hide(<harvestcraft:honeyItem>);
+NEI.hide(<harvestcraft:honeyItem>);
 <ore:listAllsugar>.remove(<harvestcraft:honeyItem>);
 <ore:FoodHoneydrop>.remove(<harvestcraft:honeyItem>);
 <ore:dropHoney>.remove(<harvestcraft:honeyItem>);
