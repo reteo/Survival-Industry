@@ -21,7 +21,12 @@ recipes.removeShaped(<BuildCraft|Core:engineBlock:3>);
 NEI.hide(<BuildCraft|Core:engineBlock:3>);
 recipes.removeShaped(<rftools:endergenicBlock:0>);
 NEI.hide(<rftools:endergenicBlock:0>);
-
+recipes.removeShaped(<BuildCraft|Factory:autoWorkbenchBlock:0>);
+NEI.hide(<BuildCraft|Factory:autoWorkbenchBlock:0>);
+recipes.removeShaped(<BuildCraft|Factory:miningWellBlock:0>);
+NEI.hide(<BuildCraft|Factory:miningWellBlock:0>);
+recipes.removeShaped(<BuildCraft|Factory:miningWellBlock:0>);
+NEI.hide(<BuildCraft|Factory:plainPipeBlock:0>);
 
 /* It's important to notify the player when something's been disabled. */
 
@@ -59,8 +64,12 @@ NEI.hide(<extracells:vibrantchamberfluid>);
 <rftools:endergenicBlock:0>.addTooltip(format.yellow("have been disabled by the"));
 <rftools:endergenicBlock:0>.addTooltip(format.yellow("Survival Industry modpack."));
 
-
-
-<BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("This quarry has been disabled"));
+<BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("The BuildCraft quarry has been disabled"));
 <BuildCraft|Builders:machineBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
+
+<BuildCraft|Factory:miningWellBlock>.addTooltip(format.yellow("The Buildcraft mining well has been disabled"));
+<BuildCraft|Factory:miningWellBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
+
+<BuildCraft|Factory:autoWorkbenchBlock>.addTooltip(format.yellow("The Buildcraft auto workbench has been disabled"));
+<BuildCraft|Factory:autoWorkbenchBlock>.addTooltip(format.yellow("by the Survival Industry modpack."));
 
