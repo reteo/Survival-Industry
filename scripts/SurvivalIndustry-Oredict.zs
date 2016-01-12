@@ -8,7 +8,8 @@
 /* Now to add canola seeds to the possible ingredients for vegetable oil. */
 
 val vegOilSource = <ore:sourceVegetableOil>;
-vegOilSource.add(<RotaryCraft:rotarycraft_item_canola>);
+//vegOilSource.add(<RotaryCraft:rotarycraft_item_canola>);
+//The above line was commented out because the mod registering the item for which a recipe is being added or removed (RotaryCraft) has requested not to allow this. See your logs for more information, including on who to go to if you have further questions.
 
 
 /* Next, we want all honey to be useable in harvestcraft recipes. */

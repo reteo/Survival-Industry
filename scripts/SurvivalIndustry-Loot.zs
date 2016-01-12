@@ -48,5 +48,4 @@ vanilla.loot.removeChestLoot("villageBlacksmith", <minecraft:gold_ingot>);
 vanilla.loot.removeChestLoot("villageBlacksmith", <minecraft:diamond>);
 vanilla.loot.removeChestLoot("villageBlacksmith", <minecraft:iron_pickaxe>);
 vanilla.loot.removeChestLoot("villageBlacksmith", <minecraft:obsidian>);
-vanilla.loot.removeChestLoot("villageBlacksmith", <Railcraft:ingot>);
-vanilla.loot.removeChestLoot("mineshaftCorridor", <Railcraft:cube:2>);
+
