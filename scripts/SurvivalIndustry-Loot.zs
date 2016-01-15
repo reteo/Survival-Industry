@@ -12,8 +12,6 @@ vanilla.loot.removeChestLoot("mineshaftCorridor", <minecraft:gold_ingot>);
 vanilla.loot.removeChestLoot("mineshaftCorridor", <minecraft:redstone>);
 vanilla.loot.removeChestLoot("mineshaftCorridor", <minecraft:diamond>);
 vanilla.loot.removeChestLoot("mineshaftCorridor", <minecraft:iron_pickaxe>);
-vanilla.loot.removeChestLoot("mineshaftCorridor", <Railcraft:ingot>);
-vanilla.loot.removeChestLoot("mineshaftCorridor", <Railcraft:cube:2>);
 
 /* Onto desert pyramids. */
 vanilla.loot.removeChestLoot("pyramidDesertyChest", <minecraft:iron_ingot>);
@@ -25,9 +23,6 @@ vanilla.loot.removeChestLoot("pyramidJungleChest", <minecraft:iron_ingot>);
 vanilla.loot.removeChestLoot("pyramidJungleChest", <minecraft:gold_ingot>);
 vanilla.loot.removeChestLoot("pyramidJungleChest", <minecraft:diamond>);
 vanilla.loot.removeChestLoot("pyramidJungleChest", <minecraft:emerald>);
-
-/* We now move onto Railcraft workshops. */
-	/* Nothing to remove. */
 
 /* Strongholds, too. */
 	/* Corridors */

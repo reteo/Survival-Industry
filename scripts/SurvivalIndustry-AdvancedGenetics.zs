@@ -1,6 +1,8 @@
 import mods.nei.NEI;
 
 val cell = <advancedgenetics:cell>;
+val book = <minecraft:book>;
+val bedrock = <minecraft:bedrock>;
 
 recipes.removeShaped(<advancedgenetics:combustiongeneratoridle>);
 NEI.hide(<advancedgenetics:combustiongeneratoridle>);

@@ -7,6 +7,18 @@ recipes.removeShaped(<enderutilities:enderpart:21>);
 recipes.removeShaped(<enderutilities:enderpearlreusable>);
 recipes.removeShaped(<enderutilities:enderarrow>);
 
+val stick = <ore:stickWood>;
+val cherenkov = <si.core:itemCherenkovsingularity>;
+val thread = <minecraft:string>;
+val diamond = <ore:gemDiamond>;
+val gold = <ore:ingotGold>;
+val goldnugget = <ore:nuggetGold>;
+val enderpearl = <ore:pearlEnder>;
+val redstoneblock = <ore:blockRedstone>;
+val arrow = <minecraft:arrow>;
+val iron = <ore:ingotIron>;
+val obsidian = <ore:blockObsidian>;
+
 // Gating Ender Utilities
 recipes.addShaped(<enderutilities:enderpart:20> * 3, [[stick, stick, stick],[cherenkov, cherenkov, cherenkov],[stick, stick, stick]]);
 recipes.addShaped(<enderutilities:enderpart:21> * 3, [[thread, thread, thread],[leather, cherenkov, leather],[thread, thread, thread]]);

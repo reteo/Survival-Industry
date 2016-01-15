@@ -9,6 +9,7 @@ val obsidian = <ore:blockObsidian>;
 val cauldron = <minecraft:cauldron>;
 val leather = <ore:materialLeather>;
 val chest = <ore:chestWood>;
+val cherenkov = <si.core:itemCherenkovsingularity>;
 
 // Ender Storage Gating
 recipes.addShaped(<EnderStorage:enderChest>, [[blazerod, wool, blazerod],[obsidian, chest, obsidian],[blazerod, cherenkov, blazerod]]);
