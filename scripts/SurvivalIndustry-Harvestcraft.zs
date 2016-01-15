@@ -1,5 +1,4 @@
 import mods.nei.NEI;
-import mods.forestry.Squeezer;
 
 val stick = <ore:stickWood>;
 val brick = <ore:ingotBrick>;
@@ -26,8 +25,10 @@ NEI.hide(<harvestcraft:honeycombItem>);
 NEI.hide(<harvestcraft:waxcombItem>);
 
 <ore:beeComb>.remove(<harvestcraft:honeycombItem>);
-<ore:materialPressedwax>.remove(<harvestcraft:waxcombItem>);
 <ore:beeComb>.remove(<harvestcraft:waxcombItem>);
+<ore:materialPressedwax>.remove(<harvestcraft:waxcombItem>);
+<ore:materialWaxcomb>.remove(<harvestcraft:waxcombItem>);
+<ore:materialHoneycomb>.remove(<harvestcraft:honeycombItem>);
 
 recipes.removeShapeless(<harvestcraft:honeycombchocolatebarItem>);
 recipes.addShapeless(<harvestcraft:honeycombchocolatebarItem>, [<ore:toolSaucepan>, <ore:foodChocolatebar>, <ore:beeComb>]);
@@ -37,18 +38,15 @@ recipes.addShapeless(<harvestcraft:honeycombchocolatebarItem>, [<ore:toolSaucepa
 NEI.hide(<harvestcraft:honeyItem>);
 
 <ore:listAllsugar>.remove(<harvestcraft:honeyItem>);
-<ore:FoodHoneydrop>.remove(<harvestcraft:honeyItem>);
+<ore:foodHoneydrop>.remove(<harvestcraft:honeyItem>);
 <ore:dropHoney>.remove(<harvestcraft:honeyItem>);
 
-/* Except that this is going to be messy if I don't wipe out ALL the honey recipes for Pam's.  Luckily, wildcards exist. */
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>,<*>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>,<*>,<*>,<*>,<*>]);
-recipes.removeShapeless(<*>,[<harvestcraft:honeyItem>,<*>,<*>,<*>,<*>,<*>,<*>,<*>,<*>]);
+/* The honey sandwich and marzipan are still using Pam's honey only.  Fixing. */
+recipes.removeShapeless(<harvestcraft:honeysandwichItem>);
+recipes.removeShapeless(<harvestcraft:marzipanItem>);
+
+recipes.addShapeless(<harvestcraft:honeysandwichItem>, [<ore:toolCuttingboard>, <ore:listAllnutbutter>, <ore:foodHoneydrop>, <minecraft:bread>]);
+recipes.addShapeless(<harvestcraft:marzipanItem>, [<ore:toolMortarandpestle>, <ore:cropAlmond>, <ore:foodHoneydrop>]);
 
 
 // The beeswax goes away.
