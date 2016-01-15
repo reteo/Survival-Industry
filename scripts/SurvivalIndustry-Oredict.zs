@@ -17,6 +17,6 @@ val vegOilSource = <ore:sourceVegetableOil>;
 <ore:listAllsugar>.addAll(<ore:dropHoney>);
 
 
-/* Adding an ore dictionary entry for the queen bee, for use in making royal jelly. */
+/* Adding an ore dictionary entry for the queen bee. */
 <ore:beeQueen>.add(<Forestry:beeQueenGE>);
 

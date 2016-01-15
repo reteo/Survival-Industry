@@ -2,7 +2,7 @@ import mods.nei.NEI;
 
 val cell = <advancedgenetics:cell>;
 val book = <minecraft:book>;
-val bedrock = <minecraft:bedrock>;
+val bedrockdust = <RotaryCraft:rotarycraft_item_powders:4>;
 
 recipes.removeShaped(<advancedgenetics:combustiongeneratoridle>);
 NEI.hide(<advancedgenetics:combustiongeneratoridle>);
@@ -14,4 +14,4 @@ NEI.hide(<advancedgenetics:combustiongenerator>);
 
 recipes.removeShaped(<advancedgenetics:basicdictionary>);
 
-recipes.addShaped(<advancedgenetics:basicdictionary>, [[null, cell, null],[cell, book, cell],[null, bedrock, null]]);
+recipes.addShaped(<advancedgenetics:basicdictionary>, [[null, bedrockdust, null],[cell, book, cell],[null, bedrockdust, null]]);

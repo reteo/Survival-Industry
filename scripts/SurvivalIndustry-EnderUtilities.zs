@@ -7,6 +7,7 @@ recipes.removeShaped(<enderutilities:enderpart:21>);
 recipes.removeShaped(<enderutilities:enderpearlreusable>);
 recipes.removeShaped(<enderutilities:enderarrow>);
 
+val leather = <ore:materialLeather>;
 val stick = <ore:stickWood>;
 val cherenkov = <si.core:itemCherenkovsingularity>;
 val thread = <minecraft:string>;

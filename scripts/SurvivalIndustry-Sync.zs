@@ -7,4 +7,5 @@ val cherenkov = <si.core:itemCherenkovsingularity>;
 val emerald = <ore:gemEmerald>;
 val redstoneblock = <ore:blockRedstone>;
 
+recipes.remove(<Sync:Sync_ItemPlaceholder>);
 recipes.addShaped(<Sync:Sync_ItemPlaceholder>, [[daylightsensor, lapisblock, daylightsensor],[quartz, cherenkov, quartz],[emerald, redstoneblock, emerald]]);
