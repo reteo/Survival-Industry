@@ -132,6 +132,13 @@
       "efficiency": 4.0,
       "damage": 0.0,
       "enchantability": 5
+    },
+    "ALUMINUM": {
+      "harvestLevel": 2,
+      "durability": 175,
+      "efficiency": 4.5,
+      "damage": 2.0,
+      "enchantability": 4
     }
   },
   "blocks": {
@@ -386,7 +393,52 @@
       "tooldata": {
         "toolmat": "COPPER"
       }
-    },
+    },    
+    "toolSwordAluminum": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },    
+    "toolPickaxeAluminum": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },    
+    "toolShovelAluminum": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },    
+    "toolAxeAluminum": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },    
+    "toolHoeAluminum": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },    
     "itemCherenkovsingularity": {
       "refClass": "SICoreItem",
       "stackSize": 1,
@@ -1168,7 +1220,127 @@
         ]
       ],
       "condition": "!Metallurgy,!RotaryCraft"
-    }
+    },
+    {
+      "result": {
+        "name": "si.core:toolPickaxeAluminum",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotAluminum",
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "ElectriCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolAxeAluminum",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          "ingotAluminum"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "ElectriCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolShovelAluminum",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotAluminum",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "ElectriCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolHoeAluminum",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "ElectriCraft"
+    },
+    {
+      "result": {
+        "name": "si.core:toolSwordAluminum",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "ingotAluminum",
+          null
+        ],
+        [
+          null,
+          "ingotAluminum",
+          null
+        ],
+        [
+          null,
+          "minecraft:stick",
+          null
+        ]
+      ],
+      "condition": "ElectriCraft"
+    }    
   ],
   "oredict": [
     {
