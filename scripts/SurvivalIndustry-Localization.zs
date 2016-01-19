@@ -81,6 +81,11 @@ game.setLocalization("en_US", "wailaharvestability.harvestlevel7", "Top");
 
 game.setLocalization("en_US", "wailaharvestability.harvestlevel", "Mining Level : ");
 
-/* On to the names of custom items. */
-game.setLocalization("en_US", "item.cherenkov_singularity.name", "Cherenkov Singularity");
-game.setLocalization("en_US", "tile.aluminum_block.name", "Block of Aluminum");
+/* Next, let's name the custom items for Survival Industry. */
+game.setLocalization("en_US", "item.si.core.toolPickaxeAluminum.name", "Aluminum Pickaxe");
+game.setLocalization("en_US", "item.si.core.toolAxeAluminum.name", "Aluminum Axe");
+game.setLocalization("en_US", "item.si.core.toolSwordAluminum.name", "Aluminum Sword");
+game.setLocalization("en_US", "item.si.core.toolShovelAluminum.name", "Aluminum Shovel");
+game.setLocalization("en_US", "item.si.core.toolHoeAluminum.name", "Aluminum Hoe");
+
+
