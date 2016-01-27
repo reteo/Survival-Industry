@@ -1,19 +1,37 @@
 {
   "settings": {
+    "PurgeRecipes": true,
     "SetToolMaterials": true,
     "AddItems": true,
     "PatchRotarycraftSteelTools": true,
+    "UpdateArmorMaterials": true,
+    "UpdateToolMaterials": true,
+    "UpdateTools": true,
+    "AddBlocks": true,
+    "SetArmorMaterials": true,
+    "RunWorldGeneration": true,
+    "EnderIOAlloys": true,
     "AddRecipes": true,
     "AddOredictEntries": true,
     "UpdateBlockProperties": true,
-    "UpdateToolMaterials": true,
-    "UpdateTools": true,
     "LibraryOnlyMode": false,
-    "AddBlocks": true,
-    "RotaryCraftSteelmaking": true,
-    "RunWorldGeneration": true
+    "RotaryCraftSteelmaking": true
   },
-  "toolMaterials": {
+  "moddependencies": {
+    "HarderWildlife": "Harder Wildlife",
+    "zombieawareness": "Zombie Awareness",
+    "ElectriCraft": "ElectriCraft",
+    "ReactorCraft": "ReactorCraft",
+    "MineTweaker3": "MineTweaker 3",
+    "modtweaker2": "Mod Tweaker",
+    "OreFlowers": "Ore Flowers",
+    "RotaryCraft": "RotaryCraft",
+    "HungerOverhaul": "Hunger Overhaul",
+    "mod_Invasion": "Invasion Mod",
+    "CustomOreGen": "Custom Ore Generation",
+    "SpecialAI": "Special AI"
+  },
+  "toolmaterials": {
     "GOLD": {
       "harvestLevel": 0,
       "durability": 131,
@@ -34,6 +52,13 @@
       "efficiency": 8.0,
       "damage": 4.0,
       "enchantability": 25
+    },
+    "SAPPHIRE": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
     },
     "WOOD": {
       "harvestLevel": 0,
@@ -63,6 +88,20 @@
       "damage": 2.0,
       "enchantability": 14
     },
+    "PERIDOT": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 7.75,
+      "damage": 3.0,
+      "enchantability": 14
+    },
+    "ALUMINUM": {
+      "harvestLevel": 2,
+      "durability": 175,
+      "efficiency": 4.5,
+      "damage": 2.0,
+      "enchantability": 4
+    },
     "BRONZE": {
       "harvestLevel": 4,
       "durability": 250,
@@ -71,13 +110,6 @@
       "enchantability": 14
     },
     "STEEL": {
-      "harvestLevel": 5,
-      "durability": 750,
-      "efficiency": 7.0,
-      "damage": 3.0,
-      "enchantability": 18
-    },
-    "RAILCRAFT_STEEL": {
       "harvestLevel": 5,
       "durability": 750,
       "efficiency": 7.0,
@@ -105,27 +137,6 @@
       "damage": 0.0,
       "enchantability": 30
     },
-    "RUBY": {
-      "harvestLevel": 5,
-      "durability": 512,
-      "efficiency": 8.0,
-      "damage": 3.0,
-      "enchantability": 10
-    },
-    "SAPPHIRE": {
-      "harvestLevel": 5,
-      "durability": 512,
-      "efficiency": 8.0,
-      "damage": 3.0,
-      "enchantability": 10
-    },
-    "PERIDOT": {
-      "harvestLevel": 5,
-      "durability": 512,
-      "efficiency": 7.75,
-      "damage": 2.75,
-      "enchantability": 14
-    },
     "STONE": {
       "harvestLevel": 1,
       "durability": 131,
@@ -133,12 +144,125 @@
       "damage": 0.0,
       "enchantability": 5
     },
+    "RUBY": {
+      "harvestLevel": 5,
+      "durability": 512,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 10
+    },
+    "RAILCRAFT_STEEL": {
+      "harvestLevel": 5,
+      "durability": 750,
+      "efficiency": 7.0,
+      "damage": 3.0,
+      "enchantability": 18
+    }
+  },
+  "armormaterials": {
+    "GOLD": {
+      "enchantability": 0,
+      "reductionbase": 7,
+      "helmetfactor": 2,
+      "chestfactor": 5,
+      "legginsfactor": 3,
+      "bootsfactor": 1
+    },
+    "DIAMOND": {
+      "enchantability": 0,
+      "reductionbase": 33,
+      "helmetfactor": 3,
+      "chestfactor": 8,
+      "legginsfactor": 6,
+      "bootsfactor": 3
+    },
+    "SILVER": {
+      "enchantability": 0,
+      "reductionbase": 7,
+      "helmetfactor": 2,
+      "chestfactor": 5,
+      "legginsfactor": 3,
+      "bootsfactor": 1
+    },
+    "PLATINUM": {
+      "enchantability": 0,
+      "reductionbase": 35,
+      "helmetfactor": 3,
+      "chestfactor": 8,
+      "legginsfactor": 6,
+      "bootsfactor": 3
+    },
+    "CLOTH": {
+      "enchantability": 0,
+      "reductionbase": 5,
+      "helmetfactor": 1,
+      "chestfactor": 3,
+      "legginsfactor": 2,
+      "bootsfactor": 1
+    },
+    "COPPER": {
+      "enchantability": 0,
+      "reductionbase": 8,
+      "helmetfactor": 2,
+      "chestfactor": 5,
+      "legginsfactor": 4,
+      "bootsfactor": 1
+    },
+    "IRON": {
+      "enchantability": 0,
+      "reductionbase": 15,
+      "helmetfactor": 2,
+      "chestfactor": 6,
+      "legginsfactor": 5,
+      "bootsfactor": 2
+    },
+    "CHAIN": {
+      "enchantability": 0,
+      "reductionbase": 15,
+      "helmetfactor": 2,
+      "chestfactor": 5,
+      "legginsfactor": 4,
+      "bootsfactor": 1
+    },
     "ALUMINUM": {
-      "harvestLevel": 2,
-      "durability": 175,
-      "efficiency": 4.5,
-      "damage": 2.0,
-      "enchantability": 4
+      "enchantability": 0,
+      "reductionbase": 6,
+      "helmetfactor": 2,
+      "chestfactor": 4,
+      "legginsfactor": 3,
+      "bootsfactor": 1
+    },
+    "BRONZE": {
+      "enchantability": 0,
+      "reductionbase": 18,
+      "helmetfactor": 3,
+      "chestfactor": 7,
+      "legginsfactor": 5,
+      "bootsfactor": 2
+    },
+    "STEEL": {
+      "enchantability": 0,
+      "reductionbase": 21,
+      "helmetfactor": 3,
+      "chestfactor": 8,
+      "legginsfactor": 6,
+      "bootsfactor": 3
+    },
+    "TIN": {
+      "enchantability": 0,
+      "reductionbase": 8,
+      "helmetfactor": 2,
+      "chestfactor": 4,
+      "legginsfactor": 3,
+      "bootsfactor": 1
+    },
+    "ELECTRUM": {
+      "enchantability": 0,
+      "reductionbase": 8,
+      "helmetfactor": 3,
+      "chestfactor": 8,
+      "legginsfactor": 6,
+      "bootsfactor": 3
     }
   },
   "blocks": {
@@ -204,13 +328,24 @@
     }
   },
   "items": {
-    "toolSwordBronze": {
-      "refClass": "SIToolSword",
+    "armorSteelHelmet": {
+      "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
       "condition": "!Metallurgy",
-      "tooldata": {
-        "toolmat": "BRONZE"
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "STEEL"
+      }
+    },
+    "armorSilverBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "SILVER"
       }
     },
     "toolShovelSteel": {
@@ -231,6 +366,223 @@
         "toolmat": "STEEL"
       }
     },
+    "toolAxeAluminum": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },
+    "armorTinChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "TIN"
+      }
+    },
+    "toolAxeSteel": {
+      "refClass": "SIToolAxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "toolHoeAluminum": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },
+    "armorSilverHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "SILVER"
+      }
+    },
+    "toolSwordCopper": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "itemCrucible": {
+      "refClass": "ItemCrucible",
+      "stackSize": 64,
+      "tab": "si.core"
+    },
+    "armorSilverLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "SILVER"
+      }
+    },
+    "toolHoeBronze": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "armorCopperLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "COPPER"
+      }
+    },
+    "armorAluminumLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "ALUMINUM"
+      }
+    },
+    "armorAluminumHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "ALUMINUM"
+      }
+    },
+    "toolSwordBronze": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "BRONZE"
+      }
+    },
+    "armorCopperChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "COPPER"
+      }
+    },
+    "armorElectrumChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "ELECTRUM"
+      }
+    },
+    "armorCopperHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "COPPER"
+      }
+    },
+    "armorPlatinumHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "PLATINUM"
+      }
+    },
+    "armorElectrumHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "ELECTRUM"
+      }
+    },
+    "toolShovelFlint": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "tooldata": {
+        "toolmat": "FLINT"
+      }
+    },
+    "armorBronzeLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "BRONZE"
+      }
+    },
+    "itemIngotMold": {
+      "refClass": "ItemIngotMold",
+      "stackSize": 64,
+      "tab": "si.core"
+    },
+    "armorSilverChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "SILVER"
+      }
+    },
+    "itemCherenkovsingularity": {
+      "refClass": "SICoreItem",
+      "stackSize": 1,
+      "tab": "si.core"
+    },
+    "armorPlatinumChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "PLATINUM"
+      }
+    },
     "ingotGeneric": {
       "refClass": "SIIngotGeneric",
       "stackSize": 64,
@@ -245,22 +597,54 @@
         "toolmat": "BRONZE"
       }
     },
-    "toolPickaxeSteel": {
-      "refClass": "SIToolPickaxe",
+    "armorCopperBoots": {
+      "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
-      "tooldata": {
-        "toolmat": "STEEL"
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "COPPER"
       }
     },
-    "toolAxeSteel": {
-      "refClass": "SIToolAxe",
+    "armorSteelChestplate": {
+      "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy,!RotaryCraft",
-      "tooldata": {
-        "toolmat": "STEEL"
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "STEEL"
+      }
+    },
+    "armorTinBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "TIN"
+      }
+    },
+    "armorAluminumChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "ALUMINUM"
+      }
+    },
+    "armorSteelLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "STEEL"
       }
     },
     "toolHoeSteel": {
@@ -270,6 +654,137 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
+      }
+    },
+    "armorElectrumBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "ELECTRUM"
+      }
+    },
+    "armorElectrumLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "ELECTRUM"
+      }
+    },
+    "armorPlatinumBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "PLATINUM"
+      }
+    },
+    "toolHoeCopper": {
+      "refClass": "SIToolHoe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "armorTinHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "TIN"
+      }
+    },
+    "toolPickaxeCopper": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "tooldata": {
+        "toolmat": "COPPER"
+      }
+    },
+    "toolSwordAluminum": {
+      "refClass": "SIToolSword",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },
+    "armorBronzeBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "BRONZE"
+      }
+    },
+    "foodJPMorningSupreme": {
+      "refClass": "SICoreFood",
+      "stackSize": 1,
+      "tab": "si.core",
+      "fooddata": {
+        "hunger": 16,
+        "saturation": 1.6,
+        "wolffood": false,
+        "alwaysEdible": false,
+        "buffdata": {
+          "name": "digspeed",
+          "duration": 60,
+          "level": 1,
+          "chance": 100
+        }
+      }
+    },
+    "toolShovelAluminum": {
+      "refClass": "SIToolShovel",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },
+    "toolPickaxeAluminum": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "ElectriCraft",
+      "tooldata": {
+        "toolmat": "ALUMINUM"
+      }
+    },
+    "toolPickaxeSteel": {
+      "refClass": "SIToolPickaxe",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy,!RotaryCraft",
+      "tooldata": {
+        "toolmat": "STEEL"
+      }
+    },
+    "armorPlatinumLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "PLATINUM"
       }
     },
     "toolAxeFlint": {
@@ -296,6 +811,46 @@
         "toolmat": "FLINT"
       }
     },
+    "armorBronzeHelmet": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "helmet",
+        "armorMaterial": "BRONZE"
+      }
+    },
+    "armorTinLeggins": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggins",
+        "armorMaterial": "TIN"
+      }
+    },
+    "armorAluminumBoots": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "ALUMINUM"
+      }
+    },
+    "armorBronzeChestplate": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "chest",
+        "armorMaterial": "BRONZE"
+      }
+    },
     "toolShovelBronze": {
       "refClass": "SIToolShovel",
       "stackSize": 1,
@@ -303,23 +858,6 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      }
-    },
-    "toolSwordCopper": {
-      "refClass": "SIToolSword",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "tooldata": {
-        "toolmat": "COPPER"
-      }
-    },
-    "toolShovelFlint": {
-      "refClass": "SIToolShovel",
-      "stackSize": 1,
-      "tab": "si.core",
-      "tooldata": {
-        "toolmat": "FLINT"
       }
     },
     "toolAxeBronze": {
@@ -339,33 +877,10 @@
         "toolmat": "FLINT"
       }
     },
-    "toolHoeCopper": {
-      "refClass": "SIToolHoe",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "tooldata": {
-        "toolmat": "COPPER"
-      }
-    },
-    "itemCrucible": {
-      "refClass": "ItemCrucible",
-      "stackSize": 64,
+    "itemWoodenBucket": {
+      "refClass": "ItemWoodenBucket",
+      "stackSize": 16,
       "tab": "si.core"
-    },
-    "itemIngotMold": {
-      "refClass": "ItemIngotMold",
-      "stackSize": 64,
-      "tab": "si.core"
-    },
-    "toolPickaxeCopper": {
-      "refClass": "SIToolPickaxe",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "tooldata": {
-        "toolmat": "COPPER"
-      }
     },
     "toolShovelCopper": {
       "refClass": "SIToolShovel",
@@ -376,13 +891,13 @@
         "toolmat": "COPPER"
       }
     },
-    "toolHoeBronze": {
-      "refClass": "SIToolHoe",
+    "armorSteelBoots": {
+      "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
-      "condition": "!Metallurgy",
-      "tooldata": {
-        "toolmat": "BRONZE"
+      "armordata": {
+        "armorType": "boots",
+        "armorMaterial": "STEEL"
       }
     },
     "toolAxeCopper": {
@@ -393,56 +908,6 @@
       "tooldata": {
         "toolmat": "COPPER"
       }
-    },    
-    "toolSwordAluminum": {
-      "refClass": "SIToolSword",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "ElectriCraft",
-      "tooldata": {
-        "toolmat": "ALUMINUM"
-      }
-    },    
-    "toolPickaxeAluminum": {
-      "refClass": "SIToolPickaxe",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "ElectriCraft",
-      "tooldata": {
-        "toolmat": "ALUMINUM"
-      }
-    },    
-    "toolShovelAluminum": {
-      "refClass": "SIToolShovel",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "ElectriCraft",
-      "tooldata": {
-        "toolmat": "ALUMINUM"
-      }
-    },    
-    "toolAxeAluminum": {
-      "refClass": "SIToolAxe",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "ElectriCraft",
-      "tooldata": {
-        "toolmat": "ALUMINUM"
-      }
-    },    
-    "toolHoeAluminum": {
-      "refClass": "SIToolHoe",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "ElectriCraft",
-      "tooldata": {
-        "toolmat": "ALUMINUM"
-      }
-    },    
-    "itemCherenkovsingularity": {
-      "refClass": "SICoreItem",
-      "stackSize": 1,
-      "tab": "si.core"
     }
   },
   "metalblocks": [
@@ -688,6 +1153,350 @@
         {
           "name": "minecraft:gravel",
           "stackSize": 2
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:foodJPMorningSupreme",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "listAllmilk",
+          "stackSize": 1
+        },
+        {
+          "name": "foodCoffee",
+          "stackSize": 1
+        },
+        {
+          "name": "foodToastsandwich",
+          "stackSize": 1
+        },
+        {
+          "name": "listAllegg",
+          "stackSize": 2
+        },
+        {
+          "name": "foodCheese",
+          "stackSize": 2
+        },
+        {
+          "name": "foodMayo",
+          "stackSize": 1
+        },
+        {
+          "name": "toolSkillet",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:freshmilkItem",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "si.core:itemWoodenBucket_milk",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:1",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:3",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:2",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:1",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:2",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers3",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:2",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:5",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:5",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:5",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:5",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:6",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:5",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:1",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:7",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:7",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:2",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:7",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:7",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:11",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers:4",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:13",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:2",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:13",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:4",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:13",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:7",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:14",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2:6",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "VeganOption:oilVegetable",
+        "stackSize": 7
+      },
+      "ingredients": [
+        {
+          "name": "presserOil",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 7
+        },
+        {
+          "name": "RotaryCraft:rotarycraft_item_canola:1",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "VeganOption:oilVegetable",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "presserOil",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "RotaryCraft:rotarycraft_item_canola",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:honeycombchocolatebarItem",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "toolSaucepan",
+          "stackSize": 1
+        },
+        {
+          "name": "foodChocolatebar",
+          "stackSize": 1
+        },
+        {
+          "name": "beeComb",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:honeysandwichItem",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "toolCuttingboard",
+          "stackSize": 1
+        },
+        {
+          "name": "listAllnutbutter",
+          "stackSize": 1
+        },
+        {
+          "name": "foodHoneydrop",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:bread",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:marzipanItem",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "cropAlmond",
+          "stackSize": 1
+        },
+        {
+          "name": "toolMortarandpestle",
+          "stackSize": 1
+        },
+        {
+          "name": "foodHoneydrop",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:mustardseedItem",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "OreFlowers:ore_flowers2",
+          "stackSize": 1
         }
       ]
     }
@@ -1122,8 +1931,7 @@
           "minecraft:stick",
           null
         ]
-      ],
-      "condition": "!Metallurgy,!RotaryCraft"
+      ]
     },
     {
       "result": {
@@ -1146,8 +1954,7 @@
           "minecraft:stick",
           null
         ]
-      ],
-      "condition": "!Metallurgy,!RotaryCraft"
+      ]
     },
     {
       "result": {
@@ -1170,8 +1977,7 @@
           "minecraft:stick",
           null
         ]
-      ],
-      "condition": "!Metallurgy,!RotaryCraft"
+      ]
     },
     {
       "result": {
@@ -1194,8 +2000,7 @@
           "minecraft:stick",
           null
         ]
-      ],
-      "condition": "!Metallurgy,!RotaryCraft"
+      ]
     },
     {
       "result": {
@@ -1210,7 +2015,7 @@
         ],
         [
           null,
-          "itemFlint",
+          "itemtFlint",
           null
         ],
         [
@@ -1218,8 +2023,7 @@
           "minecraft:stick",
           null
         ]
-      ],
-      "condition": "!Metallurgy,!RotaryCraft"
+      ]
     },
     {
       "result": {
@@ -1340,7 +2144,1764 @@
         ]
       ],
       "condition": "ElectriCraft"
-    }    
+    },
+    {
+      "result": {
+        "name": "si.core:armorCopperHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorCopperChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorCopperLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorCopperBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ],
+        [
+          "ingotCopper",
+          null,
+          "ingotCopper"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorTinHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotTin",
+          "ingotTin",
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorTinChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          "ingotTin",
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          "ingotTin",
+          "ingotTin"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorTinLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotTin",
+          "ingotTin",
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorTinBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          null,
+          "ingotTin"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorElectrumHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotElectrum",
+          "ingotElectrum",
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorElectrumChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          "ingotElectrum",
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          "ingotElectrum",
+          "ingotElectrum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorElectrumLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotElectrum",
+          "ingotElectrum",
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorElectrumBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ],
+        [
+          "ingotElectrum",
+          null,
+          "ingotElectrum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorAluminumHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotAluminum",
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorAluminumChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          "ingotAluminum",
+          "ingotAluminum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorAluminumLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotAluminum",
+          "ingotAluminum",
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorAluminumBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ],
+        [
+          "ingotAluminum",
+          null,
+          "ingotAluminum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSteelHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSteel",
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSteelChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          "ingotSteel",
+          "ingotSteel"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSteelLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSteel",
+          "ingotSteel",
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSteelBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ],
+        [
+          "ingotSteel",
+          null,
+          "ingotSteel"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorPlatinumHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotPlatinum",
+          "ingotPlatinum",
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorPlatinumChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          "ingotPlatinum",
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          "ingotPlatinum",
+          "ingotPlatinum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorPlatinumLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotPlatinum",
+          "ingotPlatinum",
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorPlatinumBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ],
+        [
+          "ingotPlatinum",
+          null,
+          "ingotPlatinum"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSilverHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSilver",
+          "ingotSilver",
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSilverChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          "ingotSilver",
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          "ingotSilver",
+          "ingotSilver"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSilverLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotSilver",
+          "ingotSilver",
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorSilverBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ],
+        [
+          "ingotSilver",
+          null,
+          "ingotSilver"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorBronzeHelmet",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBronze",
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorBronzeChestplate",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          "ingotBronze",
+          "ingotBronze"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorBronzeLeggins",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBronze",
+          "ingotBronze",
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:armorBronzeBoots",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ],
+        [
+          "ingotBronze",
+          null,
+          "ingotBronze"
+        ]
+      ],
+      "condition": "!Metallurgy"
+    },
+    {
+      "result": {
+        "name": "si.core:itemWoodenBucket",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "plankWood",
+          null,
+          "plankWood"
+        ],
+        [
+          null,
+          "plankWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "advancedgenetics:basicdictionary",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "RotaryCraft:rotarycraft_item_powders:4",
+          null
+        ],
+        [
+          "advancedgenetics:cell",
+          "minecraft:book",
+          "advancedgenetics:cell"
+        ],
+        [
+          null,
+          "RotaryCraft:rotarycraft_item_powders:4",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "battlegear2:shield.wood",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "plankWood",
+          null
+        ],
+        [
+          "plankWood",
+          "logWood",
+          "plankWood"
+        ],
+        [
+          null,
+          "plankWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "EnderStorage:enderChest",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "itemBlazeRod",
+          "materialBedding",
+          "itemBlazeRod"
+        ],
+        [
+          "plankWood",
+          "chestWood",
+          "plankWood"
+        ],
+        [
+          "itemBlazeRod",
+          "si.core:itemCherenkovsingularity",
+          "itemBlazeRod"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "EnderStorage:enderChest:4096",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "itemBlazeRod",
+          "materialBedding",
+          "itemBlazeRod"
+        ],
+        [
+          "plankWood",
+          "minecraft:cauldron",
+          "plankWood"
+        ],
+        [
+          "itemBlazeRod",
+          "si.core:itemCherenkovsingularity",
+          "itemBlazeRod"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "EnderStorage:enderPouch",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "itemBlazePowder",
+          "materialLeather",
+          "itemBlazePowder"
+        ],
+        [
+          "materialLeather",
+          "si.core:itemCherenkovsingularity",
+          "materialLeather"
+        ],
+        [
+          "itemBlazePowder",
+          "materialBedding",
+          "itemBlazePowder"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpart:20",
+        "stackSize": 3
+      },
+      "recipe": [
+        [
+          "stickWood",
+          "stickWood",
+          "stickWood"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "stickWood",
+          "stickWood",
+          "stickWood"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpart:21",
+        "stackSize": 3
+      },
+      "recipe": [
+        [
+          "minecraft:string",
+          "minecraft:string",
+          "minecraft:string"
+        ],
+        [
+          "materialLeather",
+          "si.core:itemCherenkovsingularity",
+          "materialLeather"
+        ],
+        [
+          "minecraft:string",
+          "minecraft:string",
+          "minecraft:string"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpearlreusable",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "nuggetGold",
+          "pearlEnder",
+          "nuggetGold"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "blockRedstone",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "nuggetGold",
+          "pearlEnder",
+          "nuggetGold"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderarrow",
+        "stackSize": 4
+      },
+      "recipe": [
+        [
+          null,
+          "nuggetGold",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          null,
+          "minecraft:arrow",
+          "nuggetGold"
+        ],
+        [
+          "minecraft:arrow",
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpart",
+        "stackSize": 3
+      },
+      "recipe": [
+        [
+          "ingotIron",
+          "ingotIron",
+          "ingotIron"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "ingotIron",
+          "ingotIron",
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpart:1",
+        "stackSize": 3
+      },
+      "recipe": [
+        [
+          "ingotGold",
+          "ingotGold",
+          "ingotGold"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "ingotIron",
+          "ingotIron",
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enderutilities:enderpart:2",
+        "stackSize": 3
+      },
+      "recipe": [
+        [
+          "ingotIron",
+          "si.core:itemCherenkovsingularity",
+          "ingotIron"
+        ],
+        [
+          "ingotGold",
+          "gemDiamond",
+          "ingotGold"
+        ],
+        [
+          "blockObsidian",
+          "si.core:itemCherenkovsingularity",
+          "blockObsidian"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "enhancedportals:frame",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "ingotIron",
+          "RotaryCraft:rotarycraft_item_powders:4"
+        ],
+        [
+          "ingotIron",
+          "blockQuartz",
+          "ingotIron"
+        ],
+        [
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "ingotIron",
+          "RotaryCraft:rotarycraft_item_powders:4"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:end_portal_frame",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "mod_Invasion:riftFlux",
+          "si.core:itemCherenkovsingularity"
+        ],
+        [
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity",
+          "si.core:itemCherenkovsingularity"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:saddle",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "materialLeather",
+          "materialLeather",
+          "materialLeather"
+        ],
+        [
+          "materialLeather",
+          "materialLeather",
+          "materialLeather"
+        ],
+        [
+          "ingotIron",
+          null,
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:iron_horse_armor",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotIron",
+          "ingotIron",
+          "ingotIron"
+        ],
+        [
+          "ingotIron",
+          "ingotIron",
+          "ingotIron"
+        ],
+        [
+          "ingotIron",
+          null,
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:gold_horse_armor",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotGold",
+          "ingotGold",
+          "ingotGold"
+        ],
+        [
+          "ingotGold",
+          "ingotGold",
+          "ingotGold"
+        ],
+        [
+          "ingotGold",
+          null,
+          "ingotGold"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:diamond_horse_armor",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "gemDiamond",
+          "gemDiamond",
+          "gemDiamond"
+        ],
+        [
+          "gemDiamond",
+          "gemDiamond",
+          "gemDiamond"
+        ],
+        [
+          "gemDiamond",
+          null,
+          "gemDiamond"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "ExtraUtilities:decorativeBlock1:1",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "blockObsidian",
+          null
+        ],
+        [
+          "blockObsidian",
+          "gemDiamond",
+          "blockObsidian"
+        ],
+        [
+          null,
+          "blockObsidian",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "fossil:cultureVat",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockGlass",
+          "dyeGreen",
+          "blockGlass"
+        ],
+        [
+          "blockGlass",
+          "listAllwater",
+          "blockGlass"
+        ],
+        [
+          "ingotIron",
+          "minecraft:bedrock",
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "fossil:analyzer",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotIron",
+          "fossil:relicScrap",
+          "ingotIron"
+        ],
+        [
+          "ingotIron",
+          "bioFossil",
+          "ingotIron"
+        ],
+        [
+          "ingotIron",
+          "minecraft:bedrock",
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "barsIron",
+          null
+        ],
+        [
+          "barsIron",
+          "ingotIron",
+          "barsIron"
+        ],
+        [
+          null,
+          "barsIron",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood:1",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks:1",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood:2",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks:2",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood:3",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks:3",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood:4",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks:4",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "GardenStuff:lattice_wood:5",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          "stickWood",
+          "minecraft:planks:5",
+          "stickWood"
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "Railcraft:machine.alpha:12",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "sand",
+          "minecraft:brick_block",
+          "sand"
+        ],
+        [
+          "minecraft:brick_block",
+          "minecraft:magma_cream",
+          "minecraft:brick_block"
+        ],
+        [
+          "sand",
+          "minecraft:brick_block",
+          "sand"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "gendustry:MutagenTank",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotTin",
+          "paneGlass",
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          "paneGlass",
+          "ingotTin"
+        ],
+        [
+          "ingotTin",
+          "minecraft:bedrock",
+          "ingotTin"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "mod_Invasion:phaseCrystal",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "dyeBlue",
+          null
+        ],
+        [
+          "dustRedstone",
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "dustRedstone"
+        ],
+        [
+          null,
+          "dyeBlue",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "mod_Invasion:phaseCrystal",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          null,
+          "dustRedstone",
+          null
+        ],
+        [
+          "dyeBlue",
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "dyeBlue"
+        ],
+        [
+          null,
+          "dustRedstone",
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "Metallurgy:machine.frame",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "stone",
+          "ingotCopper",
+          "stone"
+        ],
+        [
+          "ingotCopper",
+          "stone",
+          "ingotCopper"
+        ],
+        [
+          "stone",
+          "ingotCopper",
+          "stone"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "Metallurgy:crusher",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotCopper",
+          "ingotCopper",
+          "ingotCopper"
+        ],
+        [
+          "stone",
+          "Metallurgy:machine.frame",
+          "stone"
+        ],
+        [
+          "stone",
+          "minecraft:furnace",
+          "stone"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minechem:minechemAtomicManipulator",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "minecraft:piston",
+          "minecraft:piston",
+          "minecraft:piston"
+        ],
+        [
+          "minecraft:piston",
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "minecraft:piston"
+        ],
+        [
+          "minecraft:piston",
+          "minecraft:piston",
+          "minecraft:piston"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:skull:1",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "slimeball",
+          "RotaryCraft:rotarycraft_item_powders:4"
+        ],
+        [
+          "slimeball",
+          "VeganOption:mobHeadBlank",
+          "slimeball"
+        ],
+        [
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "slimeball",
+          "RotaryCraft:rotarycraft_item_powders:4"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:skull:1",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "minecraft:daylight_detector",
+          "blockLapis",
+          "minecraft:daylight_detector"
+        ],
+        [
+          "gemQuartz",
+          "si.core:itemCherenkovsingularity",
+          "gemQuartz"
+        ],
+        [
+          "gemEmerald",
+          "blockRedstone",
+          "gemEmerald"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "rftools:machineFrame",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotIron",
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "ingotIron"
+        ],
+        [
+          "goldnugget",
+          null,
+          "goldnugget"
+        ],
+        [
+          "ingotIron",
+          "RotaryCraft:rotarycraft_item_powders:4",
+          "ingotIron"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:potItem",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "stickWood",
+          "ingotBrick",
+          "ingotBrick"
+        ],
+        [
+          null,
+          "ingotBrick",
+          "ingotBrick"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:skilletItem",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBrick",
+          null,
+          null
+        ],
+        [
+          null,
+          "ingotBrick",
+          null
+        ],
+        [
+          null,
+          null,
+          "stickWood"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:saucepanItem",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "ingotBrick",
+          null,
+          null
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "harvestcraft:cuttingboardItem",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "itemFlint",
+          null,
+          null
+        ],
+        [
+          null,
+          "stickWood",
+          null
+        ],
+        [
+          null,
+          null,
+          "plankWood"
+        ]
+      ]
+    }
   ],
   "oredict": [
     {
@@ -1391,60 +3952,36 @@
     {
       "one": "oreIron",
       "result": "ingotIron",
-      "amount": 1
+      "amount": 2
     },
     {
       "one": "oreTin",
       "result": "ingotTin",
-      "amount": 1
+      "amount": 2
     },
     {
       "one": "oreCopper",
       "result": "ingotCopper",
-      "amount": 1
+      "amount": 2
     },
     {
       "one": "oreGold",
       "result": "ingotGold",
-      "amount": 1
+      "amount": 2
     },
     {
       "one": "oreAluminum",
       "result": "ingotAluminium",
-      "amount": 1
+      "amount": 2
     },
     {
       "one": "oreSilver",
       "result": "ingotSilver",
-      "amount": 1
+      "amount": 2
     }
   ],
   "blockproperties": {
     "chisel:iron2": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "minecraft:stonebrick": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "chisel:granite": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "chisel:stonebricksmooth": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "RotaryCraft:rotarycraft_block_deco": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "chisel:factoryblock": {
-      "blastresistance": 45.0,
-      "harvestlevel": {}
-    },
-    "chisel:iron_block": {
       "blastresistance": 45.0,
       "harvestlevel": {}
     },
@@ -1470,23 +4007,9 @@
         "11": 2
       }
     },
-    "minecraft:quartz_ore": {
+    "minecraft:stonebrick": {
       "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 5
-      }
-    },
-    "appliedenergistics2:tile.OreQuartz": {
-      "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 5
-      }
-    },
-    "appliedenergistics2:tile.BlockSkyStone": {
-      "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 7
-      }
+      "harvestlevel": {}
     },
     "minechem:tile.oreUranium": {
       "blastresistance": 45.0,
@@ -1546,12 +4069,6 @@
         "9": 4
       }
     },
-    "minecraft:diamond_ore": {
-      "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 5
-      }
-    },
     "minecraft:lapis_ore": {
       "blastresistance": 45.0,
       "harvestlevel": {
@@ -1559,6 +4076,62 @@
       }
     },
     "appliedenergistics2:tile.OreQuartzCharged": {
+      "blastresistance": 45.0,
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "ProjRed|Exploration:projectred.exploration.ore:0": {
+      "blastresistance": 45.0,
+      "harvestlevel": {
+        "0": 5,
+        "1": 5,
+        "2": 5,
+        "3": 1,
+        "4": 2,
+        "5": 4,
+        "6": 4
+      }
+    },
+    "chisel:granite": {
+      "blastresistance": 45.0,
+      "harvestlevel": {}
+    },
+    "Forestry:resources": {
+      "blastresistance": 45.0,
+      "harvestlevel": {
+        "0": 1,
+        "1": 1,
+        "2": 2
+      }
+    },
+    "minecraft:obsidian": {
+      "harvestlevel": {
+        "0": 6
+      }
+    },
+    "minecraft:quartz_ore": {
+      "blastresistance": 45.0,
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "appliedenergistics2:tile.OreQuartz": {
+      "blastresistance": 45.0,
+      "harvestlevel": {
+        "0": 5
+      }
+    },
+    "appliedenergistics2:tile.BlockSkyStone": {
+      "harvestlevel": {
+        "0": 7
+      }
+    },
+    "chisel:stonebricksmooth": {
+      "blastresistance": 45.0,
+      "harvestlevel": {}
+    },
+    "minecraft:diamond_ore": {
       "blastresistance": 45.0,
       "harvestlevel": {
         "0": 5
@@ -1582,18 +4155,6 @@
         "0": 4
       }
     },
-    "ProjRed|Exploration:projectred.exploration.ore:0": {
-      "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 5,
-        "1": 5,
-        "2": 5,
-        "3": 1,
-        "4": 2,
-        "5": 4,
-        "6": 4
-      }
-    },
     "minecraft:redstone_ore": {
       "blastresistance": 45.0,
       "harvestlevel": {
@@ -1601,18 +4162,21 @@
       }
     },
     "fossil:fossil": {
-      "blastresistance": 45.0,
       "harvestlevel": {
         "0": 4
       }
     },
-    "Forestry:resources": {
+    "RotaryCraft:rotarycraft_block_deco": {
       "blastresistance": 45.0,
-      "harvestlevel": {
-        "0": 1,
-        "1": 1,
-        "2": 2
-      }
+      "harvestlevel": {}
+    },
+    "chisel:factoryblock": {
+      "blastresistance": 45.0,
+      "harvestlevel": {}
+    },
+    "chisel:iron_block": {
+      "blastresistance": 45.0,
+      "harvestlevel": {}
     },
     "minecraft:iron_ore": {
       "blastresistance": 45.0,
@@ -1631,30 +4195,12 @@
         "5": 5,
         "6": 5,
         "7": 5
-      
-        }
-     },
-     "Metallurgy:base.ore": {
-       "blastresistance": 45.0,
-       "harvestlevel": {
-         "0": 1,
-         "1": 2
-       }
-     },
-     "Metallurgy:utility.ore": {
-       "blastresistance": 45.0,
-       "harvestlevel": {
-         "4": 1}
+      }
     },
     "minecraft:emerald_ore": {
       "blastresistance": 45.0,
       "harvestlevel": {
         "0": 5
-      }
-    },
-    "minecraft:obsidian": {
-      "harvestlevel": {
-        "0": 6
       }
     }
   },
@@ -1678,7 +4224,7 @@
       "starty": 8,
       "endy": 32,
       "spread": 16,
-      "condition": "!Metallurgy,!ElectriCraft"
+      "condition": "!Metallurgy,!ElectriCraft,!CustomOreGen"
     },
     {
       "blocktogenerate": "si.core:oreTin",
@@ -1689,7 +4235,7 @@
       "starty": 24,
       "endy": 48,
       "spread": 16,
-      "condition": "!Metallurgy,!ElectriCraft"
+      "condition": "!Metallurgy,!ElectriCraft,!CustomOreGen"
     },
     {
       "blocktogenerate": "si.core:oreCopper",
@@ -1700,7 +4246,248 @@
       "starty": 32,
       "endy": 96,
       "spread": 16,
-      "condition": "!Metallurgy,!ElectriCraft"
+      "condition": "!Metallurgy,!ElectriCraft,!CustomOreGen"
+    }
+  ],
+  "colors": {
+    "RED": {
+      "red": 255,
+      "green": 0,
+      "blue": 0
+    },
+    "ALUMINUM": {
+      "red": 192,
+      "green": 192,
+      "blue": 192
+    },
+    "BRONZE": {
+      "red": 192,
+      "green": 104,
+      "blue": 64
+    },
+    "STEEL": {
+      "red": 64,
+      "green": 64,
+      "blue": 64
+    },
+    "BLUE": {
+      "red": 0,
+      "green": 0,
+      "blue": 255
+    },
+    "SILVER": {
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    },
+    "PLATINUM": {
+      "red": 52,
+      "green": 104,
+      "blue": 192
+    },
+    "TIN": {
+      "red": 128,
+      "green": 128,
+      "blue": 128
+    },
+    "COPPER": {
+      "red": 192,
+      "green": 88,
+      "blue": 0
+    },
+    "ELECTRUM": {
+      "red": 255,
+      "green": 255,
+      "blue": 192
+    },
+    "GREEN": {
+      "red": 0,
+      "green": 255,
+      "blue": 0
+    }
+  },
+  "purgerecipes": [
+    "advancedgenetics:combustiongeneratoridle",
+    "advancedgenetics:basicdictionary",
+    "battlegear2:shield.wood",
+    "BuildCraft|Builders:machineBlock",
+    "BuildCraft|Core:engineBlock:0",
+    "BuildCraft|Core:engineBlock:1",
+    "BuildCraft|Core:engineBlock:2",
+    "BuildCraft|Core:engineBlock:3",
+    "BuildCraft|Factory:autoWorkbenchBlock:0",
+    "BuildCraft|Factory:miningWellBlock:0",
+    "EnderStorage:enderChest",
+    "EnderStorage:enderChest:4096",
+    "EnderStorage:enderPouch",
+    "enderutilities:enderpart",
+    "enderutilities:enderpart:1",
+    "enderutilities:enderpart:2",
+    "enderutilities:enderpart:20",
+    "enderutilities:enderpart:21",
+    "enderutilities:enderpearlreusable",
+    "enderutilities:enderarrow",
+    "enhancedportals:frame",
+    "minecraft:saddle",
+    "minecraft:iron_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:diamond_horse_armor",
+    "minecraft:end_portal_frame",
+    "ExtraUtilities:decorativeBlock1:1",
+    "fossil:analyzer",
+    "fossil:cultureVat",
+    "GardenStuff:lattice",
+    "GardenStuff:lattice_wood",
+    "GardenStuff:lattice_wood:1",
+    "GardenStuff:lattice_wood:2",
+    "GardenStuff:lattice_wood:3",
+    "GardenStuff:lattice_wood:4",
+    "GardenStuff:lattice_wood:5",
+    "Railcraft:machine.alpha:12",
+    "gendustry:MutagenTank",
+    "mod_Invasion:phaseCrystal",
+    "Metallurgy:base.brick",
+    "Metallurgy:base.brick:1",
+    "Metallurgy:base.brick:2",
+    "Metallurgy:base.brick:3",
+    "Metallurgy:base.brick:4",
+    "Metallurgy:base.brick:5",
+    "Metallurgy:base.brick:6",
+    "Metallurgy:base.brick:7",
+    "Metallurgy:precious.brick",
+    "Metallurgy:precious.brick:1",
+    "Metallurgy:precious.brick:2",
+    "Metallurgy:precious.brick:3",
+    "Metallurgy:precious.brick:4",
+    "Metallurgy:vanilla.brick:0",
+    "Metallurgy:vanilla.brick:1",
+    "Metallurgy:machine.frame",
+    "Metallurgy:crusher",
+    "Metallurgy:base.block:2",
+    "Metallurgy:base.brick:2",
+    "Metallurgy:manganese.ingot",
+    "minechem:minechemAtomicManipulator",
+    "minecraft:skull:1",
+    "Sync:Sync_ItemPlaceholder",
+    "rftools:endergenicBlock:0",
+    "harvestcraft:apiary",
+    "harvestcraft:royaljellyItem",
+    "harvestcraft:honeycombchocolatebarItem",
+    "harvestcraft:honeysandwichItem",
+    "harvestcraft:marzipanItem",
+    "EnderIO:blockStirlingGenerator",
+    "EnderIO:blockCombustionGenerator",
+    "EnderIO:blockZombieGenerator",
+    "EnderIO:blockSolarPanel",
+    "EnderIO:blockSolarPanel:1",
+    "EnderIO:blockSagMill",
+    "EnderIO:blockAlloySmelter",
+    "EnderIO:blockCapBank",
+    "EnderIO:blockCapBank:1",
+    "EnderIO:blockCapBank:2",
+    "EnderIO:blockCapBank:3",
+    "EnderIO:blockCrafter",
+    "EnderIO:blockFarmStation",
+    "EnderIO:blockKillerJoe"
+  ],
+  "hideitemsfromnei": [
+    "advancedgenetics:combustiongeneratoridle",
+    "advancedgenetics:combustiongenerator",
+    "appliedenergistics2:tile.BlockVibrationChamber",
+    "BuildCraft|Builders:machineBlock",
+    "BuildCraft|Core:engineBlock:0",
+    "BuildCraft|Core:engineBlock:1",
+    "BuildCraft|Core:engineBlock:2",
+    "BuildCraft|Core:engineBlock:3",
+    "BuildCraft|Factory:autoWorkbenchBlock:0",
+    "BuildCraft|Factory:miningWellBlock:0",
+    "extracells:vibrantchamberfluid",
+    "Metallurgy:base.ore:2",
+    "Metallurgy:base.block:2",
+    "Metallurgy:base.brick:2",
+    "Metallurgy:manganese.molten",
+    "Metallurgy:base.dust:2",
+    "Metallurgy:manganese.ingot",
+    "Metallurgy:molten.bucket:6",
+    "aobd:crushedManganese",
+    "rftools:endergenicBlock:0",
+    "rftools:machineFrame",
+    "harvestcraft:apiary:0",
+    "harvestcraft:royaljellyItem:0",
+    "harvestcraft:honeycombItem",
+    "harvestcraft:waxcombItem",
+    "harvestcraft:honeyItem",
+    "harvestcraft:beeswaxItem",
+    "harvestcraft:apiary:0",
+    "EnderIO:blockStirlingGenerator",
+    "EnderIO:blockCombustionGenerator",
+    "EnderIO:blockZombieGenerator",
+    "EnderIO:blockSolarPanel",
+    "EnderIO:blockSolarPanel:1",
+    "EnderIO:blockSagMill",
+    "EnderIO:blockAlloySmelter",
+    "EnderIO:blockCapBank",
+    "EnderIO:blockCapBank:1",
+    "EnderIO:blockCapBank:2",
+    "EnderIO:blockCapBank:3",
+    "EnderIO:blockCrafter",
+    "EnderIO:blockFarmStation",
+    "EnderIO:blockKillerJoe"
+  ],
+  "tooltips": [
+    {
+      "target": [
+        "si.core:foodJPMorningSupreme"
+      ],
+      "lines": [
+        "info.si.core.tooltips.jpsupreme1",
+        "info.si.core.tooltips.jpsupreme2",
+        "info.si.core.tooltips.jpsupreme3"
+      ]
+    },
+    {
+      "target": [
+        "advancedgenetics:combustiongeneratoridle",
+        "appliedenergistics2:tile.BlockVibrationChamber",
+        "BuildCraft|Core:engineBlock:0",
+        "BuildCraft|Core:engineBlock:1",
+        "BuildCraft|Core:engineBlock:2",
+        "BuildCraft|Core:engineBlock:3",
+        "extracells:vibrantchamberfluid",
+        "rftools:endergenicBlock:0"
+      ],
+      "lines": [
+        "info.si.core.tooltips.enginedisable1",
+        "info.si.core.tooltips.enginedisable2",
+        "info.si.core.tooltips.enginedisable3"
+      ]
+    },
+    {
+      "target": [
+        "BuildCraft|Builders:machineBlock"
+      ],
+      "lines": [
+        "info.si.core.tooltips.quarrydisable1",
+        "info.si.core.tooltips.quarrydisable2"
+      ]
+    },
+    {
+      "target": [
+        "BuildCraft|Factory:autoWorkbenchBlock:0"
+      ],
+      "lines": [
+        "info.si.core.tooltips.autoworkbenchdisable1",
+        "info.si.core.tooltips.autoworkbenchdisable2"
+      ]
+    },
+    {
+      "target": [
+        "BuildCraft|Factory:miningWellBlock:0"
+      ],
+      "lines": [
+        "info.si.core.tooltips.miningwelldisable1",
+        "info.si.core.tooltips.miningwelldisable2"
+      ]
     }
   ]
 }
