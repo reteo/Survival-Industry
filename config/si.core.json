@@ -336,8 +336,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "armorSilverBoots": {
       "refClass": "SICoreArmor",
@@ -347,8 +346,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "SILVER"
-      },
-      "colorindex": 0
+      }
     },
     "toolShovelSteel": {
       "refClass": "SIToolShovel",
@@ -357,8 +355,7 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "toolSwordSteel": {
       "refClass": "SIToolSword",
@@ -367,8 +364,7 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "toolAxeAluminum": {
       "refClass": "SIToolAxe",
@@ -377,8 +373,7 @@
       "condition": "ElectriCraft",
       "tooldata": {
         "toolmat": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorTinChestplate": {
       "refClass": "SICoreArmor",
@@ -388,8 +383,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "TIN"
-      },
-      "colorindex": 0
+      }
     },
     "toolAxeSteel": {
       "refClass": "SIToolAxe",
@@ -398,8 +392,7 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "toolHoeAluminum": {
       "refClass": "SIToolHoe",
@@ -408,8 +401,7 @@
       "condition": "ElectriCraft",
       "tooldata": {
         "toolmat": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "itemDyeBlue": {
       "refClass": "SICoreDye",
@@ -425,8 +417,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "SILVER"
-      },
-      "colorindex": 0
+      }
     },
     "itemDyeGreen": {
       "refClass": "SICoreDye",
@@ -441,14 +432,12 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "itemCrucible": {
       "refClass": "ItemCrucible",
       "stackSize": 64,
-      "tab": "si.core",
-      "colorindex": 0
+      "tab": "si.core"
     },
     "armorSilverLeggins": {
       "refClass": "SICoreArmor",
@@ -458,8 +447,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "SILVER"
-      },
-      "colorindex": 0
+      }
     },
     "toolHoeBronze": {
       "refClass": "SIToolHoe",
@@ -468,8 +456,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "armorCopperLeggins": {
       "refClass": "SICoreArmor",
@@ -479,8 +466,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "armorAluminumLeggins": {
       "refClass": "SICoreArmor",
@@ -490,8 +476,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorAluminumHelmet": {
       "refClass": "SICoreArmor",
@@ -501,8 +486,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolSwordBronze": {
       "refClass": "SIToolSword",
@@ -511,8 +495,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "armorCopperChestplate": {
       "refClass": "SICoreArmor",
@@ -522,8 +505,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "armorElectrumChestplate": {
       "refClass": "SICoreArmor",
@@ -533,8 +515,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "ELECTRUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorCopperHelmet": {
       "refClass": "SICoreArmor",
@@ -544,8 +525,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "armorPlatinumHelmet": {
       "refClass": "SICoreArmor",
@@ -555,8 +535,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "PLATINUM"
-      },
-      "colorindex": 0
+      }
     },
     "itemDyeBrown": {
       "refClass": "SICoreDye",
@@ -572,8 +551,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "ELECTRUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolShovelFlint": {
       "refClass": "SIToolShovel",
@@ -581,8 +559,7 @@
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      },
-      "colorindex": 0
+      }
     },
     "armorBronzeLeggins": {
       "refClass": "SICoreArmor",
@@ -592,14 +569,12 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "itemIngotMold": {
       "refClass": "ItemIngotMold",
       "stackSize": 64,
-      "tab": "si.core",
-      "colorindex": 0
+      "tab": "si.core"
     },
     "armorSilverChestplate": {
       "refClass": "SICoreArmor",
@@ -609,14 +584,12 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "SILVER"
-      },
-      "colorindex": 0
+      }
     },
     "itemCherenkovsingularity": {
       "refClass": "SICoreItem",
       "stackSize": 1,
-      "tab": "si.core",
-      "colorindex": 0
+      "tab": "si.core"
     },
     "armorPlatinumChestplate": {
       "refClass": "SICoreArmor",
@@ -626,14 +599,12 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "PLATINUM"
-      },
-      "colorindex": 0
+      }
     },
     "ingotGeneric": {
       "refClass": "SIIngotGeneric",
       "stackSize": 64,
-      "tab": "si.core",
-      "colorindex": 0
+      "tab": "si.core"
     },
     "toolPickaxeBronze": {
       "refClass": "SIToolPickaxe",
@@ -642,8 +613,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "armorCopperBoots": {
       "refClass": "SICoreArmor",
@@ -653,8 +623,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "itemDyeBlack": {
       "refClass": "SICoreDye",
@@ -670,8 +639,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "armorTinBoots": {
       "refClass": "SICoreArmor",
@@ -681,8 +649,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "TIN"
-      },
-      "colorindex": 0
+      }
     },
     "armorAluminumChestplate": {
       "refClass": "SICoreArmor",
@@ -692,8 +659,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorSteelLeggins": {
       "refClass": "SICoreArmor",
@@ -703,8 +669,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "toolHoeSteel": {
       "refClass": "SIToolHoe",
@@ -713,8 +678,7 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "armorElectrumBoots": {
       "refClass": "SICoreArmor",
@@ -724,8 +688,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "ELECTRUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorElectrumLeggins": {
       "refClass": "SICoreArmor",
@@ -735,8 +698,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "ELECTRUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorPlatinumBoots": {
       "refClass": "SICoreArmor",
@@ -746,8 +708,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "PLATINUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolHoeCopper": {
       "refClass": "SIToolHoe",
@@ -756,8 +717,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "armorTinHelmet": {
       "refClass": "SICoreArmor",
@@ -767,8 +727,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "TIN"
-      },
-      "colorindex": 0
+      }
     },
     "toolPickaxeCopper": {
       "refClass": "SIToolPickaxe",
@@ -777,8 +736,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "itemDyeWhite": {
       "refClass": "SICoreDye",
@@ -793,8 +751,7 @@
       "condition": "ElectriCraft",
       "tooldata": {
         "toolmat": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorBronzeBoots": {
       "refClass": "SICoreArmor",
@@ -804,8 +761,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "foodJPMorningSupreme": {
       "refClass": "SICoreFood",
@@ -822,8 +778,7 @@
           "level": 1,
           "chance": 100
         }
-      },
-      "colorindex": 0
+      }
     },
     "toolShovelAluminum": {
       "refClass": "SIToolShovel",
@@ -832,8 +787,7 @@
       "condition": "ElectriCraft",
       "tooldata": {
         "toolmat": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolPickaxeAluminum": {
       "refClass": "SIToolPickaxe",
@@ -842,8 +796,7 @@
       "condition": "ElectriCraft",
       "tooldata": {
         "toolmat": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolPickaxeSteel": {
       "refClass": "SIToolPickaxe",
@@ -852,8 +805,7 @@
       "condition": "!Metallurgy,!RotaryCraft",
       "tooldata": {
         "toolmat": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "armorPlatinumLeggins": {
       "refClass": "SICoreArmor",
@@ -863,8 +815,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "PLATINUM"
-      },
-      "colorindex": 0
+      }
     },
     "toolAxeFlint": {
       "refClass": "SIToolAxe",
@@ -872,8 +823,7 @@
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      },
-      "colorindex": 0
+      }
     },
     "toolHoeFlint": {
       "refClass": "SIToolHoe",
@@ -881,8 +831,7 @@
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      },
-      "colorindex": 0
+      }
     },
     "toolSwordFlint": {
       "refClass": "SIToolSword",
@@ -890,8 +839,7 @@
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      },
-      "colorindex": 0
+      }
     },
     "armorBronzeHelmet": {
       "refClass": "SICoreArmor",
@@ -901,8 +849,7 @@
       "armordata": {
         "armorType": "helmet",
         "armorMaterial": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "armorTinLeggins": {
       "refClass": "SICoreArmor",
@@ -912,8 +859,7 @@
       "armordata": {
         "armorType": "leggins",
         "armorMaterial": "TIN"
-      },
-      "colorindex": 0
+      }
     },
     "armorAluminumBoots": {
       "refClass": "SICoreArmor",
@@ -923,8 +869,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "ALUMINUM"
-      },
-      "colorindex": 0
+      }
     },
     "armorBronzeChestplate": {
       "refClass": "SICoreArmor",
@@ -934,8 +879,7 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "toolShovelBronze": {
       "refClass": "SIToolShovel",
@@ -944,8 +888,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "toolAxeBronze": {
       "refClass": "SIToolAxe",
@@ -954,8 +897,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "BRONZE"
-      },
-      "colorindex": 0
+      }
     },
     "toolPickaxeFlint": {
       "refClass": "SIToolPickaxe",
@@ -963,14 +905,12 @@
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      },
-      "colorindex": 0
+      }
     },
     "itemWoodenBucket": {
       "refClass": "ItemWoodenBucket",
       "stackSize": 16,
-      "tab": "si.core",
-      "colorindex": 0
+      "tab": "si.core"
     },
     "toolShovelCopper": {
       "refClass": "SIToolShovel",
@@ -979,8 +919,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
-      },
-      "colorindex": 0
+      }
     },
     "armorSteelBoots": {
       "refClass": "SICoreArmor",
@@ -989,8 +928,7 @@
       "armordata": {
         "armorType": "boots",
         "armorMaterial": "STEEL"
-      },
-      "colorindex": 0
+      }
     },
     "toolAxeCopper": {
       "refClass": "SIToolAxe",
@@ -999,8 +937,7 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
-      },
-      "colorindex": 0
+      }
     }
   },
   "metalblocks": [
