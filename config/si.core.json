@@ -3901,6 +3901,75 @@
           "plankWood"
         ]
       ]
+    },
+    {
+      "result": {
+        "name": "minecraft:enchanting_table",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockObsidian",
+          "blockGlassGreen",
+          "blockObsidian"
+        ],
+        [
+          "OpenComputers:item:24",
+          "ProjRed|Core:projectred.core.part:19",
+          "blockRedstone"
+        ],
+        [
+          "chisel:diamondChisel",
+          "RotaryCraft:rotarycraft_item_shaftcraft:3",
+          "BuildCraft|Core:wrenchItem"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "eplus:tableUpgrade",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockGlassRed",
+          "blockGlassGreen",
+          "blockGlassBlue"
+        ],
+        [
+          "OpenComputers:item:25",
+          "blockGlassColorless",
+          "ElectriCraft:electricraft_item_battery"
+        ],
+        [
+          "chisel:obsidianChisel",
+          null,
+          "appliedenergistics2:item.ToolCertusQuartzWrench"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "eplus:advancedEnchantmentTable",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockGlassRed",
+          "blockGlassGreen",
+          "blockGlassBlue"
+        ],
+        [
+          "OpenComputers:item:25",
+          "blockGlassColorless",
+          "ElectriCraft:electricraft_item_battery"
+        ],
+        [
+          "chisel:obsidianChisel",
+          "minecraft:enchanting_table",
+          "appliedenergistics2:item.ToolCertusQuartzWrench"
+        ]
+      ]
     }
   ],
   "oredict": [
