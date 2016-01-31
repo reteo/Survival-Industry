@@ -4260,7 +4260,7 @@
         [
           "blockGlassRed",
           "blockGlassGreen",
-          "blockGlassGreen"
+          "blockGlassBlue"
         ],
         [
           "OpenComputers:item:25",
@@ -4269,7 +4269,7 @@
         ],
         [
           "chisel:obsidianChisel",
-          "null",
+          null,
           "appliedenergistics2:item.ToolCertusQuartzWrench"
         ]
       ]
@@ -4283,7 +4283,7 @@
         [
           "blockGlassRed",
           "blockGlassGreen",
-          "blockGlassGreen"
+          "blockGlassBlue"
         ],
         [
           "OpenComputers:item:25",
