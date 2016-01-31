@@ -1,9 +1,12 @@
 {
   "settings": {
     "PurgeRecipes": true,
+    "PreventToolBreaking": true,
     "SetToolMaterials": true,
+    "UseBuffedAnvilRepair": true,
     "AddItems": true,
     "PatchRotarycraftSteelTools": true,
+    "UpdateArmor": true,
     "UpdateArmorMaterials": true,
     "UpdateToolMaterials": true,
     "UpdateTools": true,
@@ -14,8 +17,13 @@
     "AddRecipes": true,
     "AddOredictEntries": true,
     "UpdateBlockProperties": true,
+    "CraftingGridToolRepair": true,
     "LibraryOnlyMode": false,
     "RotaryCraftSteelmaking": true
+  },
+  "values": {
+    "CraftingGridRepairModifier": "0.9",
+    "AnvilRepairModifier": "1.1"
   },
   "moddependencies": {
     "HarderWildlife": "Harder Wildlife",
@@ -37,126 +45,152 @@
       "durability": 131,
       "efficiency": 4.0,
       "damage": 0.0,
-      "enchantability": 5
+      "enchantability": 25,
+      "repairmaterial": "ingotGold"
     },
     "EMERALD": {
       "harvestLevel": 6,
       "durability": 1561,
       "efficiency": 8.0,
       "damage": 3.0,
-      "enchantability": 10
+      "enchantability": 10,
+      "repairmaterial": "gemDiamond"
     },
     "Scarab": {
       "harvestLevel": 6,
       "durability": 1861,
       "efficiency": 8.0,
       "damage": 4.0,
-      "enchantability": 25
+      "enchantability": 25,
+      "repairmaterial": "gemScarab"
     },
     "SAPPHIRE": {
       "harvestLevel": 5,
       "durability": 512,
       "efficiency": 8.0,
       "damage": 3.0,
-      "enchantability": 10
+      "enchantability": 10,
+      "repairmaterial": "gemSapphire"
     },
     "WOOD": {
       "harvestLevel": 0,
       "durability": 59,
       "efficiency": 2.0,
       "damage": 0.0,
-      "enchantability": 15
+      "enchantability": 15,
+      "repairmaterial": "plankWood"
     },
     "SILVER": {
       "harvestLevel": 2,
       "durability": 25,
       "efficiency": 16.0,
       "damage": 1.0,
-      "enchantability": 20
+      "enchantability": 20,
+      "repairmaterial": "ingotSilver"
+    },
+    "darkSteel": {
+      "harvestLevel": 6,
+      "durability": 1250,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 3,
+      "repairmaterial": "ingotDarkSteel"
     },
     "COPPER": {
       "harvestLevel": 2,
       "durability": 180,
       "efficiency": 5.0,
       "damage": 1.0,
-      "enchantability": 5
+      "enchantability": 5,
+      "repairmaterial": "ingotCopper"
     },
     "IRON": {
       "harvestLevel": 4,
       "durability": 250,
       "efficiency": 6.0,
       "damage": 2.0,
-      "enchantability": 14
+      "enchantability": 14,
+      "repairmaterial": "ingotIron"
     },
     "PERIDOT": {
       "harvestLevel": 5,
       "durability": 512,
       "efficiency": 7.75,
       "damage": 3.0,
-      "enchantability": 14
+      "enchantability": 14,
+      "repairmaterial": "getPeridot"
     },
     "ALUMINUM": {
       "harvestLevel": 2,
       "durability": 175,
       "efficiency": 4.5,
       "damage": 2.0,
-      "enchantability": 4
+      "enchantability": 4,
+      "repairmaterial": "ingotAluminum"
     },
     "BRONZE": {
       "harvestLevel": 4,
       "durability": 250,
       "efficiency": 6.0,
       "damage": 1.0,
-      "enchantability": 14
+      "enchantability": 14,
+      "repairmaterial": "ingotBronze"
     },
     "STEEL": {
       "harvestLevel": 5,
       "durability": 750,
       "efficiency": 7.0,
       "damage": 3.0,
-      "enchantability": 18
+      "enchantability": 18,
+      "repairmaterial": "ingotSteel"
     },
     "enderutilities.enderalloyadvanced": {
       "harvestLevel": 6,
       "durability": 2560,
       "efficiency": 12.0,
       "damage": 4.0,
-      "enchantability": 15
+      "enchantability": 15,
+      "repairmaterial": "plankWood"
     },
     "FLINT": {
       "harvestLevel": 1,
       "durability": 175,
       "efficiency": 5.0,
       "damage": 1.0,
-      "enchantability": 10
+      "enchantability": 10,
+      "repairmaterial": "itemFlint"
     },
     "ELECTRUM": {
       "harvestLevel": 2,
       "durability": 100,
       "efficiency": 20.0,
       "damage": 0.0,
-      "enchantability": 30
+      "enchantability": 30,
+      "repairmaterial": "ingotElectrum"
     },
     "STONE": {
       "harvestLevel": 1,
       "durability": 131,
       "efficiency": 4.0,
       "damage": 0.0,
-      "enchantability": 5
+      "enchantability": 5,
+      "repairmaterial": "plankWood"
     },
     "RUBY": {
       "harvestLevel": 5,
       "durability": 512,
       "efficiency": 8.0,
       "damage": 3.0,
-      "enchantability": 10
+      "enchantability": 10,
+      "repairmaterial": "gemRuby"
     },
     "RAILCRAFT_STEEL": {
       "harvestLevel": 5,
       "durability": 750,
       "efficiency": 7.0,
       "damage": 3.0,
-      "enchantability": 18
+      "enchantability": 18,
+      "repairmaterial": "ingotSteel"
     }
   },
   "armormaterials": {
@@ -166,7 +200,8 @@
       "helmetfactor": 2,
       "chestfactor": 5,
       "legginsfactor": 3,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotGold"
     },
     "DIAMOND": {
       "enchantability": 0,
@@ -174,7 +209,8 @@
       "helmetfactor": 3,
       "chestfactor": 8,
       "legginsfactor": 6,
-      "bootsfactor": 3
+      "bootsfactor": 3,
+      "repairmaterial": "gemDiamond"
     },
     "SILVER": {
       "enchantability": 0,
@@ -182,15 +218,26 @@
       "helmetfactor": 2,
       "chestfactor": 5,
       "legginsfactor": 3,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotSilver"
     },
-    "PLATINUM": {
+    "darkSteel": {
       "enchantability": 0,
       "reductionbase": 35,
       "helmetfactor": 3,
       "chestfactor": 8,
       "legginsfactor": 6,
-      "bootsfactor": 3
+      "bootsfactor": 3,
+      "repairmaterial": "ingotDarkSteel"
+    },
+    "PLATINUM": {
+      "enchantability": 0,
+      "reductionbase": 28,
+      "helmetfactor": 3,
+      "chestfactor": 7,
+      "legginsfactor": 5,
+      "bootsfactor": 3,
+      "repairmaterial": "ingotPlatinum"
     },
     "CLOTH": {
       "enchantability": 0,
@@ -198,7 +245,8 @@
       "helmetfactor": 1,
       "chestfactor": 3,
       "legginsfactor": 2,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "itemLeather"
     },
     "COPPER": {
       "enchantability": 0,
@@ -206,7 +254,8 @@
       "helmetfactor": 2,
       "chestfactor": 5,
       "legginsfactor": 4,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotCopper"
     },
     "IRON": {
       "enchantability": 0,
@@ -214,7 +263,8 @@
       "helmetfactor": 2,
       "chestfactor": 6,
       "legginsfactor": 5,
-      "bootsfactor": 2
+      "bootsfactor": 2,
+      "repairmaterial": "ingotIron"
     },
     "CHAIN": {
       "enchantability": 0,
@@ -222,7 +272,8 @@
       "helmetfactor": 2,
       "chestfactor": 5,
       "legginsfactor": 4,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotIron"
     },
     "ALUMINUM": {
       "enchantability": 0,
@@ -230,7 +281,8 @@
       "helmetfactor": 2,
       "chestfactor": 4,
       "legginsfactor": 3,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotAluminum"
     },
     "BRONZE": {
       "enchantability": 0,
@@ -238,7 +290,8 @@
       "helmetfactor": 3,
       "chestfactor": 7,
       "legginsfactor": 5,
-      "bootsfactor": 2
+      "bootsfactor": 2,
+      "repairmaterial": "ingotBronze"
     },
     "STEEL": {
       "enchantability": 0,
@@ -246,7 +299,8 @@
       "helmetfactor": 3,
       "chestfactor": 8,
       "legginsfactor": 6,
-      "bootsfactor": 3
+      "bootsfactor": 3,
+      "repairmaterial": "ingotSteel"
     },
     "TIN": {
       "enchantability": 0,
@@ -254,7 +308,8 @@
       "helmetfactor": 2,
       "chestfactor": 4,
       "legginsfactor": 3,
-      "bootsfactor": 1
+      "bootsfactor": 1,
+      "repairmaterial": "ingotTin"
     },
     "ELECTRUM": {
       "enchantability": 0,
@@ -262,7 +317,8 @@
       "helmetfactor": 3,
       "chestfactor": 8,
       "legginsfactor": 6,
-      "bootsfactor": 3
+      "bootsfactor": 3,
+      "repairmaterial": "ingotElectrum"
     }
   },
   "blocks": {
@@ -1008,15 +1064,71 @@
       "condition": "!Metallurgy,!Electricraft"
     }
   ],
-  "itemstacksubstitutes": {
-    "RoC:ingotIndium": "RotaryCraft:rotarycraft_item_modingots:51",
-    "RoC:ingotPlatinum": "RotaryCraft:rotarycraft_item_modingots:44",
-    "ReC:itemPlutonium": "ReactorCraft:reactorcraft_item_plutonium:0",
-    "RoC:ingotCadmium": "RotaryCraft:rotarycraft_item_modingots:50",
-    "RoC:ingotAluminum": "RotaryCraft:rotarycraft_item_modingots:6",
-    "RoC:ingotPitchblende": "RotaryCraft:rotarycraft_item_modingots:49",
-    "ReC:ingotCdInAg": "ReactorCraft:reactorcraft_item_crafting:3"
-  },
+  "itemstacksubstitutes": [
+    {
+      "source": "RoC:ingotAluminum",
+      "target": "RotaryCraft:rotarycraft_item_modingots:6"
+    },
+    {
+      "source": "RoC:ingotIndium",
+      "target": "RotaryCraft:rotarycraft_item_modingots:51"
+    },
+    {
+      "source": "RoC:ingotPlatinum",
+      "target": "RotaryCraft:rotarycraft_item_modingots:44"
+    },
+    {
+      "source": "RoC:ingotPitchblende",
+      "target": "RotaryCraft:rotarycraft_item_modingots:49"
+    },
+    {
+      "source": "RoC:ingotCadmium",
+      "target": "RotaryCraft:rotarycraft_item_modingots:50"
+    },
+    {
+      "source": "ReC:ingotCdInAg",
+      "target": "ReactorCraft:reactorcraft_item_crafting:3"
+    },
+    {
+      "source": "ReC:itemPlutonium",
+      "target": "ReactorCraft:reactorcraft_item_plutonium:0"
+    },
+    {
+      "source": "chisel:diamondChisel",
+      "target": "minecraft:diamond",
+      "condition": "!chisel"
+    },
+    {
+      "source": "chisel:obsidianChisel",
+      "target": "minecraft:obsidian",
+      "condition": "!chisel"
+    },
+    {
+      "source": "OpenComputers:item:25",
+      "target": "itemSilicon",
+      "condition": "!OpenComputers"
+    },
+    {
+      "source": "OpenComputers:item:24",
+      "target": "dustRedstone",
+      "condition": "!OpenComputres"
+    },
+    {
+      "source": "appliedenergistics2:item.ToolCertusQuartzWrench",
+      "target": "RotaryCraft:rotarycraft_item_screwdriver",
+      "condition": "!appliedenergistics2"
+    },
+    {
+      "source": "BuildCraft|Core:wrenchItem",
+      "target": "RotaryCraft:rotarycraft_item_screwdriver",
+      "condition": "!BuildCraft|Core"
+    },
+    {
+      "source": "ProjRed|Core:projectred.core.part:19",
+      "target": "minecraft:glowstone",
+      "condition": "!ProjRed|Core"
+    }
+  ],
   "shapelessrecipes": [
     {
       "result": {
@@ -4115,6 +4227,75 @@
           "plankWood"
         ]
       ]
+    },
+    {
+      "result": {
+        "name": "minecraft:enchanting_table",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockObsidian",
+          "blockGlassGreen",
+          "blockObsidian"
+        ],
+        [
+          "OpenComputers:item:24",
+          "ProjRed|Core:projectred.core.part:19",
+          "blockRedstone"
+        ],
+        [
+          "chisel:diamondChisel",
+          "RotaryCraft:rotarycraft_item_shaftcraft:3",
+          "BuildCraft|Core:wrenchItem"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "eplus:advancedEnchantmentTable",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockGlassRed",
+          "blockGlassGreen",
+          "blockGlassGreen"
+        ],
+        [
+          "OpenComputers:item:25",
+          "blockGlassColorless",
+          "ElectriCraft:electricraft_item_battery"
+        ],
+        [
+          "chisel:obsidianChisel",
+          "null",
+          "appliedenergistics2:item.ToolCertusQuartzWrench"
+        ]
+      ]
+    },
+    {
+      "result": {
+        "name": "eplus:advancedEnchantmentTable",
+        "stackSize": 1
+      },
+      "recipe": [
+        [
+          "blockGlassRed",
+          "blockGlassGreen",
+          "blockGlassGreen"
+        ],
+        [
+          "OpenComputers:item:25",
+          "blockGlassColorless",
+          "ElectriCraft:electricraft_item_battery"
+        ],
+        [
+          "chisel:obsidianChisel",
+          "minecraft:enchanting_table",
+          "appliedenergistics2:item.ToolCertusQuartzWrench"
+        ]
+      ]
     }
   ],
   "oredict": [
@@ -4581,93 +4762,273 @@
     }
   },
   "purgerecipes": [
-    "advancedgenetics:combustiongeneratoridle",
-    "advancedgenetics:basicdictionary",
-    "battlegear2:shield.wood",
-    "BuildCraft|Builders:machineBlock",
-    "BuildCraft|Core:engineBlock:0",
-    "BuildCraft|Core:engineBlock:1",
-    "BuildCraft|Core:engineBlock:2",
-    "BuildCraft|Core:engineBlock:3",
-    "BuildCraft|Factory:autoWorkbenchBlock:0",
-    "BuildCraft|Factory:miningWellBlock:0",
-    "EnderStorage:enderChest",
-    "EnderStorage:enderChest:4096",
-    "EnderStorage:enderPouch",
-    "enderutilities:enderpart",
-    "enderutilities:enderpart:1",
-    "enderutilities:enderpart:2",
-    "enderutilities:enderpart:20",
-    "enderutilities:enderpart:21",
-    "enderutilities:enderpearlreusable",
-    "enderutilities:enderarrow",
-    "enhancedportals:frame",
-    "minecraft:saddle",
-    "minecraft:iron_horse_armor",
-    "minecraft:golden_horse_armor",
-    "minecraft:diamond_horse_armor",
-    "minecraft:end_portal_frame",
-    "ExtraUtilities:decorativeBlock1:1",
-    "fossil:analyzer",
-    "fossil:cultureVat",
-    "GardenStuff:lattice",
-    "GardenStuff:lattice_wood",
-    "GardenStuff:lattice_wood:1",
-    "GardenStuff:lattice_wood:2",
-    "GardenStuff:lattice_wood:3",
-    "GardenStuff:lattice_wood:4",
-    "GardenStuff:lattice_wood:5",
-    "Railcraft:machine.alpha:12",
-    "gendustry:MutagenTank",
-    "mod_Invasion:phaseCrystal",
-    "Metallurgy:base.brick",
-    "Metallurgy:base.brick:1",
-    "Metallurgy:base.brick:2",
-    "Metallurgy:base.brick:3",
-    "Metallurgy:base.brick:4",
-    "Metallurgy:base.brick:5",
-    "Metallurgy:base.brick:6",
-    "Metallurgy:base.brick:7",
-    "Metallurgy:precious.brick",
-    "Metallurgy:precious.brick:1",
-    "Metallurgy:precious.brick:2",
-    "Metallurgy:precious.brick:3",
-    "Metallurgy:precious.brick:4",
-    "Metallurgy:vanilla.brick:0",
-    "Metallurgy:vanilla.brick:1",
-    "Metallurgy:machine.frame",
-    "Metallurgy:crusher",
-    "Metallurgy:base.block:2",
-    "Metallurgy:base.brick:2",
-    "Metallurgy:manganese.ingot",
-    "minechem:minechemAtomicManipulator",
-    "minecraft:skull:1",
-    "Sync:Sync_ItemPlaceholder",
-    "rftools:endergenicBlock:0",
-    "harvestcraft:apiary",
-    "harvestcraft:royaljellyItem",
-    "harvestcraft:honeycombchocolatebarItem",
-    "harvestcraft:honeysandwichItem",
-    "harvestcraft:marzipanItem",
-    "EnderIO:blockStirlingGenerator",
-    "EnderIO:blockCombustionGenerator",
-    "EnderIO:blockZombieGenerator",
-    "EnderIO:blockSolarPanel",
-    "EnderIO:blockSolarPanel:1",
-    "EnderIO:blockSagMill",
-    "EnderIO:blockAlloySmelter",
-    "EnderIO:blockCapBank",
-    "EnderIO:blockCapBank:1",
-    "EnderIO:blockCapBank:2",
-    "EnderIO:blockCapBank:3",
-    "EnderIO:blockCrafter",
-    "EnderIO:blockFarmStation",
-    "EnderIO:blockKillerJoe",
-    "minecraft:dye:0",
-    "minecraft:dye:2",
-    "minecraft:dye:3",
-    "minecraft:dye:4",
-    "minecraft:dye:15"
+    {
+      "value": "advancedgenetics:combustiongeneratoridle"
+    },
+    {
+      "value": "advancedgenetics:basicdictionary"
+    },
+    {
+      "value": "battlegear2:shield.wood"
+    },
+    {
+      "value": "BuildCraft|Builders:machineBlock"
+    },
+    {
+      "value": "BuildCraft|Core:engineBlock:0"
+    },
+    {
+      "value": "BuildCraft|Core:engineBlock:1"
+    },
+    {
+      "value": "BuildCraft|Core:engineBlock:2"
+    },
+    {
+      "value": "BuildCraft|Core:engineBlock:3"
+    },
+    {
+      "value": "BuildCraft|Factory:autoWorkbenchBlock:0"
+    },
+    {
+      "value": "BuildCraft|Factory:miningWellBlock:0"
+    },
+    {
+      "value": "EnderStorage:enderChest"
+    },
+    {
+      "value": "EnderStorage:enderChest:4096"
+    },
+    {
+      "value": "EnderStorage:enderPouch"
+    },
+    {
+      "value": "enderutilities:enderpart"
+    },
+    {
+      "value": "enderutilities:enderpart:1"
+    },
+    {
+      "value": "enderutilities:enderpart:2"
+    },
+    {
+      "value": "enderutilities:enderpart:20"
+    },
+    {
+      "value": "enderutilities:enderpart:21"
+    },
+    {
+      "value": "enderutilities:enderpearlreusable"
+    },
+    {
+      "value": "enderutilities:enderarrow"
+    },
+    {
+      "value": "enhancedportals:frame"
+    },
+    {
+      "value": "minecraft:saddle"
+    },
+    {
+      "value": "minecraft:iron_horse_armor"
+    },
+    {
+      "value": "minecraft:golden_horse_armor"
+    },
+    {
+      "value": "minecraft:diamond_horse_armor"
+    },
+    {
+      "value": "minecraft:end_portal_frame"
+    },
+    {
+      "value": "ExtraUtilities:decorativeBlock1:1"
+    },
+    {
+      "value": "fossil:analyzer"
+    },
+    {
+      "value": "fossil:cultureVat"
+    },
+    {
+      "value": "GardenStuff:lattice"
+    },
+    {
+      "value": "GardenStuff:lattice_wood"
+    },
+    {
+      "value": "GardenStuff:lattice_wood:1"
+    },
+    {
+      "value": "GardenStuff:lattice_wood:2"
+    },
+    {
+      "value": "GardenStuff:lattice_wood:3"
+    },
+    {
+      "value": "GardenStuff:lattice_wood:4"
+    },
+    {
+      "value": "GardenStuff:lattice_wood:5"
+    },
+    {
+      "value": "Railcraft:machine.alpha:12"
+    },
+    {
+      "value": "gendustry:MutagenTank"
+    },
+    {
+      "value": "mod_Invasion:phaseCrystal"
+    },
+    {
+      "value": "Metallurgy:base.brick"
+    },
+    {
+      "value": "Metallurgy:base.brick:1"
+    },
+    {
+      "value": "Metallurgy:base.brick:2"
+    },
+    {
+      "value": "Metallurgy:base.brick:3"
+    },
+    {
+      "value": "Metallurgy:base.brick:4"
+    },
+    {
+      "value": "Metallurgy:base.brick:5"
+    },
+    {
+      "value": "Metallurgy:base.brick:6"
+    },
+    {
+      "value": "Metallurgy:base.brick:7"
+    },
+    {
+      "value": "Metallurgy:precious.brick"
+    },
+    {
+      "value": "Metallurgy:precious.brick:1"
+    },
+    {
+      "value": "Metallurgy:precious.brick:2"
+    },
+    {
+      "value": "Metallurgy:precious.brick:3"
+    },
+    {
+      "value": "Metallurgy:precious.brick:4"
+    },
+    {
+      "value": "Metallurgy:vanilla.brick:0"
+    },
+    {
+      "value": "Metallurgy:vanilla.brick:1"
+    },
+    {
+      "value": "Metallurgy:machine.frame"
+    },
+    {
+      "value": "Metallurgy:crusher"
+    },
+    {
+      "value": "Metallurgy:base.block:2"
+    },
+    {
+      "value": "Metallurgy:base.brick:2"
+    },
+    {
+      "value": "Metallurgy:manganese.ingot"
+    },
+    {
+      "value": "minechem:minechemAtomicManipulator"
+    },
+    {
+      "value": "minecraft:skull:1"
+    },
+    {
+      "value": "Sync:Sync_ItemPlaceholder"
+    },
+    {
+      "value": "rftools:endergenicBlock:0"
+    },
+    {
+      "value": "harvestcraft:apiary"
+    },
+    {
+      "value": "harvestcraft:royaljellyItem"
+    },
+    {
+      "value": "harvestcraft:honeycombchocolatebarItem"
+    },
+    {
+      "value": "harvestcraft:honeysandwichItem"
+    },
+    {
+      "value": "harvestcraft:marzipanItem"
+    },
+    {
+      "value": "EnderIO:blockStirlingGenerator"
+    },
+    {
+      "value": "EnderIO:blockCombustionGenerator"
+    },
+    {
+      "value": "EnderIO:blockZombieGenerator"
+    },
+    {
+      "value": "EnderIO:blockSolarPanel"
+    },
+    {
+      "value": "EnderIO:blockSolarPanel:1"
+    },
+    {
+      "value": "EnderIO:blockSagMill"
+    },
+    {
+      "value": "EnderIO:blockAlloySmelter"
+    },
+    {
+      "value": "EnderIO:blockCapBank"
+    },
+    {
+      "value": "EnderIO:blockCapBank:1"
+    },
+    {
+      "value": "EnderIO:blockCapBank:2"
+    },
+    {
+      "value": "EnderIO:blockCapBank:3"
+    },
+    {
+      "value": "EnderIO:blockCrafter"
+    },
+    {
+      "value": "EnderIO:blockFarmStation"
+    },
+    {
+      "value": "EnderIO:blockKillerJoe"
+    },
+    {
+      "value": "minecraft:dye:0"
+    },
+    {
+      "value": "minecraft:dye:2"
+    },
+    {
+      "value": "minecraft:dye:3"
+    },
+    {
+      "value": "minecraft:dye:4"
+    },
+    {
+      "value": "minecraft:dye:15"
+    },
+    {
+      "value": "minecraft:enchanting_table"
+    },
+    {
+      "value": "eplus:advancedEnchantmentTable"
+    }
   ],
   "hideitemsfromnei": [
     "advancedgenetics:combustiongeneratoridle",
