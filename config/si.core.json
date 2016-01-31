@@ -19,11 +19,11 @@
   },
   "moddependencies": {
     "HarderWildlife": "Harder Wildlife",
-    "ZAMod": "Zombie Awareness",
     "ElectriCraft": "ElectriCraft",
     "ReactorCraft": "ReactorCraft",
     "MineTweaker3": "MineTweaker 3",
     "modtweaker2": "Mod Tweaker",
+    "ZAMod": "Zombie Awareness",
     "OreFlowers": "Ore Flowers",
     "RotaryCraft": "RotaryCraft",
     "HungerOverhaul": "Hunger Overhaul",
@@ -403,6 +403,12 @@
         "toolmat": "ALUMINUM"
       }
     },
+    "itemDyeBlue": {
+      "refClass": "SICoreDye",
+      "stackSize": 64,
+      "tab": "si.core",
+      "colorindex": 11
+    },
     "armorSilverHelmet": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
@@ -412,6 +418,12 @@
         "armorType": "helmet",
         "armorMaterial": "SILVER"
       }
+    },
+    "itemDyeGreen": {
+      "refClass": "SICoreDye",
+      "stackSize": 64,
+      "tab": "si.core",
+      "colorindex": 13
     },
     "toolSwordCopper": {
       "refClass": "SIToolSword",
@@ -525,6 +537,12 @@
         "armorMaterial": "PLATINUM"
       }
     },
+    "itemDyeBrown": {
+      "refClass": "SICoreDye",
+      "stackSize": 64,
+      "tab": "si.core",
+      "colorindex": 12
+    },
     "armorElectrumHelmet": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
@@ -606,6 +624,12 @@
         "armorType": "boots",
         "armorMaterial": "COPPER"
       }
+    },
+    "itemDyeBlack": {
+      "refClass": "SICoreDye",
+      "stackSize": 64,
+      "tab": "si.core",
+      "colorindex": 15
     },
     "armorSteelChestplate": {
       "refClass": "SICoreArmor",
@@ -713,6 +737,12 @@
       "tooldata": {
         "toolmat": "COPPER"
       }
+    },
+    "itemDyeWhite": {
+      "refClass": "SICoreDye",
+      "stackSize": 64,
+      "tab": "si.core",
+      "colorindex": 0
     },
     "toolSwordAluminum": {
       "refClass": "SIToolSword",
@@ -1496,6 +1526,190 @@
       "ingredients": [
         {
           "name": "OreFlowers:ore_flowers2",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBlack",
+        "stackSize": 8
+      },
+      "ingredients": [
+        {
+          "name": "flowerBlack",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "dustRedstone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeWhite",
+        "stackSize": 8
+      },
+      "ingredients": [
+        {
+          "name": "flowerWhite",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "dustRedstone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBrown",
+        "stackSize": 8
+      },
+      "ingredients": [
+        {
+          "name": "flowerBrown",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "dustRedstone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeGreen",
+        "stackSize": 8
+      },
+      "ingredients": [
+        {
+          "name": "flowerGreen",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "dustRedstone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBlue",
+        "stackSize": 8
+      },
+      "ingredients": [
+        {
+          "name": "flowerBlue",
+          "stackSize": 1
+        },
+        {
+          "name": "minecraft:glass_bottle",
+          "stackSize": 1
+        },
+        {
+          "name": "dustRedstone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBlack",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "flowerBlack",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeWhite",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "flowerWhite",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBrown",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "flowerBrown",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeGreen",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "flowerGreen",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "si.core:itemDyeBlue",
+        "stackSize": 1
+      },
+      "ingredients": [
+        {
+          "name": "flowerBlue",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:15",
+        "stackSize": 3
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:bone",
+          "stackSize": 1
+        }
+      ]
+    },
+    {
+      "result": {
+        "name": "minecraft:dye:4",
+        "stackSize": 9
+      },
+      "ingredients": [
+        {
+          "name": "minecraft:lapis_block",
           "stackSize": 1
         }
       ]
@@ -3306,7 +3520,7 @@
     },
     {
       "result": {
-        "name": "minecraft:gold_horse_armor",
+        "name": "minecraft:golden_horse_armor",
         "stackSize": 1
       },
       "recipe": [
@@ -3363,7 +3577,7 @@
         ],
         [
           "blockObsidian",
-          "gemDiamond",
+          "si.core:itemCherenkovsingularity",
           "blockObsidian"
         ],
         [
@@ -3996,6 +4210,66 @@
       "item": "oreTin",
       "meta": 0,
       "entry": "oreTin"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBlue",
+      "meta": 0,
+      "entry": "dyeBlue"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBlue",
+      "meta": 0,
+      "entry": "dye"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeWhite",
+      "meta": 0,
+      "entry": "dyeWhite"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeWhite",
+      "meta": 0,
+      "entry": "dye"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeGreen",
+      "meta": 0,
+      "entry": "dyeGreen"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeGreen",
+      "meta": 0,
+      "entry": "dye"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBlack",
+      "meta": 0,
+      "entry": "dyeBlack"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBlack",
+      "meta": 0,
+      "entry": "dye"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBrown",
+      "meta": 0,
+      "entry": "dyeBrown"
+    },
+    {
+      "mod": "si.core",
+      "item": "itemDyeBrown",
+      "meta": 0,
+      "entry": "dye"
     }
   ],
   "alloymap": [
@@ -4457,7 +4731,12 @@
     "EnderIO:blockCapBank:3",
     "EnderIO:blockCrafter",
     "EnderIO:blockFarmStation",
-    "EnderIO:blockKillerJoe"
+    "EnderIO:blockKillerJoe",
+    "minecraft:dye:0",
+    "minecraft:dye:2",
+    "minecraft:dye:3",
+    "minecraft:dye:4",
+    "minecraft:dye:15"
   ],
   "hideitemsfromnei": [
     "advancedgenetics:combustiongeneratoridle",
@@ -4556,6 +4835,14 @@
       "lines": [
         "info.si.core.tooltips.miningwelldisable1",
         "info.si.core.tooltips.miningwelldisable2"
+      ]
+    },
+    {
+      "target": [
+        "si.core:itemDyeWhite"
+      ],
+      "lines": [
+        "info.si.core.tooltips.justadye"
       ]
     }
   ]
