@@ -4253,7 +4253,7 @@
     },
     {
       "result": {
-        "name": "eplus:advancedEnchantmentTable",
+        "name": "eplus:tableUpgrade",
         "stackSize": 1
       },
       "recipe": [
@@ -5025,6 +5025,9 @@
     },
     {
       "value": "minecraft:enchanting_table"
+    },
+    {
+      "value": "eplus:tableUpgrade"
     },
     {
       "value": "eplus:advancedEnchantmentTable"
