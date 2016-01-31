@@ -45,9 +45,9 @@
           <DisplayName>MineChem Uranium</DisplayName>
           <IfCondition condition=':= (?blockExists("minechem:tile.oreUranium")) '>
 
-          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+          <Choice value='HugeVeins' displayValue='Huge Veins'>
             <Description>
-              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+              Very large, extremely rare motherlodes with long, thin tendrils.
             </Description>
           </Choice>
           </IfCondition>
@@ -91,9 +91,9 @@
           <DisplayName>MineChem Mountain Uranium</DisplayName>
           <IfCondition condition=':= (?blockExists("minechem:tile.oreUranium")) '>
 
-          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+          <Choice value='HugeVeins' displayValue='Huge Veins'>
             <Description>
-              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+              Very large, extremely rare motherlodes with long, thin tendrils.
             </Description>
           </Choice>
           </IfCondition>
@@ -148,37 +148,49 @@
 
         <!-- Begin Uranium Generation -->
 
-        <!-- Starting LayeredVeins Preset for Uranium. -->
+        <!-- Starting HugeVeins Preset for Uranium. -->
         <ConfigSection>
-          <IfCondition condition=':= mchmUraniumDist = "LayeredVeins"'>
-            <Veins name='mchmUraniumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+          <IfCondition condition=':= mchmUraniumDist = "HugeVeins"'>
+            <Veins name='mchmUraniumVeins'  inherits='PresetHugeVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
               <Description>
-                Small, fairly rare motherlodes  with 2-4 horizontal
-                veins each.
+                Very large, extremely rare  motherlodes.  Each
+                motherlode has  many long slender branches---so  thin
+                that parts of the branch  won't contain any ore at
+                all.  This, combined with the  incredible length of
+                the  branches, makes them more  challenging to follow
+                underground.  Once found,  however, a motherlode
+                contains  enough ore to keep a player  supplied for a
+                very long time.  The rarity of these veins might  be
+                too frustrating in a single-  player setting.  In SMP,
+                though,  teamwork could make finding them  much easier
+                and the motherlodes  are big enough to supply several
+                people without shortage.  This  might be a good way to
+                add  challenge to multiplayer worlds.  Credit: based
+                on feedback by  dyrewulf from the MC forums.
               </Description>
               <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
               <ReplacesOre block='stone' weight='1.0' />
               <Biome name='.*'  />
-              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mchmUraniumFreq ' range=':= 0.500 * _default_ * mchmUraniumFreq ' type='normal' scaleTo='base' />
-              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * mchmUraniumSize ' range=':= 0.891 * _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmUraniumFreq ' range=':= 1.069 * _default_ * mchmUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.011 * _default_ * mchmUraniumSize ' range=':= 1.011 * _default_ * mchmUraniumSize ' type='normal' />
               <Setting name='MotherlodeHeight' avg=':= 17.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
               <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.034 * _default_ ' range=':= 1.034 * _default_ ' type='normal' />
               <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
               <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentLength' avg=':= _default_ * mchmUraniumSize ' range=':= _default_ * mchmUraniumSize ' type='normal' />
               <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * mchmUraniumSize ' range=':= 0.841 * _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.017 * _default_ * mchmUraniumSize ' range=':= 1.017 * _default_ * mchmUraniumSize ' type='normal' />
               <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
             </Veins>
           </IfCondition>
         </ConfigSection>
-        <!-- LayeredVeins Preset for Uranium is complete. -->
+        <!-- HugeVeins Preset for Uranium is complete. -->
 
 
         <!-- Starting StrategicClouds Preset for Uranium. -->
@@ -229,6 +241,7 @@
                 <Replaces block='minecraft:sandstone' weight='1.0' />
                 <ReplacesOre block='stone' weight='1.0' />
                 <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmUraniumFreq  * 0.1 ' range=':= 1.069 * _default_ * mchmUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
               </Veins>
             </Cloud>
           </IfCondition>
@@ -260,37 +273,49 @@
 
         <!-- Begin Mountain Uranium Generation -->
 
-        <!-- Starting LayeredVeins Preset for Mountain  Uranium. -->
+        <!-- Starting HugeVeins Preset for Mountain Uranium. -->
         <ConfigSection>
-          <IfCondition condition=':= mchmMountainUraniumDist = "LayeredVeins"'>
-            <Veins name='mchmMountainUraniumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+          <IfCondition condition=':= mchmMountainUraniumDist = "HugeVeins"'>
+            <Veins name='mchmMountainUraniumVeins'  inherits='PresetHugeVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
               <Description>
-                Small, fairly rare motherlodes  with 2-4 horizontal
-                veins each.
+                Very large, extremely rare  motherlodes.  Each
+                motherlode has  many long slender branches---so  thin
+                that parts of the branch  won't contain any ore at
+                all.  This, combined with the  incredible length of
+                the  branches, makes them more  challenging to follow
+                underground.  Once found,  however, a motherlode
+                contains  enough ore to keep a player  supplied for a
+                very long time.  The rarity of these veins might  be
+                too frustrating in a single-  player setting.  In SMP,
+                though,  teamwork could make finding them  much easier
+                and the motherlodes  are big enough to supply several
+                people without shortage.  This  might be a good way to
+                add  challenge to multiplayer worlds.  Credit: based
+                on feedback by  dyrewulf from the MC forums.
               </Description>
               <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
               <ReplacesOre block='stone' weight='1.0' />
               <BiomeType name='Mountain'  />
-              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mchmMountainUraniumFreq ' range=':= 0.500 * _default_ * mchmMountainUraniumFreq ' type='normal' scaleTo='base' />
-              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * mchmMountainUraniumSize ' range=':= 0.891 * _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmMountainUraniumFreq ' range=':= 1.069 * _default_ * mchmMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.011 * _default_ * mchmMountainUraniumSize ' range=':= 1.011 * _default_ * mchmMountainUraniumSize ' type='normal' />
               <Setting name='MotherlodeHeight' avg=':= 116.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
               <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.034 * _default_ ' range=':= 1.034 * _default_ ' type='normal' />
               <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
               <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentLength' avg=':= _default_ * mchmMountainUraniumSize ' range=':= _default_ * mchmMountainUraniumSize ' type='normal' />
               <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
-              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * mchmMountainUraniumSize ' range=':= 0.841 * _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.017 * _default_ * mchmMountainUraniumSize ' range=':= 1.017 * _default_ * mchmMountainUraniumSize ' type='normal' />
               <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
               <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
             </Veins>
           </IfCondition>
         </ConfigSection>
-        <!-- LayeredVeins Preset for Mountain Uranium is  complete. -->
+        <!-- HugeVeins Preset for Mountain Uranium is  complete. -->
 
 
         <!-- Starting StrategicClouds Preset for Mountain  Uranium. -->
@@ -341,6 +366,7 @@
                 <Replaces block='minecraft:sandstone' weight='1.0' />
                 <ReplacesOre block='stone' weight='1.0' />
                 <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmMountainUraniumFreq  * 0.1 ' range=':= 1.069 * _default_ * mchmMountainUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
               </Veins>
             </Cloud>
           </IfCondition>
@@ -375,6 +401,271 @@
       <!-- Overworld Setup Complete -->
 
 
+
+
+
+      <!-- Deep Dark Setup Beginning -->
+
+      <IfCondition condition=':= dimension.generator.class = "ChunkProviderUnderdark"'>
+
+        <!-- Starting Original "Deep Dark" Block Removal -->
+        <!-- Original "Deep Dark" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Uranium Generation -->
+
+        <!-- Starting HugeVeins Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmUraniumDist = "HugeVeins"'>
+            <Veins name='mchmUraniumVeins'  inherits='PresetHugeVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                Very large, extremely rare  motherlodes.  Each
+                motherlode has  many long slender branches---so  thin
+                that parts of the branch  won't contain any ore at
+                all.  This, combined with the  incredible length of
+                the  branches, makes them more  challenging to follow
+                underground.  Once found,  however, a motherlode
+                contains  enough ore to keep a player  supplied for a
+                very long time.  The rarity of these veins might  be
+                too frustrating in a single-  player setting.  In SMP,
+                though,  teamwork could make finding them  much easier
+                and the motherlodes  are big enough to supply several
+                people without shortage.  This  might be a good way to
+                add  challenge to multiplayer worlds.  Credit: based
+                on feedback by  dyrewulf from the MC forums.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmUraniumFreq ' range=':= 1.069 * _default_ * mchmUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.011 * _default_ * mchmUraniumSize ' range=':= 1.011 * _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 17.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.034 * _default_ ' range=':= 1.034 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mchmUraniumSize ' range=':= _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.017 * _default_ * mchmUraniumSize ' range=':= 1.017 * _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- HugeVeins Preset for Uranium is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmUraniumDist = "StrategicClouds"'>
+            <Cloud name='mchmUraniumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.756 * _default_ * mchmUraniumSize ' range=':= 0.756 * _default_ * mchmUraniumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.756 * _default_ * mchmUraniumSize ' range=':= 0.756 * _default_ * mchmUraniumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.571 * _default_ * mchmUraniumFreq ' range=':= 0.571 * _default_ * mchmUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 17.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mchmUraniumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmUraniumFreq  * 0.1 ' range=':= 1.069 * _default_ * mchmUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Uranium is complete. -->
+
+
+        <!-- Starting Vanilla Preset for Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmUraniumDist = "Vanilla"'>
+            <StandardGen name='mchmUraniumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * mchmUraniumSize ' range=':= 1.33 * mchmUraniumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mchmUraniumFreq ' range=':= 0.67 * mchmUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 17.5 ' range=':= 12.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Uranium is complete. -->
+
+        <!-- End Uranium Generation -->
+
+
+        <!-- Begin Mountain Uranium Generation -->
+
+        <!-- Starting HugeVeins Preset for Mountain Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmMountainUraniumDist = "HugeVeins"'>
+            <Veins name='mchmMountainUraniumVeins'  inherits='PresetHugeVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                Very large, extremely rare  motherlodes.  Each
+                motherlode has  many long slender branches---so  thin
+                that parts of the branch  won't contain any ore at
+                all.  This, combined with the  incredible length of
+                the  branches, makes them more  challenging to follow
+                underground.  Once found,  however, a motherlode
+                contains  enough ore to keep a player  supplied for a
+                very long time.  The rarity of these veins might  be
+                too frustrating in a single-  player setting.  In SMP,
+                though,  teamwork could make finding them  much easier
+                and the motherlodes  are big enough to supply several
+                people without shortage.  This  might be a good way to
+                add  challenge to multiplayer worlds.  Credit: based
+                on feedback by  dyrewulf from the MC forums.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmMountainUraniumFreq ' range=':= 1.069 * _default_ * mchmMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.011 * _default_ * mchmMountainUraniumSize ' range=':= 1.011 * _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 116.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.034 * _default_ ' range=':= 1.034 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mchmMountainUraniumSize ' range=':= _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.017 * _default_ * mchmMountainUraniumSize ' range=':= 1.017 * _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- HugeVeins Preset for Mountain Uranium is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmMountainUraniumDist = "StrategicClouds"'>
+            <Cloud name='mchmMountainUraniumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.756 * _default_ * mchmMountainUraniumSize ' range=':= 0.756 * _default_ * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.756 * _default_ * mchmMountainUraniumSize ' range=':= 0.756 * _default_ * mchmMountainUraniumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.571 * _default_ * mchmMountainUraniumFreq ' range=':= 0.571 * _default_ * mchmMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 116.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mchmMountainUraniumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.069 * _default_ * mchmMountainUraniumFreq  * 0.1 ' range=':= 1.069 * _default_ * mchmMountainUraniumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Uranium is  complete. -->
+
+
+        <!-- Starting Vanilla Preset for Mountain Uranium. -->
+        <ConfigSection>
+          <IfCondition condition=':= mchmMountainUraniumDist = "Vanilla"'>
+            <StandardGen name='mchmMountainUraniumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60ACFE91' drawBoundBox='false' boundBoxColor='0x60ACFE91'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='minechem:tile.oreUranium' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.667 * mchmMountainUraniumSize ' range=':= 1.33 * mchmMountainUraniumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mchmMountainUraniumFreq ' range=':= 0.67 * mchmMountainUraniumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 116.5 ' range=':= 37.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Uranium is complete. -->
+
+        <!-- End Mountain Uranium Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Deep Dark Setup Complete -->
 
     </IfCondition>
 
