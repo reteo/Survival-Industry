@@ -48,6 +48,14 @@
       "enchantability": 25,
       "repairmaterial": "ingotGold"
     },
+    "HSLA": {
+      "harvestLevel": 5,
+      "durability": 750,
+      "efficiency": 7.0,
+      "damage": 3.0,
+      "enchantability": 18,
+      "repairmaterial": "ingotHSLA"
+    },
     "EMERALD": {
       "harvestLevel": 6,
       "durability": 1561,
@@ -144,14 +152,6 @@
       "enchantability": 18,
       "repairmaterial": "ingotSteel"
     },
-    "enderutilities.enderalloyadvanced": {
-      "harvestLevel": 6,
-      "durability": 2560,
-      "efficiency": 12.0,
-      "damage": 4.0,
-      "enchantability": 15,
-      "repairmaterial": "plankWood"
-    },
     "FLINT": {
       "harvestLevel": 1,
       "durability": 175,
@@ -191,6 +191,14 @@
       "damage": 3.0,
       "enchantability": 18,
       "repairmaterial": "ingotSteel"
+    },
+    "enderutilities.enderalloy.advanced": {
+      "harvestLevel": 7,
+      "durability": 5120,
+      "efficiency": 14.0,
+      "damage": 4.0,
+      "enchantability": 15,
+      "repairmaterial": "enderAlloyAdvanced"
     }
   },
   "armormaterials": {
@@ -202,6 +210,15 @@
       "legginsfactor": 3,
       "bootsfactor": 1,
       "repairmaterial": "ingotGold"
+    },
+    "HSLA": {
+      "enchantability": 0,
+      "reductionbase": 21,
+      "helmetfactor": 2,
+      "chestfactor": 7,
+      "legginsfactor": 5,
+      "bootsfactor": 2,
+      "repairmaterial": "ingotHSLA"
     },
     "DIAMOND": {
       "enchantability": 0,
@@ -234,8 +251,8 @@
       "enchantability": 0,
       "reductionbase": 28,
       "helmetfactor": 3,
-      "chestfactor": 7,
-      "legginsfactor": 5,
+      "chestfactor": 8,
+      "legginsfactor": 6,
       "bootsfactor": 3,
       "repairmaterial": "ingotPlatinum"
     },
@@ -287,8 +304,8 @@
     "BRONZE": {
       "enchantability": 0,
       "reductionbase": 18,
-      "helmetfactor": 3,
-      "chestfactor": 7,
+      "helmetfactor": 2,
+      "chestfactor": 6,
       "legginsfactor": 5,
       "bootsfactor": 2,
       "repairmaterial": "ingotBronze"
@@ -296,10 +313,10 @@
     "STEEL": {
       "enchantability": 0,
       "reductionbase": 21,
-      "helmetfactor": 3,
-      "chestfactor": 8,
-      "legginsfactor": 6,
-      "bootsfactor": 3,
+      "helmetfactor": 2,
+      "chestfactor": 7,
+      "legginsfactor": 5,
+      "bootsfactor": 2,
       "repairmaterial": "ingotSteel"
     },
     "TIN": {
@@ -314,10 +331,10 @@
     "ELECTRUM": {
       "enchantability": 0,
       "reductionbase": 8,
-      "helmetfactor": 3,
-      "chestfactor": 8,
-      "legginsfactor": 6,
-      "bootsfactor": 3,
+      "helmetfactor": 2,
+      "chestfactor": 5,
+      "legginsfactor": 4,
+      "bootsfactor": 1,
       "repairmaterial": "ingotElectrum"
     }
   },
@@ -495,16 +512,6 @@
       "stackSize": 64,
       "tab": "si.core"
     },
-    "armorSilverLeggins": {
-      "refClass": "SICoreArmor",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "SILVER"
-      }
-    },
     "toolHoeBronze": {
       "refClass": "SIToolHoe",
       "stackSize": 1,
@@ -514,24 +521,14 @@
         "toolmat": "BRONZE"
       }
     },
-    "armorCopperLeggins": {
+    "armorSteelLeggings": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
       "condition": "!Metallurgy",
       "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "COPPER"
-      }
-    },
-    "armorAluminumLeggins": {
-      "refClass": "SICoreArmor",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "ALUMINUM"
+        "armorType": "leggings",
+        "armorMaterial": "STEEL"
       }
     },
     "armorAluminumHelmet": {
@@ -563,6 +560,16 @@
         "armorMaterial": "COPPER"
       }
     },
+    "armorSilverLeggings": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggings",
+        "armorMaterial": "SILVER"
+      }
+    },
     "armorElectrumChestplate": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
@@ -571,6 +578,16 @@
       "armordata": {
         "armorType": "chest",
         "armorMaterial": "ELECTRUM"
+      }
+    },
+    "armorBronzeLeggings": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggings",
+        "armorMaterial": "BRONZE"
       }
     },
     "armorCopperHelmet": {
@@ -609,22 +626,22 @@
         "armorMaterial": "ELECTRUM"
       }
     },
+    "armorAluminumLeggings": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggings",
+        "armorMaterial": "ALUMINUM"
+      }
+    },
     "toolShovelFlint": {
       "refClass": "SIToolShovel",
       "stackSize": 1,
       "tab": "si.core",
       "tooldata": {
         "toolmat": "FLINT"
-      }
-    },
-    "armorBronzeLeggins": {
-      "refClass": "SICoreArmor",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "BRONZE"
       }
     },
     "itemIngotMold": {
@@ -646,6 +663,16 @@
       "refClass": "SICoreItem",
       "stackSize": 1,
       "tab": "si.core"
+    },
+    "armorPlatinumLeggings": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggings",
+        "armorMaterial": "PLATINUM"
+      }
     },
     "armorPlatinumChestplate": {
       "refClass": "SICoreArmor",
@@ -717,16 +744,6 @@
         "armorMaterial": "ALUMINUM"
       }
     },
-    "armorSteelLeggins": {
-      "refClass": "SICoreArmor",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "STEEL"
-      }
-    },
     "toolHoeSteel": {
       "refClass": "SIToolHoe",
       "stackSize": 1,
@@ -746,14 +763,14 @@
         "armorMaterial": "ELECTRUM"
       }
     },
-    "armorElectrumLeggins": {
+    "armorTinLeggings": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
       "condition": "!Metallurgy",
       "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "ELECTRUM"
+        "armorType": "leggings",
+        "armorMaterial": "TIN"
       }
     },
     "armorPlatinumBoots": {
@@ -792,6 +809,16 @@
       "condition": "!Metallurgy",
       "tooldata": {
         "toolmat": "COPPER"
+      }
+    },
+    "armorElectrumLeggings": {
+      "refClass": "SICoreArmor",
+      "stackSize": 1,
+      "tab": "si.core",
+      "condition": "!Metallurgy",
+      "armordata": {
+        "armorType": "leggings",
+        "armorMaterial": "ELECTRUM"
       }
     },
     "itemDyeWhite": {
@@ -863,16 +890,6 @@
         "toolmat": "STEEL"
       }
     },
-    "armorPlatinumLeggins": {
-      "refClass": "SICoreArmor",
-      "stackSize": 1,
-      "tab": "si.core",
-      "condition": "!Metallurgy",
-      "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "PLATINUM"
-      }
-    },
     "toolAxeFlint": {
       "refClass": "SIToolAxe",
       "stackSize": 1,
@@ -907,14 +924,14 @@
         "armorMaterial": "BRONZE"
       }
     },
-    "armorTinLeggins": {
+    "armorCopperLeggings": {
       "refClass": "SICoreArmor",
       "stackSize": 1,
       "tab": "si.core",
       "condition": "!Metallurgy",
       "armordata": {
-        "armorType": "leggins",
-        "armorMaterial": "TIN"
+        "armorType": "leggings",
+        "armorMaterial": "COPPER"
       }
     },
     "armorAluminumBoots": {
@@ -4382,6 +4399,24 @@
       "item": "itemDyeBrown",
       "meta": 0,
       "entry": "dye"
+    },
+    {
+      "mod": "enderutilities",
+      "item": "enderpart",
+      "meta": 0,
+      "entry": "enderAlloyBasic"
+    },
+    {
+      "mod": "enderutilities",
+      "item": "enderpart",
+      "meta": 1,
+      "entry": "enderAlloyEnhanced"
+    },
+    {
+      "mod": "enderutilities",
+      "item": "enderpart",
+      "meta": 2,
+      "entry": "enderAlloyAdvanced"
     }
   ],
   "alloymap": [
