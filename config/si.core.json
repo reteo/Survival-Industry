@@ -174,7 +174,7 @@
       "efficiency": 4.0,
       "damage": 0.0,
       "enchantability": 5,
-      "repairmaterial": "plankWood"
+      "repairmaterial": "cobblestone"
     },
     "RUBY": {
       "harvestLevel": 5,
