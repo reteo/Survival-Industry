@@ -1976,7 +1976,7 @@
 
         <IfCondition condition=':= ?cleanUpElectriCraft'>
           <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-            <Substitute name='elcrDeep DarkBlockSubstitute0' block='minecraft:stone'>
+            <Substitute name='elcrDeepDarkBlockSubstitute0' block='minecraft:stone'>
               <Description>
                 Replace vanilla-generated ore clusters.
               </Description>
