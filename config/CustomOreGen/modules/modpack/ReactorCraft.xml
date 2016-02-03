@@ -5280,7 +5280,7 @@
 
         <IfCondition condition=':= ?cleanUpReactorCraft'>
           <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-            <Substitute name='recrDeep DarkBlockSubstitute0' block='minecraft:stone'>
+            <Substitute name='recrDeepDarkBlockSubstitute0' block='minecraft:stone'>
               <Description>
                 Replace vanilla-generated ore clusters.
               </Description>

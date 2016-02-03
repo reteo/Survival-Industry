@@ -741,7 +741,7 @@
 
         <IfCondition condition=':= ?cleanUpFossilsandArchaeology'>
           <IfCondition condition=':= ?blockExists("minecraft:stone")'>
-            <Substitute name='fsarDeep DarkBlockSubstitute0' block='minecraft:stone'>
+            <Substitute name='fsarDeepDarkBlockSubstitute0' block='minecraft:stone'>
               <Description>
                 Replace vanilla-generated ore clusters.
               </Description>
