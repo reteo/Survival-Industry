@@ -2538,7 +2538,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorCopperLeggins",
+        "name": "si.core:armorCopperLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -2634,7 +2634,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorTinLeggins",
+        "name": "si.core:armorTinLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -2730,7 +2730,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorElectrumLeggins",
+        "name": "si.core:armorElectrumLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -2826,7 +2826,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorAluminumLeggins",
+        "name": "si.core:armorAluminumLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -2922,7 +2922,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorSteelLeggins",
+        "name": "si.core:armorSteelLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -3018,7 +3018,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorPlatinumLeggins",
+        "name": "si.core:armorPlatinumLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -3114,7 +3114,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorSilverLeggins",
+        "name": "si.core:armorSilverLeggings",
         "stackSize": 1
       },
       "recipe": [
@@ -3210,7 +3210,7 @@
     },
     {
       "result": {
-        "name": "si.core:armorBronzeLeggins",
+        "name": "si.core:armorBronzeLeggings",
         "stackSize": 1
       },
       "recipe": [
