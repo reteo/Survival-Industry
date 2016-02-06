@@ -1,1 +1,1 @@
-resourcePacks:["Survival Industry-1.4.0b.zip","msi_conversion.zip","SnowSong1.4_1.7.x_Sound.zip","rhapsodia-0.5-alpha.zip","SnowSong1.4_1.7.x_Music.zip","Incompetech-1.0.zip"]
+resourcePacks:["Survival Industry.zip","msi_conversion.zip","SnowSong1.4_1.7.x_Sound.zip","rhapsodia-0.5-alpha.zip","SnowSong1.4_1.7.x_Music.zip","Incompetech-1.0.zip"]

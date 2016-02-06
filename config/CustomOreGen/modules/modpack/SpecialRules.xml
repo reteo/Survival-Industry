@@ -28,7 +28,7 @@
 
         <!-- Supplemental Caves Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruSupplementalCavesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruSupplementalCavesDist'  default='none' displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <!-- EDITED: Changed description to match original -->
                 <Description> Enables/disables COG cave generation.  This does not affect the vanilla cave generator. </Description>
                 <DisplayName>Special Rules Supplemental Caves</DisplayName>
@@ -60,7 +60,7 @@
 
         <!-- Mantle Configuration UI Starting -->
         <ConfigSection>
-            <OptionChoice name='spruMantleDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+            <OptionChoice name='spruMantleDist' default='none' displayState=':= "shown"' displayGroup='groupSpecialRules'>
                 <Description> Controls how Mantle is generated </Description>
                 <DisplayName>Special Rules Mantle</DisplayName>
                 <IfCondition condition=':= (?blockExists("minecraft:lava")) '>
