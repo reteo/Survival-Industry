@@ -54,7 +54,7 @@ SI.addMetalBlock("tin")		.condition("!Metallurgy,!ElectriCraft");
 SI.addMetalBlock("bronze")	.condition("!Metallurgy");
 SI.addMetalBlock("electrum")	.condition("!Metallurgy");
 SI.addMetalBlock("steel")	.condition("!Metallurgy");
-SI.addMetalBlock("aluminum")	.condition("Electricraft");
+SI.addMetalBlock("aluminum")	.condition("ElectriCraft");
 SI.addMetalBlock("cadmium")	.condition("ReactorCraft");
 SI.addMetalBlock("indium")	.condition("ReactorCraft");
 SI.addMetalBlock("platinum")	.condition("ElectriCraft,!Metallurgy");
@@ -65,7 +65,7 @@ SI.addMetalIngot("tin")		.condition("!Metallurgy,!ElectriCraft");
 SI.addMetalIngot("bronze")	.condition("!Metallurgy");
 SI.addMetalIngot("electrum")	.condition("!Metallurgy");
 SI.addMetalIngot("steel")	.condition("!Metallurgy");
-SI.addMetalIngot("silver")	.condition("!Metallurgy,!Electricraft");
+SI.addMetalIngot("silver")	.condition("!Metallurgy,!ElectriCraft");
 
 // Defines alloys available for the crucible
 SI.addAlloy("ingotCopper", 	"ingotTin",  		"ingotBronze",		2);
@@ -81,9 +81,9 @@ SI.addAlloy("oreSilver", 	"ingotSilver",					2);
 SI.addBlock("blockMetalGeneric", 	"SIMetalBlock",		10.0,	10.0,	"pickaxe",	1,	"iron",	"si.core").placer("SIMetalBlockPlacer");
 SI.addBlock("blockPitchblende", 	"BlockPitchblende", 	30.0, 	45.0,	"pickaxe",	1,	"iron", "si.core").condition("ReactorCraft");
 SI.addBlock("blockCdInAg" , 		"BlockCdInAg", 		10.0,	15.0,	"pickaxe",	1, 	"iron", "si.core").condition("ReactorCraft");
-SI.addBlock("oreCopper" , 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	1, 	"iron", "si.core").condition("!Electricraft,!Metallurgy");
-SI.addBlock("oreTin" ,	 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	2, 	"iron", "si.core").condition("!Electricraft,!Metallurgy");
-SI.addBlock("oreSilver" , 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	3, 	"iron", "si.core").condition("!Electricraft,!Metallurgy");
+SI.addBlock("oreCopper" , 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	1, 	"iron", "si.core").condition("!ElectriCraft,!Metallurgy");
+SI.addBlock("oreTin" ,	 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	2, 	"iron", "si.core").condition("!ElectriCraft,!Metallurgy");
+SI.addBlock("oreSilver" , 		"SICoreBlock", 		10.0,	15.0,	"pickaxe",	3, 	"iron", "si.core").condition("!ElectriCraft,!Metallurgy");
 
 // Items: name, class, stacksize, tab
 SI.addItem("ingotGeneric",		"SIIngotGeneric",  	64,	"si.core");
@@ -122,7 +122,7 @@ SI.addOreDict("enderutilities:enderpart:2",	"enderAlloyAdvanced");
 
 //loops for tools and armor
 var toolTypes = ["Sword","Hoe","Pickaxe","Axe","Shovel"];
-var toolMats = [["Bronze","!Metallurgy"],["Copper","!Metallurgy"],["Steel","!Metallurgy,!Rotarycraft"],["Flint",null],["Aluminum","Electricraft"]]
+var toolMats = [["Bronze","!Metallurgy"],["Copper","!Metallurgy"],["Steel","!Metallurgy,!Rotarycraft"],["Flint",null],["Aluminum","ElectriCraft"]]
 for(var n in toolTypes){
 	for(var m in toolMats){
 		SI.addItem("tool" + toolTypes[n] + toolMats[m][0],"SITool" + toolTypes[n],1,"si.core").tooldata(
