@@ -83,6 +83,9 @@ item.si.core.itemWoodenBucket.milk.name=Wooden Bucket filled with Milk
 
 item.si.core.foodJPMorningSupreme.name=JeffPeng's Morning Supreme
 
+item.si.core.toolChiselFlint.name=Flint Chisel
+item.si.core.toolChiselBedrock.name=Bedrock Chisel
+
 tile.si.core.blockPitchblende.name=Pitchblende Block
 tile.si.core.blockAluminum.name=Aluminum Block
 tile.si.core.blockCadmium.name=Cadmium Block
@@ -154,6 +157,9 @@ info.si.core.tooltips.quarrydisable1=§eThe BuildCraft quarry has been disabled
 info.si.core.tooltips.quarrydisable2=§eby the Survival Industry modpack.
 
 info.si.core.tooltips.justadye=Dyes things, alright. Doesn't grow plants, tho.
-info.si.core.tooltops.brokentool=§fThis tool is §cbroken§f. It won't work until you fix it.
-info.si.core.tooltops.brokenhoe=§fThis hoe would §cbreak§f if you use it. Fix it.
+info.si.core.tooltips.brokentool=§fThis tool is §cbroken§f. It won't work until you fix it.
+info.si.core.tooltips.brokenhoe=§fThis hoe would §cbreak§f if you use it. Fix it.
+
+info.si.core.tooltops.chiselnomodes=This Chisel has no carving modes
+info.si.core.tooltops.chiselhasmodes=This Chisel has several carving modes
 
