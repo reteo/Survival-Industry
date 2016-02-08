@@ -1,5 +1,6 @@
 // Because this is JavaScript we can easily define Variables for longer Strings
 var bedrockDust 	= 	"RotaryCraft:rotarycraft_item_powders:4";
+var bedrockIngot 	=	"RotaryCraft:rotarycraft_item_compacts:3";
 var aluminumIngot 	= 	"RotaryCraft:rotarycraft_item_modingots:6";
 var indiumIngot 	= 	"RotaryCraft:rotarycraft_item_modingots:51";
 var pitchblendeIngot	=	"RotaryCraft:rotarycraft_item_modingots:49";
@@ -683,6 +684,18 @@ SI.addShapedRecipe("eplus:advancedEnchantmentTable",
 [	["blockGlassRed",		"blockGlassGreen",		"blockGlassBlue"					],
 	["OpenComputers:item:25", 	"blockGlassColorless",		"ElectriCraft:electricraft_item_battery"		],
 	["chisel:obsidianChisel",	"minecraft:enchanting_table",	"appliedenergistics2:item.ToolCertusQuartzWrench"	]
+]);
+
+SI.addShapedRecipe("si.core:toolChiselFlint",
+[	[null,		"itemFlint",	null],
+	["stickWood",	null,		null],
+	[null,		null,		null]
+]);
+
+SI.addShapedRecipe("si.core:toolChiselBedrock",
+[	[null,		bedrockIngot,	null],
+	["stickWood",	null,		null],
+	[null,		null,		null]
 ]);
 
 SI.setBlockProperties("minecraft:stonebrick")					.br(45.0);
