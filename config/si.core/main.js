@@ -20,8 +20,8 @@ dependency("HungerOverhaul",	"Hunger Overhaul");
 dependency("OreFlowers",	"Ore Flowers");
 dependency("mod_Invasion",	"Invasion Mod");
 dependency("HarderWildlife",	"Harder Wildlife");
-dependency("MineTweaker3",	"MineTweaker 3");
-dependency("modtweaker2",	"Mod Tweaker");
+//dependency("MineTweaker3",	"MineTweaker 3");
+//dependency("modtweaker2",	"Mod Tweaker");
 dependency("SpecialAI",	"Special AI");
 dependency("ZAMod",		"Zombie Awareness");
 
