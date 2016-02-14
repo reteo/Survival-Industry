@@ -57,7 +57,7 @@ addMetalBlock("cadmium") .condition("ReactorCraft");
 addMetalBlock("indium") .condition("ReactorCraft");
 addMetalBlock("platinum") .condition("ElectriCraft,!Metallurgy");
 addMetalBlock("silver") .condition("!Metallurgy");
- 
+  
 addMetalIngot("copper") .condition("!Metallurgy,!ElectriCraft");
 addMetalIngot("tin") .condition("!Metallurgy,!ElectriCraft");
 addMetalIngot("bronze") .condition("!Metallurgy");
@@ -95,7 +95,7 @@ addItem("itemDyeGreen", "SICoreDye", 64, "si.core").colorindex(13);
 addItem("itemDyeBlack", "SICoreDye", 64, "si.core").colorindex(15);
 addItem("itemWoodenBucket", "ItemWoodenBucket", 16, "si.core");
 addItem("foodJPMorningSupreme", "SICoreFood", 1, "si.core")
- .fooddata(FoodData(16,1.600000023841858,false,false).buffdata("digspeed", 60, 1, 100));
+  .fooddata(FoodData(16,1.600000023841858,false,false).buffdata("digspeed", 60, 1, 100));
 addItem("toolChiselFlint", "SIToolChisel", 1, "si.core").tooldata(ToolData("FLINT").durability(64));
 addItem("toolChiselBedrock", "SIToolChisel", 1, "si.core").tooldata(ToolData("BEDROCK").hasModes(true));
 
@@ -306,20 +306,39 @@ hideFromNEI("EnderIO:blockFarmStation");
 hideFromNEI("EnderIO:blockKillerJoe");
 
 //Adding some item tooltips. First argument: The list of items the tooltips apply to. Second argument: A list of lines that show up as tool tips.
-addToolTip([ "advancedgenetics:combustiongeneratoridle",
- "appliedenergistics2:tile.BlockVibrationChamber",
- "BuildCraft|Core:engineBlock:0",
- "BuildCraft|Core:engineBlock:1",
- "BuildCraft|Core:engineBlock:2",
- "BuildCraft|Core:engineBlock:3",
- "extracells:vibrantchamberfluid",
- "rftools:endergenicBlock:0"
-],["info.si.core.tooltips.enginedisable1","info.si.core.tooltips.enginedisable2","info.si.core.tooltips.enginedisable3"]);
-addToolTip([ "BuildCraft|Builders:machineBlock"], ["info.si.core.tooltips.quarrydisable1","info.si.core.tooltips.quarrydisable2"]);
-addToolTip([ "BuildCraft|Factory:autoWorkbenchBlock:0"], ["info.si.core.tooltips.autoworkbenchdisable1","info.si.core.tooltips.autoworkbenchdisable2"]);
-addToolTip([ "BuildCraft|Factory:miningWellBlock:0"], ["info.si.core.tooltips.miningwelldisable1","info.si.core.tooltips.miningwelldisable2"]);
-addToolTip([ "si.core:itemDyeWhite"], ["info.si.core.tooltips.justadye"]);
-addToolTip([ "si.core:foodJPMorningSupreme"], ["info.si.core.tooltips.jpsupreme1","info.si.si.core.tooltips.jpsupreme2","info.si.core.tooltips.jpsupreme3"]);
+addToolTip(
+ ["advancedgenetics:combustiongeneratoridle",
+  "appliedenergistics2:tile.BlockVibrationChamber",
+  "BuildCraft|Core:engineBlock:0",
+  "BuildCraft|Core:engineBlock:1",
+  "BuildCraft|Core:engineBlock:2",
+  "BuildCraft|Core:engineBlock:3",
+  "extracells:vibrantchamberfluid",
+  "rftools:endergenicBlock:0"],  
+ ["info.si.core.tooltips.enginedisable1",
+  "info.si.core.tooltips.enginedisable2",
+  "info.si.core.tooltips.enginedisable3"]);
+  
+addToolTip(
+ ["BuildCraft|Builders:machineBlock"],
+ ["info.si.core.tooltips.quarrydisable1",
+  "info.si.core.tooltips.quarrydisable2"]);
+addToolTip(
+ ["BuildCraft|Factory:autoWorkbenchBlock:0"],
+ ["info.si.core.tooltips.autoworkbenchdisable1",
+  "info.si.core.tooltips.autoworkbenchdisable2"]);
+addToolTip(
+ ["BuildCraft|Factory:miningWellBlock:0"],
+ ["info.si.core.tooltips.miningwelldisable1",
+  "info.si.core.tooltips.miningwelldisable2"]);
+addToolTip(
+ ["si.core:itemDyeWhite"], 
+ ["info.si.core.tooltips.justadye"]);
+addToolTip(
+ ["si.core:foodJPMorningSupreme"],
+ ["info.si.core.tooltips.jpsupreme1",
+  "info.si.si.core.tooltips.jpsupreme2",
+  "info.si.core.tooltips.jpsupreme3"]);
 
 // We can substitute itemstacks for others if a certain condition is met. Works in chains.
 itemStackSubstitute("chisel:diamondChisel", "minecraft:diamond") .condition("!chisel");
@@ -377,252 +396,252 @@ addShapelessRecipe("minecraft:dye:4@9", ["minecraft:lapis_block"]);
 
 addShapedStandardRecipe("si.core:blockPitchblende","block","ingotUranium");
 addShapedStandardRecipe("si.core:blockCdInAg","block",cdInAgIngot);
- 
+  
 addShapedRecipe("si.core:itemWoodenBucket", [
-[null, "stickWood", null ],
-["plankWood", null, "plankWood" ],
-[null, "plankWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["plankWood", null, "plankWood" ],
+  [null, "plankWood", null ]]);
+  
 addShapedRecipe("advancedgenetics:basicdictionary", [
-[null, bedrockDust, null ],
-["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell" ],
-[null, bedrockDust, null ]]);
- 
+  [null, bedrockDust, null ],
+  ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell" ],
+  [null, bedrockDust, null ]]);
+  
 addShapedRecipe("battlegear2:shield.wood", [
-[null, "plankWood" , null ],
-["plankWood", "logWood" , "plankWood" ],
-[null, "plankWood" , null ]]);
- 
+  [null, "plankWood" , null ],
+  ["plankWood", "logWood" , "plankWood" ],
+  [null, "plankWood" , null ]]);
+  
 addShapedRecipe("EnderStorage:enderChest", [
-["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
-["plankWood", "chestWood", "plankWood" ],
-["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
- 
+  ["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
+  ["plankWood", "chestWood", "plankWood" ],
+  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
+  
 addShapedRecipe("EnderStorage:enderChest:4096", [
-["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
-["plankWood", "minecraft:cauldron", "plankWood" ],
-["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
- 
+  ["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
+  ["plankWood", "minecraft:cauldron", "plankWood" ],
+  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
+  
 addShapedRecipe("EnderStorage:enderPouch", [
-["itemBlazePowder", "materialLeather", "itemBlazePowder" ],
-["materialLeather", cherenkov, "materialLeather" ],
-["itemBlazePowder", "materialBedding", "itemBlazePowder" ]
+  ["itemBlazePowder", "materialLeather", "itemBlazePowder" ],
+  ["materialLeather", cherenkov, "materialLeather" ],
+  ["itemBlazePowder", "materialBedding", "itemBlazePowder" ]
 ]);
- 
+  
 addShapedRecipe("enderutilities:enderpart:20@3", [
-["stickWood", "stickWood", "stickWood" ],
-[cherenkov, cherenkov, cherenkov ],
-["stickWood", "stickWood", "stickWood" ]]);
- 
+  ["stickWood", "stickWood", "stickWood" ],
+  [cherenkov, cherenkov, cherenkov ],
+  ["stickWood", "stickWood", "stickWood" ]]);
+  
 addShapedRecipe("enderutilities:enderpart:21@3", [
-["minecraft:string", "minecraft:string", "minecraft:string" ],
-["materialLeather", cherenkov, "materialLeather" ],
-["minecraft:string", "minecraft:string", "minecraft:string" ]]);
- 
+  ["minecraft:string", "minecraft:string", "minecraft:string" ],
+  ["materialLeather", cherenkov, "materialLeather" ],
+  ["minecraft:string", "minecraft:string", "minecraft:string" ]]);
+  
 addShapedRecipe("enderutilities:enderpearlreusable", [
-["nuggetGold", "pearlEnder", "nuggetGold" ],
-[cherenkov, "blockRedstone", cherenkov ],
-["nuggetGold", "pearlEnder", "nuggetGold" ]]);
- 
+  ["nuggetGold", "pearlEnder", "nuggetGold" ],
+  [cherenkov, "blockRedstone", cherenkov ],
+  ["nuggetGold", "pearlEnder", "nuggetGold" ]]);
+  
 addShapedRecipe("enderutilities:enderarrow@4", [
-[null, "nuggetGold", cherenkov ],
-[null, "minecraft:arrow", "nuggetGold" ],
-["minecraft:arrow", null, null ]]);
- 
+  [null, "nuggetGold", cherenkov ],
+  [null, "minecraft:arrow", "nuggetGold" ],
+  ["minecraft:arrow", null, null ]]);
+  
 addShapedRecipe("enderutilities:enderpart@3", [
-["ingotIron", "ingotIron", "ingotIron" ],
-[cherenkov, cherenkov, cherenkov ],
-["ingotIron", "ingotIron", "ingotIron" ]]);
- 
+  ["ingotIron", "ingotIron", "ingotIron" ],
+  [cherenkov, cherenkov, cherenkov ],
+  ["ingotIron", "ingotIron", "ingotIron" ]]);
+  
 addShapedRecipe("enderutilities:enderpart:1@3", 
-[ ["ingotGold", "ingotGold", "ingotGold" ],
-[cherenkov, cherenkov, cherenkov ],
-["ingotIron", "ingotIron", "ingotIron" ]]);
- 
+  [ ["ingotGold", "ingotGold", "ingotGold" ],
+  [cherenkov, cherenkov, cherenkov ],
+  ["ingotIron", "ingotIron", "ingotIron" ]]);
+  
 addShapedRecipe("enderutilities:enderpart:2@3", [
-["ingotIron", cherenkov, "ingotIron" ],
-["ingotGold", "gemDiamond", "ingotGold" ],
-["blockObsidian", cherenkov, "blockObsidian" ]]);
- 
+  ["ingotIron", cherenkov, "ingotIron" ],
+  ["ingotGold", "gemDiamond", "ingotGold" ],
+  ["blockObsidian", cherenkov, "blockObsidian" ]]);
+  
 addShapedRecipe("enhancedportals:frame", [
-[bedrockDust, "ingotIron", bedrockDust],
-["ingotIron", "blockQuartz", "ingotIron"],
-[bedrockDust, "ingotIron", bedrockDust]]);
- 
+  [bedrockDust, "ingotIron", bedrockDust],
+  ["ingotIron", "blockQuartz", "ingotIron"],
+  [bedrockDust, "ingotIron", bedrockDust]]);
+  
 addShapedRecipe("minecraft:end_portal_frame", [
-[cherenkov, cherenkov, cherenkov],
-[cherenkov, "mod_Invasion:riftFlux", cherenkov],
-[cherenkov, cherenkov, cherenkov]]);
- 
+  [cherenkov, cherenkov, cherenkov],
+  [cherenkov, "mod_Invasion:riftFlux", cherenkov],
+  [cherenkov, cherenkov, cherenkov]]);
+  
 addShapedRecipe("minecraft:saddle", [
-["materialLeather", "materialLeather", "materialLeather" ],
-["materialLeather", "materialLeather", "materialLeather" ],
-["ingotIron", null, "ingotIron" ]]);
- 
+  ["materialLeather", "materialLeather", "materialLeather" ],
+  ["materialLeather", "materialLeather", "materialLeather" ],
+  ["ingotIron", null, "ingotIron" ]]);
+  
 addShapedRecipe("minecraft:iron_horse_armor", [
-["ingotIron", "ingotIron", "ingotIron"],
-["ingotIron", "ingotIron", "ingotIron"],
-["ingotIron", null, "ingotIron"]]);
- 
+  ["ingotIron", "ingotIron", "ingotIron"],
+  ["ingotIron", "ingotIron", "ingotIron"],
+  ["ingotIron", null, "ingotIron"]]);
+  
 addShapedRecipe("minecraft:golden_horse_armor", [
-["ingotGold", "ingotGold", "ingotGold"],
-["ingotGold", "ingotGold", "ingotGold"],
-["ingotGold", null, "ingotGold"]]);
- 
+  ["ingotGold", "ingotGold", "ingotGold"],
+  ["ingotGold", "ingotGold", "ingotGold"],
+  ["ingotGold", null, "ingotGold"]]);
+  
 addShapedRecipe("minecraft:diamond_horse_armor", [
-["gemDiamond", "gemDiamond", "gemDiamond"],
-["gemDiamond", "gemDiamond", "gemDiamond"],
-["gemDiamond", null, "gemDiamond"]]);
- 
+  ["gemDiamond", "gemDiamond", "gemDiamond"],
+  ["gemDiamond", "gemDiamond", "gemDiamond"],
+  ["gemDiamond", null, "gemDiamond"]]);
+  
 addShapedRecipe("ExtraUtilities:decorativeBlock1:1", [
-[null, "blockObsidian", null ],
-["blockObsidian", cherenkov, "blockObsidian" ],
-[null, "blockObsidian", null ] ]);
- 
+  [null, "blockObsidian", null ],
+  ["blockObsidian", cherenkov, "blockObsidian" ],
+  [null, "blockObsidian", null ] ]);
+  
 addShapedRecipe("fossil:cultureVat", [
-["blockGlass", "dyeGreen", "blockGlass"],
-["blockGlass", "listAllwater", "blockGlass"],
-["ingotIron", "minecraft:bedrock", "ingotIron" ]]);
- 
+  ["blockGlass", "dyeGreen", "blockGlass"],
+  ["blockGlass", "listAllwater", "blockGlass"],
+  ["ingotIron", "minecraft:bedrock", "ingotIron" ]]);
+  
 addShapedRecipe("fossil:analyzer", [
-["ingotIron", "fossil:relicScrap", "ingotIron"],
-["ingotIron", "bioFossil", "ingotIron"],
-["ingotIron", "minecraft:bedrock", "ingotIron"]]);
- 
+  ["ingotIron", "fossil:relicScrap", "ingotIron"],
+  ["ingotIron", "bioFossil", "ingotIron"],
+  ["ingotIron", "minecraft:bedrock", "ingotIron"]]);
+  
 addShapedRecipe("GardenStuff:lattice", [
-[null, "barsIron", null ],
-["barsIron", "ingotIron", "barsIron" ],
-[null, "barsIron", null ]]);
- 
+  [null, "barsIron", null ],
+  ["barsIron", "ingotIron", "barsIron" ],
+  [null, "barsIron", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood:1", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks:1", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks:1", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood:2", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks:2", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks:2", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood:3", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks:3", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks:3", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood:4", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks:4", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks:4", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("GardenStuff:lattice_wood:5", [
-[null, "stickWood", null ],
-["stickWood", "minecraft:planks:5", "stickWood" ],
-[null, "stickWood", null ]]);
- 
+  [null, "stickWood", null ],
+  ["stickWood", "minecraft:planks:5", "stickWood" ],
+  [null, "stickWood", null ]]);
+  
 addShapedRecipe("Railcraft:machine.alpha:12", [
-["sand", "minecraft:brick_block", "sand" ],
-["minecraft:brick_block", "minecraft:magma_cream", "minecraft:brick_block" ],
-["sand", "minecraft:brick_block", "sand" ]]);
- 
+  ["sand", "minecraft:brick_block", "sand" ],
+  ["minecraft:brick_block", "minecraft:magma_cream", "minecraft:brick_block" ],
+  ["sand", "minecraft:brick_block", "sand" ]]);
+  
 addShapedRecipe("gendustry:MutagenTank", [
-["ingotTin", "paneGlass", "ingotTin"],
-["ingotTin", "paneGlass", "ingotTin"],
-["ingotTin", "minecraft:bedrock", "ingotTin"]]);
- 
+  ["ingotTin", "paneGlass", "ingotTin"],
+  ["ingotTin", "paneGlass", "ingotTin"],
+  ["ingotTin", "minecraft:bedrock", "ingotTin"]]);
+  
 addShapedRecipe("mod_Invasion:phaseCrystal", [
-[null, "dyeBlue", null ],
-["dustRedstone",bedrockDust, "dustRedstone" ],
-[null, "dyeBlue", null ]]);
+  [null, "dyeBlue", null ],
+  ["dustRedstone",bedrockDust, "dustRedstone" ],
+  [null, "dyeBlue", null ]]);
 
 addShapedRecipe("mod_Invasion:phaseCrystal", [
-[null, "dustRedstone", null ],
-["dyeBlue", bedrockDust, "dyeBlue" ],
-[null, "dustRedstone", null ]]);
- 
+  [null, "dustRedstone", null ],
+  ["dyeBlue", bedrockDust, "dyeBlue" ],
+  [null, "dustRedstone", null ]]);
+  
 addShapedRecipe("Metallurgy:machine.frame", [
-["stone", "ingotCopper", "stone" ],
-["ingotCopper", "stone", "ingotCopper" ],
-["stone", "ingotCopper", "stone" ]]);
- 
+  ["stone", "ingotCopper", "stone" ],
+  ["ingotCopper", "stone", "ingotCopper" ],
+  ["stone", "ingotCopper", "stone" ]]);
+  
 addShapedRecipe("Metallurgy:crusher", [
-["ingotCopper", "ingotCopper", "ingotCopper" ],
-["stone", "Metallurgy:machine.frame", "stone" ],
-["stone", "minecraft:furnace", "stone" ]]);
- 
+  ["ingotCopper", "ingotCopper", "ingotCopper" ],
+  ["stone", "Metallurgy:machine.frame", "stone" ],
+  ["stone", "minecraft:furnace", "stone" ]]);
+  
 addShapedRecipe("minechem:minechemAtomicManipulator", [
-["minecraft:piston", "minecraft:piston", "minecraft:piston"],
-["minecraft:piston", bedrockDust, "minecraft:piston"],
-["minecraft:piston", "minecraft:piston", "minecraft:piston"]]);
- 
+  ["minecraft:piston", "minecraft:piston", "minecraft:piston"],
+  ["minecraft:piston", bedrockDust, "minecraft:piston"],
+  ["minecraft:piston", "minecraft:piston", "minecraft:piston"]]);
+  
 addShapedRecipe("minecraft:skull:1", [
-[bedrockDust, "slimeball", bedrockDust],
-["slimeball", "VeganOption:mobHeadBlank", "slimeball"],
-[bedrockDust, "slimeball", bedrockDust]]);
- 
+  [bedrockDust, "slimeball", bedrockDust],
+  ["slimeball", "VeganOption:mobHeadBlank", "slimeball"],
+  [bedrockDust, "slimeball", bedrockDust]]);
+  
 addShapedRecipe("minecraft:skull:1", [
-["minecraft:daylight_detector", "blockLapis", "minecraft:daylight_detector" ],
-["gemQuartz", cherenkov, "gemQuartz" ],
-["gemEmerald", "blockRedstone","gemEmerald" ]]);
- 
+  ["minecraft:daylight_detector", "blockLapis", "minecraft:daylight_detector" ],
+  ["gemQuartz", cherenkov, "gemQuartz" ],
+  ["gemEmerald", "blockRedstone","gemEmerald" ]]);
+  
 addShapedRecipe("rftools:machineFrame", [
-["ingotIron", bedrockDust, "ingotIron" ],
-["goldnugget", null, "goldnugget" ],
-["ingotIron", bedrockDust, "ingotIron" ]]);
- 
+  ["ingotIron", bedrockDust, "ingotIron" ],
+  ["goldnugget", null, "goldnugget" ],
+  ["ingotIron", bedrockDust, "ingotIron" ]]);
+  
 addShapedRecipe("harvestcraft:potItem", [
-["stickWood", "ingotBrick", "ingotBrick" ],
-[null, "ingotBrick", "ingotBrick" ],
-[null, null, null ]]);
- 
+  ["stickWood", "ingotBrick", "ingotBrick" ],
+  [null, "ingotBrick", "ingotBrick" ],
+  [null, null, null ]]);
+  
 addShapedRecipe("harvestcraft:skilletItem", [
-["ingotBrick", null, null ],
-[null, "ingotBrick", null ],
-[null, null, "stickWood" ]]);
- 
+  ["ingotBrick", null, null ],
+  [null, "ingotBrick", null ],
+  [null, null, "stickWood" ]]);
+  
 addShapedRecipe("harvestcraft:saucepanItem", [
-["ingotBrick", null, null ],
-[null, "stickWood", null ],
-[null, null, null ]]);
- 
+  ["ingotBrick", null, null ],
+  [null, "stickWood", null ],
+  [null, null, null ]]);
+  
 addShapedRecipe("harvestcraft:cuttingboardItem", [
-["itemFlint", null, null ],
-[null, "stickWood", null ],
-[null, null, "plankWood" ]]);
- 
+  ["itemFlint", null, null ],
+  [null, "stickWood", null ],
+  [null, null, "plankWood" ]]);
+  
 addShapedRecipe("minecraft:enchanting_table", [
-["blockObsidian", "blockGlassGreen", "blockObsidian" ],
-["OpenComputers:item:24", "ProjRed|Core:projectred.core.part:19", "blockRedstone" ],
-["chisel:diamondChisel", "RotaryCraft:rotarycraft_item_shaftcraft:3", "BuildCraft|Core:wrenchItem" ]]);
- 
+  ["blockObsidian", "blockGlassGreen", "blockObsidian" ],
+  ["OpenComputers:item:24", "ProjRed|Core:projectred.core.part:19", "blockRedstone" ],
+  ["chisel:diamondChisel", "RotaryCraft:rotarycraft_item_shaftcraft:3", "BuildCraft|Core:wrenchItem" ]]);
+  
 addShapedRecipe("eplus:tableUpgrade", [
-["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
-["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
-["chisel:obsidianChisel", null, "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
- 
+  ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+  ["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
+  ["chisel:obsidianChisel", null, "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
+  
 addShapedRecipe("eplus:advancedEnchantmentTable", [
-["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
-["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
-["chisel:obsidianChisel", "minecraft:enchanting_table", "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
+  ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+  ["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
+  ["chisel:obsidianChisel", "minecraft:enchanting_table", "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
 
 addShapedRecipe("si.core:toolChiselFlint", [
-[null, "itemFlint", null],
-["stickWood", null, null],
-[null, null, null]]);
+  [null, "itemFlint", null],
+  ["stickWood", null, null],
+  [null, null, null]]);
 
 addShapedRecipe("si.core:toolChiselBedrock", [
-[null, bedrockIngot, null],
-["stickWood", null, null],
-[null, null, null]]);
+  [null, bedrockIngot, null],
+  ["stickWood", null, null],
+  [null, null, null]]);
 
 addShapedRecipe("Sync:Sync_ItemPlaceholder", [
-["minecraft:daylight_detector", "minecraft:lapis_block", "minecraft:daylight_detector"],
-["minecraft:quartz", cherenkov, "minecraft:quartz"],
-["minecraft:emerald", "minecraft:redstone_block", "minecraft:emerald"]]);
+  ["minecraft:daylight_detector", "minecraft:lapis_block", "minecraft:daylight_detector"],
+  ["minecraft:quartz", cherenkov, "minecraft:quartz"],
+  ["minecraft:emerald", "minecraft:redstone_block", "minecraft:emerald"]]);
 
 setBlockProperties("minecraft:stonebrick") .br(45.0);
 setBlockProperties("chisel:stonebricksmooth") .br(45.0);
@@ -651,9 +670,9 @@ setBlockProperties("minechem:tile.oreUranium") .hl(4).br(45.0);
 setBlockProperties("ElectriCraft:electricraft_block_ore") .hl(0,1).hl(1,2).hl(2,4).hl(3,3).hl(4,1).hl(5,4).br(45);
 setBlockProperties("Forestry:resources") .hl(0,1).hl(1,1).hl(2,2).br(45.0);
 setBlockProperties("NetherOres:tile.netherores.ore.0") .hl(0, 1).hl(1, 5).hl(2, 4).hl(3, 3).hl(4, 2).hl(5, 4).hl(6, 1).hl(7, 2).hl(8, 5).hl(9, 4).hl(10,2)
- .hl(11,4).hl(12,4).hl(13,5).hl(14,5).hl(15,5).br(45.0); 
+  .hl(11,4).hl(12,4).hl(13,5).hl(14,5).hl(15,5).br(45.0); 
 setBlockProperties("NetherOres:tile.netherores.ore.1") .hl(0, 4).hl(1, 3).hl(2, 4).hl(3, 4).hl(4, 4).hl(5, 1).hl(6, 5).hl(7, 4).hl(8, 5).hl(9, 4).hl(10,4)
- .hl(11,2).hl(12,1).hl(13,1).hl(14,1).hl(15,2).br(45.0); 
+  .hl(11,2).hl(12,1).hl(13,1).hl(14,1).hl(15,2).br(45.0); 
 setBlockProperties("ProjRed|Exploration:projectred.exploration.ore:0") .hl(0,5).hl(1,5).hl(2,5).hl(3,1).hl(4,2).hl(5,4).hl(6,4).br(45.0); 
 setBlockProperties("Railcraft:ore") .hl(0,1).hl(1,1).hl(2,5).hl(3,5).hl(4,2).hl(5,5).hl(7,3).hl(8,4).hl(9,1).hl(10,2).hl(11,2).br(45.0);
 setBlockProperties("ReactorCraft:reactorcraft_block_fluoriteore") .hl(0,5).hl(1,5).hl(2,5).hl(3,5).hl(4,5).hl(5,5).hl(6,5).hl(7,5).br(45.0);
@@ -661,61 +680,64 @@ setBlockProperties("ReactorCraft:reactorcraft_block_ore") .hl(1,4).hl(2,4).hl(3,
 
 
 /* When both Forestry and Pam's HarvestCraft are loaded together, HarvestCraft's
-   bee products will be replaced with Forestry's bee products.  Make sure Pam's
-   hives are prevented from loading. */ 
+    bee products will be replaced with Forestry's bee products.  Make sure Pam's
+    hives are prevented from loading. */ 
 if(isModLoaded("Forestry") && isModLoaded("harvestcraft")){
- hideFromNEI("harvestcraft:beehive");;
- hideFromNEI("harvestcraft:apiary");;
- 
- hideFromNEI("harvestcraft:grubItem:*");
- hideFromNEI("harvestcraft:queenbeeItem:*");
- hideFromNEI("harvestcraft:royaljellyItem")
- 
- hideFromNEI("harvestcraft:honeycombItem");
- hideFromNEI("harvestcraft:waxcombItem");
- 
- hideFromNEI("harvestcraft:honeyItem");
- hideFromNEI("harvestcraft:beeswaxItem");
- 
- 
- removeOreDict("harvestcraft:honeycombItem","beeComb");
- removeOreDict("harvestcraft:honeycombItem","materialHoneycomb");
- removeOreDict("harvestcraft:waxcombItem","beeComb");
- removeOreDict("harvestcraft:waxcombItem","materialWaxcomb");
- 
- removeOreDict("harvestcraft:honeyItem","listAllsugar");
- removeOreDict("harvestcraft:honeyItem","foodHoneydrop");
- removeOreDict("harvestcraft:honeyItem","dropHoney");
- removeOreDict("harvestcraft:beeswaxItem","materialPressedwax");
- 
- 
- addOreDict("Forestry:beeQueenGE", "beeQueen");
- 
- addOreDict("beeComb", "materialHoneycomb");
- addOreDict("beeComb", "materialWaxcomb");
- 
- addOreDict("dropHoney", "foodHoneydrop");
- addOreDict("dropHoney", "listAllSugar");
- 
- addOreDict("itemBeeswax", "materialPressedwax");
+  hideFromNEI("harvestcraft:beehive");;
+  hideFromNEI("harvestcraft:apiary");;
   
+  hideFromNEI("harvestcraft:grubItem:*");
+  hideFromNEI("harvestcraft:queenbeeItem:*");
+  hideFromNEI("harvestcraft:royaljellyItem")
+  
+  hideFromNEI("harvestcraft:honeycombItem");
+  hideFromNEI("harvestcraft:waxcombItem");
+  
+  hideFromNEI("harvestcraft:honeyItem");
+  hideFromNEI("harvestcraft:beeswaxItem");
+  
+  
+  removeOreDict("harvestcraft:honeycombItem","beeComb");
+  removeOreDict("harvestcraft:honeycombItem","materialHoneycomb");
+  removeOreDict("harvestcraft:waxcombItem","beeComb");
+  removeOreDict("harvestcraft:waxcombItem","materialWaxcomb");
+  
+  removeOreDict("harvestcraft:honeyItem","listAllsugar");
+  removeOreDict("harvestcraft:honeyItem","foodHoneydrop");
+  removeOreDict("harvestcraft:honeyItem","dropHoney");
+  removeOreDict("harvestcraft:beeswaxItem","materialPressedwax");
+  
+  
+  addOreDict("Forestry:beeQueenGE", "beeQueen");
+  
+  addOreDict("beeComb", "materialHoneycomb");
+  addOreDict("beeComb", "materialWaxcomb");
+  
+  addOreDict("dropHoney", "foodHoneydrop");
+  addOreDict("dropHoney", "listAllSugar");
+  
+  addOreDict("itemBeeswax", "materialPressedwax");
+   
 // These should be removed entirely. 
- purgeRecipe("harvestcraft:apiary");
- purgeRecipe("harvestcraft:royaljellyItem");
+  purgeRecipe("harvestcraft:apiary");
+  purgeRecipe("harvestcraft:royaljellyItem");
 
 // These need to be remade using oredict entries.
- purgeRecipe("harvestcraft:marzipanItem");
- purgeRecipe("harvestcraft:honeycombchocolatebarItem");
- purgeRecipe("harvestcraft:honeysandwichItem");
- 
- addShapelessRecipe("harvestcraft:honeycombchocolatebarItem",["toolSaucepan","foodChocolatebar","beeComb"]);
- addShapelessRecipe("harvestcraft:honeysandwichItem", ["toolCuttingboard","listAllnutbutter","foodHoneydrop","minecraft:bread"]);
- addShapelessRecipe("harvestcraft:marzipanItem", ["cropAlmond","toolMortarandpestle","foodHoneydrop"]);
+  purgeRecipe("harvestcraft:marzipanItem");
+  purgeRecipe("harvestcraft:honeycombchocolatebarItem");
+  purgeRecipe("harvestcraft:honeysandwichItem");
+  purgeRecipe("harvestcraft:honeylemonlambItem");
+  
+  addShapelessRecipe("harvestcraft:honeycombchocolatebarItem",["toolSaucepan","foodChocolatebar","beeComb"]);
+  addShapelessRecipe("harvestcraft:honeysandwichItem", ["toolCuttingboard","listAllnutbutter","foodHoneydrop","minecraft:bread"]);
+  addShapelessRecipe("harvestcraft:marzipanItem", ["cropAlmond","toolMortarandpestle","foodHoneydrop"]);
+  addShapelessRecipe("harvestcraft:honeylemonlambItem", ["toolBakeware","listAllmuttonraw","cropLemon", "foodMustard","foodHoneydrop"]);
 }
 
 // While we're at it, let's add GardenCore support for Forestry wax.
 if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
- addOreDict("itemBeeswax", "materialWax");
+  addOreDict("itemBeeswax", "materialWax");
+  addOreDict("materialWax", "itemBeeswax");
 }
 
 if(isModLoaded("Ztones")) load("ztones.js");
