@@ -263,6 +263,7 @@ purgeRecipe( "minecraft:dye:15");
 purgeRecipe( "minecraft:enchanting_table");
 purgeRecipe( "eplus:tableUpgrade");
 purgeRecipe( "eplus:advancedEnchantmentTable");
+purgeRecipe( "rftools:machineFrame");
 
 //purgeShapelessRecipe("harvestcraft:cottonItem",["harvestcraft:candleberryItem@2"]);
 purgeRecipe( "harvestcraft:cottonItem");
