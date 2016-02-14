@@ -9,7 +9,7 @@ addShapedRecipe("Ztones:auroraBlock@8",
 
 addShapedRecipe("Ztones:stoneTile@32",
 [	["minecraft:stone", 	"Ztones:auroraBlock", 	"minecraft:stone"	], 
-	["Ztones:auroraBlock", 	"minecraft:stone", 	"Ztones:auroraBlock>"	],
+	["Ztones:auroraBlock", 	"minecraft:stone", 	"Ztones:auroraBlock"	],
 	["minecraft:stone", 	"Ztones:auroraBlock", 	"minecraft:stone"	]
 ]);
 
