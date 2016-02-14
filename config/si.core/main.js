@@ -506,7 +506,7 @@ addShapedRecipe("fossil:cultureVat", [
   
 addShapedRecipe("fossil:analyzer", [
   ["ingotIron", "fossil:relicScrap", "ingotIron"],
-  ["ingotIron", "bioFossil", "ingotIron"],
+  ["ingotIron", "fossil:bioFossil", "ingotIron"],
   ["ingotIron", "minecraft:bedrock", "ingotIron"]]);
   
 addShapedRecipe("GardenStuff:lattice", [
@@ -591,7 +591,7 @@ addShapedRecipe("minecraft:skull:1", [
   
 addShapedRecipe("rftools:machineFrame", [
   ["ingotIron", bedrockDust, "ingotIron" ],
-  ["goldnugget", null, "goldnugget" ],
+  ["nuggetGold", null, "nuggetGold" ],
   ["ingotIron", bedrockDust, "ingotIron" ]]);
   
 addShapedRecipe("harvestcraft:potItem", [
