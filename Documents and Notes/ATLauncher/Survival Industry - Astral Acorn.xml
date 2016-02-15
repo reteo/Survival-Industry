@@ -408,6 +408,8 @@
       
       <mod name="FastCraft" version="1.21" url="packs/SurvivalIndustry/files/Astral_Acorn/Optional_Mods/fastcraft-1.21.jar" file="fastcraft-1.21.jar" md5="f1f33a007d6a78d68e6bb217a6ffdb9e" download="server" type="mods" website="http://forum.industrial-craft.net/index.php?page=Thread&amp;threadID=10820" authors="Player" description="This pack contains Fastcraft, by Player, disabled by default. Fastcraft enhances Minecraft with increased performance.  If FastCraft is enabled, bug reports being made directly to Mod Authors should state Fastcraft is enabled." linked="Performance Tweaks" colour="Performance" optional="yes" selected="no" recommended="no"/>
       
+      <mod name="Opis" version="1.2.5" url="packs/SurvivalIndustry/files/Astral_Acorn/Optional_Mods/Opis-1.2.5_1.7.10.jar" file="Opis-1.2.5_1.7.10.jar" md5="82e98ab306d952f3371a514333c226b4" download="server" type="mods" website="http://www.curseforge.com/projects/73832/" authors="ProfMobius" description="Contextual server profiler" linked="Performance Tweaks" colour="Performance" server="no" optional="yes" selected="no" recommended="no" />
+      
     </mods>
 </version>
 
