@@ -743,3 +743,6 @@ if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
 
 if(isModLoaded("Ztones")) load("ztones.js");
 load("toolsandarmor.js");
+load("cleanup.js");
+
+
