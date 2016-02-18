@@ -613,21 +613,6 @@ addShapedRecipe("harvestcraft:cuttingboardItem", [
   ["itemFlint", null, null ],
   [null, "stickWood", null ],
   [null, null, "plankWood" ]]);
-  
-addShapedRecipe("minecraft:enchanting_table", [
-  ["blockObsidian", "blockGlassGreen", "blockObsidian" ],
-  ["OpenComputers:item:24", "ProjRed|Core:projectred.core.part:19", "blockRedstone" ],
-  ["chisel:diamondChisel", "RotaryCraft:rotarycraft_item_shaftcraft:3", "BuildCraft|Core:wrenchItem" ]]);
-  
-addShapedRecipe("eplus:tableUpgrade", [
-  ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
-  ["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
-  ["chisel:obsidianChisel", null, "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
-  
-addShapedRecipe("eplus:advancedEnchantmentTable", [
-  ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
-  ["OpenComputers:item:25", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
-  ["chisel:obsidianChisel", "minecraft:enchanting_table", "appliedenergistics2:item.ToolCertusQuartzWrench" ]]);
 
 addShapedRecipe("si.core:toolChiselFlint", [
   [null, "itemFlint", null],
@@ -643,6 +628,39 @@ addShapedRecipe("Sync:Sync_ItemPlaceholder", [
   ["minecraft:daylight_detector", "minecraft:lapis_block", "minecraft:daylight_detector"],
   ["minecraft:quartz", cherenkov, "minecraft:quartz"],
   ["minecraft:emerald", "minecraft:redstone_block", "minecraft:emerald"]]);
+
+
+if (isModLoaded("RotaryCraft") && isModLoaded("ElectriCraft")) {
+  addShapedRecipe("minecraft:enchanting_table", [
+    ["blockObsidian", "blockGlassGreen", "blockObsidian" ],
+    ["RotaryCraft:rotarycraft_item_machine:45", "RotaryCraft:rotarycraft_item_borecraft:5", "blockRedstone" ],
+    ["RotaryCraft:rotarycraft_item_machine:75", "RotaryCraft:rotarycraft_item_shaftcraft:3", "RotaryCraft:rotarycraft_item_machine:115" ]]);
+  
+  addShapedRecipe("eplus:tableUpgrade", [
+    ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+    ["RotaryCraft:rotarycraft_item_misccraft:15", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
+    ["RotaryCraft:rotarycraft_item_borecraft:1", null, "RotaryCraft:rotarycraft_item_misccraft" ]]);
+  
+  addShapedRecipe("eplus:advancedEnchantmentTable", [
+    ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+    ["RotaryCraft:rotarycraft_item_misccraft:15", "blockGlassColorless", "ElectriCraft:electricraft_item_battery" ],
+    ["RotaryCraft:rotarycraft_item_borecraft:1", "minecraft:enchanting_table", "RotaryCraft:rotarycraft_item_misccraft" ]]);
+} else {
+  addShapedRecipe("minecraft:enchanting_table", [
+    ["blockObsidian", "blockGlassGreen", "blockObsidian" ],
+    ["minecraft:furnace", "dustGlowstone", "blockRedstone" ],
+    ["minecraft:crafting_table", "blockIron", "minecraft:anvil" ]]);
+  
+  addShapedRecipe("eplus:tableUpgrade", [
+    ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+    ["craftingPiston", "blockGlassColorless", "blockRedstone" ],
+    ["minecraft:dispenser", null, "minecraft:heavy_weighted_pressure_plate" ]]);
+  
+  addShapedRecipe("eplus:advancedEnchantmentTable", [
+    ["blockGlassRed", "blockGlassGreen", "blockGlassBlue" ],
+    ["craftingPiston", "blockGlassColorless", "blockRedstone" ],
+    ["minecraft:dispenser", "minecraft:enchanting_table", "minecraft:heavy_weighted_pressure_plate" ]]);
+}
 
 setBlockProperties("minecraft:stonebrick") .br(45.0);
 setBlockProperties("chisel:stonebricksmooth") .br(45.0);
