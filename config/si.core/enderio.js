@@ -13,6 +13,8 @@ purgeRecipe( "EnderIO:blockCrafter");
 purgeRecipe( "EnderIO:blockFarmStation");
 purgeRecipe( "EnderIO:blockKillerJoe");
 purgeRecipe( "EnderIO:blockVat");
+purgeRecipe( "EnderIO:itemMaterial:7");
+
 
 hideFromNEI("EnderIO:blockStirlingGenerator");
 hideFromNEI("EnderIO:blockCombustionGenerator");
@@ -32,7 +34,20 @@ hideFromNEI("EnderIO:bucketNutrient_distillation");
 hideFromNEI("EnderIO:bucketHootch");
 hideFromNEI("EnderIO:bucketRocket_fuel");
 hideFromNEI("EnderIO:bucketFire_water");
+hideFromNEI("EnderIO:blockNutrient_distillation");
+hideFromNEI("EnderIO:blockHootch");
+hideFromNEI("EnderIO:blockRocket_fuel");
+hideFromNEI("EnderIO:blockFire_water");
 hideFromNEI("EnderIO:blockVat");
+hideFromNEI("EnderIO:itemMaterial:7");
+
+
+hideFromNEI("EnderIO:itemPowderIngot:0");
+hideFromNEI("EnderIO:itemPowderIngot:1");
+hideFromNEI("EnderIO:itemPowderIngot:2");
+hideFromNEI("EnderIO:itemPowderIngot:3");
+hideFromNEI("EnderIO:itemPowderIngot:4");
+hideFromNEI("EnderIO:itemPowderIngot:8");
 
 removeOreDict("EnderIO:itemPowderIngot:0","dustCoal");
 removeOreDict("EnderIO:itemPowderIngot:1","dustIron");
