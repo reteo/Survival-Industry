@@ -241,20 +241,7 @@ purgeRecipe( "minechem:minechemAtomicManipulator");
 purgeRecipe( "minecraft:skull:1");
 purgeRecipe( "Sync:Sync_ItemPlaceholder");
 purgeRecipe( "rftools:endergenicBlock:0");
-purgeRecipe( "EnderIO:blockStirlingGenerator");
-purgeRecipe( "EnderIO:blockCombustionGenerator");
-purgeRecipe( "EnderIO:blockZombieGenerator");
-purgeRecipe( "EnderIO:blockSolarPanel");
-purgeRecipe( "EnderIO:blockSolarPanel:1");
-purgeRecipe( "EnderIO:blockSagMill");
-purgeRecipe( "EnderIO:blockAlloySmelter");
-purgeRecipe( "EnderIO:blockCapBank");
-purgeRecipe( "EnderIO:blockCapBank:1");
-purgeRecipe( "EnderIO:blockCapBank:2");
-purgeRecipe( "EnderIO:blockCapBank:3");
-purgeRecipe( "EnderIO:blockCrafter");
-purgeRecipe( "EnderIO:blockFarmStation");
-purgeRecipe( "EnderIO:blockKillerJoe");
+
 purgeRecipe( "minecraft:dye:0");
 purgeRecipe( "minecraft:dye:2");
 purgeRecipe( "minecraft:dye:3");
@@ -291,20 +278,7 @@ hideFromNEI("Metallurgy:manganese.ingot");
 hideFromNEI("Metallurgy:molten.bucket:6");
 hideFromNEI("aobd:crushedManganese");
 hideFromNEI("rftools:endergenicBlock:0");
-hideFromNEI("EnderIO:blockStirlingGenerator");
-hideFromNEI("EnderIO:blockCombustionGenerator");
-hideFromNEI("EnderIO:blockZombieGenerator");
-hideFromNEI("EnderIO:blockSolarPanel");
-hideFromNEI("EnderIO:blockSolarPanel:1");
-hideFromNEI("EnderIO:blockSagMill");
-hideFromNEI("EnderIO:blockAlloySmelter");
-hideFromNEI("EnderIO:blockCapBank");
-hideFromNEI("EnderIO:blockCapBank:1");
-hideFromNEI("EnderIO:blockCapBank:2");
-hideFromNEI("EnderIO:blockCapBank:3");
-hideFromNEI("EnderIO:blockCrafter");
-hideFromNEI("EnderIO:blockFarmStation");
-hideFromNEI("EnderIO:blockKillerJoe");
+
 
 //Adding some item tooltips. First argument: The list of items the tooltips apply to. Second argument: A list of lines that show up as tool tips.
 addToolTip(
@@ -760,7 +734,9 @@ if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
 }
 
 if(isModLoaded("Ztones")) load("ztones.js");
+if(isModLoaded("EnderIO")) load("enderio.js");
 load("toolsandarmor.js");
 load("cleanup.js");
+
 
 
