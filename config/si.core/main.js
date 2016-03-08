@@ -733,7 +733,7 @@ if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
   addOreDict("materialWax", "itemBeeswax");
 }
 
-if(isModLoaded("Ztones")) load("ztones.js");
+if(isModLoaded("Ztones") && isModLoaded("chisel")) load("ztones.js");
 if(isModLoaded("EnderIO")) load("enderio.js");
 load("toolsandarmor.js");
 load("cleanup.js");

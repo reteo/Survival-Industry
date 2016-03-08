@@ -473,67 +473,70 @@
         
     </ConfigSection>
 
-    <!-- **************** Import Modpack Custom Configs ******************* -->
-    <!--
-              This is the load order for ores in Survival Industry.
-    -->
+    <!-- Do not load any configurations if we're playing skyblock. -->
     
-    <!-- Let's add colossal caves with lava lakes. -->
-    <Import file='modules/modpack/SpecialRules.xml'/>
-    
-    <!-- These mods include stone. -->
-    <Import file='modules/modpack/Chisel2.xml'/>
-    <Import file='modules/modpack/FossilsandArchaeology.xml'/>
-    
-        
-    <!-- Vanilla Minecraft should always have top priority. -->
-    <Import file='modules/modpack/Vanilla.xml'/>
-    
-    <!-- Metallurgy's also in the mining progression, so it's next. -->
-    <Import file='modules/modpack/Metallurgy4.xml'/>
-    
-    <!-- After vanilla's nether quartz, these ores should be highly
-         prioritized in the Nether. -->
-    <Import file='modules/modpack/NetherOres.xml'/>
-    
-    <!-- ElectriCraft provides most of the common ores with correct
-         names. More importantly, these ores are in the ore dictionary,
-         so they will be used by all mods calling for those specific
-         ores.  As a result, duplicate ores will be disabled in other
-         oregen configurations. -->
-    <Import file='modules/modpack/ElectriCraft.xml'/>
-    
-    <!-- These ores are important to the modpack. -->
-    <Import file='modules/modpack/ReactorCraft.xml'/>
-    <Import file='modules/modpack/AppliedEnergistics.xml'/>
-    <Import file='modules/modpack/MineChem.xml'/>
-    <Import file='modules/modpack/PamsHarvestCraft.xml'/>
-    <Import file='modules/modpack/Forestry.xml'/>
-    
-    <!-- These are useful for their original ores, but not essential. -->
-    <Import file='modules/modpack/RailCraft.xml'/>
-    <Import file='modules/modpack/ProjectRed.xml'/>
-
-    <!-- ******************** Import Standard Configs ********************** -->
-    <!--
-         NOTE: to override a default config, remove the corresponding
-         directive (and optionally add something to 'modules/custom')
-    -->
-
-    <!-- ***************** Import Mod-provided configs ********************* -->
-    <!-- NOTE: mods will overwrite these configs upon each load -->
-    <OptionalImport file='modules/mods/*.xml'/>
-    
-    <!-- ******************** Import Custom Configs ************************ -->
-    <OptionalImport file='modules/custom/*.xml'/>
-    
-    <!--*************************   Testing & Debugging   *********************
-    *   I use this section for quick-and-dirty experiments
-    **************************************************************************-->
-    <IfChoice name='debugDist' value='true'>
-       
-        <!-- Experimental distributions should go here -->
-        
-    </IfChoice>
-    
+    <IfNotModInstalled name="Ex Nihilo">
+      <!-- **************** Import Modpack Custom Configs ******************* -->
+      <!--
+                This is the load order for ores in Survival Industry.
+      -->
+      
+      <!-- Let's add colossal caves with lava lakes. -->
+      <Import file='modules/modpack/SpecialRules.xml'/>
+      
+      <!-- These mods include stone. -->
+      <Import file='modules/modpack/Chisel2.xml'/>
+      <Import file='modules/modpack/FossilsandArchaeology.xml'/>
+      
+          
+      <!-- Vanilla Minecraft should always have top priority. -->
+      <Import file='modules/modpack/Vanilla.xml'/>
+      
+      <!-- Metallurgy's also in the mining progression, so it's next. -->
+      <Import file='modules/modpack/Metallurgy4.xml'/>
+      
+      <!-- After vanilla's nether quartz, these ores should be highly
+           prioritized in the Nether. -->
+      <Import file='modules/modpack/NetherOres.xml'/>
+      
+      <!-- ElectriCraft provides most of the common ores with correct
+           names. More importantly, these ores are in the ore dictionary,
+           so they will be used by all mods calling for those specific
+           ores.  As a result, duplicate ores will be disabled in other
+           oregen configurations. -->
+      <Import file='modules/modpack/ElectriCraft.xml'/>
+      
+      <!-- These ores are important to the modpack. -->
+      <Import file='modules/modpack/ReactorCraft.xml'/>
+      <Import file='modules/modpack/AppliedEnergistics.xml'/>
+      <Import file='modules/modpack/MineChem.xml'/>
+      <Import file='modules/modpack/PamsHarvestCraft.xml'/>
+      <Import file='modules/modpack/Forestry.xml'/>
+      
+      <!-- These are useful for their original ores, but not essential. -->
+      <Import file='modules/modpack/RailCraft.xml'/>
+      <Import file='modules/modpack/ProjectRed.xml'/>
+  
+      <!-- ******************** Import Standard Configs ********************** -->
+      <!--
+           NOTE: to override a default config, remove the corresponding
+           directive (and optionally add something to 'modules/custom')
+      -->
+  
+      <!-- ***************** Import Mod-provided configs ********************* -->
+      <!-- NOTE: mods will overwrite these configs upon each load -->
+      <OptionalImport file='modules/mods/*.xml'/>
+      
+      <!-- ******************** Import Custom Configs ************************ -->
+      <OptionalImport file='modules/custom/*.xml'/>
+      
+      <!--*************************   Testing & Debugging   *********************
+      *   I use this section for quick-and-dirty experiments
+      **************************************************************************-->
+      <IfChoice name='debugDist' value='true'>
+         
+          <!-- Experimental distributions should go here -->
+          
+      </IfChoice>
+    </IfNotModInstalled>    
 </Config>
