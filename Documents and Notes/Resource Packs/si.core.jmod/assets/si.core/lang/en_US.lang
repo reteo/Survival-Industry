@@ -1,4 +1,8 @@
-itemGroup.si.core=Survival Industry
+itemGroup.si.core.general=Survival Industry
+itemGroup.si.core.armor=Survival Industry Armor
+itemGroup.si.core.tools=Survival Industry Tools
+itemGroup.si.core.food=Survival Industry Food
+
 
 item.si.core.itemCherenkovsingularity.name=Cherenkov Singularity
 item.si.core.itemCTEnblem.name=Survival Industry Bragging Rights
@@ -105,13 +109,13 @@ tile.si.core.oreSilver.name=Silver Ore
 info.si.core.shifted=- Shift for Info -
 info.si.core.harvestlevel=Harvest Level
 info.si.core.harvestlevel0=Base Level
-info.si.core.harvestlevel1=Entry Level
-info.si.core.harvestlevel2=Low Level
-info.si.core.harvestlevel3=Mid Level
-info.si.core.harvestlevel4=High Level
-info.si.core.harvestlevel5=Extreme Level
-info.si.core.harvestlevel6=Top Level
-info.si.core.harvestlevel255=All Levels
+info.si.core.harvestlevel1=§fEntry§7 Level
+info.si.core.harvestlevel2=§2Low§7 Level
+info.si.core.harvestlevel3=§eMid§7 Level
+info.si.core.harvestlevel4=§6High§7 Level
+info.si.core.harvestlevel5=§cExtreme§7 Level
+info.si.core.harvestlevel6=§5Top§7 Level
+info.si.core.harvestlevel255=§bAll§7 Levels
 
 info.si.core.tntsafe=Safe from most explosions
 
@@ -157,8 +161,6 @@ info.si.core.tooltips.quarrydisable1=§eThe BuildCraft quarry has been disabled
 info.si.core.tooltips.quarrydisable2=§eby the Survival Industry modpack.
 
 info.si.core.tooltips.justadye=Dyes things, alright. Doesn't grow plants, tho.
-info.si.core.tooltips.brokentool=§fThis tool is §cbroken§f. It won't work until you fix it.
-info.si.core.tooltips.brokenhoe=§fThis hoe would §cbreak§f if you use it. Fix it.
 
 info.si.core.tooltops.chiselnomodes=This Chisel has no carving modes
 info.si.core.tooltops.chiselhasmodes=This Chisel has several carving modes

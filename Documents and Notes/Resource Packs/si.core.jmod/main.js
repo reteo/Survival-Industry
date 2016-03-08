@@ -10,6 +10,15 @@ var platinumIngot = "RotaryCraft:rotarycraft_item_modingots:44";
 var cadmiumIngot = "RotaryCraft:rotarycraft_item_modingots:50";
 var cherenkov = "si.core:itemCherenkovsingularity";
 
+Settings.showToolHarvestLevels(true);
+Settings.showArmorValues(true);
+Settings.showBlockHarvestLevels(true);
+Settings.enhancedAnvilRepair(true);
+Settings.craftingGridToolRepair(true);
+Global.preventToolBreaking(true);
+RotaryCraft.patchRotarycraftSteelTools(true);
+Sync.preventRecipeReload(true);
+
 // Mods the pack depends on: modid, display name
 dependency("RotaryCraft",	"RotaryCraft");
 dependency("ReactorCraft",	"ReactorCraft");
@@ -36,34 +45,35 @@ defineColor("TIN", 128, 128, 128);
 defineColor("ALUMINUM", 192, 192, 192);
 defineColor("SILVER", 255, 255, 255);
 
-// These are used by the ToolTips showing what harvestlevel a certain tool has
-setHarvestLevelColor(255, "AQUA");
-setHarvestLevelColor(0, "GRAY");
-setHarvestLevelColor(1, "WHITE");
-setHarvestLevelColor(2, "GREEN");
-setHarvestLevelColor(3, "YELLOW");
-setHarvestLevelColor(4, "GOLD");
-setHarvestLevelColor(5, "RED");
-setHarvestLevelColor(6, "DARK_PURPLE");
+addCreativeTab("si.core.general","Survival Industry","si.core:itemCrucible");
+addCreativeTab("si.core.armor","Survival Industry Armor","si.core:armorBronzeChestplate");
+addCreativeTab("si.core.tools","Survival Industry Tools","si.core:toolPickaxeFlint");
+addCreativeTab("si.core.food","Survival Industry Food","si.core:foodJPMorningSupreme");
 
 // Metal configuration. Requires SIIngotGeneric for ingots and SIMetalBlocks for blocks to be added
-addMetalBlock("copper") .condition("!Metallurgy,!ElectriCraft");
-addMetalBlock("tin") .condition("!Metallurgy,!ElectriCraft");
-addMetalBlock("bronze") .condition("!Metallurgy");
-addMetalBlock("electrum") .condition("!Metallurgy");
-addMetalBlock("steel") .condition("!Metallurgy");
-addMetalBlock("aluminum") .condition("ElectriCraft");
-addMetalBlock("cadmium") .condition("ReactorCraft");
-addMetalBlock("indium") .condition("ReactorCraft");
-addMetalBlock("platinum") .condition("ElectriCraft,!Metallurgy");
-addMetalBlock("silver") .condition("!Metallurgy");
-  
-addMetalIngot("copper") .condition("!Metallurgy,!ElectriCraft");
-addMetalIngot("tin") .condition("!Metallurgy,!ElectriCraft");
-addMetalIngot("bronze") .condition("!Metallurgy");
-addMetalIngot("electrum") .condition("!Metallurgy");
-addMetalIngot("steel") .condition("!Metallurgy");
-addMetalIngot("silver") .condition("!Metallurgy,!ElectriCraft");
+if(!isModLoaded("Metallurgy")){
+	addMetalBlock("bronze");	
+	addMetalIngot("bronze");
+	addMetalBlock("electrum");	
+	addMetalIngot("electrum");
+	addMetalBlock("steel");		
+	addMetalIngot("steel");
+	addMetalBlock("silver");
+	if(!isModLoaded("ElectriCraft")){
+		addMetalIngot("silver");
+		addMetalBlock("copper");	
+		addMetalIngot("copper");
+		addMetalBlock("tin");		
+		addMetalIngot("tin");
+	}
+	if(isModLoaded("ElectriCraft")) addMetalBlock("platinum");
+}
+
+if(isModLoaded("ElectriCraft")) addMetalBlock("aluminum");
+if(isModLoaded("ReactorCraft")) {
+	addMetalBlock("cadmium");
+	addMetalBlock("indium");
+}
 
 // Defines alloys available for the crucible
 addAlloy("ingotCopper", "ingotTin", "ingotBronze", 2);
@@ -75,29 +85,53 @@ addAlloy("oreGold", "ingotGold", 2);
 addAlloy("oreAluminum", "ingotAluminium", 2);
 addAlloy("oreSilver", "ingotSilver", 2);
 
+
+RotaryCraft.addBlastFurnaceRecipe	("ingotBronze",	 		600,1,0,[["ingotCopper","ingotTin",null],[null,null,null],[null,null,null]]);
+RotaryCraft.addBlastFurnaceRecipe	("ingotElectrum",		600,1,0,[["ingotSilver","ingotGold",null],[null,null,null],[null,null,null]]);
+
+RotaryCraft.addBlastFurnaceAlloying	("si.core:ingotSteel",		"minecraft:iron_ingot"	,550).setXP(1).input(1,"minecraft:coal",100,2);
+RotaryCraft.addBlastFurnaceAlloying	("si.core:ingotSteel",		"minecraft:iron_ingot"	,550).setXP(1).input(1,"minecraft:coal:1",100,4);
+RotaryCraft.addBlastFurnaceAlloying	("si.core:ingotSteel",		"minecraft:iron_ingot"	,550).setXP(1).input(1,"RotaryCraft:rotarycraft_item_compacts:8",100,1);
+RotaryCraft.addBlastFurnaceAlloying	("si.core:ingotSteel",		"minecraft:iron_ingot"	,1200).setXP(1)
+	.input(1,"RotaryCraft:rotarycraft_item_compacts:8",100,1)
+	.input(2,"minecraft:gunpowder",3,1);
+
 // Blocks: name, class, hardness, resistance, tool, harvestlevel, material, tab
-addBlock("blockMetalGeneric", "SIMetalBlock", 10.0, 10.0, "pickaxe", 1, "iron", "si.core").placer("SIMetalBlockPlacer");
-addBlock("blockPitchblende", "BlockPitchblende", 30.0, 45.0, "pickaxe", 1, "iron", "si.core").condition("ReactorCraft");
-addBlock("blockCdInAg" , "BlockCdInAg", 10.0, 15.0, "pickaxe", 1, "iron", "si.core").condition("ReactorCraft");
-addBlock("oreCopper" , "SICoreBlock", 10.0, 15.0, "pickaxe", 1, "iron", "si.core").condition("!ElectriCraft,!Metallurgy");
-addBlock("oreTin" , "SICoreBlock", 10.0, 15.0, "pickaxe", 2, "iron", "si.core").condition("!ElectriCraft,!Metallurgy");
-addBlock("oreSilver" , "SICoreBlock", 10.0, 15.0, "pickaxe", 3, "iron", "si.core").condition("!ElectriCraft,!Metallurgy");
+addBlock("blockMetalGeneric", "MetalBlock", 10.0, 10.0, "pickaxe", 1, "iron", "si.core.general");
+if(!isModLoaded("ElectriCraft") && !isModLoaded("!Metallurgy")){
+	addBlock("oreCopper" , "CoreBlock", 10.0, 15.0, "pickaxe", 1, "iron", "si.core.general");
+	addBlock("oreTin" , "CoreBlock", 10.0, 15.0, "pickaxe", 2, "iron", "si.core.general");
+	addBlock("oreSilver" , "CoreBlock", 10.0, 15.0, "pickaxe", 3, "iron", "si.core.general");
+	if(!isModLoaded("CustomOreGen")){
+		addOreGeneration().blockToGenerate("si.core:oreCopper").chancesPerChunk(10);
+		addOreGeneration().blockToGenerate("si.core:oreTin").chancesPerChunk(10);
+		addOreGeneration().blockToGenerate("si.core:oreSilver").chancesPerChunk(10);
+	}
+}
+
+if(isModLoaded("ReactorCraft")){
+	addBlock("blockPitchblende", "BlockPitchblende", 30.0, 45.0, "pickaxe", 1, "iron", "si.core.general");
+	addBlock("blockCdInAg" , "BlockCdInAg", 10.0, 15.0, "pickaxe", 1, "iron", "si.core.general");
+}
+
 
 // Items: name, class, stacksize, tab
-addItem("ingotGeneric", "SIIngotGeneric", 64, "si.core");
-addItem("itemCherenkovsingularity", "SICoreItem", 1, "si.core");
-addItem("itemCrucible", "ItemCrucible", 64, "si.core");
-addItem("itemIngotMold", "ItemIngotMold", 64, "si.core");
-addItem("itemDyeWhite", "SICoreDye", 64, "si.core").colorindex( 0);
-addItem("itemDyeBlue", "SICoreDye", 64, "si.core").colorindex(11);
-addItem("itemDyeBrown", "SICoreDye", 64, "si.core").colorindex(12);
-addItem("itemDyeGreen", "SICoreDye", 64, "si.core").colorindex(13);
-addItem("itemDyeBlack", "SICoreDye", 64, "si.core").colorindex(15);
-addItem("itemWoodenBucket", "ItemWoodenBucket", 16, "si.core");
-addItem("foodJPMorningSupreme", "SICoreFood", 1, "si.core")
+addItem("ingotGeneric", "IngotGeneric", 64, "si.core.general");
+addItem("itemCherenkovsingularity", "CoreItem", 1, "si.core.general");
+addItem("itemCrucible", "ItemCrucible", 64, "si.core.general");
+addItem("itemIngotMold", "ItemIngotMold", 64, "si.core.general");
+addItem("itemDyeWhite", "CoreDye", 64, "si.core.general").colorindex( 0);
+addItem("itemDyeBlue", "CoreDye", 64, "si.core.general").colorindex(11);
+addItem("itemDyeBrown", "CoreDye", 64, "si.core.general").colorindex(12);
+addItem("itemDyeGreen", "CoreDye", 64, "si.core.general").colorindex(13);
+addItem("itemDyeBlack", "CoreDye", 64, "si.core.general").colorindex(15);
+addItem("itemWoodenBucket", "ItemWoodenBucket", 16, "si.core.general");
+addItem("foodJPMorningSupreme", "CoreFood", 1, "si.core.food")
   .fooddata(FoodData(16,1.600000023841858,false,false).buffdata("digspeed", 60, 1, 100));
-addItem("toolChiselFlint", "SIToolChisel", 1, "si.core").tooldata(ToolData("FLINT").durability(64));
-addItem("toolChiselBedrock", "SIToolChisel", 1, "si.core").tooldata(ToolData("BEDROCK").hasModes(true));
+if(isModLoaded("chisel")){
+	addItem("toolChiselFlint", "ToolChisel", 1, "si.core.tools").tooldata(ToolData("FLINT").durability(64));
+	addItem("toolChiselBedrock", "ToolChisel", 1, "si.core.tools").tooldata(ToolData("BEDROCK").hasModes(true));
+}
 
 //OreDict: item (or oreDictEntry) to oreDictEntry. Matching two OreDictEntries against each other will result in all items of the first entry become member of the second, not vice versa.
 addOreDict("si.core:blockPitchblende", "blockUranium");
@@ -178,84 +212,82 @@ addArmorMaterial( "DIAMOND", 33,3,8,6,3,10,"gemDiamond" ); // Vanilla
 addArmorMaterial( "darkSteel", 35,3,8,6,3, 4,"ingotDarkSteel" );
 
 // The recipes for these items are erased
-purgeRecipe( "advancedgenetics:combustiongeneratoridle");
-purgeRecipe( "advancedgenetics:basicdictionary");
-purgeRecipe( "battlegear2:shield.wood");
-purgeRecipe( "BuildCraft|Builders:machineBlock");
-purgeRecipe( "BuildCraft|Core:engineBlock:0");
-purgeRecipe( "BuildCraft|Core:engineBlock:1");
-purgeRecipe( "BuildCraft|Core:engineBlock:2");
-purgeRecipe( "BuildCraft|Core:engineBlock:3");
-purgeRecipe( "BuildCraft|Factory:autoWorkbenchBlock:0");
-purgeRecipe( "BuildCraft|Factory:miningWellBlock:0");
-purgeRecipe( "EnderStorage:enderChest");
-purgeRecipe( "EnderStorage:enderChest:4096");
-purgeRecipe( "EnderStorage:enderPouch");
-purgeRecipe( "enderutilities:enderpart");
-purgeRecipe( "enderutilities:enderpart:1");
-purgeRecipe( "enderutilities:enderpart:2");
-purgeRecipe( "enderutilities:enderpart:20");
-purgeRecipe( "enderutilities:enderpart:21");
-purgeRecipe( "enderutilities:enderpearlreusable");
-purgeRecipe( "enderutilities:enderarrow");
-purgeRecipe( "enhancedportals:frame");
-purgeRecipe( "minecraft:saddle");
-purgeRecipe( "minecraft:iron_horse_armor");
-purgeRecipe( "minecraft:golden_horse_armor");
-purgeRecipe( "minecraft:diamond_horse_armor");
-purgeRecipe( "minecraft:end_portal_frame");
-purgeRecipe( "ExtraUtilities:decorativeBlock1:1");
-purgeRecipe( "fossil:analyzer");
-purgeRecipe( "fossil:cultureVat");
-purgeRecipe( "GardenStuff:lattice");
-purgeRecipe( "GardenStuff:lattice_wood");
-purgeRecipe( "GardenStuff:lattice_wood:1");
-purgeRecipe( "GardenStuff:lattice_wood:2");
-purgeRecipe( "GardenStuff:lattice_wood:3");
-purgeRecipe( "GardenStuff:lattice_wood:4");
-purgeRecipe( "GardenStuff:lattice_wood:5");
-purgeRecipe( "Railcraft:machine.alpha:12");
-purgeRecipe( "gendustry:MutagenTank");
-purgeRecipe( "mod_Invasion:phaseCrystal");
-purgeRecipe( "Metallurgy:base.brick");
-purgeRecipe( "Metallurgy:base.brick:1");
-purgeRecipe( "Metallurgy:base.brick:2");
-purgeRecipe( "Metallurgy:base.brick:3");
-purgeRecipe( "Metallurgy:base.brick:4");
-purgeRecipe( "Metallurgy:base.brick:5");
-purgeRecipe( "Metallurgy:base.brick:6");
-purgeRecipe( "Metallurgy:base.brick:7");
-purgeRecipe( "Metallurgy:precious.brick");
-purgeRecipe( "Metallurgy:precious.brick:1");
-purgeRecipe( "Metallurgy:precious.brick:2");
-purgeRecipe( "Metallurgy:precious.brick:3");
-purgeRecipe( "Metallurgy:precious.brick:4");
-purgeRecipe( "Metallurgy:vanilla.brick:0");
-purgeRecipe( "Metallurgy:vanilla.brick:1");
-purgeRecipe( "Metallurgy:machine.frame");
-purgeRecipe( "Metallurgy:crusher");
-purgeRecipe( "Metallurgy:base.block:2");
-purgeRecipe( "Metallurgy:base.brick:2");
-purgeRecipe( "Metallurgy:manganese.ingot");
-purgeRecipe( "minechem:minechemAtomicManipulator");
-purgeRecipe( "minecraft:skull:1");
-purgeRecipe( "Sync:Sync_ItemPlaceholder");
-purgeRecipe( "rftools:endergenicBlock:0");
+removeRecipes( "advancedgenetics:combustiongeneratoridle");
+removeRecipes( "advancedgenetics:basicdictionary");
+removeRecipes( "battlegear2:shield.wood");
+removeRecipes( "BuildCraft|Builders:machineBlock");
+removeRecipes( "BuildCraft|Core:engineBlock:0");
+removeRecipes( "BuildCraft|Core:engineBlock:1");
+removeRecipes( "BuildCraft|Core:engineBlock:2");
+removeRecipes( "BuildCraft|Core:engineBlock:3");
+removeRecipes( "BuildCraft|Factory:autoWorkbenchBlock:0");
+removeRecipes( "BuildCraft|Factory:miningWellBlock:0");
+removeRecipes( "EnderStorage:enderChest");
+removeRecipes( "EnderStorage:enderChest:4096");
+removeRecipes( "EnderStorage:enderPouch");
+removeRecipes( "enderutilities:enderpart");
+removeRecipes( "enderutilities:enderpart:1");
+removeRecipes( "enderutilities:enderpart:2");
+removeRecipes( "enderutilities:enderpart:20");
+removeRecipes( "enderutilities:enderpart:21");
+removeRecipes( "enderutilities:enderpearlreusable");
+removeRecipes( "enderutilities:enderarrow");
+removeRecipes( "enhancedportals:frame");
+removeRecipes( "minecraft:saddle");
+removeRecipes( "minecraft:iron_horse_armor");
+removeRecipes( "minecraft:golden_horse_armor");
+removeRecipes( "minecraft:diamond_horse_armor");
+removeRecipes( "minecraft:end_portal_frame");
+removeRecipes( "ExtraUtilities:decorativeBlock1:1");
+removeRecipes( "fossil:analyzer");
+removeRecipes( "fossil:cultureVat");
+removeRecipes( "GardenStuff:lattice");
+removeRecipes( "GardenStuff:lattice_wood");
+removeRecipes( "GardenStuff:lattice_wood:1");
+removeRecipes( "GardenStuff:lattice_wood:2");
+removeRecipes( "GardenStuff:lattice_wood:3");
+removeRecipes( "GardenStuff:lattice_wood:4");
+removeRecipes( "GardenStuff:lattice_wood:5");
+removeRecipes( "Railcraft:machine.alpha:12");
+removeRecipes( "gendustry:MutagenTank");
+removeRecipes( "mod_Invasion:phaseCrystal");
+removeRecipes( "Metallurgy:base.brick");
+removeRecipes( "Metallurgy:base.brick:1");
+removeRecipes( "Metallurgy:base.brick:2");
+removeRecipes( "Metallurgy:base.brick:3");
+removeRecipes( "Metallurgy:base.brick:4");
+removeRecipes( "Metallurgy:base.brick:5");
+removeRecipes( "Metallurgy:base.brick:6");
+removeRecipes( "Metallurgy:base.brick:7");
+removeRecipes( "Metallurgy:precious.brick");
+removeRecipes( "Metallurgy:precious.brick:1");
+removeRecipes( "Metallurgy:precious.brick:2");
+removeRecipes( "Metallurgy:precious.brick:3");
+removeRecipes( "Metallurgy:precious.brick:4");
+removeRecipes( "Metallurgy:vanilla.brick:0");
+removeRecipes( "Metallurgy:vanilla.brick:1");
+removeRecipes( "Metallurgy:machine.frame");
+removeRecipes( "Metallurgy:crusher");
+removeRecipes( "Metallurgy:base.block:2");
+removeRecipes( "Metallurgy:base.brick:2");
+removeRecipes( "Metallurgy:manganese.ingot");
+removeRecipes( "minechem:minechemAtomicManipulator");
+removeRecipes( "minecraft:skull:1");
+removeRecipes( "Sync:Sync_ItemPlaceholder");
+removeRecipes( "rftools:endergenicBlock:0");
 
-purgeRecipe( "minecraft:dye:0");
-purgeRecipe( "minecraft:dye:2");
-purgeRecipe( "minecraft:dye:3");
-purgeRecipe( "minecraft:dye:4");
-purgeRecipe( "minecraft:dye:15");
-purgeRecipe( "minecraft:enchanting_table");
-purgeRecipe( "eplus:tableUpgrade");
-purgeRecipe( "eplus:advancedEnchantmentTable");
-purgeRecipe( "rftools:machineFrame");
+removeRecipes( "minecraft:dye:0");
+removeRecipes( "minecraft:dye:2");
+removeRecipes( "minecraft:dye:3");
+removeRecipes( "minecraft:dye:4");
+removeRecipes( "minecraft:dye:15");
+removeRecipes( "minecraft:enchanting_table");
+removeRecipes( "eplus:tableUpgrade");
+removeRecipes( "eplus:advancedEnchantmentTable");
+removeRecipes( "rftools:machineFrame");
+removeRecipes( "harvestcraft:cottonItem");
 
-//purgeShapelessRecipe("harvestcraft:cottonItem",["harvestcraft:candleberryItem@2"]);
-purgeRecipe( "harvestcraft:cottonItem");
-
-purgeSmeltingRecipe("Metallurgy:manganese.ingot");
+removeSmeltingRecipes("Metallurgy:manganese.ingot");
 
 // While still in the game, these items will not show up in NEI
 hideFromNEI("advancedgenetics:combustiongeneratoridle");
@@ -312,17 +344,8 @@ addToolTip(
 addToolTip(
  ["si.core:foodJPMorningSupreme"],
  ["info.si.core.tooltips.jpsupreme1",
-  "info.si.si.core.tooltips.jpsupreme2",
+  "info.si.core.tooltips.jpsupreme2",
   "info.si.core.tooltips.jpsupreme3"]);
-
-// We can substitute itemstacks for others if a certain condition is met. Works in chains.
-itemStackSubstitute("chisel:diamondChisel", "minecraft:diamond") .condition("!chisel");
-itemStackSubstitute("chisel:obsidianChisel", "minecraft:obsidian") .condition("!chisel");
-itemStackSubstitute("OpenComputers:item:25", "itemSilicon") .condition("!OpenComputers");
-itemStackSubstitute("OpenComputers:item:24", "dustRedstone") .condition("!OpenComputres");
-itemStackSubstitute("appliedenergistics2:item.ToolCertusQuartzWrench", "RotaryCraft:rotarycraft_item_screwdriver") .condition("!appliedenergistics2");
-itemStackSubstitute("BuildCraft|Core:wrenchItem", "RotaryCraft:rotarycraft_item_screwdriver") .condition("!BuildCraft|Core");
-itemStackSubstitute("ProjRed|Core:projectred.core.part:19", "minecraft:glowstone") .condition("!ProjRed|Core");
 
 // Shapeless recipes
 addShapelessRecipe("RoC:ingotAluminum@9", ["blockAluminum"]);
@@ -712,14 +735,14 @@ if(isModLoaded("Forestry") && isModLoaded("harvestcraft")){
   addOreDict("itemBeeswax", "materialPressedwax");
    
 // These should be removed entirely. 
-  purgeRecipe("harvestcraft:apiary");
-  purgeRecipe("harvestcraft:royaljellyItem");
+  removeRecipes("harvestcraft:apiary");
+  removeRecipes("harvestcraft:royaljellyItem");
 
 // These need to be remade using oredict entries.
-  purgeRecipe("harvestcraft:marzipanItem");
-  purgeRecipe("harvestcraft:honeycombchocolatebarItem");
-  purgeRecipe("harvestcraft:honeysandwichItem");
-  purgeRecipe("harvestcraft:honeylemonlambItem");
+  removeRecipes("harvestcraft:marzipanItem");
+  removeRecipes("harvestcraft:honeycombchocolatebarItem");
+  removeRecipes("harvestcraft:honeysandwichItem");
+  removeRecipes("harvestcraft:honeylemonlambItem");
   
   addShapelessRecipe("harvestcraft:honeycombchocolatebarItem",["toolSaucepan","foodChocolatebar","beeComb"]);
   addShapelessRecipe("harvestcraft:honeysandwichItem", ["toolCuttingboard","listAllnutbutter","foodHoneydrop","minecraft:bread"]);
