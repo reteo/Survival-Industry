@@ -1,6 +1,6 @@
 /* Here we try to tie up some loose ends left over by some mods */
 
-if(!isModLoaded("tconstruct")){
+if(!isModLoaded("tconstruct") && isModLoaded("RotaryCraft")){
 
 	/* If we don't have TCon anymore, we surely don't need RoCs items and OreDict entries to integrate it, right? */
 
@@ -13,7 +13,7 @@ if(!isModLoaded("tconstruct")){
 }
 
 
-if(!isModLoaded("NetherOres")){
+if(!isModLoaded("NetherOres") && isModLoaded("RotaryCraft")){
 
 	/* We also don't need RoCs NetherOre ingots and their OreDict entries if there.... uhm... is no NetherOres! */
 

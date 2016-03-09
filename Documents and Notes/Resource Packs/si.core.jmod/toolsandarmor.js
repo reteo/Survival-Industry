@@ -14,7 +14,11 @@ for(var m in toolMats) for(var n in toolTypes){
 }
 
 var armorTypes = ["Helmet","Chestplate","Leggings","Boots"];
-var armorMats = ["Copper","Silver","Bronze","Steel","Electrum","Tin","Aluminum","Platinum"];
+var armorMats = ["Copper","Silver","Bronze","Steel","Electrum","Tin"];
+if(isModLoaded("ElectriCraft")){
+	armorMats.push("Aluminum");
+	armorMats.push("Platinum");
+}
 if(!isModLoaded("Metallurgy")) for(var m in armorMats) for(var n in armorTypes) {
 	addItem("armor" + armorMats[m] + armorTypes[n],"CoreArmor",1,"si.core.armor").armordata(			ArmorData(armorMats[m].toUpperCase(),armorTypes[n].toLowerCase())	);
 	addShapedStandardRecipe(	"si.core:armor" + armorMats[m] + armorTypes[n],armorTypes[n].toLowerCase(),"ingot"+armorMats[m]);

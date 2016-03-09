@@ -103,9 +103,9 @@ if(!isModLoaded("ElectriCraft") && !isModLoaded("!Metallurgy")){
 	addBlock("oreTin" , "CoreBlock", 10.0, 15.0, "pickaxe", 2, "iron", "si.core.general");
 	addBlock("oreSilver" , "CoreBlock", 10.0, 15.0, "pickaxe", 3, "iron", "si.core.general");
 	if(!isModLoaded("CustomOreGen")){
-		addOreGeneration().blockToGenerate("si.core:oreCopper").chancesPerChunk(10);
-		addOreGeneration().blockToGenerate("si.core:oreTin").chancesPerChunk(10);
-		addOreGeneration().blockToGenerate("si.core:oreSilver").chancesPerChunk(10);
+		addOreGeneration().blockToGenerate("si.core:oreCopper").chancesPerChunk(7).startY(48).endY(72);
+		addOreGeneration().blockToGenerate("si.core:oreTin").chancesPerChunk(5).startY(28).endY(48);
+		addOreGeneration().blockToGenerate("si.core:oreSilver").chancesPerChunk(2).startY(16).endY(24);
 	}
 }
 
@@ -155,6 +155,9 @@ addOreDict("minecraft:coal:2", "fuelCoal");
 addOreDict("minecraft:coal:2", "itemCoal");
 addOreDict("minecraft:coal:2", "coal");
 addOreDict("RotaryCraft:rotarycraft_item_canola","sourceVegetableOil");
+addOreDict("minecraft:flint","itemFlint");
+addOreDict("minecraft:obsidian","blockObsidian");
+addOreDict("minecraft:leather","materialLeather");
 
 removeChestLoot("minecraft:iron_ingot");
 removeChestLoot("minecraft:gold_ingot");
