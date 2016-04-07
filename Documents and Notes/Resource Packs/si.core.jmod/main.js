@@ -569,11 +569,6 @@ addShapedRecipe("Metallurgy:machine.frame", [
   ["ingotCopper", "stone", "ingotCopper" ],
   ["stone", "ingotCopper", "stone" ]]);
   
-addShapedRecipe("Metallurgy:crusher", [
-  ["ingotCopper", "ingotCopper", "ingotCopper" ],
-  ["stone", "Metallurgy:machine.frame", "stone" ],
-  ["stone", "minecraft:furnace", "stone" ]]);
-  
 addShapedRecipe("minechem:minechemAtomicManipulator", [
   ["minecraft:piston", "minecraft:piston", "minecraft:piston"],
   ["minecraft:piston", bedrockDust, "minecraft:piston"],
@@ -763,6 +758,7 @@ if(isModLoaded("Ztones") && isModLoaded("chisel")) load("ztones.js");
 if(isModLoaded("EnderIO")) load("enderio.js");
 load("toolsandarmor.js");
 load("cleanup.js");
+load("redstone.js");
 
 
 
