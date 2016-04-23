@@ -759,6 +759,3 @@ if(isModLoaded("EnderIO")) load("enderio.js");
 load("toolsandarmor.js");
 load("cleanup.js");
 load("redstone.js");
-
-
-
