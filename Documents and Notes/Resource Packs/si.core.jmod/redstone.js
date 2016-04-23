@@ -5,6 +5,20 @@ var camouflageBlock = "ExpandedRedstone:expanded redstone_item_placer:10"
 var chestReader = "ExpandedRedstone:expanded redstone_item_placer:7"
 var signalDriver = "ExpandedRedstone:expanded redstone_item_placer:8"
 var itemEffector = "ExpandedRedstone:expanded redstone_item_placer:3"
+var weatherSensor = "ExpandedRedstone:expanded redstone_item_placer:6"
+var hopperTicker = "ExpandedRedstone:expanded redstone_item_placer:15"
+var redstoneClock = "ExpandedRedstone:expanded redstone_item_placer:9"
+var blockUpdateDetector = "ExpandedRedstone:expanded redstone_item_placer"
+var proximityDetector= "ExpandedRedstone:expanded redstone_item_placer:4"
+var toggleLatch = "ExpandedRedstone:expanded redstone_item_placer:5"
+var metalBlockBreaker = "ExpandedRedstone:expanded redstone_item_placer:1"
+var quartzShockPanel = "ExpandedRedstone:expanded redstone_item_placer:13"
+var analogWirelessTransmitter = "ExpandedRedstone:expanded redstone_item_placer:18"
+var analogWirelessReceiver = "ExpandedRedstone:expanded redstone_item_placer:19"
+var countdownTimer = "ExpandedRedstone:expanded redstone_item_placer:21"
+var arithmeticOperator = "ExpandedRedstone:expanded redstone_item_placer:22"
+var analogRelay = "ExpandedRedstone:expanded redstone_item_placer:23"
+var signalScaler = "ExpandedRedstone:expanded redstone_item_placer:16"
 
 // Let's make a new oredict referencing structural-type metal ingots.
 //var ingotMats = ["ingotAluminum","ingotCopper","ingotIron","ingotBronze","ingotSteel","ingotHSLA","ingotNickel","ingotPlatinum"];
@@ -38,6 +52,8 @@ removeRecipes(camouflageBlock);
 removeRecipes(chestReader);
 removeRecipes(signalDriver);
 removeRecipes(itemEffector);
+removeRecipes(weatherSensor);
+removeRecipes(hopperTicker);
 
 // Make new recipes:
 // Piston.
@@ -96,6 +112,9 @@ addShapedRecipe(signalDriver, [
 	["materialQuartz", "minecraft:dispenser" ,"pearlEnder" ],
 	["cobblestone", "dustRedstone", "cobblestone" ]]);
 
-
-
+// Weather Sensor
+addShapedRecipe(weatherSensor, [
+	["materialQuartz", "minecraft:daylight_detector", "materialQuartz" ],
+	["dustRedstone", "materialQuartz" ,"dustRedstone" ],
+	["slabStone", "slabStone", "slabStone" ]]);
 

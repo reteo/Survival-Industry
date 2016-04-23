@@ -475,7 +475,7 @@
 
     <!-- Do not load any configurations if we're playing skyblock. -->
     
-    <IfNotModInstalled name="Ex Nihilo">
+    <IfNotModInstalled name="exnihilo">
       <!-- **************** Import Modpack Custom Configs ******************* -->
       <!--
                 This is the load order for ores in Survival Industry.
