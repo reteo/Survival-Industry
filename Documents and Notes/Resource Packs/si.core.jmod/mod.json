@@ -2,7 +2,7 @@
   "modid": "si.core",
   "name": "Survival Industry",
   "description" : "This is the core mod of the Survival Industry Modpack. It takes care of a multitude of changes to the game.",
-  "version"	:	"1.5.1.1",
+  "version"	:	"1.6.0",
   "scripts" : ["main.js"],
   "authors"	: ["reteo","Dulciphi","jeffpengMC"],
   "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",

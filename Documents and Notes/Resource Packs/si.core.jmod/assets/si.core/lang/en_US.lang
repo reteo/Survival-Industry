@@ -3,7 +3,6 @@ itemGroup.si.core.armor=Survival Industry Armor
 itemGroup.si.core.tools=Survival Industry Tools
 itemGroup.si.core.food=Survival Industry Food
 
-
 item.si.core.itemCherenkovsingularity.name=Cherenkov Singularity
 item.si.core.itemCTEnblem.name=Survival Industry Bragging Rights
 
@@ -145,14 +144,14 @@ info.si.core.itemCrucible.alloy.ingotTin=molten §3Tin§7
 info.si.core.itemCrucible.alloy.ingotGold=molten §6Gold§7
 info.si.core.itemCrucible.alloy.ingotSilver=molten §bSilver§b
 
-info.si.core.ItemIngotMold.info1=Toss this get your precious sand back
-info.si.core.ItemIngotMold.info2=or craft it with a stick - if you are a sandbag
+info.si.core.ItemIngotMold.info1=Combined with Hot Crucible
+info.si.core.ItemIngotMold.info2=to make two ingots of metal.
 
 info.si.core.armorvalue=Armorvalue: 
 
 info.si.core.tooltips.jpsupreme1=Nuthin' like fried eggs'n'cheese in
 info.si.core.tooltips.jpsupreme2=a crisp sandwich with a fresh cup
-info.si.core.tooltips.jpsupreme3=of Café Latte to start the day
+info.si.core.tooltips.jpsupreme3=of Café Latte to start the day!
 
 info.si.core.tooltips.enginedisable1=§eAll non-RotaryCraft engines
 info.si.core.tooltips.enginedisable2=§ehave been disabled in the
@@ -160,12 +159,10 @@ info.si.core.tooltips.enginedisable3=§eSurvival Industry modpack.
 info.si.core.tooltips.quarrydisable1=§eThe BuildCraft quarry has been disabled
 info.si.core.tooltips.quarrydisable2=§eby the Survival Industry modpack.
 
-info.si.core.tooltips.justadye=Dyes things, alright. Doesn't grow plants, tho.
+info.si.core.tooltips.justadye=Does nothing but dye things.
 
-info.si.core.tooltops.chiselnomodes=This Chisel has no carving modes
-info.si.core.tooltops.chiselhasmodes=This Chisel has several carving modes
-
-
+info.si.core.tooltips.chiselnomodes=This Chisel has no carving modes
+info.si.core.tooltips.chiselhasmodes=This Chisel has several carving modes
 
 item.thermalfoundation.material.dustMithril.name=Pulverized Mithril
 item.thermalfoundation.material.ingotMithril.name=Mithril Ingot
