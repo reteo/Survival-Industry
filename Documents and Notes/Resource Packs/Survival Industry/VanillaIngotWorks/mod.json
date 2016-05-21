@@ -1,0 +1,12 @@
+{
+  "modid": "VanillaIngotWorks",
+  "name": "Vanilla Ingot Works",
+  "description" : "Ore doubling and alloying using the vanilla furnace.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "VanillaIngotWorks.png",
+  "credits" : "JeffPengMC for the work he did in JMOD and si.core."
+  
+}
