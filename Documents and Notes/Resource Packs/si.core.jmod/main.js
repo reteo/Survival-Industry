@@ -9,6 +9,7 @@ var plutonium = "ReactorCraft:reactorcraft_item_plutonium:0";
 var platinumIngot = "RotaryCraft:rotarycraft_item_modingots:44";
 var cadmiumIngot = "RotaryCraft:rotarycraft_item_modingots:50";
 var cherenkov = "si.core:itemCherenkovsingularity";
+var ironScrap = "RotaryCraft:rotarycraft_item_shaftcraft:10";
 
 Settings.showToolHarvestLevels(true);
 Settings.showArmorValues(true);
@@ -20,17 +21,7 @@ RotaryCraft.patchRotarycraftSteelTools(true);
 Sync.preventRecipeReload(true);
 
 // Mods the pack depends on: modid, display name
-dependency("RotaryCraft",	"RotaryCraft");
-dependency("ReactorCraft",	"ReactorCraft");
-dependency("ReactorCraft",	"ReactorCraft");
-dependency("ElectriCraft",	"ElectriCraft");
-dependency("CustomOreGen",	"Custom Ore Generation");
-dependency("HungerOverhaul",	"Hunger Overhaul");
-dependency("OreFlowers",	"Ore Flowers");
-dependency("mod_Invasion",	"Invasion Mod");
-dependency("HarderWildlife",	"Harder Wildlife");
-dependency("SpecialAI",	"Special AI");
-dependency("ZAMod",		"Zombie Awareness");
+
 
 // As of now, only the armors use these colors. colorname, red, green, glue.
 defineColor("RED", 255, 0, 0);
@@ -159,6 +150,40 @@ addOreDict("minecraft:flint","itemFlint");
 addOreDict("minecraft:obsidian","blockObsidian");
 addOreDict("minecraft:leather","materialLeather");
 
+// Oredicting different forms of fertilizer for recipes
+// --- First, "fertilizer"
+
+addOreDict("minecraft:dye:15","fertilizer");
+addOreDict("Forestry:fertilizerBio","fertilizer");
+addOreDict("Forestry:fertilizerCompound","fertilizer");
+addOreDict("VeganOption:fertilizer","fertilizer");
+addOreDict("VeganOption:compost","fertilizer");
+addOreDict("RotaryCraft:rotarycraft_item_powders:13","fertilizer");
+addOreDict("GardenCore:compost_pile","fertilizer");
+addOreDict("HarderWildlife:logRotting:12","fertilizer");
+addOreDict("Metallurgy:fertilizer","fertilizer");
+
+// --- Next, "itemFertilizer"
+
+addOreDict("minecraft:dye:15","itemFertilizer");
+addOreDict("Forestry:fertilizerBio","itemFertilizer");
+addOreDict("Forestry:fertilizerCompound","itemFertilizer");
+addOreDict("VeganOption:fertilizer","itemFertilizer");
+addOreDict("VeganOption:compost","itemFertilizer");
+addOreDict("RotaryCraft:rotarycraft_item_powders:13","itemFertilizer");
+addOreDict("GardenCore:compost_pile","itemFertilizer");
+addOreDict("HarderWildlife:logRotting:12","itemFertilizer");
+addOreDict("Metallurgy:fertilizer","itemFertilizer");
+
+// Finally, "fertilizerOrganic", which includes fewer entries.
+
+addOreDict("minecraft:dye:15","fertilizerOrganic");
+addOreDict("Forestry:fertilizerBio","fertilizerOrganic");
+addOreDict("VeganOption:compost","fertilizerOrganic");
+addOreDict("RotaryCraft:rotarycraft_item_powders:13","fertilizerOrganic");
+addOreDict("GardenCore:compost_pile","fertilizerOrganic");
+addOreDict("HarderWildlife:logRotting:12","fertilizerOrganic");
+
 removeChestLoot("minecraft:iron_ingot");
 removeChestLoot("minecraft:gold_ingot");
 removeChestLoot("minecraft:redstone");
@@ -276,6 +301,7 @@ removeRecipes( "Metallurgy:base.brick:2");
 removeRecipes( "Metallurgy:manganese.ingot");
 removeRecipes( "minechem:minechemAtomicManipulator");
 removeRecipes( "minecraft:skull:1");
+removeRecipes( "RandomThings:fertilizedDirt");
 removeRecipes( "Sync:Sync_ItemPlaceholder");
 removeRecipes( "rftools:endergenicBlock:0");
 
@@ -289,6 +315,7 @@ removeRecipes( "eplus:tableUpgrade");
 removeRecipes( "eplus:advancedEnchantmentTable");
 removeRecipes( "rftools:machineFrame");
 removeRecipes( "harvestcraft:cottonItem");
+removeRecipes( ironScrap); // Smelting this would bypass progression.
 
 removeSmeltingRecipes("Metallurgy:manganese.ingot");
 
@@ -618,7 +645,7 @@ addShapedRecipe("si.core:toolChiselBedrock", [
   [null, bedrockIngot, null],
   ["stickWood", null, null],
   [null, null, null]]);
-
+  
 addShapedRecipe("Sync:Sync_ItemPlaceholder", [
   ["minecraft:daylight_detector", "minecraft:lapis_block", "minecraft:daylight_detector"],
   ["minecraft:quartz", cherenkov, "minecraft:quartz"],
@@ -752,6 +779,14 @@ if(isModLoaded("Forestry") && isModLoaded("harvestcraft")){
 if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
   addOreDict("itemBeeswax", "materialWax");
   addOreDict("materialWax", "itemBeeswax");
+}
+
+// Random Things' Fertilized Dirt should have a more oredicted entry.
+if(isModLoaded("RandomThings")){
+  addShapedRecipe("RandomThings:fertilizedDirt", [
+  ["itemFertilizer", "materialRotten", "itemFertilizer" ],
+  ["materialRotten", "minecraft:dirt", "materialRotten" ],
+  ["itemFertilizer", "materialRotten", "itemFertilizer" ]]);
 }
 
 if(isModLoaded("Ztones") && isModLoaded("chisel")) load("ztones.js");
