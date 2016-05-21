@@ -1,0 +1,154 @@
+itemGroup.MohsMining.general=Expanded Mining Ores and Metals
+itemGroup.MohsMining.tools=Expanded Mining - Tools and Weapons
+itemGroup.MohsMining.armor=Expanded Mining - Armor
+
+tile.MohsMining.oreTin.name=Tin Ore
+tile.MohsMining.oreCopper.name=Copper Ore
+tile.MohsMining.oreSilver.name=Silver Ore
+tile.MohsMining.oreAluminum.name=Aluminum Ore
+tile.MohsMining.oreLead.name=Lead Ore
+tile.MohsMining.oreNickel.name=Nickel Ore
+tile.MohsMining.orePlatinum.name=Platinum Ore
+
+item.MohsMining.ingotBronze.name=Bronze Ingot
+item.MohsMining.ingotElectrum.name=Electrum Ingot
+item.MohsMining.ingotPlatinum.name=Platinum Ingot
+item.MohsMining.ingotCopper.name=Copper Ingot
+item.MohsMining.ingotTin.name=Tin Ingot
+item.MohsMining.ingotSilver.name=Silver Ingot
+item.MohsMining.ingotAluminum.name=Aluminum Ingot
+item.MohsMining.ingotLead.name=Lead Ingot
+item.MohsMining.ingotNickel.name=Nickel Ingot
+
+tile.MohsMining.blockAluminum.name=Aluminum Block
+tile.MohsMining.blockPlatinum.name=Platinum Block
+tile.MohsMining.blockElectrum.name=Electrum Block
+tile.MohsMining.blockBronze.name=Bronze Block
+tile.MohsMining.blockCopper.name=Copper Block
+tile.MohsMining.blockNickel.name=Nickel Block
+tile.MohsMining.blockSilver.name=Silver Block
+tile.MohsMining.blockLead.name=Lead Block
+tile.MohsMining.blockTin.name=Tin Block
+
+item.MohsMining.toolAxeCopper.name=Copper Axe
+item.MohsMining.toolPickaxeCopper.name=Copper Pickaxe
+item.MohsMining.toolShovelCopper.name=Copper Shovel
+item.MohsMining.toolHoeCopper.name=Copper Hoe
+item.MohsMining.toolSwordCopper.name=Copper Sword
+item.MohsMining.toolChiselCopper.name=Copper Sword
+
+item.MohsMining.toolAxeBronze.name=Bronze Axe
+item.MohsMining.toolPickaxeBronze.name=Bronze Pickaxe
+item.MohsMining.toolShovelBronze.name=Bronze Shovel
+item.MohsMining.toolHoeBronze.name=Bronze Hoe
+item.MohsMining.toolSwordBronze.name=Bronze Sword
+item.MohsMining.toolChiselBronze.name=Bronze Chisel
+
+item.MohsMining.toolAxeElectrum.name=Electrum Axe
+item.MohsMining.toolPickaxeElectrum.name=Electrum Pickaxe
+item.MohsMining.toolShovelElectrum.name=Electrum Shovel
+item.MohsMining.toolHoeElectrum.name=Electrum Hoe
+item.MohsMining.toolSwordElectrum.name=Electrum Sword
+
+item.MohsMining.toolAxeSilver.name=Silver Axe
+item.MohsMining.toolPickaxeSilver.name=Silver Pickaxe
+item.MohsMining.toolShovelSilver.name=Silver Shovel
+item.MohsMining.toolHoeSilver.name=Silver Hoe
+item.MohsMining.toolSwordSilver.name=Silver Sword
+
+item.MohsMining.toolAxePlatinum.name=Platinum Axe
+item.MohsMining.toolPickaxePlatinum.name=Platinum Pickaxe
+item.MohsMining.toolShovelPlatinum.name=Platinum Shovel
+item.MohsMining.toolHoePlatinum.name=Platinum Hoe
+item.MohsMining.toolSwordPlatinum.name=Platinum Sword
+item.MohsMining.toolChiselPlatinum.name=Platinum Chisel
+
+item.MohsMining.toolAxeAluminum.name=Aluminum Axe
+item.MohsMining.toolPickaxeAluminum.name=Aluminum Pickaxe
+item.MohsMining.toolShovelAluminum.name=Aluminum Shovel
+item.MohsMining.toolHoeAluminum.name=Aluminum Hoe
+item.MohsMining.toolSwordAluminum.name=Aluminum Sword
+item.MohsMining.toolChiselAluminum.name=Aluminum Chisel
+
+item.MohsMining.toolAxeNickel.name=Nickel Axe
+item.MohsMining.toolPickaxeNickel.name=Nickel Pickaxe
+item.MohsMining.toolShovelNickel.name=Nickel Shovel
+item.MohsMining.toolHoeNickel.name=Nickel Hoe
+item.MohsMining.toolSwordNickel.name=Nickel Sword
+item.MohsMining.toolChiselNickel.name=Nickel Chisel
+
+item.MohsMining.toolAxeFlint.name=Flint Axe
+item.MohsMining.toolPickaxeFlint.name=Flint Pickaxe
+item.MohsMining.toolShovelFlint.name=Flint Shovel
+item.MohsMining.toolHoeFlint.name=Flint Hoe
+item.MohsMining.toolSwordFlint.name=Flint Sword
+item.MohsMining.toolChiselFlint.name=Flint Chisel
+
+item.MohsMining.toolAxeObsidian.name=Obsidian Axe
+item.MohsMining.toolPickaxeObsidian.name=Obsidian Pickaxe
+item.MohsMining.toolShovelObsidian.name=Obsidian Shovel
+item.MohsMining.toolHoeObsidian.name=Obsidian Hoe
+item.MohsMining.toolSwordObsidian.name=Obsidian Sword
+
+item.MohsMining.toolPipeLead.name=Lead Pipe
+
+item.MohsMining.armorElectrumHelmet.name=Electrum Helmet
+item.MohsMining.armorElectrumChestplate.name=Electrum Chestplate
+item.MohsMining.armorElectrumLeggings.name=Electrum Leggings
+item.MohsMining.armorElectrumBoots.name=Electrum Boots
+
+item.MohsMining.armorSilverHelmet.name=Silver Helmet
+item.MohsMining.armorSilverChestplate.name=Silver Chestplate
+item.MohsMining.armorSilverLeggings.name=Silver Leggings
+item.MohsMining.armorSilverBoots.name=Silver Boots 
+
+item.MohsMining.armorCopperHelmet.name=Copper Helmet
+item.MohsMining.armorCopperChestplate.name=Copper Chestplate
+item.MohsMining.armorCopperLeggings.name=Copper Leggings
+item.MohsMining.armorCopperBoots.name=Copper Boots 
+
+item.MohsMining.armorBronzeHelmet.name=Bronze Helmet
+item.MohsMining.armorBronzeChestplate.name=Bronze Chestplate
+item.MohsMining.armorBronzeLeggings.name=Bronze Leggings
+item.MohsMining.armorBronzeBoots.name=Bronze Boots 
+
+item.MohsMining.armorPlatinumHelmet.name=Platinum Helmet
+item.MohsMining.armorPlatinumChestplate.name=Platinum Chestplate
+item.MohsMining.armorPlatinumLeggings.name=Platinum Leggings
+item.MohsMining.armorPlatinumBoots.name=Platinum Boots 
+
+item.MohsMining.armorAluminumHelmet.name=Aluminum Helmet
+item.MohsMining.armorAluminumChestplate.name=Aluminum Chestplate
+item.MohsMining.armorAluminumLeggings.name=Aluminum Leggings
+item.MohsMining.armorAluminumBoots.name=Aluminum Boots 
+
+item.MohsMining.armorNickelHelmet.name=Nickel Helmet
+item.MohsMining.armorNickelChestplate.name=Nickel Chestplate
+item.MohsMining.armorNickelLeggings.name=Nickel Leggings
+item.MohsMining.armorNickelBoots.name=Nickel Boots 
+
+item.MohsMining.armorObsidianHelmet.name=Obsidian Helmet
+item.MohsMining.armorObsidianChestplate.name=Obsidian Chestplate
+item.MohsMining.armorObsidianLeggings.name=Obsidian Leggings
+item.MohsMining.armorObsidianBoots.name=Obsidian Boots
+
+info.MohsMining.shifted=- Shift for Info -
+info.MohsMining.harvestlevel=Harvest Level
+info.MohsMining.harvestlevel0=Wood
+info.MohsMining.harvestlevel1=Stone
+info.MohsMining.harvestlevel2=Aluminum
+info.MohsMining.harvestlevel3=Copper
+info.MohsMining.harvestlevel4=Platinum/Bronze
+info.MohsMining.harvestlevel5=Iron/Nickel
+info.MohsMining.harvestlevel6=Obsidian
+info.MohsMining.harvestlevel7=Diamond
+info.MohsMining.harvestlevel255=Everything
+
+wailaharvestability.harvestlevel1=Wood
+wailaharvestability.harvestlevel2=Stone
+wailaharvestability.harvestlevel3=Aluminum
+wailaharvestability.harvestlevel4=Copper
+wailaharvestability.harvestlevel5=Platinum/Bronze
+wailaharvestability.harvestlevel6=Iron/Nickel
+wailaharvestability.harvestlevel7=Obsidian
+wailaharvestability.harvestlevel=Harvest Level : 
