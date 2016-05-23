@@ -1,7 +1,6 @@
 // #### Ender Technology Gating
 // The key to ender-tech gating, the Cherenkov Singularity.
-addItem("itemCherenkovsingularity", "CoreItem", 1, "SurvivalIndustry.general");
-
+addItem("itemCherenkovSingularity", "CoreItem", 1, "SurvivalIndustry.general");
 addShapelessRecipe(cherenkov, [plutonium,"minecraft:ender_pearl"]);
 
 

@@ -9,7 +9,7 @@
 Sync.preventRecipeReload(true);
 
 // Let's make a creative tab for Survival Industry.
-addCreativeTab("si.core.general","Survival Industry","si.core:itemCrucible");
+addCreativeTab("SurvivalIndustry.general","Survival Industry","SurvivalIndustry:itemCherenkovSingularity");
 
 // Let's assign definitions, so we don't need to use a lot of long strings.
 load("definitions.js");
@@ -44,7 +44,7 @@ if(isModLoaded("Forestry") && isModLoaded("harvestcraft")){
 
 
 // Custom food, courtesy of JeffPeng:
-addItem("foodJPMorningSupreme", "CoreFood", 1, "SurvivalIndustry.food")
+addItem("foodJPMorningSupreme", "CoreFood", 1, "SurvivalIndustry.general")
   .fooddata(FoodData(16,1.600000023841858,false,false).buffdata("digspeed", 60, 1, 100));
 
 addShapelessRecipe("SurvivalIndustry:foodJPMorningSupreme", ["listAllmilk","foodCoffee","foodToastsandwich","listAllegg@2","foodCheese@2","foodMayo","toolSkillet"]);
