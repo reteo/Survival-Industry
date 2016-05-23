@@ -3,7 +3,7 @@ itemGroup.SurvivalIndustry.armor=Survival Industry Armor
 itemGroup.SurvivalIndustry.tools=Survival Industry Tools
 itemGroup.SurvivalIndustry.food=Survival Industry Food
 
-item.SurvivalIndustry.itemCherenkovsingularity.name=Cherenkov Singularity
+item.SurvivalIndustry.itemCherenkovSingularity.name=Cherenkov Singularity
 item.SurvivalIndustry.itemCTEnblem.name=Survival Industry Bragging Rights
 
 item.SurvivalIndustry.ingotBronze.name=Bronze Ingot
