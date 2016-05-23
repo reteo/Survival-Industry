@@ -1,5 +1,5 @@
 #Custom Ore Generation 1.2.24 Config Options
-#Tue May 10 11:37:03 EDT 2016
+#Thu May 12 14:47:40 EDT 2016
 drawWireframes=true
 oreSize=1.0
 advOptions=false
