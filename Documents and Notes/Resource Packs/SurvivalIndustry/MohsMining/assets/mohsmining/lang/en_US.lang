@@ -29,13 +29,15 @@ tile.MohsMining.blockNickel.name=Nickel Block
 tile.MohsMining.blockSilver.name=Silver Block
 tile.MohsMining.blockLead.name=Lead Block
 tile.MohsMining.blockTin.name=Tin Block
+tile.MohsMining.blockCd-In-Ag.name=Cd-In-Ag Block
+tile.MohsMining.blockPitchblende.name=Pitchblende Block
 
 item.MohsMining.toolAxeCopper.name=Copper Axe
 item.MohsMining.toolPickaxeCopper.name=Copper Pickaxe
 item.MohsMining.toolShovelCopper.name=Copper Shovel
 item.MohsMining.toolHoeCopper.name=Copper Hoe
 item.MohsMining.toolSwordCopper.name=Copper Sword
-item.MohsMining.toolChiselCopper.name=Copper Sword
+item.MohsMining.toolChiselCopper.name=Copper Chisel
 
 item.MohsMining.toolAxeBronze.name=Bronze Axe
 item.MohsMining.toolPickaxeBronze.name=Bronze Pickaxe
@@ -90,6 +92,13 @@ item.MohsMining.toolShovelObsidian.name=Obsidian Shovel
 item.MohsMining.toolHoeObsidian.name=Obsidian Hoe
 item.MohsMining.toolSwordObsidian.name=Obsidian Sword
 
+item.MohsMining.toolAxeSteel.name=Steel Axe
+item.MohsMining.toolPickaxeSteel.name=Steel Pickaxe
+item.MohsMining.toolShovelSteel.name=Steel Shovel
+item.MohsMining.toolHoeSteel.name=Steel Hoe
+item.MohsMining.toolSwordSteel.name=Steel Sword
+item.MohsMining.toolChiselSteel.name=Steel Chisel
+
 item.MohsMining.toolPipeLead.name=Lead Pipe
 
 item.MohsMining.armorElectrumHelmet.name=Electrum Helmet
@@ -131,6 +140,11 @@ item.MohsMining.armorObsidianHelmet.name=Obsidian Helmet
 item.MohsMining.armorObsidianChestplate.name=Obsidian Chestplate
 item.MohsMining.armorObsidianLeggings.name=Obsidian Leggings
 item.MohsMining.armorObsidianBoots.name=Obsidian Boots
+
+item.MohsMining.armorSteelHelmet.name=Steel Helmet
+item.MohsMining.armorSteelChestplate.name=Steel Chestplate
+item.MohsMining.armorSteelLeggings.name=Steel Leggings
+item.MohsMining.armorSteelBoots.name=Steel Boots
 
 info.MohsMining.shifted=- Shift for Info -
 info.MohsMining.harvestlevel=Harvest Level
