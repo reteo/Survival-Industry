@@ -23,10 +23,8 @@ load("madscience.js");
 // We set up recipes, and clean up competition, for RotaryCraft machines.
 load("rotarycraft.js");
 
-// Converting Ender IO to fit the modpack.
-if(isModLoaded("EnderIO")){
-    load("enderio.js");
-}
+// Now, let's make sure the loot prevents a progression short-circuit.
+load("loot.js");
 
 // Let's do some Mad Science gating.
 load("madscience.js");
@@ -39,22 +37,19 @@ if(isModLoaded("Forestry") && isModLoaded("harvestcraft")){
     load("bees.js");
 }
 
+// Let's add some things to fix existing recipes.
+load("fixes.js");
+
+// Let's add some stuff for the Ore Dictionary.
+load("oredictionary.js");
+
+// Anything we don't want, let's purge.
+load("purge.js");
+
 
 //  **** Miscellaneous stuff that don't need a whole file. ****
 
 
-// Custom food, courtesy of JeffPeng:
-addItem("foodJPMorningSupreme", "CoreFood", 1, "SurvivalIndustry.general")
-  .fooddata(FoodData(16,1.600000023841858,false,false).buffdata("digspeed", 60, 1, 100));
-
-addShapelessRecipe("SurvivalIndustry:foodJPMorningSupreme", ["listAllmilk","foodCoffee","foodToastsandwich","listAllegg@2","foodCheese@2","foodMayo","toolSkillet"]);
-
-
-addToolTip(
- ["SurvivalIndustry:foodJPMorningSupreme"],
- ["info.SurvivalIndustry.tooltips.jpsupreme1",
-  "info.SurvivalIndustry.tooltips.jpsupreme2",
-  "info.SurvivalIndustry.tooltips.jpsupreme3"]);
 
 /* Flint should not be solely obtained by digging through gravel.  However, we also don't
  * want a 1:1 recipe, since it would discourage other methods of obtaining flint. */
