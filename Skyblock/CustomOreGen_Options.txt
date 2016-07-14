@@ -1,2 +1,0 @@
-#Custom Ore Generation 1.2.24 Config Options
-#Wed Mar 30 21:04:04 EDT 2016
