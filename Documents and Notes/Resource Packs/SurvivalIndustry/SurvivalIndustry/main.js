@@ -51,56 +51,5 @@ load("purge.js");
 
 
 
-/* Flint should not be solely obtained by digging through gravel.  However, we also don't
- * want a 1:1 recipe, since it would discourage other methods of obtaining flint. */
-addShapelessRecipe("minecraft:flint", ["minecraft:gravel@3"]);
 
-// Pam's cooking tools should have "stoneware" varieties, with flint cutting tools.
-addShapedRecipe("harvestcraft:potItem", [
-  ["stickWood", "ingotBrick", "ingotBrick" ],
-  [null, "ingotBrick", "ingotBrick" ],
-  [null, null, null ]]);
-  
-addShapedRecipe("harvestcraft:skilletItem", [
-  ["ingotBrick", null, null ],
-  [null, "ingotBrick", null ],
-  [null, null, "stickWood" ]]);
-  
-addShapedRecipe("harvestcraft:saucepanItem", [
-  ["ingotBrick", null, null ],
-  [null, "stickWood", null ],
-  [null, null, null ]]);
-  
-addShapedRecipe("harvestcraft:cuttingboardItem", [
-  ["itemFlint", null, null ],
-  [null, "stickWood", null ],
-  [null, null, "plankWood" ]]);
-
-addShapedRecipe("si.core:toolChiselFlint", [
-  [null, "itemFlint", null],
-  ["stickWood", null, null],
-  [null, null, null]]);
-  
-// The "Indian Mustard" ore flower should drop a mustard seed.
-addShapelessRecipe("harvestcraft:mustardseedItem", ["OreFlowers:ore_flowers2"]);
-
-// Forestry wax recipes should support gardencore's wax.
-if(isModLoaded("Forestry") && isModLoaded("GardenCore")){
-    var update = [
-        ["itemBeeswax", ["materialWax"]],
-        ["materialWax", ["itemBeeswax"]]
-    ];
-
-    for (var m in update)
-        for (i in update[m][1])
-            addOreDict(update[m][1][0], update[m][1][i]);
-}
-
-// Random Things' Fertilized Dirt should have a more oredicted entry.
-if(isModLoaded("RandomThings")){
-  addShapedRecipe("RandomThings:fertilizedDirt", [
-  ["itemFertilizer", "materialRotten", "itemFertilizer" ],
-  ["materialRotten", "minecraft:dirt", "materialRotten" ],
-  ["itemFertilizer", "materialRotten", "itemFertilizer" ]]);
-}
 

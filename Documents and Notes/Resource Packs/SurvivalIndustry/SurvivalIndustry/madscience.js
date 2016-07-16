@@ -2,50 +2,65 @@
 
 // All Mad Science depends on bedrock.
 
-// Gating Advanced Genetics
-removeRecipes( "advancedgenetics:basicdictionary");
-addShapedRecipe("advancedgenetics:basicdictionary", [
-  [null, bedrockDust, null ],
-  ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell" ],
-  [null, bedrockDust, null ]]);
+// Legend: Output count, output ID, [recipe], mod
 
-// Fossils & Archaeology
-removeRecipes( "fossil:analyzer");
-addShapedRecipe("fossil:analyzer", [
-  ["ingotIron", "fossil:relicScrap", "ingotIron"],
-  ["ingotIron", "fossil:bioFossil", "ingotIron"],
-  ["ingotIron", "minecraft:bedrock", "ingotIron"]]);
+var ShapelessRecipes = [
+    [null, null, [null], null]
+];
 
-removeRecipes( "fossil:cultureVat");
-addShapedRecipe("fossil:cultureVat", [
-  ["blockGlass", "dyeGreen", "blockGlass"],
-  ["blockGlass", "listAllwater", "blockGlass"],
-  ["ingotIron", "minecraft:bedrock", "ingotIron" ]]);
 
-// Gendustry  
-removeRecipes( "gendustry:MutagenTank");
-addShapedRecipe("gendustry:MutagenTank", [
-  ["ingotTin", "paneGlass", "ingotTin"],
-  ["ingotTin", "paneGlass", "ingotTin"],
-  ["ingotTin", "minecraft:bedrock", "ingotTin"]]);
+var ShapedRecipes = [
+    // Advanced Genetics - The important machines each need a basic dictionary.
+    [1, "advancedgenetics:basicdictionary", 
+        [[null, bedrockDust, null], ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell"], [null, bedrockDust, null]], 
+        "advancedgenetics"], 
+    
+    // Fossils & Archaeology - The Culture Vat is needed to actually grow dinosaurs.
+    [1, "fossil:cultureVat", 
+        [["blockGlass", "dyeGreen", "blockGlass"], ["blockGlass", "listAllwater", "blockGlass"], ["ingotIron", "minecraft:bedrock", "ingotIron"]], 
+        "fossil"], 
+    
+    // Gendustry - The mutagen tank is needed to perform any mutations.
+    [1, "gendustry:MutagenTank", 
+        [["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "minecraft:bedrock", "ingotTin"]], 
+        "gendustry"], 
+    
+    //MineChem - The atomic manipulator actually does the work for this mod.
+    [1, "minechem:minechemAtomicManipulator", 
+        [["minecraft:piston", "minecraft:piston", "minecraft:piston"], ["minecraft:piston", bedrockDust, "minecraft:piston"], ["minecraft:piston", "minecraft:piston", "minecraft:piston"]], 
+        "minechem"], 
+    
+    // Invasion Mod - The phase crystal is needed to make all the technology in this pack, including the nexus.
+    [1, "mod_Invasion:phaseCrystal", 
+        [[null, "dyeBlue", null], ["dustRedstone", bedrockDust, "dustRedstone"], [null, "dyeBlue", null]], 
+        "mod_Invasion"], 
+    
+    // RFTools - The machine frame is needed for all RFTools machinery.
+    [1, "rftools:machineFrame", 
+        [["ingotIron", bedrockDust, "ingotIron"], ["nuggetGold", null, "nuggetGold"], ["ingotIron", bedrockDust, "ingotIron"]], 
+        "rftools"], 
+];
 
-// Minechem
-removeRecipes( "minechem:minechemAtomicManipulator");
-addShapedRecipe("minechem:minechemAtomicManipulator", [
-  ["minecraft:piston", "minecraft:piston", "minecraft:piston"],
-  ["minecraft:piston", bedrockDust, "minecraft:piston"],
-  ["minecraft:piston", "minecraft:piston", "minecraft:piston"]]);
+  
+/// Do not edit past this point. ////////////////////////////////////////////////////
 
-// Invasion Mod
-removeRecipes( "mod_Invasion:phaseCrystal");
-addShapedRecipe("mod_Invasion:phaseCrystal", [
-  [null, "dyeBlue", null ],
-  ["dustRedstone",bedrockDust, "dustRedstone" ],
-  [null, "dyeBlue", null ]]);
+// Code for making shapeless recipes.
 
-// RFTools
-removeRecipes( "rftools:machineFrame");
-addShapedRecipe("rftools:machineFrame", [
-  ["ingotIron", bedrockDust, "ingotIron" ],
-  ["nuggetGold", null, "nuggetGold" ],
-  ["ingotIron", bedrockDust, "ingotIron" ]]);
+for (var m in ShapelessRecipes) {
+    if (ShapelessRecipes[m][3] == null || isModLoaded(ShapelessRecipes[m][3])) {
+        var quantity="";
+        if (ShapelessRecipes[m][0] > 1) quantity = "@"+ShapelessRecipes[m][0];
+        removeRecipes(ShapelessRecipes[m][1]);
+        addShapelessRecipe(ShapelessRecipes[m][1]+quantity, ShapelessRecipes[m][2]);
+    }
+}
+
+// Code for making shaped recipes.
+for (var m in ShapedRecipes) {
+    if (ShapedRecipes[m][3] == null || isModLoaded(ShapedRecipes[m][3])) {
+        var quantity="";
+        if (ShapedRecipes[m][0] > 1) quantity = "@"+ShapedRecipes[m][0];
+        removeRecipes(ShapedRecipes[m][1]);
+        addShapedRecipe(ShapedRecipes[m][1]+quantity, ShapedRecipes[m][2]);
+    }
+}

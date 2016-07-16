@@ -5,7 +5,6 @@ dependency("ReactorCraft", "ReactorCraft");
 dependency("ElectriCraft", "ElectriCraft");
 dependency("HungerOverhaul", "Hunger Overhaul");
 dependency("mod_Invasion", "Invasion Mod");
-dependency("HarderWildlife", "Harder Wildlife");
 dependency("SpecialAI", "Special AI");
 dependency("ZAMod", "Zombie Awareness");
 

@@ -1,97 +1,62 @@
 // #### Ender Technology Gating
+
 // The key to ender-tech gating, the Cherenkov Singularity.
 addItem("itemCherenkovSingularity", "CoreItem", 1, "SurvivalIndustry.general");
-addShapelessRecipe(cherenkov, [plutonium,"minecraft:ender_pearl"]);
 
+ShapelessRecipes = [
+    [1, cherenkov, [plutonium, "minecraft:ender_pearl"], "ReactorCraft"]
+];
 
-// Recipes gated using the Cherenkov Singularity
-// Ender Storage
-removeRecipes( "EnderStorage:enderChest");
-addShapedRecipe("EnderStorage:enderChest", [
-  ["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
-  ["plankWood", "chestWood", "plankWood" ],
-  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
+var ShapedRecipes = [
+    // Ender Storage
+    [1, "EnderStorage:enderChest", 
+        [["itemBlazeRod", "materialBedding", "itemBlazeRod" ],  ["plankWood", "chestWood", "plankWood" ],  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]], 
+        "EnderStorage"],
+    [1, "EnderStorage:enderChest:4096", 
+        [["itemBlazeRod", "materialBedding", "itemBlazeRod" ],  ["plankWood", "minecraft:cauldron", "plankWood" ],  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]], 
+        "EnderStorage"],
+    [1, "EnderStorage:enderPouch", 
+        [["itemBlazePowder", "materialLeather", "itemBlazePowder" ],  ["materialLeather", cherenkov, "materialLeather" ],  ["itemBlazePowder", "materialBedding", "itemBlazePowder" ]], 
+        "EnderStorage"],
+        
+    // Enhanced Portals 3
+    [1, "enhancedportals:frame", 
+        [[bedrockDust, "ingotIron", bedrockDust],  ["ingotIron", "blockQuartz", "ingotIron"],  [bedrockDust, "ingotIron", bedrockDust]], 
+        "enhancedportals"],
+        
+    // Extra Utilities' "Ender Infused Obsidian," needed for much of ExU's ender machinery
+    [1, "ExtraUtilities:decorativeBlock1:1", 
+        [[null, "blockObsidian", null ],  ["blockObsidian", cherenkov, "blockObsidian" ],  [null, "blockObsidian", null ]], 
+        "ExtraUtilities"],
+        
+    // The end portal stone, specifically to allow players to make their own end portals.
+    [1, "minecraft:end_portal_frame", 
+        [[cherenkov, cherenkov, cherenkov],  [cherenkov, "mod_Invasion:riftFlux", cherenkov],  [cherenkov, cherenkov, cherenkov]], 
+        null],
+];
   
-removeRecipes( "EnderStorage:enderChest:4096");
-addShapedRecipe("EnderStorage:enderChest:4096", [
-  ["itemBlazeRod", "materialBedding", "itemBlazeRod" ],
-  ["plankWood", "minecraft:cauldron", "plankWood" ],
-  ["itemBlazeRod", cherenkov, "itemBlazeRod" ]]);
-  
-removeRecipes( "EnderStorage:enderPouch");
-addShapedRecipe("EnderStorage:enderPouch", [
-  ["itemBlazePowder", "materialLeather", "itemBlazePowder" ],
-  ["materialLeather", cherenkov, "materialLeather" ],
-  ["itemBlazePowder", "materialBedding", "itemBlazePowder" ]
-]);
+/// Do not edit past this point. ////////////////////////////////////////////////////
 
-// Ender Utilities
-removeRecipes(stickEnder);
-addShapedRecipe(stickEnder + "@3", [
-  ["stickWood", "stickWood", "stickWood" ],
-  [cherenkov, cherenkov, cherenkov ],
-  ["stickWood", "stickWood", "stickWood" ]]);
-  
-removeRecipes(ropeEnder);
-addShapedRecipe(ropeEnder + "@3", [
-  ["minecraft:string", "minecraft:string", "minecraft:string" ],
-  ["materialLeather", cherenkov, "materialLeather" ],
-  ["minecraft:string", "minecraft:string", "minecraft:string" ]]);
-  
-removeRecipes("enderutilities:enderpearlreusable");
-addShapedRecipe("enderutilities:enderpearlreusable", [
-  ["nuggetGold", "pearlEnder", "nuggetGold" ],
-  [cherenkov, "blockRedstone", cherenkov ],
-  ["nuggetGold", "pearlEnder", "nuggetGold" ]]);
-  
-removeRecipes("enderutilities:enderarrow");
-addShapedRecipe("enderutilities:enderarrow@4", [
-  [null, "nuggetGold", cherenkov ],
-  [null, "minecraft:arrow", "nuggetGold" ],
-  ["minecraft:arrow", null, null ]]);
-  
-removeRecipes(alloyEnder)
-addShapedRecipe(alloyEnder + "@3", [
-  ["ingotIron", "ingotIron", "ingotIron" ],
-  [cherenkov, cherenkov, cherenkov ],
-  ["ingotIron", "ingotIron", "ingotIron" ]]);
-  
-removeRecipes(alloyEnderEnhanced)
-addShapedRecipe(alloyEnderEnhanced + "@3", 
-  [ ["ingotGold", "ingotGold", "ingotGold" ],
-  [cherenkov, cherenkov, cherenkov ],
-  ["ingotIron", "ingotIron", "ingotIron" ]]);
-  
-removeRecipes(alloyEnderAdvanced)
-addShapedRecipe(alloyEnderAdvanced + "@3", [
-  ["ingotIron", cherenkov, "ingotIron" ],
-  ["ingotGold", "gemDiamond", "ingotGold" ],
-  ["blockObsidian", cherenkov, "blockObsidian" ]]);
+// Code for making shapeless recipes.
+for (var m in ShapelessRecipes) {
+    log("Checking "+ShapelessRecipes[m][1] + ".");
+    if (ShapelessRecipes[m][3] == null || isModLoaded(ShapelessRecipes[m][3])) {
+        var quantity="";
+        log("Making "+ShapelessRecipes[m][1] + ".");
+        if (ShapelessRecipes[m][0] > 1) quantity = "@"+ShapelessRecipes[m][0];
+        removeRecipes(ShapelessRecipes[m][1]);
+        addShapelessRecipe(ShapelessRecipes[m][1]+quantity, ShapelessRecipes[m][2]);
+    }
+}
 
-// Enhanced Portals 3
-removeRecipes("enhancedportals:frame");
-addShapedRecipe("enhancedportals:frame", [
-  [bedrockDust, "ingotIron", bedrockDust],
-  ["ingotIron", "blockQuartz", "ingotIron"],
-  [bedrockDust, "ingotIron", bedrockDust]]);
-  
-// Ender Infused Obsidian
-removeRecipes( "ExtraUtilities:decorativeBlock1:1");
-addShapedRecipe("ExtraUtilities:decorativeBlock1:1", [
-  [null, "blockObsidian", null ],
-  ["blockObsidian", cherenkov, "blockObsidian" ],
-  [null, "blockObsidian", null ] ]);
-
-// Sync
-removeRecipes( "Sync:Sync_ItemPlaceholder");
-addShapedRecipe("Sync:Sync_ItemPlaceholder", [
-  ["minecraft:daylight_detector", "minecraft:lapis_block", "minecraft:daylight_detector"],
-  ["minecraft:quartz", cherenkov, "minecraft:quartz"],
-  ["minecraft:emerald", "minecraft:redstone_block", "minecraft:emerald"]]);
-
-// The vanilla End Portal stone
-removeRecipes("minecraft:end_portal_frame");
-addShapedRecipe("minecraft:end_portal_frame", [
-  [cherenkov, cherenkov, cherenkov],
-  [cherenkov, "mod_Invasion:riftFlux", cherenkov],
-  [cherenkov, cherenkov, cherenkov]]);
+// Code for making shaped recipes.
+for (var m in ShapedRecipes) {
+    log("Checking "+ShapedRecipes[m][1] + ".");
+    if (ShapedRecipes[m][3] == null || isModLoaded(ShapedRecipes[m][3])) {
+        var quantity="";
+        log("Making "+ShapedRecipes[m][1] + ".");
+        if (ShapedRecipes[m][0] > 1) quantity = "@"+ShapedRecipes[m][0];
+        removeRecipes(ShapedRecipes[m][1]);
+        addShapedRecipe(ShapedRecipes[m][1]+quantity, ShapedRecipes[m][2]);
+    }
+}

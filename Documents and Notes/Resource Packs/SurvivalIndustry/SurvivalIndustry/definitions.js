@@ -1,5 +1,5 @@
 // Definitions specific to Survival Industry
-var cherenkov               =   "SurvivalIndustry:itemCherenkovsingularity";
+var cherenkov               =   "SurvivalIndustry:itemCherenkovSingularity";
 
 // EnderIO Definitions
 // EnderAlloy
@@ -30,14 +30,11 @@ var aluminumFlakes          = 	"RotaryCraft:rotarycraft_item_modextracts:27";
 var indiumIngot             =   "RotaryCraft:rotarycraft_item_modingots:51";
 var pitchblendeIngot        =   "RotaryCraft:rotarycraft_item_modingots:49";
 var cdInAgIngot             =   "ReactorCraft:reactorcraft_item_crafting:3";
-var plutonium               =   "ReactorCraft:reactorcraft_item_plutonium:0";
+var plutonium               =   "ReactorCraft:reactorcraft_item_plutonium";
 var platinumIngot           =   "RotaryCraft:rotarycraft_item_modingots:44";
 var cadmiumIngot            =   "RotaryCraft:rotarycraft_item_modingots:50";
 var ironScrap               =   "RotaryCraft:rotarycraft_item_shaftcraft:10";
 
-// Ender Utilities
-var alloyEnder              =   "enderutilites:enderpart:0"
-var alloyEnderEnhanced      =   "enderutilites:enderpart:1"
-var alloyEnderAdvanced      =   "enderutilites:enderpart:2"
-var stickEnder              =   "enderutilites:enderpart:20"
-var ropeEnder               =   "enderutilites:enderpart:21"
+// Miscellaneous
+var brickblock              =   "minecraft:brick_block"
+var leather                 =   "materialLeather"
