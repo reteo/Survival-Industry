@@ -103,7 +103,7 @@
             <DisplayIncrement>16</DisplayIncrement>
         </OptionNumeric> 
 
-        <OptionChoice name='vanillaOreGen' default=':=!?COGActive' displayGroup='groupGeneral'>
+        <!-- <OptionChoice name='vanillaOreGen' default=':=!?COGActive' displayGroup='groupGeneral'>
             <Description> 
                 Enable/disable the vanilla ore generators for coal, iron, gold, redstone, lapis lazuli, and diamond.  
             </Description>
@@ -117,7 +117,7 @@
             <DisplayName>Vanilla Ore Gen.</DisplayName>
             <Choice value='true' displayValue='On'/>
             <Choice value='false' displayValue='Off'/>
-        </OptionChoice> 
+        </OptionChoice> -->
         
         <OptionChoice name='drawWireframes' default='true' displayGroup='groupGeneral'>
             <Description> 
