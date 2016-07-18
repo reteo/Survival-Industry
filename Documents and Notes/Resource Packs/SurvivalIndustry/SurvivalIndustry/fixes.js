@@ -41,7 +41,7 @@ var ShapelessRecipes = [
     // NOTE:  JMODs are undetectable at present, so this recipe won't check for Simple Wooden Bucket.
     [1, "harvestcraft:freshmilkItem", ["SimpleWoodenBucket:itemWoodenBucket_milk"], "harvestcraft"], */
     // There should be a recipe to "sift for flint."  I'm not fond of the "digging gravel" grind.
-    [4, "minecraft:flint", ["minecraft:gravel"], null]
+    [1, "minecraft:flint", ["minecraft:gravel"], null]
 ];
 
 
