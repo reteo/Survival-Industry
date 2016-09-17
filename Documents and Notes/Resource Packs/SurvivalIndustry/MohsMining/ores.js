@@ -59,7 +59,7 @@ var blocks = [
 
 for (var m in blocks)
     if ((blocks[m][3] == null) || isModLoaded(blocks[m][3]))
-        for (var n in blocks[m])
+        for (var n in blocks[m][1])
             if (blocks[m][1][n] >= 0)
 		log("Setting Harvest Level for "+blocks[m][0]+" to "+blocks[m][1][n]+".");
                 setBlockProperties(blocks[m][0]) .harvestlevel(n,blocks[m][1][n]);
@@ -69,7 +69,7 @@ for (var m in blocks)
 
 
 
-var blocks = [
+var oreBlocks = [
     ["minecraft:coal_ore",          [4.2], null],
     ["MohsMining:oreTin",           [7.0], null],
     ["MohsMining:oreLead",          [9.1], null],
@@ -111,11 +111,11 @@ var blocks = [
                                     [-1,26.6,9.2,6.0,12.5,26.6,3.0,5.9,15.2,12.6], "ReactorCraft"]
 ];
 
-for (var m in blocks)
-    if ((blocks[m][3] == null) || isModLoaded(blocks[m][3]))
-        for (var n in blocks[m])
-            if (blocks[m][1][n] >= 0)
-                setBlockProperties(blocks[m][0] + ":" + n) .hardness(blocks[m][1][n]).br(blocks[m][1][n]);
+for (var m in oreBlocks)
+    if ((oreBlocks[m][3] == null) || isModLoaded(oreBlocks[m][3]))
+        for (var n in oreBlocks[m][1])
+            if (oreBlocks[m][1][n] >= 0)
+                setBlockProperties(oreBlocks[m][0] + ":" + n) .hardness(oreBlocks[m][1][n]).br(oreBlocks[m][1][n]);
 
 
 
