@@ -37,23 +37,28 @@ var oreDictAssign = [
 /// Do not edit past this point. ////////////////////////////////////////////////////
 
 // Assign items to the ore dictionary.
-for (var m in oreDictAssign) {
-    if (oreDictAssign[m][2] == null || isModLoaded(oreDictAssign[m][2])) {
-        for (var n in oreDictAssign[m][1]) {
-            for (var o in oreDictAssign[m][0]) {
-                addOreDict(oreDictAssign[m][0][o], oreDictAssign[m][1][n]);
+(function(assign){
+    for (var m in assign) {
+        if (assign[m][2] == null || isModLoaded(assign[m][2])) {
+            for (var n in assign[m][1]) {
+                for (var o in assign[m][0]) {
+                    addOreDict(assign[m][0][o], assign[m][1][n]);
+                }
             }
         }
     }
-}
+})(oreDictAssign);
 
 // Merge multiple ore dictionaries together.
-for (var m in oreDictMerge) { // for every record...
-    for (var n in oreDictMerge[m]) { // ...every entry...
-        for (var o in oreDictMerge[m]) { // ...will be merged with every other entry...
-            if (oreDictMerge[m][n] != oreDictMerge[m][o]) { // ... unless they're the same item.
-                addOreDict(oreDictMerge[m][n], oreDictMerge[m][o]);
+(function(merge){
+    for (var m in merge) { // for every record...
+        for (var n in merge[m]) { // ...every entry...
+            for (var o in merge[m]) { // ...will be merged with every other entry...
+                if (merge[m][n] != merge[m][o]) { // ... unless they're the same item.
+                    addOreDict(merge[m][n], merge[m][o]);
+                }
             }
         }
     }
-}
+})(oreDictMerge);
+    

@@ -3,7 +3,7 @@
 // The key to ender-tech gating, the Cherenkov Singularity.
 addItem("itemCherenkovSingularity", "CoreItem", 1, "SurvivalIndustry.general");
 
-ShapelessRecipes = [
+var ShapelessRecipes = [
     [1, cherenkov, [plutonium, "minecraft:ender_pearl"], "ReactorCraft"]
 ];
 
@@ -26,25 +26,29 @@ var ShapedRecipes = [
 /// Do not edit past this point. ////////////////////////////////////////////////////
 
 // Code for making shapeless recipes.
-for (var m in ShapelessRecipes) {
-    log("Checking "+ShapelessRecipes[m][1] + ".");
-    if (ShapelessRecipes[m][3] == null || isModLoaded(ShapelessRecipes[m][3])) {
-        var quantity="";
-        log("Making "+ShapelessRecipes[m][1] + ".");
-        if (ShapelessRecipes[m][0] > 1) quantity = "@"+ShapelessRecipes[m][0];
-        removeRecipes(ShapelessRecipes[m][1]);
-        addShapelessRecipe(ShapelessRecipes[m][1]+quantity, ShapelessRecipes[m][2]);
+(function(recipes){
+    for (var m in recipes) {
+        log("Checking "+recipes[m][1] + ".");
+        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+            var quantity="";
+            log("Making "+recipes[m][1] + ".");
+            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
+            removeRecipes(recipes[m][1]);
+            addShapelessRecipe(recipes[m][1]+quantity, recipes[m][2]);
+        }
     }
-}
+})(ShapelessRecipes);
 
 // Code for making shaped recipes.
-for (var m in ShapedRecipes) {
-    log("Checking "+ShapedRecipes[m][1] + ".");
-    if (ShapedRecipes[m][3] == null || isModLoaded(ShapedRecipes[m][3])) {
-        var quantity="";
-        log("Making "+ShapedRecipes[m][1] + ".");
-        if (ShapedRecipes[m][0] > 1) quantity = "@"+ShapedRecipes[m][0];
-        removeRecipes(ShapedRecipes[m][1]);
-        addShapedRecipe(ShapedRecipes[m][1]+quantity, ShapedRecipes[m][2]);
+(function(recipes){
+    for (var m in recipes) {
+        log("Checking "+recipes[m][1] + ".");
+        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+            var quantity="";
+            log("Making "+recipes[m][1] + ".");
+            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
+            removeRecipes(recipes[m][1]);
+            addShapedRecipe(recipes[m][1]+quantity, recipes[m][2]);
+        }
     }
-}
+})(ShapedRecipes);

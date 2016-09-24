@@ -60,21 +60,25 @@ if (isModLoaded("OreFlowers")) {
 /// Do not edit past this point. ////////////////////////////////////////////////////
 
 // Code for making shapeless recipes.
-for (var m in ShapelessRecipes) {
-    if (ShapelessRecipes[m][3] == null || isModLoaded(ShapelessRecipes[m][3])) {
-        var quantity="";
-        if (ShapelessRecipes[m][0] > 1) quantity = "@"+ShapelessRecipes[m][0];
-        removeRecipes(ShapelessRecipes[m][1]);
-        addShapelessRecipe(ShapelessRecipes[m][1]+quantity, ShapelessRecipes[m][2]);
+(function(recipes){
+    for (var m in recipes) {
+        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+            var quantity="";
+            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
+            removeRecipes(recipes[m][1]);
+            addShapelessRecipe(recipes[m][1]+quantity, recipes[m][2]);
+        }
     }
-}
+})(ShapelessRecipes);
 
 // Code for making shaped recipes.
-for (var m in ShapedRecipes) {
-    if (ShapedRecipes[m][3] == null || isModLoaded(ShapedRecipes[m][3])) {
-        var quantity="";
-        if (ShapedRecipes[m][0] > 1) quantity = "@"+ShapedRecipes[m][0];
-        removeRecipes(ShapedRecipes[m][1]);
-        addShapedRecipe(ShapedRecipes[m][1]+quantity, ShapedRecipes[m][2]);
+(function(recipes){
+    for (var m in recipes) {
+        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+            var quantity="";
+            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
+            removeRecipes(recipes[m][1]);
+            addShapedRecipe(recipes[m][1]+quantity, recipes[m][2]);
+        }
     }
-}
+})(ShapedRecipes);

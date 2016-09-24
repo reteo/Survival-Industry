@@ -14,7 +14,7 @@ var soularium               =	"EnderIO:itemAlloy:7";
 //FusedQuartz   
 var fusedQuartz             =	"EnderIO:blockFusedQuartz:0";
 var quiteClearGlass         =	"EnderIO:blockFusedQuartz:1";
-var enlightenedFusedQuartz	=	"EnderIO:blockFusedQuartz:2";
+var enlightenedFusedQuartz  =   "EnderIO:blockFusedQuartz:2";
 var enlightenedClearGlass   =	"EnderIO:blockFusedQuartz:3";
 var darkFusedQuartz         =	"EnderIO:blockFusedQuartz:4";
 var darkClearGlass          =	"EnderIO:blockFusedQuartz:5";
