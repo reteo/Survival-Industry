@@ -5,12 +5,13 @@ The vanilla mining progression is replaced with a scale consistent with Moh's ha
 The mining progression is as follows:
 
 1. Wood can mine stone.
-2. Stone tools can mine aluminum and tin.  They can also mine lead, gold, and silver.
-3. Aluminum tools can mine copper.  They can also mine redstone.
-4. Copper tools can mine platinum.
-5. Bronze and platinum tools can mine iron and nickel.
-6. Iron and nickel tools can mine obsidian.
-7. Obsidian tools can mine emerald and diamond.
+2. Stone and flint tools can mine aluminum and tin.  They can also mine lead, gold, and silver.
+3. Aluminum tools can mine copper and platinum.  They can also mine redstone.
+4. Copper and platinum tools can mine iron and nickel.
+5. Iron, Nickel, and Bronze tools can mine everything up to this point.  Steel alloying is needed to progress.
+6. Steel tools can mine obsidian.
+7. Obsidian tools can mine quartz.
+8. Quartz tools can mine emerald and diamond.
 
 This mod provides the features of both Common Ores and Tool Repair, so it should not be included in the same pack with them.  In addition, this mini-mod also provides tools and armor made from obsidian, as obsidian is now required to mine diamonds and emeralds.
 
