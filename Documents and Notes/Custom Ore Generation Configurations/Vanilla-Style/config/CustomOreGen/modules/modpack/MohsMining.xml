@@ -1,0 +1,2331 @@
+<!-- =================================================================
+     Custom Ore Generation "Mohs Mining" Module: This configuration
+     covers silver, mountain silver, copper, mountain copper, tin,
+     mountain tin, platinum, mountain platinum, aluminum, mountain
+     aluminum, lead, mountain lead, nickel, and mountain nickel.
+     ================================================================= -->
+
+
+<!-- A JMOD mini-mod that adds the most common ores found in different
+     Minecraft mods.  Mini-mod AND configuration by Reteo. -->
+
+
+
+
+<!-- Is the "Mohs Mining" mod on the system?  Let's find out! -->
+<IfModInstalled name="MohsMining">
+
+  <!-- Starting Configuration for Custom Ore Generation. -->
+  <ConfigSection>
+
+
+
+
+
+    <!-- Setup Screen Configuration -->
+    <ConfigSection>
+      <OptionDisplayGroup name='groupMohsMining' displayName='Mohs Mining' displayState='shown'>
+        <Description>
+          Distribution options for Mohs Mining Ores.
+        </Description>
+      </OptionDisplayGroup>
+      <OptionChoice name='enableMohsMining' displayName='Handle Mohs Mining Setup?' default='true' displayState='shown_dynamic' displayGroup='groupMohsMining'>
+        <Description> Should Custom Ore Generation handle Mohs Mining ore generation? </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use Custom Ore Generation to handle Mohs Mining ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Mohs Mining ores will be handled by the mod itself.'/>
+      </OptionChoice>
+      <OptionChoice name='cleanUpMohsMining' displayName='Use Mohs Mining Cleanup?' default='true' displayState='shown_dynamic' displayGroup='groupMohsMining'>
+        <Description> Should Custom Ore Generation use the Substitution Pass to remove all instances of Mohs Mining ore from the world?  If the mod's oregen can be turned off in its configuration, then it's recommended to do so, as the substitution pass can slow the game significantly.  If this option is disabled without disabling the mod's own ore generation, you'll end up with two oregens working at once, flooding the world with ore.  Enabled by default to ensure the ores are completely removed. </Description>
+        <Choice value=':= ?true' displayValue='Yes' description='Use the substitution pass to clean up Mohs Mining ores.'/>
+        <Choice value=':= ?false' displayValue='No' description='Mohs Mining ores do not need to be cleaned up by a substitution pass.'/>
+      </OptionChoice>
+
+      <!-- Silver Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsSilverDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Silver is generated </Description>
+          <DisplayName>Mohs Mining Silver</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Silver is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsSilverFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Silver distributions </Description>
+          <DisplayName>Mohs Mining Silver Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsSilverSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Silver distributions </Description>
+          <DisplayName>Mohs Mining Silver Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Silver Configuration UI Complete -->
+
+
+      <!-- Mountain Silver Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainSilverDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Silver is generated </Description>
+          <DisplayName>Mohs Mining Mountain Silver</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreSilver")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Silver is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainSilverFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Silver distributions </Description>
+          <DisplayName>Mohs Mining Mountain Silver Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainSilverSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Silver distributions </Description>
+          <DisplayName>Mohs Mining Mountain Silver Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Silver Configuration UI Complete -->
+
+
+      <!-- Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsCopperDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Copper is generated </Description>
+          <DisplayName>Mohs Mining Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Copper distributions </Description>
+          <DisplayName>Mohs Mining Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Copper distributions </Description>
+          <DisplayName>Mohs Mining Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Copper Configuration UI Complete -->
+
+
+      <!-- Mountain Copper Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainCopperDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Copper is generated </Description>
+          <DisplayName>Mohs Mining Mountain Copper</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreCopper")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Copper is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainCopperFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Copper distributions </Description>
+          <DisplayName>Mohs Mining Mountain Copper Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainCopperSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Copper distributions </Description>
+          <DisplayName>Mohs Mining Mountain Copper Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Copper Configuration UI Complete -->
+
+
+      <!-- Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsTinDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Tin is generated </Description>
+          <DisplayName>Mohs Mining Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Tin distributions </Description>
+          <DisplayName>Mohs Mining Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsTinSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Tin distributions </Description>
+          <DisplayName>Mohs Mining Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Tin Configuration UI Complete -->
+
+
+      <!-- Mountain Tin Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainTinDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Tin is generated </Description>
+          <DisplayName>Mohs Mining Mountain Tin</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreTin")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Tin is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainTinFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Tin distributions </Description>
+          <DisplayName>Mohs Mining Mountain Tin Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainTinSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Tin distributions </Description>
+          <DisplayName>Mohs Mining Mountain Tin Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Tin Configuration UI Complete -->
+
+
+      <!-- Platinum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsPlatinumDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Platinum is generated </Description>
+          <DisplayName>Mohs Mining Platinum</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Platinum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsPlatinumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Platinum distributions </Description>
+          <DisplayName>Mohs Mining Platinum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsPlatinumSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Platinum distributions </Description>
+          <DisplayName>Mohs Mining Platinum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Platinum Configuration UI Complete -->
+
+
+      <!-- Mountain Platinum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainPlatinumDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Platinum is generated </Description>
+          <DisplayName>Mohs Mining Mountain Platinum</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:orePlatinum")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Platinum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainPlatinumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Platinum distributions </Description>
+          <DisplayName>Mohs Mining Mountain Platinum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainPlatinumSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Platinum distributions </Description>
+          <DisplayName>Mohs Mining Mountain Platinum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Platinum Configuration UI Complete -->
+
+
+      <!-- Aluminum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsAluminumDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Aluminum is generated </Description>
+          <DisplayName>Mohs Mining Aluminum</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Aluminum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsAluminumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Aluminum distributions </Description>
+          <DisplayName>Mohs Mining Aluminum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsAluminumSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Aluminum distributions </Description>
+          <DisplayName>Mohs Mining Aluminum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Aluminum Configuration UI Complete -->
+
+
+      <!-- Mountain Aluminum Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainAluminumDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Aluminum is generated </Description>
+          <DisplayName>Mohs Mining Mountain Aluminum</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreAluminum")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Aluminum is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainAluminumFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Aluminum distributions </Description>
+          <DisplayName>Mohs Mining Mountain Aluminum Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainAluminumSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Aluminum distributions </Description>
+          <DisplayName>Mohs Mining Mountain Aluminum Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Aluminum Configuration UI Complete -->
+
+
+      <!-- Lead Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsLeadDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Lead is generated </Description>
+          <DisplayName>Mohs Mining Lead</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Lead is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsLeadFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Lead distributions </Description>
+          <DisplayName>Mohs Mining Lead Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsLeadSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Lead distributions </Description>
+          <DisplayName>Mohs Mining Lead Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Lead Configuration UI Complete -->
+
+
+      <!-- Mountain Lead Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainLeadDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Lead is generated </Description>
+          <DisplayName>Mohs Mining Mountain Lead</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreLead")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Lead is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainLeadFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Lead distributions </Description>
+          <DisplayName>Mohs Mining Mountain Lead Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainLeadSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Lead distributions </Description>
+          <DisplayName>Mohs Mining Mountain Lead Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Lead Configuration UI Complete -->
+
+
+      <!-- Nickel Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsNickelDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Nickel is generated </Description>
+          <DisplayName>Mohs Mining Nickel</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Nickel is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsNickelFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Nickel distributions </Description>
+          <DisplayName>Mohs Mining Nickel Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsNickelSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Nickel distributions </Description>
+          <DisplayName>Mohs Mining Nickel Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Nickel Configuration UI Complete -->
+
+
+      <!-- Mountain Nickel Configuration UI Starting -->
+      <ConfigSection>
+        <OptionChoice name='mohsMountainNickelDist'  displayState=':= if(?enableMohsMining, "shown", "hidden")' displayGroup='groupMohsMining'>
+          <Description> Controls how Mountain Nickel is generated </Description>
+          <DisplayName>Mohs Mining Mountain Nickel</DisplayName>
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='Vanilla' displayValue='Vanilla'>
+            <Description>
+              Simulates Vanilla Minecraft.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='LayeredVeins' displayValue='Layered Veins'>
+            <Description>
+              Small, fairly rare motherlodes with 2-4 horizontal veins each.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <IfCondition condition=':= (?blockExists("MohsMining:oreNickel")) '>
+
+          <Choice value='StrategicClouds' displayValue='Strategic Clouds'>
+            <Description>
+              Large irregular clouds filled lightly with ore.
+            </Description>
+          </Choice>
+          </IfCondition>
+
+          <Choice value='none' displayValue='None' description='Mountain Nickel is not generated in the world.'/>
+        </OptionChoice>
+        <OptionNumeric name='mohsMountainNickelFreq' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Frequency multiplier for Mohs Mining Mountain Nickel distributions </Description>
+          <DisplayName>Mohs Mining Mountain Nickel Freq.</DisplayName>
+        </OptionNumeric>
+        <OptionNumeric name='mohsMountainNickelSize' default='1'  min='0' max='5' displayState=':= if(?enableMohsMining, if(?advOptions, "shown", "hidden"), "hidden")' displayGroup='groupMohsMining'>
+          <Description> Size multiplier for Mohs Mining Mountain Nickel distributions </Description>
+          <DisplayName>Mohs Mining Mountain Nickel Size</DisplayName>
+        </OptionNumeric>
+      </ConfigSection>
+      <!-- Mountain Nickel Configuration UI Complete -->
+
+    </ConfigSection>
+    <!-- Setup Screen Complete -->
+
+    <IfCondition condition=':= ?enableMohsMining'>
+
+
+
+
+      <!-- Overworld Setup Beginning -->
+
+      <IfCondition condition=':= ?COGActive'>
+
+        <!-- Starting Original "Overworld" Block Removal -->
+
+        <IfCondition condition=':= ?cleanUpMohsMining'>
+          <IfCondition condition=':= ?blockExists("minecraft:stone")'>
+            <Substitute name='mohsOverworldBlockSubstitute0' block='minecraft:stone'>
+              <Description>
+                Replace vanilla-generated ore clusters.
+              </Description>
+              <Comment>
+                The global option  deferredPopulationRange must be
+                large enough to catch all ore  clusters (>= 32).
+              </Comment>
+              <Replaces block='MohsMining:oreAluminum' weight='1.0' />
+              <Replaces block='MohsMining:oreCopper' weight='1.0' />
+              <Replaces block='MohsMining:oreLead' weight='1.0' />
+              <Replaces block='MohsMining:oreNickel' weight='1.0' />
+              <Replaces block='MohsMining:orePlatinum' weight='1.0' />
+              <Replaces block='MohsMining:oreSilver' weight='1.0' />
+              <Replaces block='MohsMining:oreTin' weight='1.0' />
+            </Substitute>
+          </IfCondition>
+        </IfCondition>
+
+        <!-- Original "Overworld" Block Removal Complete -->
+
+        <!-- Adding blocks -->
+
+        <!-- Begin Silver Generation -->
+
+        <!-- Starting Vanilla Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsSilverDist = "Vanilla"'>
+            <StandardGen name='mohsSilverStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * mohsSilverSize ' range=':= 2.67 * mohsSilverSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * mohsSilverFreq ' range=':= 1.33 * mohsSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Silver is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsSilverDist = "LayeredVeins"'>
+            <Veins name='mohsSilverVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.001 * _default_ * mohsSilverFreq ' range=':= 1.001 * _default_ * mohsSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.000 * _default_ * mohsSilverSize ' range=':= 1.000 * _default_ * mohsSilverSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.000 * _default_ ' range=':= 1.000 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsSilverSize ' range=':= _default_ * mohsSilverSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.000 * _default_ * mohsSilverSize ' range=':= 1.000 * _default_ * mohsSilverSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Silver is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsSilverDist = "StrategicClouds"'>
+            <Cloud name='mohsSilverCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.817 * _default_ * mohsSilverSize ' range=':= 0.817 * _default_ * mohsSilverSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.817 * _default_ * mohsSilverSize ' range=':= 0.817 * _default_ * mohsSilverSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.668 * _default_ * mohsSilverFreq ' range=':= 0.668 * _default_ * mohsSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsSilverHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.001 * _default_ * mohsSilverFreq  * 0.1 ' range=':= 1.001 * _default_ * mohsSilverFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Silver is complete. -->
+
+        <!-- End Silver Generation -->
+
+
+        <!-- Begin Mountain Silver Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainSilverDist = "Vanilla"'>
+            <StandardGen name='mohsMountainSilverStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * mohsMountainSilverSize ' range=':= 2.67 * mohsMountainSilverSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 2.667 * mohsMountainSilverFreq ' range=':= 1.33 * mohsMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Silver is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainSilverDist = "LayeredVeins"'>
+            <Veins name='mohsMountainSilverVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.001 * _default_ * mohsMountainSilverFreq ' range=':= 1.001 * _default_ * mohsMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.000 * _default_ * mohsMountainSilverSize ' range=':= 1.000 * _default_ * mohsMountainSilverSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.000 * _default_ ' range=':= 1.000 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainSilverSize ' range=':= _default_ * mohsMountainSilverSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.000 * _default_ * mohsMountainSilverSize ' range=':= 1.000 * _default_ * mohsMountainSilverSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Silver is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Silver. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainSilverDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainSilverCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.817 * _default_ * mohsMountainSilverSize ' range=':= 0.817 * _default_ * mohsMountainSilverSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.817 * _default_ * mohsMountainSilverSize ' range=':= 0.817 * _default_ * mohsMountainSilverSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.668 * _default_ * mohsMountainSilverFreq ' range=':= 0.668 * _default_ * mohsMountainSilverFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainSilverHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E3F2F7' drawBoundBox='false' boundBoxColor='0x60E3F2F7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreSilver' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.001 * _default_ * mohsMountainSilverFreq  * 0.1 ' range=':= 1.001 * _default_ * mohsMountainSilverFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Silver is  complete. -->
+
+        <!-- End Mountain Silver Generation -->
+
+
+        <!-- Begin Copper Generation -->
+
+        <!-- Starting Vanilla Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsCopperDist = "Vanilla"'>
+            <StandardGen name='mohsCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * mohsCopperSize ' range=':= 2.33 * mohsCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * mohsCopperFreq ' range=':= 8.0 * mohsCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Copper is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsCopperDist = "LayeredVeins"'>
+            <Veins name='mohsCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsCopperFreq ' range=':= 2.294 * _default_ * mohsCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * mohsCopperSize ' range=':= 1.148 * _default_ * mohsCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsCopperSize ' range=':= _default_ * mohsCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * mohsCopperSize ' range=':= 1.231 * _default_ * mohsCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Copper is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsCopperDist = "StrategicClouds"'>
+            <Cloud name='mohsCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.237 * _default_ * mohsCopperSize ' range=':= 1.237 * _default_ * mohsCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.237 * _default_ * mohsCopperSize ' range=':= 1.237 * _default_ * mohsCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.531 * _default_ * mohsCopperFreq ' range=':= 1.531 * _default_ * mohsCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsCopperFreq  * 0.1 ' range=':= 2.294 * _default_ * mohsCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Copper is complete. -->
+
+        <!-- End Copper Generation -->
+
+
+        <!-- Begin Mountain Copper Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainCopperDist = "Vanilla"'>
+            <StandardGen name='mohsMountainCopperStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * mohsMountainCopperSize ' range=':= 2.33 * mohsMountainCopperSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * mohsMountainCopperFreq ' range=':= 8.0 * mohsMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Copper is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainCopperDist = "LayeredVeins"'>
+            <Veins name='mohsMountainCopperVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsMountainCopperFreq ' range=':= 2.294 * _default_ * mohsMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * mohsMountainCopperSize ' range=':= 1.148 * _default_ * mohsMountainCopperSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainCopperSize ' range=':= _default_ * mohsMountainCopperSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * mohsMountainCopperSize ' range=':= 1.231 * _default_ * mohsMountainCopperSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Copper is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Copper. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainCopperDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainCopperCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.237 * _default_ * mohsMountainCopperSize ' range=':= 1.237 * _default_ * mohsMountainCopperSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.237 * _default_ * mohsMountainCopperSize ' range=':= 1.237 * _default_ * mohsMountainCopperSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.531 * _default_ * mohsMountainCopperFreq ' range=':= 1.531 * _default_ * mohsMountainCopperFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainCopperHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60FF8E2B' drawBoundBox='false' boundBoxColor='0x60FF8E2B'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreCopper' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsMountainCopperFreq  * 0.1 ' range=':= 2.294 * _default_ * mohsMountainCopperFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Copper is  complete. -->
+
+        <!-- End Mountain Copper Generation -->
+
+
+        <!-- Begin Tin Generation -->
+
+        <!-- Starting Vanilla Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsTinDist = "Vanilla"'>
+            <StandardGen name='mohsTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * mohsTinSize ' range=':= 2.33 * mohsTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 14.667 * mohsTinFreq ' range=':= 7.33 * mohsTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Tin is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsTinDist = "LayeredVeins"'>
+            <Veins name='mohsTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * mohsTinFreq ' range=':= 2.196 * _default_ * mohsTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * mohsTinSize ' range=':= 1.140 * _default_ * mohsTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsTinSize ' range=':= _default_ * mohsTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * mohsTinSize ' range=':= 1.217 * _default_ * mohsTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsTinDist = "StrategicClouds"'>
+            <Cloud name='mohsTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.211 * _default_ * mohsTinSize ' range=':= 1.211 * _default_ * mohsTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.211 * _default_ * mohsTinSize ' range=':= 1.211 * _default_ * mohsTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.466 * _default_ * mohsTinFreq ' range=':= 1.466 * _default_ * mohsTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreTin' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * mohsTinFreq  * 0.1 ' range=':= 2.196 * _default_ * mohsTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Tin is complete. -->
+
+        <!-- End Tin Generation -->
+
+
+        <!-- Begin Mountain Tin Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainTinDist = "Vanilla"'>
+            <StandardGen name='mohsMountainTinStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * mohsMountainTinSize ' range=':= 2.33 * mohsMountainTinSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 14.667 * mohsMountainTinFreq ' range=':= 7.33 * mohsMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Tin is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainTinDist = "LayeredVeins"'>
+            <Veins name='mohsMountainTinVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * mohsMountainTinFreq ' range=':= 2.196 * _default_ * mohsMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.140 * _default_ * mohsMountainTinSize ' range=':= 1.140 * _default_ * mohsMountainTinSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.482 * _default_ ' range=':= 1.482 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainTinSize ' range=':= _default_ * mohsMountainTinSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.217 * _default_ * mohsMountainTinSize ' range=':= 1.217 * _default_ * mohsMountainTinSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Tin is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain Tin. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainTinDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainTinCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreTin' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.211 * _default_ * mohsMountainTinSize ' range=':= 1.211 * _default_ * mohsMountainTinSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.211 * _default_ * mohsMountainTinSize ' range=':= 1.211 * _default_ * mohsMountainTinSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.466 * _default_ * mohsMountainTinFreq ' range=':= 1.466 * _default_ * mohsMountainTinFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainTinHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60E8E8E8' drawBoundBox='false' boundBoxColor='0x60E8E8E8'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreTin' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.196 * _default_ * mohsMountainTinFreq  * 0.1 ' range=':= 2.196 * _default_ * mohsMountainTinFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Tin is  complete. -->
+
+        <!-- End Mountain Tin Generation -->
+
+
+        <!-- Begin Platinum Generation -->
+
+        <!-- Starting Vanilla Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsPlatinumDist = "Vanilla"'>
+            <StandardGen name='mohsPlatinumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 2.667 * mohsPlatinumSize ' range=':= 1.33 * mohsPlatinumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mohsPlatinumFreq ' range=':= 0.67 * mohsPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 10.5 ' range=':= 5.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Platinum is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsPlatinumDist = "LayeredVeins"'>
+            <Veins name='mohsPlatinumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mohsPlatinumFreq ' range=':= 0.500 * _default_ * mohsPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * mohsPlatinumSize ' range=':= 0.891 * _default_ * mohsPlatinumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 10.5 ' range=':= 5.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsPlatinumSize ' range=':= _default_ * mohsPlatinumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * mohsPlatinumSize ' range=':= 0.841 * _default_ * mohsPlatinumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Platinum is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsPlatinumDist = "StrategicClouds"'>
+            <Cloud name='mohsPlatinumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.578 * _default_ * mohsPlatinumSize ' range=':= 0.578 * _default_ * mohsPlatinumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.578 * _default_ * mohsPlatinumSize ' range=':= 0.578 * _default_ * mohsPlatinumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.334 * _default_ * mohsPlatinumFreq ' range=':= 0.334 * _default_ * mohsPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 10.5 ' range=':= 5.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsPlatinumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mohsPlatinumFreq  * 0.1 ' range=':= 0.500 * _default_ * mohsPlatinumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Platinum is complete. -->
+
+        <!-- End Platinum Generation -->
+
+
+        <!-- Begin Mountain Platinum Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainPlatinumDist = "Vanilla"'>
+            <StandardGen name='mohsMountainPlatinumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 2.667 * mohsMountainPlatinumSize ' range=':= 1.33 * mohsMountainPlatinumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 1.333 * mohsMountainPlatinumFreq ' range=':= 0.67 * mohsMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 95.5 ' range=':= 16.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Platinum is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainPlatinumDist = "LayeredVeins"'>
+            <Veins name='mohsMountainPlatinumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mohsMountainPlatinumFreq ' range=':= 0.500 * _default_ * mohsMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 0.891 * _default_ * mohsMountainPlatinumSize ' range=':= 0.891 * _default_ * mohsMountainPlatinumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 95.5 ' range=':= 16.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 0.707 * _default_ ' range=':= 0.707 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainPlatinumSize ' range=':= _default_ * mohsMountainPlatinumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 0.841 * _default_ * mohsMountainPlatinumSize ' range=':= 0.841 * _default_ * mohsMountainPlatinumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Platinum is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Platinum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainPlatinumDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainPlatinumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.578 * _default_ * mohsMountainPlatinumSize ' range=':= 0.578 * _default_ * mohsMountainPlatinumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.578 * _default_ * mohsMountainPlatinumSize ' range=':= 0.578 * _default_ * mohsMountainPlatinumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.334 * _default_ * mohsMountainPlatinumFreq ' range=':= 0.334 * _default_ * mohsMountainPlatinumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 95.5 ' range=':= 16.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainPlatinumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x602D84E7' drawBoundBox='false' boundBoxColor='0x602D84E7'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:orePlatinum' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 0.500 * _default_ * mohsMountainPlatinumFreq  * 0.1 ' range=':= 0.500 * _default_ * mohsMountainPlatinumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Platinum is
+             complete. -->
+
+        <!-- End Mountain Platinum Generation -->
+
+
+        <!-- Begin Aluminum Generation -->
+
+        <!-- Starting Vanilla Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsAluminumDist = "Vanilla"'>
+            <StandardGen name='mohsAluminumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 4.667 * mohsAluminumSize ' range=':= 2.33 * mohsAluminumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * mohsAluminumFreq ' range=':= 8.0 * mohsAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Aluminum is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsAluminumDist = "LayeredVeins"'>
+            <Veins name='mohsAluminumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsAluminumFreq ' range=':= 2.294 * _default_ * mohsAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * mohsAluminumSize ' range=':= 1.148 * _default_ * mohsAluminumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsAluminumSize ' range=':= _default_ * mohsAluminumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * mohsAluminumSize ' range=':= 1.231 * _default_ * mohsAluminumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Aluminum is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsAluminumDist = "StrategicClouds"'>
+            <Cloud name='mohsAluminumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.237 * _default_ * mohsAluminumSize ' range=':= 1.237 * _default_ * mohsAluminumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.237 * _default_ * mohsAluminumSize ' range=':= 1.237 * _default_ * mohsAluminumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.531 * _default_ * mohsAluminumFreq ' range=':= 1.531 * _default_ * mohsAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 34.5 ' range=':= 29.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsAluminumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsAluminumFreq  * 0.1 ' range=':= 2.294 * _default_ * mohsAluminumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Aluminum is complete. -->
+
+        <!-- End Aluminum Generation -->
+
+
+        <!-- Begin Mountain Aluminum Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainAluminumDist = "Vanilla"'>
+            <StandardGen name='mohsMountainAluminumStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 4.667 * mohsMountainAluminumSize ' range=':= 2.33 * mohsMountainAluminumSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 16.0 * mohsMountainAluminumFreq ' range=':= 8.0 * mohsMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Aluminum is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain  Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainAluminumDist = "LayeredVeins"'>
+            <Veins name='mohsMountainAluminumVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsMountainAluminumFreq ' range=':= 2.294 * _default_ * mohsMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.148 * _default_ * mohsMountainAluminumSize ' range=':= 1.148 * _default_ * mohsMountainAluminumSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.514 * _default_ ' range=':= 1.514 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainAluminumSize ' range=':= _default_ * mohsMountainAluminumSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.231 * _default_ * mohsMountainAluminumSize ' range=':= 1.231 * _default_ * mohsMountainAluminumSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Aluminum is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Aluminum. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainAluminumDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainAluminumCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.237 * _default_ * mohsMountainAluminumSize ' range=':= 1.237 * _default_ * mohsMountainAluminumSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.237 * _default_ * mohsMountainAluminumSize ' range=':= 1.237 * _default_ * mohsMountainAluminumSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.531 * _default_ * mohsMountainAluminumFreq ' range=':= 1.531 * _default_ * mohsMountainAluminumFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 167.5 ' range=':= 88.5 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainAluminumHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60EDEDED' drawBoundBox='false' boundBoxColor='0x60EDEDED'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreAluminum' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 2.294 * _default_ * mohsMountainAluminumFreq  * 0.1 ' range=':= 2.294 * _default_ * mohsMountainAluminumFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Aluminum is
+             complete. -->
+
+        <!-- End Mountain Aluminum Generation -->
+
+
+        <!-- Begin Lead Generation -->
+
+        <!-- Starting Vanilla Preset for Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsLeadDist = "Vanilla"'>
+            <StandardGen name='mohsLeadStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * mohsLeadSize ' range=':= 2.67 * mohsLeadSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mohsLeadFreq ' range=':= 2.67 * mohsLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Lead is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsLeadDist = "LayeredVeins"'>
+            <Veins name='mohsLeadVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * mohsLeadFreq ' range=':= 1.416 * _default_ * mohsLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.060 * _default_ * mohsLeadSize ' range=':= 1.060 * _default_ * mohsLeadSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.190 * _default_ ' range=':= 1.190 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsLeadSize ' range=':= _default_ * mohsLeadSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.091 * _default_ * mohsLeadSize ' range=':= 1.091 * _default_ * mohsLeadSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Lead is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsLeadDist = "StrategicClouds"'>
+            <Cloud name='mohsLeadCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 0.972 * _default_ * mohsLeadSize ' range=':= 0.972 * _default_ * mohsLeadSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.972 * _default_ * mohsLeadSize ' range=':= 0.972 * _default_ * mohsLeadSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.945 * _default_ * mohsLeadFreq ' range=':= 0.945 * _default_ * mohsLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 20 ' range=':= 12 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsLeadHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreLead' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * mohsLeadFreq  * 0.1 ' range=':= 1.416 * _default_ * mohsLeadFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Lead is complete. -->
+
+        <!-- End Lead Generation -->
+
+
+        <!-- Begin Mountain Lead Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainLeadDist = "Vanilla"'>
+            <StandardGen name='mohsMountainLeadStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * mohsMountainLeadSize ' range=':= 2.67 * mohsMountainLeadSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 5.333 * mohsMountainLeadFreq ' range=':= 2.67 * mohsMountainLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Lead is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainLeadDist = "LayeredVeins"'>
+            <Veins name='mohsMountainLeadVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * mohsMountainLeadFreq ' range=':= 1.416 * _default_ * mohsMountainLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.060 * _default_ * mohsMountainLeadSize ' range=':= 1.060 * _default_ * mohsMountainLeadSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.190 * _default_ ' range=':= 1.190 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainLeadSize ' range=':= _default_ * mohsMountainLeadSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.091 * _default_ * mohsMountainLeadSize ' range=':= 1.091 * _default_ * mohsMountainLeadSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Lead is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Lead. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainLeadDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainLeadCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreLead' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 0.972 * _default_ * mohsMountainLeadSize ' range=':= 0.972 * _default_ * mohsMountainLeadSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 0.972 * _default_ * mohsMountainLeadSize ' range=':= 0.972 * _default_ * mohsMountainLeadSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 0.945 * _default_ * mohsMountainLeadFreq ' range=':= 0.945 * _default_ * mohsMountainLeadFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 124 ' range=':= 36 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainLeadHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60818EBE' drawBoundBox='false' boundBoxColor='0x60818EBE'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreLead' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.416 * _default_ * mohsMountainLeadFreq  * 0.1 ' range=':= 1.416 * _default_ * mohsMountainLeadFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Lead is  complete. -->
+
+        <!-- End Mountain Lead Generation -->
+
+
+        <!-- Begin Nickel Generation -->
+
+        <!-- Starting Vanilla Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsNickelDist = "Vanilla"'>
+            <StandardGen name='mohsNickelStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='Size' avg=':= 5.333 * mohsNickelSize ' range=':= 2.67 * mohsNickelSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 8.0 * mohsNickelFreq ' range=':= 4.0 * mohsNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Nickel is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsNickelDist = "LayeredVeins"'>
+            <Veins name='mohsNickelVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.734 * _default_ * mohsNickelFreq ' range=':= 1.734 * _default_ * mohsNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.096 * _default_ * mohsNickelSize ' range=':= 1.096 * _default_ * mohsNickelSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.317 * _default_ ' range=':= 1.317 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsNickelSize ' range=':= _default_ * mohsNickelSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.147 * _default_ * mohsNickelSize ' range=':= 1.147 * _default_ * mohsNickelSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Nickel is complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsNickelDist = "StrategicClouds"'>
+            <Cloud name='mohsNickelCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <Biome name='.*'  />
+              <Setting name='CloudRadius' avg=':= 1.076 * _default_ * mohsNickelSize ' range=':= 1.076 * _default_ * mohsNickelSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.076 * _default_ * mohsNickelSize ' range=':= 1.076 * _default_ * mohsNickelSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.157 * _default_ * mohsNickelFreq ' range=':= 1.157 * _default_ * mohsNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 32 ' range=':= 16 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsNickelHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.734 * _default_ * mohsNickelFreq  * 0.1 ' range=':= 1.734 * _default_ * mohsNickelFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Nickel is complete. -->
+
+        <!-- End Nickel Generation -->
+
+
+        <!-- Begin Mountain Nickel Generation -->
+
+        <!-- Starting Vanilla Preset for Mountain Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainNickelDist = "Vanilla"'>
+            <StandardGen name='mohsMountainNickelStandard'  inherits='PresetStandardGen' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                A master preset for standardgen  ore distributions.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='Size' avg=':= 5.333 * mohsMountainNickelSize ' range=':= 2.67 * mohsMountainNickelSize ' type='normal' />
+              <Setting name='Frequency' avg=':= 8.0 * mohsMountainNickelFreq ' range=':= 4.0 * mohsMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='Height' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </StandardGen>
+          </IfCondition>
+        </ConfigSection>
+        <!-- Vanilla Preset for Mountain Nickel is complete. -->
+
+
+        <!-- Starting LayeredVeins Preset for Mountain Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainNickelDist = "LayeredVeins"'>
+            <Veins name='mohsMountainNickelVeins'  inherits='PresetLayeredVeins' branchType='Bezier' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Small, fairly rare motherlodes  with 2-4 horizontal
+                veins each.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='MotherlodeFrequency' avg=':= 1.734 * _default_ * mohsMountainNickelFreq ' range=':= 1.734 * _default_ * mohsMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeSize' avg=':= 1.096 * _default_ * mohsMountainNickelSize ' range=':= 1.096 * _default_ * mohsMountainNickelSize ' type='normal' />
+              <Setting name='MotherlodeHeight' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='MotherlodeRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='BranchLength' avg=':= 1.317 * _default_ ' range=':= 1.317 * _default_ ' type='normal' />
+              <Setting name='BranchHeightLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='SegmentForkFrequency' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentForkLengthMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentLength' avg=':= _default_ * mohsMountainNickelSize ' range=':= _default_ * mohsMountainNickelSize ' type='normal' />
+              <Setting name='SegmentAngle' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentPitch' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='SegmentRadius' avg=':= 1.147 * _default_ * mohsMountainNickelSize ' range=':= 1.147 * _default_ * mohsMountainNickelSize ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+            </Veins>
+          </IfCondition>
+        </ConfigSection>
+        <!-- LayeredVeins Preset for Mountain Nickel is  complete. -->
+
+
+        <!-- Starting StrategicClouds Preset for Mountain  Nickel. -->
+        <ConfigSection>
+          <IfCondition condition=':= mohsMountainNickelDist = "StrategicClouds"'>
+            <Cloud name='mohsMountainNickelCloud'  inherits='PresetStrategicCloud' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+              <Description>
+                Large irregular clouds filled  lightly with ore.
+                These are  huge, spanning several adjacent  chunks,
+                and consequently rather  rare.  They contain a
+                sizeable  amount of ore, but it takes some  time and
+                effort to mine due to  low density. The intent for
+                strategic clouds is that the  player will need to
+                actively  search for one and then set up a  semi-
+                permanent mining base and  spend some time actually
+                mining  the ore.
+              </Description>
+              <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+              <ReplacesOre block='stone' weight='1.0' />
+              <BiomeType name='Mountain'  />
+              <Setting name='CloudRadius' avg=':= 1.076 * _default_ * mohsMountainNickelSize ' range=':= 1.076 * _default_ * mohsMountainNickelSize ' type='normal' />
+              <Setting name='CloudThickness' avg=':= 1.076 * _default_ * mohsMountainNickelSize ' range=':= 1.076 * _default_ * mohsMountainNickelSize ' type='normal' scaleTo='base' />
+              <Setting name='DistributionFrequency' avg=':= 1.157 * _default_ * mohsMountainNickelFreq ' range=':= 1.157 * _default_ * mohsMountainNickelFreq ' type='normal' scaleTo='base' />
+              <Setting name='CloudHeight' avg=':= 160 ' range=':= 48 ' type='normal' scaleTo='base' />
+              <Setting name='ParentRangeLimit' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudSizeNoise' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='CloudInclination' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreDensity' avg=':= _default_ ' range=':= _default_ ' type='normal' scaleTo='base' />
+              <Setting name='OreVolumeNoiseCutoff' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Setting name='OreRadiusMult' avg=':= _default_ ' range=':= _default_ ' type='normal' />
+              <Veins name='mohsMountainNickelHintVeins' branchType='Bezier'  inherits='PresetHintVeins' drawWireframe='true' wireframeColor='0x60D2D1B6' drawBoundBox='false' boundBoxColor='0x60D2D1B6'>
+                <Description>
+                  Single blocks, generously  scattered through all
+                  heights  (density is about that of  vanilla iron
+                  ore). They will  replace dirt and sandstone  (but
+                  not grass or sand), so  they can be found nearer to
+                  the surface than most ores.  Intened to be used as a
+                  child  distribution for large, rare  strategic
+                  deposits that would  otherwise be very difficult  to
+                  find.  Note that the  frequency is multiplied by
+                  ground level to maintain a  constant density, but
+                  not by  ore frequency because it is  assumed that
+                  the frequency of  the parent distribution will
+                  already be scaled by that.
+                </Description>
+                <OreBlock block='MohsMining:oreNickel' weight='1.0' />
+                <Replaces block='minecraft:dirt' weight='1.0' />
+                <Replaces block='minecraft:sandstone' weight='1.0' />
+                <ReplacesOre block='stone' weight='1.0' />
+                <Replaces block='minecraft:gravel' weight='1.0' />
+                <Setting name='MotherlodeFrequency' avg=':= 1.734 * _default_ * mohsMountainNickelFreq  * 0.1 ' range=':= 1.734 * _default_ * mohsMountainNickelFreq  * 0.1 ' type='normal' scaleTo='base' />
+              </Veins>
+            </Cloud>
+          </IfCondition>
+        </ConfigSection>
+        <!-- StrategicClouds Preset for Mountain Nickel is  complete. -->
+
+        <!-- End Mountain Nickel Generation -->
+
+        <!-- Finished adding blocks -->
+
+      </IfCondition>
+      <!-- Overworld Setup Complete -->
+
+    </IfCondition>
+
+  </ConfigSection>
+  <!-- Configuration for Custom Ore Generation Complete! -->
+
+</IfModInstalled>
+<!-- The "Mohs Mining" mod is now configured. -->
+
+
+
+
+
+<!-- =================================================================
+     This file was made using the Sprocket Advanced Configuration
+     Generator.  If you wish to make your own configurations for a mod
+     not currently supported by Custom Ore Generation, and you don't
+     want the hassle of writing XML, you can find the generator script
+     at its GitHub page: http://https://github.com/reteo/Sprocket
+     ================================================================= -->

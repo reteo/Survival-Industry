@@ -1,0 +1,118 @@
+31,32c31,33
+<             <OptionChoice name='spruSupplementalCavesDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+<                 <Description> Controls how Supplemental Caves is generated </Description>
+---
+>             <OptionChoice name='spruSupplementalCavesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+>                 <!-- EDITED: Changed description to match original -->
+>                 <Description> Enables/disables COG cave generation.  This does not affect the vanilla cave generator. </Description>
+36c37,39
+<                 <Choice value='CustomVeins' displayValue='Custom Veins'>
+---
+>                 <!-- EDITED: Changed display value to match original -->
+>                 <Choice value='CustomVeins' displayValue='True'>
+>                     <!-- EDITED: Changed description value to clarify option -->
+38c41
+<                         Custom vein; update this description.
+---
+>                         Enable the COG cave generation.
+43c46,47
+<                 <Choice value='none' displayValue='None' description='Supplemental Caves is not generated in the world.'/>
+---
+>                 <!-- EDITED: Changed display value and description to clarify option -->
+>                 <Choice value='none' displayValue='False' description='Disable the COG cave generation.'/>
+59c63
+<             <OptionChoice name='spruMantleDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+---
+>             <OptionChoice name='spruMantleDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+80a85,89
+>             <!-- EDITED: Added new slider to set the lava level in caves. -->
+>             <OptionNumeric name='spruMantleLevel' default='16'  min='1' max='64'    displayState=':= "shown"' displayGroup='groupSpecialRules'>
+>                 <Description> How high should the mantle be? </Description>
+>                 <DisplayName>Special Rules Mantle Level</DisplayName>
+>             </OptionNumeric>
+108a118,122
+>             <!-- EDITED: Added new slider to set the water level in caves. -->
+>             <OptionNumeric name='spruWaterTableLevel' default='8'  min='1' max='64'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+>                 <Description> How high should the water table be? </Description>
+>                 <DisplayName>Special Rules Water Table Level</DisplayName>
+>             </OptionNumeric>
+115c129
+<             <OptionChoice name='spruIgneousDikesDist'  displayState=':= "shown"' displayGroup='groupSpecialRules'>
+---
+>             <OptionChoice name='spruIgneousDikesDist' displayState=':= "shown"' displayGroup='groupSpecialRules'>
+120a135
+>                     <!-- EDITED: Described igneous dikes. -->
+122c137
+<                         Large irregular clouds filled lightly with ore.
+---
+>                         Giant intrusion of lava from the mantle in a great big bump at bedrock level.
+144,145c159,160
+<                 <Description> Controls how Clear Portal Stones is generated </Description>
+<                 <DisplayName>Special Rules Clear Portal Stones</DisplayName>
+---
+>                 <Description> Replace End Portal Stones with Cobblestone </Description>
+>                 <DisplayName>Remove End Portal Stones</DisplayName>
+148c163
+<                 <Choice value='Substitution' displayValue='Substitution'>
+---
+>                 <Choice value='Substitution' displayValue='Yes'>
+155c170
+<                 <Choice value='none' displayValue='None' description='Clear Portal Stones is not generated in the world.'/>
+---
+>                 <Choice value='none' displayValue='No' description='Clear Portal Stones is not generated in the world.'/>
+183a199
+> 
+189c205,206
+<                 <Veins name='spruSupplementalCavesVeins'   branchType='Bezier' drawWireframe='true' wireframeColor='0x60888888' drawBoundBox='false' boundBoxColor='0x60888888'>
+---
+>                 <Veins name='spruSupplementalCavesVeins'  minHeight='0'  maxHeight='60'   branchType='Bezier' drawWireframe='true' wireframeColor='0x60888888' drawBoundBox='false' boundBoxColor='0x60888888'>
+>                     <!-- EDITED: Changed description to match the original -->
+191,193c208,212
+<                         A completely custom veins design.  It is
+<                         recommended to change this text to
+<                         appropriately describe the distribution.
+---
+>                         Very large veins intended for generating caves, supplementary to the vanilla cave generator.
+>                         Note that these caves won't have lava or water springs, vines, or any of the other special 
+>                         features that the vanilla cave generator adds.  Also note that hese caves won't replace water,
+>                         to avoid carving huge holes in the ocean.
+>                         Credit: based on feedback by dyrewulf from the MC forums.
+196,198c215,218
+<                     <Replaces block='.*' weight='1' />
+<                     <Replaces block='minecraft:.*water' weight='-1' />
+<                     <Replaces block='minecraft:.*bedrock' weight='-1' />
+---
+>                     <!-- EDITED: Changed "Replaces" to "ReplacesRegexp" -->
+>                     <ReplacesRegexp block='.*' weight='1' />
+>                     <ReplacesRegexp block='minecraft:.*water' weight='-1' />
+>                     <ReplacesRegexp block='minecraft:.*bedrock' weight='-1' />
+223d242
+< 
+229c248
+<                 <Substitute name='spruMantleSubstitute'  minHeight='0'  maxHeight='16' >
+---
+>                 <Substitute name='spruMantleSubstitute'  minHeight='0'  maxHeight='8' >
+237,238c256,257
+<                     <Replaces block='minecraft:dirt' weight='1.0' />
+<                     <Replaces block='minecraft:gravel' weight='1.0' />
+---
+>                     <ReplacesOre block='dirt' weight='1.0' />
+>                     <ReplacesOre block='gravel' weight='1.0' />
+292,293c311,312
+<                     <Replaces block='minecraft:dirt' weight='1.0' />
+<                     <Replaces block='minecraft:gravel' weight='1.0' />
+---
+>                     <ReplacesOre block='dirt' weight='1.0' />
+>                     <ReplacesOre block='gravel' weight='1.0' />
+350,354c369,373
+<      This file was made using the Sprocket Advanced Configuration
+<      Generator.  If you wish to make your own configurations for a mod
+<      not currently supported by Custom Ore Generation, and you don't
+<      want the hassle of writing XML, you can find the generator script
+<      at its GitHub page: http://https://github.com/reteo/Sprocket
+---
+>      This file was made using the Sprocket Configuration Generator.
+>      If you wish to make your own configurations for a mod not
+>      currently supported by Custom Ore Generation, and you don't want
+>      the hassle of writing XML, you can find the generator script at
+>      its GitHub page: http://https://github.com/reteo/Sprocket
