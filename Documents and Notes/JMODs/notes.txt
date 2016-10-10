@@ -1,0 +1,21 @@
+Textures Needed: 
+    * Steel Chisel
+    * Steel Block
+    * Pitchblende Block
+    * CdInAg Block
+    Cherenkov Singularity = itemCherenkovsingularity (needs to be fixed)
+    JeffPeng's Morning Supreme = foodJPMorningSupreme (needs to be fixed)
+    
+    Project Red: airous light?
+    Tool Utilities: Broken Tool?
+    Pam's HarvestCraft: Chocolate Roll?
+    RFTools: Proxy Block?
+    
+    
+
+Items Missing:
+    Steel Tools
+
+Other Things to Do:
+    Ruby, Sapphire, and Peridot Armor Rebalancing
+    
