@@ -1,0 +1,12 @@
+{
+  "modid": "jmodexamples",
+  "name": "JMOD Example",
+  "description" : "Showcasing new and rarely used features of JMOD",
+  "version"	:	"1.0.5",
+  "scripts" : ["main.js"],
+  "authors"	: ["SvenKayser"],
+  "url" : "",
+  "logo" : "",
+  "credits" : ""
+
+}

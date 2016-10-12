@@ -60,4 +60,4 @@ for(var m in ores){
 
 // Add Blast Furnace alloying recipes if RotaryCraft is installed.
 if (isModLoaded("RotaryCraft"))
-    load("RotaryCraft.js");
+    loadjs("RotaryCraft.js");

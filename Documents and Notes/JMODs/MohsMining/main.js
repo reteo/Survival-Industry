@@ -27,10 +27,10 @@ addCreativeTab("MohsMining.tools","Moh's Mining: Tools and Weapons","MohsMining:
 addCreativeTab("MohsMining.armor","Moh's Mining: Armor","MohsMining:armorSilverChestplate");
 
 // Creating tool and armor material stats.
-load("materials.js");
+loadjs("materials.js");
 
 // Creating items and blocks.
-load("objects.js");
+loadjs("objects.js");
 
 // Creating and distributing ores.
-load("ores.js");
+loadjs("ores.js");
