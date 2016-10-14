@@ -44,8 +44,9 @@
     ];
         
     for (var m in loot){
-        if (loot[m][1][0] == null)
-            removeChestLoot(loot[m][0]);
-        else removeChestLoot(loot[m][0], loot[m][1]);
+        var item = loot[m];
+        if (item[1][0] == null)
+            removeChestLoot(item[0]);
+        else removeChestLoot(item[0], item[1]);
     }
 })();

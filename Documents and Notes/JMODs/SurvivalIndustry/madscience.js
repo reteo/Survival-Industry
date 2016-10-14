@@ -12,22 +12,28 @@ var ShapelessRecipes = [
 
 var ShapedRecipes = [
     // Advanced Genetics - The important machines each need a basic dictionary.
-    [1, "advancedgenetics:basicdictionary", [[null, bedrockDust, null], ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell"], [null, bedrockDust, null]], "advancedgenetics"], 
+    [1, "advancedgenetics:basicdictionary", 
+        [[null, bedrockDust, null], ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell"], [null, bedrockDust, null]], "advancedgenetics"], 
     
     // Fossils & Archaeology - The Culture Vat is needed to actually grow dinosaurs.
-    [1, "fossil:cultureVat", [["blockGlass", "dyeGreen", "blockGlass"], ["blockGlass", "listAllwater", "blockGlass"], ["ingotIron", "minecraft:bedrock", "ingotIron"]], "fossil"], 
+    [1, "fossil:cultureVat", 
+        [["blockGlass", "dyeGreen", "blockGlass"], ["blockGlass", "listAllwater", "blockGlass"], ["ingotIron", "minecraft:bedrock", "ingotIron"]], "fossil"], 
     
     // Gendustry - The mutagen tank is needed to perform any mutations.
-    [1, "gendustry:MutagenTank", [["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "minecraft:bedrock", "ingotTin"]], "gendustry"], 
+    [1, "gendustry:MutagenTank", 
+        [["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "paneGlass", "ingotTin"], ["ingotTin", "minecraft:bedrock", "ingotTin"]], "gendustry"], 
     
     //MineChem - The atomic manipulator actually does the work for this mod.
-    [1, "minechem:minechemAtomicManipulator", [["minecraft:piston", "minecraft:piston", "minecraft:piston"], ["minecraft:piston", bedrockDust, "minecraft:piston"], ["minecraft:piston", "minecraft:piston", "minecraft:piston"]], "minechem"], 
+    [1, "minechem:minechemAtomicManipulator", 
+        [["minecraft:piston", "minecraft:piston", "minecraft:piston"], ["minecraft:piston", bedrockDust, "minecraft:piston"], ["minecraft:piston", "minecraft:piston", "minecraft:piston"]], "minechem"], 
     
     // Invasion Mod - The phase crystal is needed to make all the technology in this pack, including the nexus.
-    [1, "mod_Invasion:phaseCrystal", [[null, "dyeBlue", null], ["dustRedstone", bedrockDust, "dustRedstone"], [null, "dyeBlue", null]], "mod_Invasion"], 
+    [1, "mod_Invasion:phaseCrystal", 
+        [[null, "dyeBlue", null], ["dustRedstone", bedrockDust, "dustRedstone"], [null, "dyeBlue", null]], "mod_Invasion"], 
     
     // RFTools - The machine frame is needed for all RFTools machinery.
-    [1, "rftools:machineFrame", [["ingotIron", bedrockDust, "ingotIron"], ["nuggetGold", null, "nuggetGold"], ["ingotIron", bedrockDust, "ingotIron"]], "rftools"], 
+    [1, "rftools:machineFrame", 
+        [["ingotIron", bedrockDust, "ingotIron"], ["nuggetGold", null, "nuggetGold"], ["ingotIron", bedrockDust, "ingotIron"]], "rftools"], 
 ];
 
   
@@ -36,11 +42,12 @@ var ShapedRecipes = [
 // Code for making shapeless recipes.
 (function(recipes){
     for (var m in recipes) {
-        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+        var recipe = recipes[m];
+        if (recipe[3] == null || isModLoaded(recipe[3])) {
             var quantity="";
-            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
-            removeRecipes(recipes[m][1]);
-            addShapelessRecipe(recipes[m][1]+quantity, recipes[m][2]);
+            if (recipe[0] > 1) quantity = "@"+recipe[0];
+            removeRecipes(recipe[1]);
+            addShapelessRecipe(recipe[1]+quantity, recipe[2]);
         }
     }
 })(ShapelessRecipes);
@@ -48,11 +55,12 @@ var ShapedRecipes = [
 // Code for making shaped recipes.
 (function(recipes){
     for (var m in ShapedRecipes) {
-        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+        var recipe = recipes[m];
+        if (recipe[3] == null || isModLoaded(recipe[3])) {
             var quantity="";
-            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
-            removeRecipes(recipes[m][1]);
-            addShapedRecipe(recipes[m][1]+quantity, recipes[m][2]);
+            if (recipe[0] > 1) quantity = "@"+recipe[0];
+            removeRecipes(recipe[1]);
+            addShapedRecipe(recipe[1]+quantity, recipe[2]);
         }
     }
 })(ShapedRecipes);
