@@ -62,11 +62,12 @@ if (isModLoaded("OreFlowers")) {
 // Code for making shapeless recipes.
 (function(recipes){
     for (var m in recipes) {
-        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+        var recipe = recipes[m];
+        if (recipe[3] == null || isModLoaded(recipe[3])) {
             var quantity="";
-            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
-            removeRecipes(recipes[m][1]);
-            addShapelessRecipe(recipes[m][1]+quantity, recipes[m][2]);
+            if (recipe[0] > 1) quantity = "@"+recipe[0];
+            removeRecipes(recipe[1]);
+            addShapelessRecipe(recipe[1]+quantity, recipe[2]);
         }
     }
 })(ShapelessRecipes);
@@ -74,11 +75,12 @@ if (isModLoaded("OreFlowers")) {
 // Code for making shaped recipes.
 (function(recipes){
     for (var m in recipes) {
-        if (recipes[m][3] == null || isModLoaded(recipes[m][3])) {
+        var recipe = recipes[m];
+        if (recipe[3] == null || isModLoaded(recipe[3])) {
             var quantity="";
-            if (recipes[m][0] > 1) quantity = "@"+recipes[m][0];
-            removeRecipes(recipes[m][1]);
-            addShapedRecipe(recipes[m][1]+quantity, recipes[m][2]);
+            if (recipe[0] > 1) quantity = "@"+recipe[0];
+            removeRecipes(recipe[1]);
+            addShapedRecipe(recipe[1]+quantity, recipe[2]);
         }
     }
 })(ShapedRecipes);

@@ -4,7 +4,7 @@ hives are prevented from loading. */
 
 // The list columns are: blockID, oredict, crafting?, smelting?, [tooltip ID, # of lines]
 (function(){
-    var purge = [
+    var purges = [
         ["harvestcraft:beehive", [null], false, false, ["forestrybees", 2]],
         ["harvestcraft:apiary", [null], true, false, ["forestrybees", 2]],
         ["harvestcraft:grubItem", [null], false, false, ["forestrybees", 2]],
@@ -17,34 +17,38 @@ hives are prevented from loading. */
     ];
 
     // Now for the purge.
-    for (var m in purge) {
-        hideFromNEI(purge[m][0]);
-        if (purge[m][1][0] != null) // Remove ore dictionary entries
-            for (i in purge[m][1])
-                removeOreDict(purge[m][0],purge[m][1][i]);
-        if (purge[m][2] == true) // Remove crafting bench recipe
-            removeRecipes(purge[m][0]);
-        if (purge[m][3] == true) // Remove furnace recipe
-            removeSmeltingRecipes(purge[m][0]);
-        if (purge[m][4][0] != null) // Add tooltips referencing the removal.
-            for (var i in purge[m][4][1])
-                addToolTip(purge[m][0], ["info.SurvivalIndustry.tooltips." + purge[m][4][0] + i]);
+    for (var m in purges) {
+        var purge = purges[m];
+        
+        hideFromNEI(purge[0]);
+        if (purge[1][0] != null) // Remove ore dictionary entries
+            for (i in purge[1])
+                removeOreDict(purge[0],purge[1][i]);
+        if (purge[2] == true) // Remove crafting bench recipe
+            removeRecipes(purge[0]);
+        if (purge[3] == true) // Remove furnace recipe
+            removeSmeltingRecipes(purge[0]);
+        if (purge[4][0] != null) // Add tooltips referencing the removal.
+            for (var i in purge[4][1])
+                addToolTip(purge[0], ["info.SurvivalIndustry.tooltips." + purge[4][0] + i]);
     }
 })();
 
 // Now to do some Ore Dictionary Merging.
 (function(){
-    var update = [
+    var updates = [
         ["Forestry:beeQueenGE", ["beeQueen"]],
-        ["beeComb", ["materialHoneycomb", "materialWaxcomb"]],
-        ["dropHoney", ["foodHoneydrop","listAllSugar"]],
-        ["itemBeeswax", ["materialPressedwax"]]
+        ["beeComb",             ["materialHoneycomb", "materialWaxcomb"]],
+        ["dropHoney",           ["foodHoneydrop","listAllSugar"]],
+        ["itemBeeswax",         ["materialPressedwax"]]
     ];
     
-    for (var m in update)
-        if (update[m][1][0] != null) // Merge ore dictionary entries
-            for (i in update[m][1])
-                addOreDict(update[m][1][0], update[m][1][i]);
+    for (var m in updates)
+        var update = updates[m];
+    
+        if (update[1][0] != null) // Merge ore dictionary entries
+            for (i in update[1])
+                addOreDict(update[1][0], update[1][i]);
 })();
 
 // Finally, let's remake some recipes to fit the changes.
@@ -57,7 +61,9 @@ hives are prevented from loading. */
     ];
     
     for (m in recipes){
-        removeRecipes(recipes[m][0]);
-        addShapelessRecipe(recipes[m][0], recipes[m][1]);
+        var recipe = recipes[m];
+        
+        removeRecipes(recipe[0]);
+        addShapelessRecipe(recipe[0], recipe[1]);
     }   
 })();

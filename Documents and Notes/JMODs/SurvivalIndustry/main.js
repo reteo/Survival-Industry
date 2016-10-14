@@ -6,7 +6,8 @@
 
 // Now we handle the basic settings.
 // Finally, make Sync obey progression gating.
-Sync.preventRecipeReload(true);
+if(isModLoaded("Sync"))
+    Sync.preventRecipeReload(true);
 
 // Let's make a creative tab for Survival Industry.
 addCreativeTab("SurvivalIndustry.general","Survival Industry","SurvivalIndustry:itemCherenkovSingularity");
