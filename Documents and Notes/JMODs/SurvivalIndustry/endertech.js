@@ -24,6 +24,22 @@ var ShapedRecipes = [
     [1, "ExtraUtilities:decorativeBlock1:1", 
         [[null, "blockObsidian", null ], ["blockObsidian", cherenkov, "blockObsidian" ], [null, "blockObsidian", null ]], "ExtraUtilities"], 
         
+    // Ender Utilities
+    [3, "enderutilities:enderpart:20",
+        [["stickWood", "stickWood", "stickWood"], [cherenkov, cherenkov, cherenkov], ["stickWood", "stickWood", "stickWood"]], "enderutilities"],
+    [3, "enderutilities:enderpart:21",
+        [["minecraft:string", "minecraft:string", "minecraft:string"], ["materialLeather", cherenkov, "materialLeather"], ["minecraft:string", "minecraft:string", "minecraft:string"]], "enderutilities"],
+    [1, "enderutilities:enderpearlreusable",
+        [["nuggetGold", "pearlEnder", "nuggetGold"], [cherenkov, "blockRedstone", cherenkov ], ["nuggetGold", "pearlEnder", "nuggetGold"]], "enderutilities"],
+    [4, "enderutilities:enderarrow",
+        [[null, "nuggetGold", cherenkov ],  [null, "minecraft:arrow", "nuggetGold" ],  ["minecraft:arrow", null, null ]], "enderutilities"],
+    [3, "enderutilities:enderpart",
+        [["ingotIron", "ingotIron", "ingotIron" ], [cherenkov, cherenkov, cherenkov ],  ["ingotIron", "ingotIron", "ingotIron" ]], "enderutilities"],
+    [3, "enderutilities:enderpart:1",
+        [["ingotGold", "ingotGold", "ingotGold" ], [cherenkov, cherenkov, cherenkov ],  ["ingotIron", "ingotIron", "ingotIron" ]], "enderutilities"],
+    [3, "enderutilities:enderpart:2",
+        [["ingotIron", cherenkov, "ingotIron" ], ["ingotGold", "gemDiamond", "ingotGold" ], ["blockObsidian", cherenkov, "blockObsidian" ]], "enderutilities"],
+        
     // The end portal stone, specifically to allow players to make their own end portals.
     [1, "minecraft:end_portal_frame", 
         [[cherenkov, cherenkov, cherenkov], [cherenkov, "mod_Invasion:riftFlux", cherenkov], [cherenkov, cherenkov, cherenkov]], null], 

@@ -20,6 +20,9 @@ var oreDictAssign = [
     [["minecraft:flint"], ["itemFlint"], null],
     [["minecraft:obsidian"], ["blockObsidian"], null],
     [["minecraft:leather"], ["materialLeather"], null],
+    [["enderutilities:enderpart:0"], ["enderAlloyBasic"], null],
+    [["enderutilities:enderpart:1"], ["enderAlloyEnhanced"], null],
+    [["enderutilities:enderpart:2"], ["enderAlloyAdvanced"], null],
     
     // Fertilizers should be oredicted.  "fertilizerOrganic" should be limited to materials gained from dead creatures and plants.
     [["minecraft:dye:15"], ["fertilizer", "itemFertilizer", "fertilizerOrganic"], null],
