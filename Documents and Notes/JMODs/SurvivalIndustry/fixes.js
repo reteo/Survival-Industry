@@ -24,13 +24,16 @@ var ShapedRecipes = [
     [1, "GardenStuff:lattice_wood:3", [[null, "stickWood", null ], ["stickWood", "minecraft:planks:3", "stickWood" ], [null, "stickWood", null ]], "GardenStuff"], 
     [1, "GardenStuff:lattice_wood:4", [[null, "stickWood", null ], ["stickWood", "minecraft:planks:4", "stickWood" ], [null, "stickWood", null ]], "GardenStuff"], 
     [1, "GardenStuff:lattice_wood:5", [[null, "stickWood", null ], ["stickWood", "minecraft:planks:5", "stickWood" ], [null, "stickWood", null ]], "GardenStuff"], 
+    // The Random Things fertilizer is too specific.  Let's oredict that sucker.
+    [1, "RandomThings:fertilizedDirt", [["itemFertilizer", "materialRotten", "itemFertilizer" ], ["materialRotten", "minecraft:dirt", "materialRotten" ], ["itemFertilizer", "materialRotten", "itemFertilizer" ]], "RandomThings"]
+];
+
+var AdditionalShapedRecipes = [
     // Pam's mods have cooking utensils, but not earthenware.  Let's fix that, using flint for bladed utensils.
     [1, "harvestcraft:potItem", [["stickWood", "ingotBrick", "ingotBrick" ], [null, "ingotBrick", "ingotBrick" ], [null, null, null ]], "harvestcraft"], 
     [1, "harvestcraft:skilletItem", [["ingotBrick", null, null ], [null, "ingotBrick", null ], [null, null, "stickWood" ]], "harvestcraft"], 
     [1, "harvestcraft:saucepanItem", [["ingotBrick", null, null ], [null, "stickWood", null ], [null, null, null ]], "harvestcraft"], 
-    [1, "harvestcraft:cuttingboardItem", [["itemFlint", null, null ], [null, "stickWood", null ], [null, null, "plankWood" ]], "harvestcraft"], 
-    // The Random Things fertilizer is too specific.  Let's oredict that sucker.
-    [1, "RandomThings:fertilizedDirt", [["itemFertilizer", "materialRotten", "itemFertilizer" ], ["materialRotten", "minecraft:dirt", "materialRotten" ], ["itemFertilizer", "materialRotten", "itemFertilizer" ]], "RandomThings"]
+    [1, "harvestcraft:cuttingboardItem", [["itemFlint", null, null ], [null, "stickWood", null ], [null, null, "plankWood" ]], "harvestcraft"]
 ];
 
 
@@ -84,3 +87,15 @@ if (isModLoaded("OreFlowers")) {
         }
     }
 })(ShapedRecipes);
+
+// Code for making shaped recipes.
+(function(recipes){
+    for (var m in recipes) {
+        var recipe = recipes[m];
+        if (recipe[3] == null || isModLoaded(recipe[3])) {
+            var quantity="";
+            if (recipe[0] > 1) quantity = "@"+recipe[0];
+            addShapedRecipe(recipe[1]+quantity, recipe[2]);
+        }
+    }
+})(AdditionalShapedRecipes);
