@@ -1,0 +1,10 @@
+tile.enchantmentTable.name=Modification Table
+item.enchantedBook.name=Modification Manual
+container.enchant=Modify
+container.repair.cost=Modification Cost: %1$d
+achievement.enchantments=Modifier
+achievement.enchantments.desc=Construct a modification table
+achievement.bookcase.desc=Build some bookshelves to supplement your modification table
+commands.enchant.notFound=There is no such modification with ID %d
+commands.enchant.cantEnchant=The selected modification can't be added to the target item
+commands.enchant.success=Modification succeeded

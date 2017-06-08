@@ -1,0 +1,11 @@
+{
+  "modid": "SimpleWoodenBucket",
+  "name": "Simple Wooden Bucket",
+  "description" : "Adds a wooden bucket that can hold water and milk.  That's all.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "SimpleWoodenBucket.png",
+  "credits" : "JeffPengMC for the work he did in JMOD and si.core."
+}

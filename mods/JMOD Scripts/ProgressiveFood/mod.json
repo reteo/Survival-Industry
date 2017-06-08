@@ -1,0 +1,11 @@
+{
+  "modid": "ProgressiveFood",
+  "name": "Progressive Food",
+  "description" : "Food is created and calculated for its hunger and saturation; each ingredient adds .5 hunger, each step in making the food adds .5 saturation.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "ToolRepair.png",
+  "credits" : "JeffPengMC for the work he did in JMOD and si.core."
+}

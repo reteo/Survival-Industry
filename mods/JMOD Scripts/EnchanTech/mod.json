@@ -1,0 +1,11 @@
+{
+  "modid": "EnchanTech",
+  "name": "Enchantment Technology",
+  "description" : "Mod that replaces 'enchantment magic' with 'modification technology.'  Primarily allows enchantment to fit the theme of tech packs.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "EnchanTech.png",
+  "credits" : ""
+}
