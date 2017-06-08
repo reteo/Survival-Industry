@@ -25,7 +25,9 @@ var ShapedRecipes = [
     [1, "GardenStuff:lattice_wood:4", [[null, "stickWood", null ], ["stickWood", "minecraft:planks:4", "stickWood" ], [null, "stickWood", null ]], "GardenStuff"], 
     [1, "GardenStuff:lattice_wood:5", [[null, "stickWood", null ], ["stickWood", "minecraft:planks:5", "stickWood" ], [null, "stickWood", null ]], "GardenStuff"], 
     // The Random Things fertilizer is too specific.  Let's oredict that sucker.
-    [1, "RandomThings:fertilizedDirt", [["itemFertilizer", "materialRotten", "itemFertilizer" ], ["materialRotten", "minecraft:dirt", "materialRotten" ], ["itemFertilizer", "materialRotten", "itemFertilizer" ]], "RandomThings"]
+    [1, "RandomThings:fertilizedDirt", [["itemFertilizer", "materialRotten", "itemFertilizer" ], ["materialRotten", "minecraft:dirt", "materialRotten" ], ["itemFertilizer", "materialRotten", "itemFertilizer" ]], "RandomThings"],
+    // The fossil obsidian spikes conflict with the obsidian boots recipe from Moh's Mining.  Let's fix that.
+    [2, "fossil:obsidianSpikes", [["blockObsidian", null, "blockObsidian"], [null, null, null],  [null, null, null]], "fossil"]
 ];
 
 var AdditionalShapedRecipes = [

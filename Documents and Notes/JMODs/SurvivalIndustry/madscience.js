@@ -14,6 +14,10 @@ var ShapedRecipes = [
     // Advanced Genetics - The important machines each need a basic dictionary.
     [1, "advancedgenetics:basicdictionary", 
         [[null, bedrockDust, null], ["advancedgenetics:cell", "minecraft:book", "advancedgenetics:cell"], [null, bedrockDust, null]], "advancedgenetics"], 
+
+    // Applied Energistics - The inscriber is the gateway to this mod.
+    [1, "appliedenergistics2:tile.BlockInscriber", 
+        [["ingotIron", "minecraft:sticky_piston", "ingotIron"], ["crystalFluix", null, bedrockIngot], ["ingotIron", "minecraft:sticky_piston", "ingotIron"]], "appliedenergistics2"], 
     
     // Fossils & Archaeology - The Culture Vat is needed to actually grow dinosaurs.
     [1, "fossil:cultureVat", 
