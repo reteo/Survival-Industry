@@ -16,9 +16,9 @@ To make obsidian concrete, we need to combine obsidian with another really touch
 2. Use the grinder to make flint dust.
 3. On the crafting bench, combine obsidian and flint dusts to make obsidian cement mix.
 4. On the crafting bench, combine cobsidian cement mix and flint (not flint dust) to make obsidian concrete mix.
-4. Use the liquifaction machine to infuse the obsidian concrete mix with water to make obsidian concrete paste.
-5. Use the blast furnace at 1200°C to cook the obsidian concrete paste into obsidian concrete.
-6: Place the obsidian concrete and use the bedrock breaker to collect bedrock dust.
+5. Use the liquifaction machine to infuse the obsidian concrete mix with water to make obsidian concrete paste.
+6. Use the blast furnace at 1200°C to cook the obsidian concrete paste into obsidian concrete.
+7: Place the obsidian concrete and use the bedrock breaker to collect bedrock dust.
 
 ## Centrifuge: Replaces sieve for higher-tier materials.
 
@@ -32,56 +32,56 @@ In order to encourage RotaryCraft use, we will limit the sieve to the lower-tier
 
 Each entry shows the name of the material, it's production ratio (1:x), and the percentage chance of the drop happening.  The production ratio is used by Ex Nihilo, and the percentage is important for the Centrifuge.
 
-* Dirt:
- * Stones (1,1,2,2,3,3) (61.1%)
- * Wheat Seeds (15) (6.7%)
- * Grass Seeds (15) (6.7%)
- * Melon Seeds (32) (3.1%)
- * Pumpkin Seeds (32) (3.1%)
- * Sugarcane Seeds (32) (3.1%)
- * Carrot Seeds (64) (1.5%)
- * Potato Seeds (64) (1.5%)
- * Oak Seeds (64) (1.5%) - Called an "acorn"
- * Acacia Seeds (90) (1.1%)
- * Spruce Seeds (90) (1.1%)
- * Birch Seeds (90) (1.1%)
+Dirt:
+* Stones (1,1,2,2,3,3) (61.1%)
+* Wheat Seeds (15) (6.7%)
+* Grass Seeds (15) (6.7%)
+* Melon Seeds (32) (3.1%)
+* Pumpkin Seeds (32) (3.1%)
+* Sugarcane Seeds (32) (3.1%)
+* Carrot Seeds (64) (1.5%)
+* Potato Seeds (64) (1.5%)
+* Oak Seeds (64) (1.5%) - Called an "acorn"
+* Acacia Seeds (90) (1.1%)
+* Spruce Seeds (90) (1.1%)
+* Birch Seeds (90) (1.1%)
 
-* Gravel:
- * Flint (4) (25%)
- * Coal (8) (12.5%)
- * Lapis Lazuli (20) (5%)
- * Diamond (128) (.8%)
- * Emerald (150) (.7%)
- * "Broken" Ores
+Gravel:
+* Flint (4) (25%)
+* Coal (8) (12.5%)
+* Lapis Lazuli (20) (5%)
+* Diamond (128) (.8%)
+* Emerald (150) (.7%)
+* "Broken" Ores
 
-* Sand:
- * Cocoa Beans (32) (3.1%)
- * Cactus Seeds (32) (3.1%)
- * Jungle Seeds (64) (1.5%)
- * Mycelium Spores (128) (.8%)
- * Certus Quartz
- * "Crushed" Ores
+Sand:
+* Cocoa Beans (32) (3.1%)
+* Cactus Seeds (32) (3.1%)
+* Jungle Seeds (64) (1.5%)
+* Mycelium Spores (128) (.8%)
+* Certus Quartz
+* "Crushed" Ores
 
-* Dust:
- * Bonemeal (5) (20%)
- * Redstone (8) (12.5%)
- * Gunpowder (15) (6.7%)
- * Glowstone Dust (16) (6.3%)
- * Blaze Powder (20) (5%)
- * Certus Quartz Dust
- * Sky Stone Dust
- * "Powdered" Ores
+Dust:
+* Bonemeal (5) (20%)
+* Redstone (8) (12.5%)
+* Gunpowder (15) (6.7%)
+* Glowstone Dust (16) (6.3%)
+* Blaze Powder (20) (5%)
+* Certus Quartz Dust
+* Sky Stone Dust
+* "Powdered" Ores
 
-* Crushed Netherrack:
- * Nether "Broken" Ores
+Crushed Netherrack:
+* Nether "Broken" Ores
 
-* Soul Sand:
- * Quartz (1,3) (66.7%)
- * Nether Wart (20) (5%)
- * Ghast Tear (64) (1.6%)
+Soul Sand:
+* Quartz (1,3) (66.7%)
+* Nether Wart (20) (5%)
+* Ghast Tear (64) (1.6%)
 
-* Crushed End Stone:
- * Ender "Broken" Ores
+Crushed End Stone:
+* Ender "Broken" Ores
  
 Unlike the other materials, which are hardcoded into the mod, the ore entries are configured in the Ex Nihilo config file, and can probably be disabled with a significantly-large enough value.
 
@@ -89,27 +89,27 @@ Unlike the other materials, which are hardcoded into the mod, the ore entries ar
 
 Low-tier materials are those materials that can be mined up to iron and redstone.  This follows the logic that once you can acquire iron and redstone, you can make and power the centrifuge for the purpose of collecting higher-tier materials.  These materials will also be available from the centrifuge.
 
-* Dirt:
- * No changes
+Dirt:
+* No changes
 
-* Gravel: 
- * Flint
- * Coal
+Gravel: 
+* Flint
+* Coal
 
-* Sand:
- * Cocoa
- * Cactus Seeds
- * Jungle Sapling Seeds
- * Mycelium Spores
+Sand:
+* Cocoa
+* Cactus Seeds
+* Jungle Sapling Seeds
+* Mycelium Spores
  
-* Dust:
- * Bonemeal
- * Redstone
- * Gunpowder
+Dust:
+* Bonemeal
+* Redstone
+* Gunpowder
 
-* Soul Sand:
- * Nether Wart
- * Ghast Tear
+Soul Sand:
+* Nether Wart
+* Ghast Tear
  
 All ores will be retained at this point, since above iron, there are no more metallic ores.
 
@@ -117,47 +117,47 @@ All ores will be retained at this point, since above iron, there are no more met
 
 The high-tier materials are limited to the RotaryCraft centrifuge, which will make the centrifuge a requirement in progression through the higher tiers of the game.  This is just good sense, anyways, since the centrifuge can extract multiple items per block, as opposed to the sieve's one item per block.
 
-* Gravel:
- * Lapis Lazuli
- * Diamond
- * Emerald
+Gravel:
+* Lapis Lazuli
+* Diamond
+* Emerald
 
-* Soul Sand:
- * Quartz
+Soul Sand:
+* Quartz
 
-* Dust:
- * Glowstone Dust
- * Blaze Powder
+Dust:
+* Glowstone Dust
+* Blaze Powder
 
 ### Centrifuge-specific extractions
 
 The RotaryCraft centrifuge is not limited to the materials the sieve is capable of; RotaryCraft can also extract additional materials from blocks using the centrifuge:
 
-* Dirt:
- * Grass (.06%) - Not grass block, just grass usually seen above such blocks
- * Sand (80%)
- * Clay (10%)
- * Melon Seeds (.13%)
- * Wheat Seeds (2%)
- * Pumpkin Seeds (.13%)
- * Oak sapling (.03%)
+Dirt:
+* Grass (.06%) - Not grass block, just grass usually seen above such blocks
+* Sand (80%)
+* Clay (10%)
+* Melon Seeds (.13%)
+* Wheat Seeds (2%)
+* Pumpkin Seeds (.13%)
+* Oak sapling (.03%)
 
-* Gravel:
- * Sand (75%)
- * Flint (50%)
+Gravel:
+* Sand (75%)
+* Flint (50%)
 
-* Sand:
- * Silicon (10%)
- * Saltpeter (10%)
- * Redstone (1%)
+Sand:
+* Silicon (10%)
+* Saltpeter (10%)
+* Redstone (1%)
 
-* Clay:
- * Grass (2.5%)
- * Silicon Powder (75%)
- * Dirt (100%)
- * Iron Flakes (.5%)
- * Gold Flakes (.2%)
- * Water (40%) - Fluid goes into centrifuge's reservoir for piping.
+Clay:
+* Grass (2.5%)
+* Silicon Powder (75%)
+* Dirt (100%)
+* Iron Flakes (.5%)
+* Gold Flakes (.2%)
+* Water (40%) - Fluid goes into centrifuge's reservoir for piping.
 
 This alone means that you can make significantly more progress using the centrifuge than the sieve, so making it as soon as possible is preferable.
 
