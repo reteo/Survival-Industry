@@ -113,7 +113,7 @@ Soul Sand:
  
 All ores will be retained at this point, since:
 1. In Survival Industry, Iron is the hardest minable metal.
-2: In other modpacks using RotaryCaft: if copper isn't available, gold is required to make the steam engine.
+2. In other modpacks using RotaryCaft: if copper isn't available, gold is required to make the steam engine.
 
 ### High-Tier Materials (available only through RotaryCraft's centrifuge)
 
