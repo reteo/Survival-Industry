@@ -111,7 +111,7 @@ Soul Sand:
 * Nether Wart
 * Ghast Tear
  
-All ores will be retained at this point, since:
+All metal ores will be retained at this point, since:
 1. In Survival Industry, Iron is the hardest minable metal.
 2. In other modpacks using RotaryCaft: if copper isn't available, gold is required to make the steam engine.
 
