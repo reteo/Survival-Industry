@@ -1,0 +1,12 @@
+{
+  "modid": "ModAlter",
+  "name": "Mod Alter",
+  "description" : "Custom Recipes for various mods' Machines and Materials.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "https://github.com/reteo/JMOD-Collection",
+  "logo" : "RotaryTweaks.png",
+  "credits" : "JeffPengMC for the work he did in JMOD and si.core, as well as all the modders who put so much work into making modded Minecraft the bounty that it is!"
+  
+}

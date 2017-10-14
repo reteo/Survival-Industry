@@ -1,0 +1,4 @@
+Needs:
+* Dusts for AE/Thermal Expansion (dustMetal)
+* Crushed Ores for Railcraft (crushedMetal)
+* 

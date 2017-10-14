@@ -1,0 +1,12 @@
+{
+  "modid": "JustDyes",
+  "name": "Just Dyes",
+  "description" : "Provides single-purpose, origin-neutral dyes for modpacks.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "JustDyes.png",
+  "credits" : "JeffPengMC for the work he did in JMOD and si.core."
+  
+}

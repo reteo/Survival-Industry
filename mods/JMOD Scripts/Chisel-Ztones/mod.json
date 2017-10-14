@@ -1,0 +1,12 @@
+{
+  "modid": "ChiselZtones",
+  "name": "Chisel Ztones",
+  "description" : "Replaces Ztones' recipes to use Chisel instead.",
+  "version"	:	"1.0.1",
+  "scripts" : ["main.js"],
+  "authors"	: ["Reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "ChiselZtones.png",
+  "credits" : "BBoldt for the original MineTweaker script, Chizzle Z-Tizzle and JeffPengMC for the work he did in JMOD and si.core."
+  
+}

@@ -1,0 +1,11 @@
+{
+  "modid": "ExMachina",
+  "name": "Ex Machina",
+  "description" : "Integrates RotaryCraft and Ex Nihilo into a seamless skyblock experience.",
+  "version"	:	"1.0",
+  "scripts" : ["main.js"],
+  "authors"	: ["reteo"],
+  "url" : "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/2446203-modpack-recipe-survival-industry-a-progressive?comment=187",
+  "logo" : "ExMachina.png",
+  "credits" : "JeffPengMC for the work he did in JMOD."
+}
