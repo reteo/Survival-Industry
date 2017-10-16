@@ -101,3 +101,25 @@ if (isModLoaded("OreFlowers")) {
         }
     }
 })(AdditionalShapedRecipes);
+
+
+// Vegan Option Plant Milk fix
+// The Vegan Option's Plant Mil Recipe introduces an item dupe bug with RoCs Autocrafter, let's work around that
+(function(){
+	if(isModLoaded("VeganOption")){									// if Vegan Option is loaded
+		removeRecipes("VeganOption:bucketPlantMilk"); 					// purge the old recipe
+		addItem("CoreItem").set({
+			name: "itemPlantMilk",
+			stacksize: 64,
+			tab : "SurvivalIndustry.general"
+		});																// add our item replacement
+		addOreDict("SurvivalIndustry:itemPlantMilk","listAllmilk"); 	// assign the new item to the proper ore dictionary
+		addShapelessRecipe("SurvivalIndustry:itemPlantMilk", 
+			["listAllwater","listAllsugar","sourcePlantMilk@2"]);		// and add a proper shapeless recipe
+
+	}
+
+})();
+
+
+
