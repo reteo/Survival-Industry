@@ -1,0 +1,60 @@
+itemGroup.SurvivalIndustry.general=Survival Industry
+itemGroup.SurvivalIndustry.food=Survival Industry Food
+
+item.SurvivalIndustry.itemCherenkovSingularity.name=Cherenkov Singularity
+item.SurvivalIndustry.itemCTEnblem.name=Survival Industry Bragging Rights
+
+item.SurvivalIndustry.foodJPMorningSupreme.name=JeffPeng's Morning Supreme
+
+info.SurvivalIndustry.tntsafe=Safe from most explosions
+
+info.SurvivalIndustry.tooltips.jpsupreme1=Nuthin' like fried eggs'n'cheese in
+info.SurvivalIndustry.tooltips.jpsupreme2=a crisp sandwich with a fresh cup
+info.SurvivalIndustry.tooltips.jpsupreme3=of Café Latte to start the day!
+
+info.SurvivalIndustry.tooltips.enginedisable1=§eAll non-RotaryCraft engines
+info.SurvivalIndustry.tooltips.enginedisable2=§ehave been disabled in the
+info.SurvivalIndustry.tooltips.enginedisable3=§eSurvival Industry modpack.
+
+info.SurvivalIndustry.tooltips.powerstoredisable1=§eAll non-RotaryCraft power storage
+info.SurvivalIndustry.tooltips.powerstoredisable2=§eblocks have been disabled in the
+info.SurvivalIndustry.tooltips.powerstoredisable3=§eSurvival Industry modpack.
+
+info.SurvivalIndustry.tooltips.miningmachinedisable1=§eAll non-RotaryCraft mining machine
+info.SurvivalIndustry.tooltips.miningmachinedisable2=§eblocks have been disabled in the
+info.SurvivalIndustry.tooltips.miningmachinedisable3=§eSurvival Industry modpack.
+
+info.SurvivalIndustry.tooltips.autocrafterdisable1=§eAll non-RotaryCraft auto-crafter
+info.SurvivalIndustry.tooltips.autocrafterdisable2=§eblocks have been disabled in the
+info.SurvivalIndustry.tooltips.autocrafterdisable3=§eSurvival Industry modpack.
+
+info.SurvivalIndustry.tooltips.sagmilldisable1=§eThe Ender IO SAG Mill has been
+info.SurvivalIndustry.tooltips.sagmilldisable2=§edisabled by the Survival Industry
+info.SurvivalIndustry.tooltips.sagmilldisable3=§emodpack in favor of the RotaryCraft
+info.SurvivalIndustry.tooltips.sagmilldisable3=§egrinder.
+
+info.SurvivalIndustry.tooltips.alloysmelterdisable1=§eThe Ender IO Alloy Smelter has been
+info.SurvivalIndustry.tooltips.alloysmelterdisable2=§edisabled by the Survival Industry
+info.SurvivalIndustry.tooltips.alloysmelterdisable3=§emodpack in favor of the RotaryCraft
+info.SurvivalIndustry.tooltips.alloysmelterdisable4=§eblast furnace.
+
+info.SurvivalIndustry.tooltips.farmingstationdisable1=§eThe Ender IO Farming Station has been
+info.SurvivalIndustry.tooltips.farmingstationdisable2=§edisabled by the Survival Industry
+info.SurvivalIndustry.tooltips.farmingstationdisable3=§emodpack in favor of RotaryCraft
+info.SurvivalIndustry.tooltips.farmingstationdisable4=§efans, sprinklers, and item vacuum.
+
+info.SurvivalIndustry.tooltips.killerjoedisable1=§eThe Ender IO Killer Joe has been
+info.SurvivalIndustry.tooltips.killerjoedisable2=§edisabled by the Survival Industry
+info.SurvivalIndustry.tooltips.killerjoedisable3=§emodpack in favor of RotaryCraft
+info.SurvivalIndustry.tooltips.killerjoedisable4=§eMob Harvesters.
+
+info.SurvivalIndustry.tooltips.vatdisable1=§eThe Ender IO Vat has been disabled
+info.SurvivalIndustry.tooltips.vatdisable2=§eby the Survival Industry modpack,
+info.SurvivalIndustry.tooltips.vatdisable3=§esince all engines were also disabled.
+
+info.SurvivalIndustry.tooltips.fueldisable1=§eAll EnderIO fuels have been
+info.SurvivalIndustry.tooltips.fueldisable2=§edisabled by the Survival Industry
+info.SurvivalIndustry.tooltips.fueldisable3=§emodpack.
+
+info.SurvivalIndustry.tooltips.manganesedisable1=§eManganese has been disabled by the
+info.SurvivalIndustry.tooltips.manganesedisable2=§eSurvival Industry Modpack
