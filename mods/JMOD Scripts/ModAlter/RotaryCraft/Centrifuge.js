@@ -4,6 +4,10 @@
 
 // Legend: Input, Output, chance (in percent)
 
+/* Any changes to the outputs of the centrifuge wipes out its original
+ * outputs.  We need to prevent this by ensuring the centrifuge recipe
+ * includes all original outputs as well.
+
 var itemOutput = [
     ["sand", [["dustRedstone", 1], ["dustSaltpeter", 10]]]
 ];

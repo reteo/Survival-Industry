@@ -51,14 +51,14 @@ var alloys = [
 // First, alloy ingots with ingots to make 2 ingots each.
 for(var m in alloys){
     var alloy = alloys[m];
-	  vanillaingotworks.addAlloy("ingot" + alloy[1][0], "ingot" + alloy[1][1], "ingot" + alloy[0], 2);
+	  VIW.addAlloy("ingot" + alloy[1][0], "ingot" + alloy[1][1], "ingot" + alloy[0], 2);
 }
 
 
 // Next, alloy ores with ores to make 4 ingots each.
 for(var m in alloys){
     var alloy = alloys[m];
-	  vanillaingotworks.addAlloy("ore" + alloy[1][0], "ore" + alloy[1][1], "ingot" + alloy[0], 4);
+	  VIW.addAlloy("ore" + alloy[1][0], "ore" + alloy[1][1], "ingot" + alloy[0], 4);
 }
 
 
@@ -66,5 +66,5 @@ for(var m in alloys){
 for(var m in ores){
     var ore = ores[m];
     if ((ore[1] == null) || isModLoaded(ore[1]))
-        vanillaingotworks.addAlloy("ore" + ore[0], "ingot" + ore[0], 2);
+        VIW.addAlloy("ore" + ore[0], "ingot" + ore[0], 2);
 }
