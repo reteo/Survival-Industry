@@ -20,7 +20,7 @@ hives are prevented from loading. */
     for (var m in purges) {
         var purge = purges[m];
         
-        hideFromNEI(purge[0]);
+        NEI.hideItem(purge[0]);
         if (purge[1][0] != null) // Remove ore dictionary entries
             for (i in purge[1])
                 removeOreDict(purge[0],purge[1][i]);

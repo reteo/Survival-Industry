@@ -106,7 +106,7 @@
     for (var m in purges) {
         var purge = purges[m];
 	if (purge[4] == true) // Hide from "Not Enough Items"
-	    hideFromNEI(purge[0]);
+	    NEI.hideItem(purge[0]);
         if (purge[1] != null) // Remove ore dictionary entry
             removeOreDict(purge[0],purge[1]);
         if (purge[2] == true) // Remove crafting bench recipe
