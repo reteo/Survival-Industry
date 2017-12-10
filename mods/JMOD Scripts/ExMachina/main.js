@@ -11,3 +11,14 @@
  */
 
 
+// Split material drops between sifter and centrifuge.
+
+loadjs("sifting.js");
+
+// Make ore blocks (for extractor) using stone and ore gravel.
+
+loadjs("ore-recipes.js")
+
+// Obsidian Concrete; used with Bedrock Breaker to make bedrock dust.
+
+loadjs("obsidian-concrete.js");

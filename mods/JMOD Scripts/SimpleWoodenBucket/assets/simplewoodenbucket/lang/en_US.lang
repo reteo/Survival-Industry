@@ -1,5 +1,5 @@
 itemGroup.SimpleWoodenBucket.general=Simple Wooden Bucket
 
-item.SimpleWoodenBucket.itemWoodenBucket.empty.name=Wooden Bucket
+item.SimpleWoodenBucket.itemWoodenBucket.name=Wooden Bucket
 item.SimpleWoodenBucket.itemWoodenBucket.water.name=Wooden Water Bucket
 item.SimpleWoodenBucket.itemWoodenBucket.milk.name=Wooden Milk Bucket

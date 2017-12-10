@@ -1,0 +1,7 @@
+itemGroup.SimpleClayBucket.general=Simple Clay Bucket
+
+item.SimpleClayBucket.itemClayBucket.name=Clay Bucket
+item.SimpleClayBucket.itemClayBucket.water.name=Clay Water Bucket
+item.SimpleClayBucket.itemClayBucket.milk.name=Clay Milk Bucket
+item.SimpleClayBucket.itemClayBucket.lava.name=Clay Lava Bucket
+item.SimpleClayBucket.itemUnfiredClayBucket.name=Unfired Clay Bucket
