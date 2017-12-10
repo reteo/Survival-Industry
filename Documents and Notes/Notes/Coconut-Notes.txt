@@ -1,0 +1,29 @@
+Notes for Survival Industry Coconut:
+
+* The skulls should be craftable into the default drops of the mobs.
+  - Skeleton skull should make bonemeal
+  - Zombie skull should make rotten flesh
+  - Enderman skull should make an ender pearl.
+  - Creeper skull should make gunpowder.
+  - Spider skull should provide a spider eye.
+  - Blaze skull should make blast powder.
+* The sieve should not be able to drop crystals; that will be the privilege of the centrifuge.
+* Food will be needed for the opening game.  Having 4 beef wellington meals in the player inventory would help; those last a long time, and need to be husbanded carefully.
+* BuildCraft is now up to version 7.1.23; see if an upgrade is required.
+* The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
+* The maps need to be re-made, using only the required mods for the pack.  This will prevent the "missing items" message when the game is started.
+* Obsidian Concrete:
+  - Grind Obsidian into dust.
+  - Mix obsidian dust and gravel.
+  - Dampen the obsidian/gravel mix in the wetter.
+  - Bake the wet obsidian concrete.
+  - Put the dry obsidian concrete block in front of the block breaker.
+* Add Vanilla Ingot Works recipes for ore dusts, ore sands, and ore gravels.
+
+
+
+
+Fixed:
+
+* For some reason, the wooden buckets are missing from the game.  I need to check the bucket plugin to make sure it's being accessed.
+* Add a Clay Bucket for early skyblock lava transport.
