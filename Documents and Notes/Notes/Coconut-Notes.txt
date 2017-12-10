@@ -1,24 +1,182 @@
 Notes for Survival Industry Coconut:
 
-* The skulls should be craftable into the default drops of the mobs.
-  - Skeleton skull should make bonemeal
-  - Zombie skull should make rotten flesh
-  - Enderman skull should make an ender pearl.
-  - Creeper skull should make gunpowder.
-  - Spider skull should provide a spider eye.
-  - Blaze skull should make blast powder.
-* The sieve should not be able to drop crystals; that will be the privilege of the centrifuge.
-* Food will be needed for the opening game.  Having 4 beef wellington meals in the player inventory would help; those last a long time, and need to be husbanded carefully.
+* Add all sieve drops to centrifuge, and ensure original centrifuge drops remain.
+  * Dirt (% chance)
+    - Sand (80) (minecraft:sand)
+    - Clay Block (10) (minecraft:clay)
+    - Stone (100, 100, 50, 50, 33, 33) (exnihilo:stone)
+    - Wheat Seeds (7) (minecraft:wheat_seeds)
+    - Grass Seeds (7) (exnihilo:seed_grass)
+    - Melon Seeds (3) (minecraft:melon_seeds)
+    - Pumpkin Seeds (3) (minecraft:pumpkin_seeds)
+    - Sugar Cane Seeds (3) (exnihilo:seed_sugar_cane)
+    - Carrot (2) (exnihilo:seed_carrot)
+    - Potato (2) (exnihilo:seed_potato)
+    - Acorn (2) (exnihilo:seed_oak)
+    - Acacia Seed (1) (exnihilo:seed_acacia)
+    - Spruce Seed (1) (exnihilo:seed_spruce)
+    - Birch Seed (1) (exnihilo:seed_birch)
+  * Sand
+    - Silicon (10) (EnderIO:itemMaterial)
+    - Saltpeter (10) (VeganOption:saltpeter)
+    - Cocoa Beans (3) (minecraft:dye:3)
+    - Cactus Seeds (3) (exnihilo:seed_cactus)
+    - Exotic Seeds (2) (exnihilo:seed_jungle)
+    - Ancient Spores (1) (exnihilo:spores)
+    - Crushed Ore: Uranium (5) (aobd:oreCrushedUranium)
+    - Crushed Ore: Cadmium (5) (aobd:oreCrushedCadmium)
+    - Crushed Ore: Indium (5) (aobd:oreCrushedIndium)
+    - Crushed Ore: Iron (20) (exnihilo:exnihilo.iron_crushed)
+    - Crushed Ore: Gold (3) (exnihilo:exnihilo.gold_crushed)
+    - Crushed Ore: Copper (6) (exnihilo:exnihilo.copper_crushed)
+    - Crushed Ore: Tin (6) (exnihilo:exnihilo.tin_crushed)
+    - Crushed Ore: Silver (2) (exnihilo:exnihilo.silver_crushed)
+    - Crushed Ore: Lead (3) (exnihilo:exnihilo.lead_crushed)
+    - Crushed Ore: Nickel (3) (exnihilo:exnihilo.nickel_crushed)
+    - Crushed Ore: Platinum (1) (exnihilo:exnihilo.platinum_crushed)
+    - Crushed Ore: Aluminum (13) (exnihilo:exnihilo.aluminum_crushed)
+    - Certus Quartz (17) (appliedenergistics2:item.ItemMultiMaterial:0)
+    - Charged Certus Quartz (1) (appliedenergistics2:item.ItemMultiMaterial:1)
+  * Gravel
+    - Flint (50) (minecraft:flint)
+    - Sand (75) (minecraft:sand)
+    - Coal (13) (minecraft:coal)
+    - Lapis Lazuli (5) (minecraft:dye:4)
+    - Diamond (1) (minecraft:diamond)
+    - Emerald (1) (minecraft:emerald)
+    - Broken Ore: Uranium (5) (aobd:oreBrokenUranium)
+    - Broken Ore: Cadmium (5) (aobd:oreBrokenCadmium)
+    - Broken Ore: Indium (5) (aobd:oreBrokenIndium)
+    - Broken Ore: Iron (20) (exnihilo:exnihilo.iron_broken)
+    - Broken Ore: Gold (3) (exnihilo:exnihilo.gold_broken)
+    - Broken Ore: Copper (6) (exnihilo:exnihilo.copper_broken)
+    - Broken Ore: Tin (6) (exnihilo:exnihilo.ender_tin_broken)
+    - Broken Ore: Silver (2) (exnihilo:exnihilo.silver_broken)
+    - Broken Ore: Lead (3) (exnihilo:exnihilo.lead_broken)
+    - Broken Ore: Nickel (3) (exnihilo:exnihilo.nickel_broken)
+    - Broken Ore: Platinum (1) (exnihilo:exnihilo.platinum_broken)
+    - Broken Ore: Aluminum (13) (exnihilo:exnihilo.aluminum_broken)
+    - Apatite (6) (Forestry:apatite)
+  * Dust
+    - Bonemeal (20) (minecraft:dye:15)
+    - Redstone (13) (minecraft:redstone)
+    - Gunpowder (7) (minecraft:gunpowder)
+    - Glowstone Dust (6) (minecraft:glowstone_dust)
+    - Blaze Powder (5) (minecraft:blaze_powder)
+    - Powdered Ore: Uranium (5) (aobd:orePowderedUranium)
+    - Powdered Ore: Cadmium (5) (aobd:orePowderedCadmium)
+    - Powdered Ore: Indium (5) (aobd:orePowderedIndium)
+    - Powdered Ore: Iron (20) (exnihilo:exnihilo.iron_powdered)
+    - Powdered Ore: Gold (3) (exnihilo:exnihilo.gold_powdered)
+    - Powdered Ore: Copper (6) (exnihilo:exnihilo.copper_powdered)
+    - Powdered Ore: Tin (6) (exnihilo:exnihilo.tin_powdered)
+    - Powdered Ore: Silver (2) (exnihilo:exnihilo.silver_powdered)
+    - Powdered Ore: Lead (3) (exnihilo:exnihilo.lead_powdered)
+    - Powdered Ore: Nickel (3) (exnihilo:exnihilo.nickel_powdered)
+    - Powdered Ore: Platinum (1) (exnihilo:exnihilo.platinum_powdered)
+    - Powdered Ore: Aluminum (13) (exnihilo:exnihilo.aluminum_powdered)
+    - Certus Quartz Dust (17) (appliedenergistics2:item.ItemMultiMaterial:2)
+    - Sky Stone Dust (13) (appliedenergistics2:item.ItemMultiMaterial:45)
+  * Soul Sand
+    - Nether Quartz (100, 33) (minecraft:quartz)
+    - Nether Wart (5) (minecraft:nether_wart)
+    - Ghast Tear (2) (minecraft:ghast_tear)
+  * Crushed Netherrack
+    - Broken Ore: Uranium (6) (aobd:oreNetherBrokenCadmium)
+    - Broken Ore: Cadmium (6) (aobd:oreNetherBrokenCadmium)
+    - Broken Ore: Indium (6) (aobd:oreNetherBrokenIndium)
+    - Broken Ore: Iron (17) (exnihilo:exnihilo.nether_iron_broken)
+    - Broken Ore: Gold (17) (exnihilo:exnihilo.nether_gold_broken)
+    - Broken Ore: Copper (10) (exnihilo:exnihilo.nether_copper_broken)
+    - Broken Ore: Nickel (10) (exnihilo:exnihilo.nether_nickel_broken)
+  * Crushed End Stone
+    - Broken Ore: Tin (10) (exnihilo:exnihilo.ender_tin_broken)
+    - Broken Ore: Silver (17) (exnihilo:exnihilo.ender_silver_broken)
+    - Broken Ore: Lead (17) (exnihilo:exnihilo.ender_lead_broken)
+    - Broken Ore: Platinum (5) (exnihilo:exnihilo.ender_platinum_broken)
+* The sieve should not be able to drop certain materials; enforcing use of centrifuge.
+  * Dust: (exnihilo:dust)
+    - Certus Quartz Dust (appliedenergistics2:item.ItemMultiMaterial:2)
+    - Blaze Powder (minecraft:blaze_powder)
+    - Glowstone Dust (minecraft:glowstone_dust)
+  * Sand: (minecraft:sand)
+    - Certus Quartz (appliedenergistics2:item.ItemMultiMaterial:0 and 1)
+  * Gravel: (minecraft:gravel)
+    - Diamond (minecraft:diamond)
+    - Emerald (minecraft:emerald)
+  * Soul Sand: (minecraft:soul_sand)
+    - Nether Quartz (minecraft:quartz)
+    - Ghast Tear (minecraft:ghast_tear)
+
+* Since the Nether is also devoid of blocks, we need a recipe for netherrack.
+  - Most likely Cobblestone + Soul Sand
+  
+* Food will be needed for the opening game.  1 stack of bread in the player inventory should help, but need to be husbanded carefully.
+
 * BuildCraft is now up to version 7.1.23; see if an upgrade is required.
+
 * The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
+
 * The maps need to be re-made, using only the required mods for the pack.  This will prevent the "missing items" message when the game is started.
+
 * Obsidian Concrete:
   - Grind Obsidian into dust.
   - Mix obsidian dust and gravel.
   - Dampen the obsidian/gravel mix in the wetter.
   - Bake the wet obsidian concrete.
   - Put the dry obsidian concrete block in front of the block breaker.
+
 * Add Vanilla Ingot Works recipes for ore dusts, ore sands, and ore gravels.
+  * 1 ore gravel = 2 ore sand = 4 ore dusts = 4 ores
+    - Ore Gravel: Uranium (aobd:oreGravelUranium)
+    - Ore Gravel: Cadmium (aobd:oreGravelCadmium)
+    - Ore Gravel: Indium (aobd:oreGravelIndium)
+    - Ore Gravel: Iron (exnihilo:iron_gravel)
+    - Ore Gravel: Gold (exnihilo:gold_gravel)
+    - Ore Gravel: Copper (exnihilo:copper_gravel)
+    - Ore Gravel: Tin (exnihilo:tin_gravel)
+    - Ore Gravel: Silver (exnihilo:silver_gravel)
+    - Ore Gravel: Nickel (exnihilo:nickel_gravel)
+    - Ore Gravel: Platinum (exnihilo:platinum_gravel)
+    - Ore Gravel: Aluminum (exnihilo:aluminum_gravel)
+    - Ore Gravel: Lead (exnihilo:lead_gravel)
+    - Ore Nether Gravel: Uranium (aobd:oreNetherGravelUranium)
+    - Ore Nether Gravel: Cadmium (aobd:oreNetherGravelCadmium)
+    - Ore Nether Gravel: Indium (aobd:oreNetherGravelIndium)
+    - Ore Nether Gravel: Iron (exnihilo:nether_iron_gravel)
+    - Ore Nether Gravel: Gold (exnihilo:nether_gold_gravel)
+    - Ore Nether Gravel: Copper (exnihilo:nether_copper_gravel)
+    - Ore Nether Gravel: Nickel (exnihilo:nether_nickel_gravel)
+    - Ore Ender Gravel: Tin (exnihilo:ender_tin_gravel)
+    - Ore Ender Gravel: Silver (exnihilo:ender_silver_gravel)
+    - Ore Ender Gravel: Platinum (exnihilo:ender_platinum_gravel)
+    - Ore Ender Gravel: Lead (exnihilo:ender_lead_gravel)
+    - Ore Sand: Uranium (aobd:oreSandUranium)
+    - Ore Sand: Cadmium (aobd:oreSandCadmium)
+    - Ore Sand: Indium (aobd:oreSandIndium)
+    - Ore Sand: Iron (exnihilo:iron_sand)
+    - Ore Sand: Gold (exnihilo:gold_sand)
+    - Ore Sand: Copper (exnihilo:copper_sand)
+    - Ore Sand: Tin (exnihilo:tin_sand)
+    - Ore Sand: Silver (exnihilo:silver_sand)
+    - Ore Sand: Nickel (exnihilo:nickel_sand)
+    - Ore Sand: Platinum (exnihilo:platinum_sand)
+    - Ore Sand: Aluminum (exnihilo:aluminum_sand)
+    - Ore Sand: Lead (exnihilo:lead_sand)
+    - Ore Dust: Uranium (aobd:oreDustUranium)
+    - Ore Dust: Cadmium (aobd:oreDustCadmium)
+    - Ore Dust: Indium (aobd:oreDustIndium)
+    - Ore Dust: Iron (exnihilo:iron_dust)
+    - Ore Dust: Gold (exnihilo:gold_dust)
+    - Ore Dust: Copper (exnihilo:copper_dust)
+    - Ore Dust: Tin (exnihilo:tin_dust)
+    - Ore Dust: Silver (exnihilo:silver_dust)
+    - Ore Dust: Nickel (exnihilo:nickel_dust)
+    - Ore Dust: Platinum (exnihilo:platinum_dust)
+    - Ore Dust: Aluminum (exnihilo:aluminum_dust)
+    - Ore Dust: Lead (exnihilo:lead_dust) 
+
+* There needs to be recipes for ores from broken ores (4 broken ore + 5 cobble = 1 ore)
 
 
 
