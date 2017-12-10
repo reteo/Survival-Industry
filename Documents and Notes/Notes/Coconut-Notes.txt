@@ -1,5 +1,7 @@
 Notes for Survival Industry Coconut:
 
+These notes mainly affect Skyblock play.
+
 * Add all sieve drops to centrifuge, and ensure original centrifuge drops remain.
   * Dirt (% chance)
     - Sand (80) (minecraft:sand)
