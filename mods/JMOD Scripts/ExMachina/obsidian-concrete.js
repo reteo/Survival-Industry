@@ -10,7 +10,7 @@ addItem("CoreItem").set({
 });
 
 // Obsidian Concrete (ExMachina:ObsidianConcrete)
-addItem("rotarycraft.DynamicBlock").set({
+addItem("RotaryCraft.DynamicBlock").set({
     name: "ObsidianConcrete",
     stacksize: 64,
     tab: "ExMachina.general",
@@ -23,4 +23,4 @@ addItem("rotarycraft.DynamicBlock").set({
 addShapelessRecipe("ExMachina:mixObsidianConcrete", ["Railcraft:dust", "minecraft:gravel"]);
 
 // Superheat in pulse jet furnace to make the final obsidian concrete.
-RotaryCraft.addPulseJetRecipe("ExMachina:wetObsidianConcrete", "ExMachina:ObsidianConcrete");
+RotaryCraft.addPulseJetRecipe("ExMachina:mixObsidianConcrete", "ExMachina:ObsidianConcrete");
