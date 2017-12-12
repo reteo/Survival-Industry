@@ -3,16 +3,17 @@
 
 /* First, create the necessary blocks to cover the steps in the production process. */
 // Obsidian Concrete Mix
-addItem("CoreItem").set({
+addBlock("CoreBlock").set({
     name: "mixObsidianConcrete",
-    stacksize: 64,
+    material: "sand",
     tab: "ExMachina.general"
 });
 
 // Obsidian Concrete (ExMachina:ObsidianConcrete)
-addItem("RotaryCraft.DynamicBlock").set({
-    name: "ObsidianConcrete",
+addBlock(".rotarycraft.DynamicBlock").set({
+    name: "blockObsidianConcrete",
     stacksize: 64,
+    material: "rock",
     tab: "ExMachina.general",
     fakebedrock: true
 });
@@ -20,7 +21,7 @@ addItem("RotaryCraft.DynamicBlock").set({
 /* Now to make the appropriate recipes. */
 
 // Combine obsidian dust and gravel to make Obsidian Concrete Mix.
-addShapelessRecipe("ExMachina:mixObsidianConcrete", ["Railcraft:dust", "minecraft:gravel"]);
+addShapelessRecipe("ExMachina:mixObsidianConcrete", ["dustObsidian", "minecraft:gravel"]);
 
 // Superheat in pulse jet furnace to make the final obsidian concrete.
-RotaryCraft.addPulseJetRecipe("ExMachina:mixObsidianConcrete", "ExMachina:ObsidianConcrete");
+RotaryCraft.addPulseJetRecipe("ExMachina:blockObsidianConcrete", "ExMachina:mixObsidianConcrete");
