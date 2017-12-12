@@ -110,24 +110,6 @@ These notes mainly affect Skyblock play.
     - Nether Quartz (minecraft:quartz)
     - Ghast Tear (minecraft:ghast_tear)
 
-* Since the Nether is also devoid of blocks, we need a recipe for netherrack.
-  - Most likely Cobblestone + Soul Sand
-  
-* Food will be needed for the opening game.  1 stack of bread in the player inventory should help, but need to be husbanded carefully.
-
-* BuildCraft is now up to version 7.1.23; see if an upgrade is required.
-
-* The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
-
-* The maps need to be re-made, using only the required mods for the pack.  This will prevent the "missing items" message when the game is started.
-
-* Obsidian Concrete:
-  - Grind Obsidian into dust.
-  - Mix obsidian dust and gravel.
-  - Dampen the obsidian/gravel mix in the wetter.
-  - Bake the wet obsidian concrete.
-  - Put the dry obsidian concrete block in front of the block breaker.
-
 * Add Vanilla Ingot Works recipes for ore dusts, ore sands, and ore gravels.
   * 1 ore gravel = 2 ore sand = 4 ore dusts = 4 ores
     - Ore Gravel: Uranium (aobd:oreGravelUranium)
@@ -179,11 +161,28 @@ These notes mainly affect Skyblock play.
     - Ore Dust: Lead (exnihilo:lead_dust) 
 
 * There needs to be recipes for ores from broken ores (4 broken ore + 5 cobble = 1 ore)
+  
+* Food will be needed for the opening game.  1 stack (8) of bread in the player inventory should help, but need to be husbanded carefully.
 
+* The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
 
 
 
 Fixed:
 
 * For some reason, the wooden buckets are missing from the game.  I need to check the bucket plugin to make sure it's being accessed.
+
 * Add a Clay Bucket for early skyblock lava transport.
+
+* BuildCraft is now up to version 7.1.23; see if an upgrade is required. (It was required)
+
+* Since the Nether is also devoid of blocks, we need a recipe for netherrack.
+  - Most likely Cobblestone + Soul Sand
+
+* Obsidian Concrete:
+  - Grind Obsidian into dust.
+  - Mix obsidian dust and gravel.
+  - Superheat the mix using the pulse jet furnace.
+  - Put the resulting obsidian concrete block in front of the block breaker.
+
+* The maps need to be re-made, using only the required mods for the pack.  This will prevent the "missing items" message when the game is started.
