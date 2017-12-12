@@ -11,7 +11,7 @@
  */
 
 // To begin with, let's make the creative tab for everything built in this mod.
-addCreativeTab("ExMachina.general","Ex Machina","ExMachina:ObsidianConcrete");
+addCreativeTab("ExMachina.general","Ex Machina","ExMachina:blockObsidianConcrete");
 
 
 // Split material drops between sifter and centrifuge.
