@@ -3,6 +3,9 @@ Notes for Survival Industry Coconut:
 These notes mainly affect Skyblock play.
 
 * There needs to be recipes for ores from ore gravel/sand/dust (1 ore g/s/d + 1 cobble = 1 ore)
+  - Redstone Ore (oreRedstone): 1 cobble + 8 redstone
+  - Coal Ore (oreCoal): 1 cobble + 8 coal
+  - Lapis Lazuli Ore (oreLapis): 1 cobble + 8 Lapis Lazuli
 
 * There needs to be a grinder recipe to make a dust block from sand.
   
@@ -11,7 +14,26 @@ These notes mainly affect Skyblock play.
 * The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
 
 * Give all AOBD additions for Reika's materials new textures; the black-color thing just doesn't work for me.
+  - tile.aobd.ore(Type)(Metal) - Type: Dust/Sand/Gravel - Metal: Indium/Cadmium
+  - item.aobd.ore(Type)(Metal) - Type: Powdered/Crushed/Broken - Metal: Indium/Cadmium
 
+* Additional drops need to be added to the centrifuge:
+  * Gravel:
+    - Calcite Crystal (5) (ReactorCraft:reactorcraft_item_raw:5)
+    - Red Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:5)
+    - Orange Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:2)
+    - Yellow Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:7)
+    - Green Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:4)
+    - Blue Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:0)
+    - Magenta Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:3)
+    - Pink Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:1)
+    - White Fluorite Crystals (1) (ReactorCraft:reactorcraft_item_fluorite:6)
+    - Lodestone (5) (ReactorCraft:reactorcraft_item_raw:6)
+  * Sand:
+    - Saltpeter (5) (VeganOption:saltpeter)
+  * Dust:
+    - Thorite Dust (1) (ReactorCraft:reactorcraft_item_raw:7)
+    - Ammonium Chloride (2) (ReactorCraft:reactorcraft_item_raw:3)
 
 
 Fixed:
