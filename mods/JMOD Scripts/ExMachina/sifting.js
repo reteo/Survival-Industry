@@ -137,8 +137,6 @@ var addCentrifugeRecipes = [
 	    var resultItem = resultList[j];
 
 	    ExNihilo.removeResult(resultItem, originBlock);
-	    
-	    log("This will remove " + resultItem + " from " + originBlock + " Drops.");
 	}
     }
 }) (removeSiftRecipes);
@@ -149,15 +147,15 @@ var addCentrifugeRecipes = [
 	var sourceBlock = centrifugeRecipes[sourceStanza][0];
 	var resultList = centrifugeRecipes[sourceStanza][1];
 
-	centrifugeObject = addCentrifugeRecipe(sourceBlock);
+	centrifugeObject = RotaryCraft.addCentrifugeRecipe(sourceBlock);
+
+	log("In the centrifuge, " + sourceBlock + "...")
 	
 	for (var recipeResult in resultList) {
 	    var resultItem = resultList[recipeResult][0];
 	    var resultChance = resultList[recipeResult][1];
 
 	    centrifugeObject.addOutput(resultItem, resultChance);
-
-	    log("Centrifuge has a " + resultChance + "% chance of dropping " + resultItem + " from " + sourceBlock + ".")
 	}
     }
 }) (addCentrifugeRecipes);
