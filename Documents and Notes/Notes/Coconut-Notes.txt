@@ -3,6 +3,8 @@ Notes for Survival Industry Coconut:
 These notes mainly affect Skyblock play.
 
 * There needs to be recipes for ores from ore gravel/sand/dust (1 ore g/s/d + 1 cobble = 1 ore)
+
+* There needs to be a grinder recipe to make a dust block from sand.
   
 * Food will be needed for the opening game.  1 stack (8) of bread in the player inventory should help, but need to be husbanded carefully.
 
