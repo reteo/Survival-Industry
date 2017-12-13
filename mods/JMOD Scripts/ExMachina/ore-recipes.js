@@ -64,6 +64,8 @@ function nativeOreDoubling(oreMetal, oreStyle) {
     resultItem = "ingot" + oreMetal
     resultDuplication = 2
 
+    VIW.addAlloy(resultItem, originBlock, resultDuplication);
+    
     log("This should make " + resultDuplication + " of " + resultItem + " from 1 " + originBlock + ".");
 
     
@@ -74,6 +76,8 @@ function aobdOreDoubling(oreMetal, oreStyle) {
     originBlock = "aobd:ore" + oreStyle + oreMetal;
     resultItem = "ingot" + oreMetal
     resultDuplication = 2
+
+    VIW.addAlloy(resultItem, originBlock, resultDuplication);
 
     log("This should make " + resultDuplication + " of " + resultItem + " from 1 " + originBlock + ".");
 }
