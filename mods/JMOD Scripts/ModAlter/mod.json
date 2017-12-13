@@ -2,7 +2,7 @@
   "modid": "ModAlter",
   "name": "Mod Alter",
   "description" : "Custom Recipes for various mods' Machines and Materials.",
-  "version"	:	"1.0",
+  "version"	:	"1.4",
   "scripts" : ["main.js"],
   "authors"	: ["reteo"],
   "url" : "https://github.com/reteo/JMOD-Collection",

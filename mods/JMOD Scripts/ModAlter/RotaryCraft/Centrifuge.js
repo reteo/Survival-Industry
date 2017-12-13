@@ -8,7 +8,8 @@
  * outputs.  We need to prevent this by ensuring the centrifuge recipe
  * includes all original outputs as well. */
 
-if (!isModLoaded("ExNihilo")) {
+if (!(isModLoaded("exnihilo"))) {
+    log("Ex Nihilo not found, using default centrifuge recipes.");
     var itemOutput = [
 	["sand", [["dustRedstone", 1], ["dustSaltpeter", 10]]]
     ];
