@@ -60,11 +60,20 @@ function nativeOreDoubling(oreMetal, oreStyle) {
     metalType = oreMetal.toLowerCase();
     metalStyle = oreStyle.toLowerCase();
 
-    log("Metal: " + oreMetal + " - Form: " + oreStyle);
-    VIW.addAlloy("ingot" + oreMetal, "exnihilo:" + metalType + "_" + metalStyle, 2);
+    originBlock = "exnihilo:" + metalType + "_" + metalStyle;
+    resultItem = "ingot" + oreMetal
+    resultDuplication = 2
+
+    log("This should make " + resultDuplication + " of " + resultItem + " from 1 " + originBlock + ".");
+
+    
 }
 
 function aobdOreDoubling(oreMetal, oreStyle) {
-    log("Metal: " + oreMetal + " - Form: " + oreStyle);
-    VIW.addAlloy("ingot" + oreMetal, "aobd:ore" + oreStyle + oreMetal, 2);
+
+    originBlock = "aobd:ore" + oreStyle + oreMetal;
+    resultItem = "ingot" + oreMetal
+    resultDuplication = 2
+
+    log("This should make " + resultDuplication + " of " + resultItem + " from 1 " + originBlock + ".");
 }
