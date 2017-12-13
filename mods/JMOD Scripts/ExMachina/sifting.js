@@ -2,15 +2,6 @@
    In this way, we can preserve the mining progression, even when playing a skyblock
    game. */
 
-/* The sifter will be able to produce metals:
-   lead, tin, gold, silver, aluminum, copper, platinum, iron, and nickel. */
-
-//exnihilo.removeResult(appliedenergistics2:item.ItemMultiMaterial:2, exnihilo:dust);
-
-
-
-
-
 
 var removeSiftRecipes = [
     ["exnihilo:dust", ["appliedenergistics2:item.ItemMultiMaterial:2", "minecraft:blaze_powder", "minecraft:glowstone_dust"]],
@@ -37,7 +28,8 @@ var addCentrifugeRecipes = [
 	["exnihilo:seed_oak", 2],
 	["exnihilo:seed_acacia", 1],
 	["exnihilo:seed_spruce", 1],
-	["exnihilo:seed_birch", 1]]],
+	["exnihilo:seed_birch", 1]
+    ]],
     ["minecraft:sand", [
 	["EnderIO:itemMaterial", 10], // Silicon
 	["VeganOption:saltpeter", 10],
@@ -58,7 +50,8 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.platinum_crushed", 1],
 	["exnihilo:exnihilo.aluminum_crushed", 13],
 	["appliedenergistics2:item.ItemMultiMaterial:0", 17], // Certus Quartz
-	["appliedenergistics2:item.ItemMultiMaterial:1", 1]]], // Charged Certus Quartz
+	["appliedenergistics2:item.ItemMultiMaterial:1", 1] // Charged Certus Quartz
+    ]],
     ["minecraft:gravel", [
 	["minecraft:flint", 50],
 	["minecraft:coal", 13],
@@ -77,7 +70,18 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.nickel_broken", 3],
 	["exnihilo:exnihilo.platinum_broken", 1],
 	["exnihilo:exnihilo.aluminum_broken", 13],
-	["Forestry:apatite", 6]]],
+	["Forestry:apatite", 6],
+	["ReactorCraft:reactorcraft_item_raw:5", 5], // Calcite Crystal
+	["ReactorCraft:reactorcraft_item_fluorite:5", 1], // Red Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:2", 1], // Orange Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:7", 1], // Yellow Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:4", 1], // Green Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:0", 1], // Blue Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:3", 1], // Magenta Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:1", 1], // Pink Fluorite
+	["ReactorCraft:reactorcraft_item_fluorite:6", 1], // White Fluorite
+	["ReactorCraft:reactorcraft_item_raw:6", 5] // Lodestone
+    ]],
     ["exnihilo:dust", [
 	["minecraft:dye:15", 20], // Bonemeal
 	["minecraft:redstone",13 ],
@@ -97,12 +101,16 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.platinum_powdered", 1],
 	["exnihilo:exnihilo.aluminum_powdered", 13],
 	["appliedenergistics2:item.ItemMultiMaterial:2", 17], // Certus Quartz Dust
-	["appliedenergistics2:item.ItemMultiMaterial:45", 13]]], // Sky Stone Dust
+	["appliedenergistics2:item.ItemMultiMaterial:45", 13], // Sky Stone Dust
+	["ReactorCraft:reactorcraft_item_raw:7", 1], // Thorite Dust
+	["ReactorCraft:reactorcraft_item_raw:3", 2] // Ammonium Chloride
+    ]],
     ["minecraft:soul_sand", [
 	["minecraft:quartz",100 ], //Nether Quartz
 	["minecraft:quartz",33 ], //Nether Quartz
 	["minecraft:nether_wart", 5],
-	["minecraft:ghast_tear", 2]]],
+	["minecraft:ghast_tear", 2]
+    ]],
     ["exnihilo:exnihilo.gravel_nether", [
 	["aobd:oreNetherBrokenCadmium", 6],
 	["aobd:oreNetherBrokenCadmium", 6],
@@ -110,12 +118,14 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.nether_iron_broken", 17],
 	["exnihilo:exnihilo.nether_gold_broken", 17],
 	["exnihilo:exnihilo.nether_copper_broken", 10],
-	["exnihilo:exnihilo.nether_nickel_broken", 10]]],
+	["exnihilo:exnihilo.nether_nickel_broken", 10]
+    ]],
     ["exnihilo:exnihilo.gravel_ender", [
 	["exnihilo:exnihilo.ender_tin_broken", 10],
 	["exnihilo:exnihilo.ender_silver_broken", 17],
 	["exnihilo:exnihilo.ender_lead_broken", 17],
-	["exnihilo:exnihilo.ender_platinum_broken", 5]]]
+	["exnihilo:exnihilo.ender_platinum_broken", 5]
+    ]]
 ];
 
 
