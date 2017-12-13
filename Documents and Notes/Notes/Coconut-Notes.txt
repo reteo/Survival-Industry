@@ -8,6 +8,8 @@ These notes mainly affect Skyblock play.
 
 * The crook should share the shovel's repair recipe; 1 wood = 100% repair (more or less).  As it stands now, making a new crook is cheaper than repairing it.
 
+* Give all AOBD additions for Reika's materials new textures; the black-color thing just doesn't work for me.
+
 
 
 Fixed:
