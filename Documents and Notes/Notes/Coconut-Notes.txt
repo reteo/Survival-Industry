@@ -3,11 +3,34 @@ Notes for Survival Industry Coconut:
 These notes mainly affect Skyblock play.
 
 * There needs to be recipes for ores from ore gravel/sand/dust (1 ore g/s/d + 1 cobble = 1 ore)
-  - Redstone Ore (oreRedstone): 1 cobble + 8 redstone
-  - Coal Ore (oreCoal): 1 cobble + 8 coal
-  - Lapis Lazuli Ore (oreLapis): 1 cobble + 8 Lapis Lazuli
+  - Redstone Ore (minecraft:redstone): 1 cobble + 8 redstone
+  - Coal Ore (minecraft:coal): 1 cobble + 8 coal
+  - Lapis Lazuli Ore (minecraft:dye:4): 1 cobble + 8 Lapis Lazuli
+  - Aluminum: (MohsMining:oreAluminum)
+  - Cadmium (ReactorCraft:reactorcraft_block_ore:2)
+  - Copper (MohsMining:oreCopper)
+  - Gold (minecraft:gold_ore)
+  - Indium (ReactorCraft:reactorcraft_block_ore:3)
+  - Iron (minecraft:iron_ore)
+  - Lead (MohsMining:oreLead)
+  - Nickel (MohsMining:oreNickel)
+  - Platinum (MohsMining:orePlatinum)
+  - Silver (MohsMining:oreSilver)
+  - Tin (MohsMining:oreTin)
 
-* There needs to be a grinder recipe to make a dust block from sand.
+* More drops needed:
+  * Dirt:
+    - Amber (fossil:amber)
+    - Fossil (fossil:relicScrap, fossil:bioFossil, fossil:plantFossil, minecraft:bone)
+  * Gravel:
+    - Ruby (ProjRed|Core:projectred.core.part:37)
+    - Peridot (ProjRed|Core:projectred.core.part:39)
+    - Sapphire (ProjRed|Core:projectred.core.part:38)
+  * Sand:
+    - Electrotine (ProjRed|Core:projectred.core.part:56)
+  * Crushed Netherrack
+    - Firestone (Railcraft:firestone.raw)
+    - Sulfur (VeganOption:sulfur)
   
 * Food will be needed for the opening game.  1 stack (8) of bread in the player inventory should help, but need to be husbanded carefully.
 
@@ -37,6 +60,8 @@ These notes mainly affect Skyblock play.
 
 
 Fixed:
+
+* There needs to be a grinder recipe to make a dust block from sand.
 
 * For some reason, the wooden buckets are missing from the game.  I need to check the bucket plugin to make sure it's being accessed.
 
