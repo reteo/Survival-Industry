@@ -9,6 +9,25 @@ var removeSiftRecipes = [
     ["minecraft:gravel",["minecraft:diamond", "minecraft:emerald"]],
     ["minecraft:soul_sand", ["minecraft:quartz", "minecraft:ghast_tear"]]];
 
+var addSiftRecipes = [
+    ["minecraft:dirt", [
+	["fossil:amber", 100],
+	["fossil:relicScrap", 100],
+	["fossil:bioFossil", 100],
+	["fossil:plantFossil", 100]
+    ]],
+    ["minecraft:sand", [
+	["VeganOption:saltpeter", 10],
+    ]],
+    ["minecraft:dust", [
+	["appliedenergistics2:item.ItemMultiMaterial:45", 8] // Sky Stone Dust
+    ]],
+    ["exnihilo:exnihilo.gravel_nether", [
+	["VeganOption:sulfur", 5],
+	["ReactorCraft:reactorcraft_item_raw:7", 100], // Thorite Dust
+	["ReactorCraft:reactorcraft_item_raw:3", 50], // Ammonium Chloride
+    ]]];
+
 var addCentrifugeRecipes = [
     ["minecraft:dirt", [
 	["minecraft:clay", 10],
@@ -28,7 +47,11 @@ var addCentrifugeRecipes = [
 	["exnihilo:seed_oak", 2],
 	["exnihilo:seed_acacia", 1],
 	["exnihilo:seed_spruce", 1],
-	["exnihilo:seed_birch", 1]
+	["exnihilo:seed_birch", 1],
+	["fossil:amber", 1],
+	["fossil:relicScrap", 1],
+	["fossil:bioFossil", 1],
+	["fossil:plantFossil", 1]
     ]],
     ["minecraft:sand", [
 	["EnderIO:itemMaterial", 10], // Silicon
@@ -50,7 +73,7 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.platinum_crushed", 1],
 	["exnihilo:exnihilo.aluminum_crushed", 13],
 	["appliedenergistics2:item.ItemMultiMaterial:0", 17], // Certus Quartz
-	["appliedenergistics2:item.ItemMultiMaterial:1", 1] // Charged Certus Quartz
+	["appliedenergistics2:item.ItemMultiMaterial:1", 1] // Charged Certus Quartz,
     ]],
     ["minecraft:gravel", [
 	["minecraft:flint", 50],
@@ -80,7 +103,10 @@ var addCentrifugeRecipes = [
 	["ReactorCraft:reactorcraft_item_fluorite:3", 1], // Magenta Fluorite
 	["ReactorCraft:reactorcraft_item_fluorite:1", 1], // Pink Fluorite
 	["ReactorCraft:reactorcraft_item_fluorite:6", 1], // White Fluorite
-	["ReactorCraft:reactorcraft_item_raw:6", 5] // Lodestone
+	["ReactorCraft:reactorcraft_item_raw:6", 5], // Lodestone
+	["ProjRed|Core:projectred.core.part:37", ], // Ruby
+	["ProjRed|Core:projectred.core.part:38", ], // Sapphire
+	["ProjRed|Core:projectred.core.part:39", ] // Peridot
     ]],
     ["exnihilo:dust", [
 	["minecraft:dye:15", 20], // Bonemeal
@@ -102,8 +128,7 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.aluminum_powdered", 13],
 	["appliedenergistics2:item.ItemMultiMaterial:2", 17], // Certus Quartz Dust
 	["appliedenergistics2:item.ItemMultiMaterial:45", 13], // Sky Stone Dust
-	["ReactorCraft:reactorcraft_item_raw:7", 1], // Thorite Dust
-	["ReactorCraft:reactorcraft_item_raw:3", 2] // Ammonium Chloride
+	["ProjRed|Core:projectred.core.part:56", 5] // Electrotine
     ]],
     ["minecraft:soul_sand", [
 	["minecraft:quartz",100 ], //Nether Quartz
@@ -118,7 +143,11 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.nether_iron_broken", 17],
 	["exnihilo:exnihilo.nether_gold_broken", 17],
 	["exnihilo:exnihilo.nether_copper_broken", 10],
-	["exnihilo:exnihilo.nether_nickel_broken", 10]
+	["exnihilo:exnihilo.nether_nickel_broken", 10],
+	["Railcraft:firestone.raw", 1],
+	["VeganOption:sulfur", 5],
+	["ReactorCraft:reactorcraft_item_raw:7", 1], // Thorite Dust
+	["ReactorCraft:reactorcraft_item_raw:3", 2], // Ammonium Chloride
     ]],
     ["exnihilo:exnihilo.gravel_ender", [
 	["exnihilo:exnihilo.ender_tin_broken", 10],
@@ -142,14 +171,36 @@ var addCentrifugeRecipes = [
     for (var i in sifterRemovals) {
 	var originBlock = sifterRemovals[i][0];
 	var resultList = sifterRemovals[i][1];
+
+	log("Sieve: " + originBlock + "...");
 	
 	for (var j in resultList) {
 	    var resultItem = resultList[j];
+
+	    log("...can no longer drop " + resultItem + ".");
 
 	    ExNihilo.removeResult(resultItem, originBlock);
 	}
     }
 }) (removeSiftRecipes);
+
+(function (sifterAdditions) {
+    for (var sourceStanza in sifterAdditions) {
+	var sourceBlock = sifterAdditions[sourceStanza][0];
+	var resultList = sifterAdditions[sourceStanza][1];
+	
+	log("Sieve: " + sourceBlock + "...")
+	
+	for (var recipeResult in resultList) {
+	    var resultItem = resultList[recipeResult][0];
+	    var resultChance = resultList[recipeResult][1];
+
+	    ExNihilo.addResult(resultItem, sourceBlock, resultChance);
+	    
+	    log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
+	}
+    }
+}) (addSiftRecipes);
 
 
 (function (centrifugeRecipes) {
@@ -157,14 +208,16 @@ var addCentrifugeRecipes = [
 	var sourceBlock = centrifugeRecipes[sourceStanza][0];
 	var resultList = centrifugeRecipes[sourceStanza][1];
 
-	centrifugeObject = RotaryCraft.addCentrifugeRecipe(sourceBlock);
+	log("Centrifuge: " + sourceBlock + "...");
 
-	log("In the centrifuge, " + sourceBlock + "...")
+	centrifugeObject = RotaryCraft.addCentrifugeRecipe(sourceBlock);
 	
 	for (var recipeResult in resultList) {
 	    var resultItem = resultList[recipeResult][0];
 	    var resultChance = resultList[recipeResult][1];
 
+	    log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
+	    
 	    centrifugeObject.addOutput(resultItem, resultChance);
 	}
     }

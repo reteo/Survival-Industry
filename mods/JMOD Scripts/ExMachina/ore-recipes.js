@@ -10,6 +10,23 @@ var metalsEnder = ["Tin", "Silver", "Platinum", "Lead"];
 
 var oreStyles = ["Gravel", "Sand", "Dust"];
 
+var nativeOreRecipes = [
+    ["MohsMining:oreAluminum", "Aluminum"],
+    ["MohsMining:oreCopper", "Copper"],
+    ["minecraft:gold_ore", "Gold"],
+    ["minecraft:iron_ore", "Iron"],
+    ["MohsMining:oreLead", "Lead"],
+    ["MohsMining:oreNickel", "Nickel"],
+    ["MohsMining:orePlatinum", "Platinum"],
+    ["MohsMining:oreSilver", "Silver"],
+    ["MohsMining:oreTin", "Tin"]
+];
+
+var aobdOreRecipes = [
+    ["ReactorCraft:reactorcraft_block_ore:2", "Cadmium"],
+    ["ReactorCraft:reactorcraft_block_ore:3", "Indium"]
+];
+
 // First, let's do basic ore duplication.
 
 // Native first.
@@ -53,41 +70,16 @@ for (var m in metalsNetherAobd){
    To fix this, we can simply add recipes to make ore blocks out of ore gravels, sands, and
    dusts, along with one cobblestone. */
 
-// Native first.
-for (var m in metalsNative){
-    for (var o in oreStyles) {
-	nativeOreBlock(metalsNative[m],oreStyles[o]);
-    }
-}
-
-// Nether next.
-for (var m in metalsNether){
-    for (var o in oreStyles) {
-	nativeOreBlock(metalsNether[m],oreStyles[o]);
-    }
-}
-
-// Then, the End.
-for (var m in metalsEnder){
-    for (var o in oreStyles) {
-	nativeOreBlock(metalsEnder[m],oreStyles[o]);
-    }
+for (var i in nativeOreRecipes) {
+    nativeOreBlock(nativeOreRecipes[i][1], nativeOreRecipes[i][0]);
 }
 
 
-// Now for AOBD ores.
-for (var m in metalsAobd){
-    for (var o in oreStyles) {
-	aobdOreBlock(metalsAobd[m], oreStyles[o]);
-    }
+for (var i in aobdOreRecipes) {
+    aobdOreBlock(aobdOreRecipes[i][1], aobdOreRecipes[i][0]);
 }
 
-// Then, AOBD Nether ores.
-for (var m in metalsNetherAobd){
-    for (var o in oreStyles) {
-	aobdOreBlock(metalsNetherAobd[m], oreStyles[o]);
-    }
-}
+
 
 /* In addition to the metals, we will also need ore blocks for other drops.  These are needed in order
    to collect additional materials using the RotaryCraft extractor. */
@@ -130,26 +122,23 @@ function aobdOreDoubling(oreMetal, oreStyle) {
     log("This should make " + resultDuplication + " of " + resultItem + " from 1 " + originBlock + ".");
 }
 
-function nativeOreBlock(oreMetal, oreStyle) {
+function nativeOreBlock(oreMetal, resultOre) {
     metalType = oreMetal.toLowerCase();
-    metalStyle = oreStyle.toLowerCase();
 
-    originBlock = "exnihilo:" + metalType + "_" + metalStyle;
-    resultOre = "ore" + oreMetal
+    originItem = "exnihilo:exnihilo." + metalType + "_broken";
 
-    addShapelessRecipe(resultOre, ["cobblestone",originBlock]);
+    addShapelessRecipe(resultOre, [originItem, originItem, originItem, originItem, originItem, originItem, originItem]);
 
-    log("This should make " + resultOre + " from cobblestone and " + originBlock + ".");
+    log("Made " + resultOre + " from cobblestone@2 and " + originItem + ".");
 
 }
 
-function aobdOreBlock(oreMetal, oreStyle) {
-    originBlock = "aobd:ore" + oreStyle + oreMetal;
-    resultOre = "ore" + oreMetal
+function aobdOreBlock(oreMetal, resultOre) {
+    originItem = "aobd:oreBroken" + oreMetal;
 
-    addShapelessRecipe(resultOre, ["cobblestone",originBlock]);
+    addShapelessRecipe(resultOre, [originItem, originItem, originItem, originItem, originItem, originItem, originItem]);
 
-    log("This should make " + resultOre + " from cobblestone and " + originBlock + ".");
+    log("Made " + resultOre + " from cobblestone@2 and " + originItem + ".");
 
 }
 
