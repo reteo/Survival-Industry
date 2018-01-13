@@ -87,7 +87,7 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.iron_broken", 20],
 	["exnihilo:exnihilo.gold_broken", 3],
 	["exnihilo:exnihilo.copper_broken", 6],
-	["exnihilo:exnihilo.ender_tin_broken", 6],
+	["exnihilo:exnihilo.tin_broken", 6],
 	["exnihilo:exnihilo.silver_broken", 2],
 	["exnihilo:exnihilo.lead_broken", 3],
 	["exnihilo:exnihilo.nickel_broken", 3],
@@ -161,7 +161,7 @@ var addCentrifugeRecipes = [
 /* The centrifuge will be required to produce crystals:
    peridot, quartz (certus and nether), emerald, ruby, sapphire, and diamond. 
 
-   ...along with some other materials:
+   ...along with some other high-level materials:
    blaze powder, glowstone, ghast tears */
 
 
@@ -177,7 +177,7 @@ var addCentrifugeRecipes = [
 	for (var j in resultList) {
 	    var resultItem = resultList[j];
 
-	    log("...can no longer drop " + resultItem + ".");
+	    // log("...can no longer drop " + resultItem + ".");
 
 	    ExNihilo.removeResult(resultItem, originBlock);
 	}
@@ -197,7 +197,7 @@ var addCentrifugeRecipes = [
 
 	    ExNihilo.addResult(resultItem, sourceBlock, resultChance);
 	    
-	    log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
+	    // log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
 	}
     }
 }) (addSiftRecipes);
@@ -207,16 +207,16 @@ var addCentrifugeRecipes = [
     for (var sourceStanza in centrifugeRecipes){
 	var sourceBlock = centrifugeRecipes[sourceStanza][0];
 	var resultList = centrifugeRecipes[sourceStanza][1];
-
-	log("Centrifuge: " + sourceBlock + "...");
-
+	
+	// log("Centrifuge: " + sourceBlock + "...");
+	
 	centrifugeObject = RotaryCraft.addCentrifugeRecipe(sourceBlock);
 	
 	for (var recipeResult in resultList) {
 	    var resultItem = resultList[recipeResult][0];
 	    var resultChance = resultList[recipeResult][1];
-
-	    log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
+	    
+	    // log("...now also has a " + resultChance + "% chance of dropping a " + resultItem + ".");
 	    
 	    centrifugeObject.addOutput(resultItem, resultChance);
 	}
