@@ -15,7 +15,7 @@ include file("default.recipes")
 #include file("your_custom.recipes")
 #include file("SI.RoC.recipes")
 #include file("SI.VO.recipes")
-include file("SI.recipes")
+#include file("SI.recipes")
 
 
 # You can also specify custom recipes in this file directly. Have a look at the
