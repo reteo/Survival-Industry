@@ -7,7 +7,7 @@ var removeSiftRecipes = [
     ["exnihilo:dust", ["appliedenergistics2:item.ItemMultiMaterial:2", "minecraft:blaze_powder", "minecraft:glowstone_dust"]],
     ["minecraft:sand", ["appliedenergistics2:item.ItemMultiMaterial:0", "appliedenergistics2:item.ItemMultiMaterial:1"]],
     ["minecraft:gravel",["minecraft:diamond", "minecraft:emerald"]],
-    ["minecraft:soul_sand", ["minecraft:quartz", "minecraft:ghast_tear"]]];
+    ["minecraft:soul_sand", ["minecraft:ghast_tear"]]];
 
 var addSiftRecipes = [
     ["minecraft:dirt", [
