@@ -1,10 +1,10 @@
 /* We want the ore gravels, sands, and dusts to be processed by Vanilla Ingot Works. */
 
 var metalsNative = ["Iron", "Gold", "Copper", "Tin", "Silver", "Nickel", "Platinum", "Aluminum", "Lead"];
-var metalsAobd = ["Cadmium", "Indium", "Uranium"];
+var metalsAobd = ["Cadmium", "Indium"];
 
 var metalsNether = ["Iron", "Gold", "Copper", "Nickel" ];
-var metalsNetherAobd = ["Cadmium", "Indium", "Uranium"];
+var metalsNetherAobd = ["Cadmium", "Indium"];
 
 var metalsEnder = ["Tin", "Silver", "Platinum", "Lead"];
 
@@ -24,8 +24,7 @@ var nativeOreRecipes = [
 
 var aobdOreRecipes = [
     ["ReactorCraft:reactorcraft_block_ore:2", "Cadmium"],
-    ["ReactorCraft:reactorcraft_block_ore:3", "Indium"],
-    ["ReactorCraft:reactorcraft_block_ore:1", "Uranium"]
+    ["ReactorCraft:reactorcraft_block_ore:3", "Indium"]
 ];
 
 // First, let's do basic ore duplication.
