@@ -1,3 +1,5 @@
 tile.ExMachina.blockObsidianConcrete.name=Obsidian Concrete
 tile.ExMachina.mixObsidianConcrete.name=Obsidian Concrete Mix
+info.ExMachina.tooltips.obsidianConcrete=Substitute bedrock for Bedrock Breaker
+info.ExMachina.tooltips.bedrockBreaker=Use with Bedrock or Obsidian Concrete
 itemGroup.ExMachina.general=Ex Machina
