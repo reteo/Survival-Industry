@@ -25,3 +25,10 @@ addShapelessRecipe("ExMachina:mixObsidianConcrete", ["dustObsidian", "minecraft:
 
 // Superheat in pulse jet furnace to make the final obsidian concrete.
 RotaryCraft.addPulseJetRecipe("ExMachina:blockObsidianConcrete", "ExMachina:mixObsidianConcrete");
+
+
+/* Now, we need to make sure the player knows the point of "Obsidian Concrete."  To do this, 
+   we'll simply add a tooltip for both the concrete and the bedrock breaker. */
+
+// addToolTip("ExMachina:blockObsidianConcrete", "info.ExMachina.tooltips.obsidianConcrete");
+// addToolTip("RotaryCraft:rotarycraft_item_machine", "info.ExMachina.tooltips.bedrockBreaker");
