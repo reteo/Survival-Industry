@@ -191,42 +191,42 @@ Dirt:
 
 * Stones (as normal)
 * Crop Seeds
- * Wheat Seeds
- * Melon Seeds
- * Pumpkin Seeds
- * Sugarcane Seeds
- * Carrot Seeds
- * Potato Seeds
+  * Wheat Seeds
+  * Melon Seeds
+  * Pumpkin Seeds
+  * Sugarcane Seeds
+  * Carrot Seeds
+  * Potato Seeds
 * Wild Seeds (trees, grass, mycelium, etc.)
- * Grass Seeds
- * Oak Seeds
- * Acacia Seeds
- * Spruce Seeds
- * Birch Seeds
+  * Grass Seeds
+  * Oak Seeds
+  * Acacia Seeds
+  * Spruce Seeds
+  * Birch Seeds
 * Fossils
- * Amber
- * Relic
- * Bio Fossil
- * Plant Fossil
+  * Amber
+  * Relic
+  * Bio Fossil
+  * Plant Fossil
 
 Sand:
 * (EnderIO) Silicon
 * Saltpeter
 * Cocoa Beans
 * Crushed Soft Metals
- * Indium
- * Tin
- * Lead
- * Cadmium
- * Silver
- * Gold
- * Aluminum
- * Copper
- * Platinum
+  * Indium
+  * Tin
+  * Lead
+  * Cadmium
+  * Silver
+  * Gold
+  * Aluminum
+  * Copper
+  * Platinum
 * Crushed Hard Metals
- * Iron
- * Nickel
- * Uranium 
+  * Iron
+  * Nickel
+  * Uranium 
 * Seeds
 * Certus Quartz
 * Charged Certus Quartz
@@ -234,64 +234,64 @@ Sand:
 Gravel:
 * Flint
 * Crystals
- * Flint
- * Coal
- * Apatite
- * Lapis Lazuli
- * Calcite
- * Lodestone
+  * Flint
+  * Coal
+  * Apatite
+  * Lapis Lazuli
+  * Calcite
+  * Lodestone
 * Gems
- * Diamond
- * Emerald
- * Ruby
- * Sapphire
- * Peridot
+  * Diamond
+  * Emerald
+  * Ruby
+  * Sapphire
+  * Peridot
 * Broken Soft Metals
- * Indium
- * Tin
- * Lead
- * Cadmium
- * Silver
- * Gold
- * Aluminum
- * Copper
- * Platinum
+  * Indium
+  * Tin
+  * Lead
+  * Cadmium
+  * Silver
+  * Gold
+  * Aluminum
+  * Copper
+  * Platinum
 * Broken Hard Metals
- * Iron
- * Nickel
- * Uranium 
+  * Iron
+  * Nickel
+  * Uranium 
 * Fluorite
- * Red
- * Orange
- * Yellow
- * Green
- * Blue
- * Magenta
- * Pink
- * White
+  * Red
+  * Orange
+  * Yellow
+  * Green
+  * Blue
+  * Magenta
+  * Pink
+  * White
 
 Dust:
 * Powders
- * Bonemeal
- * Redstone
- * Gunpowder
- * Glowstone Dust
- * Blaze Powder
- * Electrotine
+  * Bonemeal
+  * Redstone
+  * Gunpowder
+  * Glowstone Dust
+  * Blaze Powder
+  * Electrotine
 * Powdered Soft Metals
- * Indium
- * Tin
- * Lead
- * Cadmium
- * Silver
- * Gold
- * Aluminum
- * Copper
- * Platinum
+  * Indium
+  * Tin
+  * Lead
+  * Cadmium
+  * Silver
+  * Gold
+  * Aluminum
+  * Copper
+  * Platinum
 * Powdered Hard Metals
- * Iron
- * Nickel
- * Uranium
+  * Iron
+  * Nickel
+  * Uranium
 
 Soul Sand (kept as-is):
 * Nether Quartz
@@ -304,14 +304,14 @@ Nether Gravel:
 * Thorite Dust
 * Ammonium Chloride
 * Broken Nether Metals
- * Indium
- * Cadmium
- * Gold
- * Aluminum
- * Copper
- * Iron
- * Nickel
- * Uranium
+  * Indium
+  * Cadmium
+  * Gold
+  * Aluminum
+  * Copper
+  * Iron
+  * Nickel
+  * Uranium
 
 Ender Gravel:
 * Broken Ender Tin
