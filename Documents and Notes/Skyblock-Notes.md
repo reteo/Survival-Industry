@@ -232,7 +232,6 @@ Sand:
 * Charged Certus Quartz
 
 Gravel:
-* Flint
 * Crystals
   * Flint
   * Coal
