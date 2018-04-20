@@ -182,3 +182,139 @@ Why is this an exploit?  Because once you've sieved gravel, and got broken ore, 
 *Solution:* We create recipes using 7 broken ores that will make one ore block.  This works, because the ore block will not be processed by the sieve, and will return to 7 broken ores when crushed with a hammer, so this cannot be exploited.  This has the downside that the extractor might be less-efficient than the hammer, seeing as how the average ore processing of the extractor is 5x.  It does, however, provide a benefit when dealing with ores that have a secondary material... such as tungsten or aluminum powder.
 
 Either way. we can add grinder recipes for broken and crushed ores, as well as ore gravel and ore sand, so processing can still proceed apace.
+
+# New Centrifuge System
+
+Reika has decided that the centrifuge will not allow more than 9 drops, which means that 2-step sifting will have to happen for the Centrifuge to work.  As such, we'll break things down as follows:
+
+Dirt:
+
+* Stones (as normal)
+* Crop Seeds
+ * Wheat Seeds
+ * Melon Seeds
+ * Pumpkin Seeds
+ * Sugarcane Seeds
+ * Carrot Seeds
+ * Potato Seeds
+* Wild Seeds (trees, grass, mycelium, etc.)
+ * Grass Seeds
+ * Oak Seeds
+ * Acacia Seeds
+ * Spruce Seeds
+ * Birch Seeds
+* Fossils
+ * Amber
+ * Relic
+ * Bio Fossil
+ * Plant Fossil
+
+Sand:
+* (EnderIO) Silicon
+* Saltpeter
+* Cocoa Beans
+* Crushed Soft Metals
+ * Indium
+ * Tin
+ * Lead
+ * Cadmium
+ * Silver
+ * Gold
+ * Aluminum
+ * Copper
+ * Platinum
+* Crushed Hard Metals
+ * Iron
+ * Nickel
+ * Uranium 
+* Seeds
+* Certus Quartz
+* Charged Certus Quartz
+
+Gravel:
+* Flint
+* Crystals
+ * Flint
+ * Coal
+ * Apatite
+ * Lapis Lazuli
+ * Calcite
+ * Lodestone
+* Gems
+ * Diamond
+ * Emerald
+ * Ruby
+ * Sapphire
+ * Peridot
+* Broken Soft Metals
+ * Indium
+ * Tin
+ * Lead
+ * Cadmium
+ * Silver
+ * Gold
+ * Aluminum
+ * Copper
+ * Platinum
+* Broken Hard Metals
+ * Iron
+ * Nickel
+ * Uranium 
+* Fluorite
+ * Red
+ * Orange
+ * Yellow
+ * Green
+ * Blue
+ * Magenta
+ * Pink
+ * White
+
+Dust:
+* Powders
+ * Bonemeal
+ * Redstone
+ * Gunpowder
+ * Glowstone Dust
+ * Blaze Powder
+ * Electrotine
+* Powdered Soft Metals
+ * Indium
+ * Tin
+ * Lead
+ * Cadmium
+ * Silver
+ * Gold
+ * Aluminum
+ * Copper
+ * Platinum
+* Powdered Hard Metals
+ * Iron
+ * Nickel
+ * Uranium
+
+Soul Sand (kept as-is):
+* Nether Quartz
+* Nether Wart
+* Ghast Tear
+
+Nether Gravel:
+* Firestone
+* Sulfur
+* Thorite Dust
+* Ammonium Chloride
+* Broken Nether Metals
+ * Indium
+ * Cadmium
+ * Gold
+ * Aluminum
+ * Copper
+ * Iron
+ * Nickel
+ * Uranium
+
+Ender Gravel:
+* Broken Ender Tin
+* Broken Ender Silver
+* Broken Ender Lead
+* Broken Ender Platinum
