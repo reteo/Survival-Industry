@@ -318,3 +318,13 @@ Ender Gravel:
 * Broken Ender Silver
 * Broken Ender Lead
 * Broken Ender Platinum
+
+## Multiple-step problem
+
+All the probabilities of the materials are single-step; meaning that that is the odds of the material being produced given a single run through the sifter/centrifuge.  However, with the changes in the centrifuge, this means that there will be a 2-step process to get the final material for a lot of the materials.
+
+### Possible solution
+
+It would improve centrifuge use if it produced more output than the sifter; after all, if you could get more by using the centrifuge than the sifter, wouldn't you switch?  Reika wanted to use more complex systems of sifting to get around the centrifuge, so why not add recursion into the mix?
+
+The main material has an even chance of dropping any of its materials per sifted material.  The siftable materials then have a small-moderate (perhaps 10%-25%) chance if dropping itself following each sift.  This would increase the chance of drops for each sift, until the block no longer duplicates itself.  This would allow me to use the original percentages in the new intermediate block, while giving it a moderate chance of dropping from the original material (perhaps even the same percentage that the block drops itself with).
