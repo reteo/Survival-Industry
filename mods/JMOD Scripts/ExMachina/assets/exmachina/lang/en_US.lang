@@ -1,5 +1,16 @@
 tile.ExMachina.blockObsidianConcrete.name=Obsidian Concrete
 tile.ExMachina.mixObsidianConcrete.name=Obsidian Concrete Mix
+item.ExMachina.itemBones.name=Fossil Pile
+item.ExMachina.itemCropSeeds.name=Crop Seed Pile
+item.ExMachina.itemWildSeeds.name=Wild Seed Pile
+item.ExMachina.itemBrokenHardOres.name=Broken Hard Ore Pile
+item.ExMachina.itemBrokenHardOresNether.name=Broken Nether Hard Ore Pile
+item.ExMachina.itemBrokenSoftOres.name=Broken Soft Ore Pile
+item.ExMachina.itemBrokenSoftOresNether.name=Broken Nether Soft Ore Pile
+item.ExMachina.itemCrushedHardOres.name=Crushed Hard Ore Pile
+item.ExMachina.itemCrushedSoftOres.name=Crushed Soft Ore Pile
+item.ExMachina.itemPowderedHardOres.name=Powdered Hard Ore Pile
+item.ExMachina.itemPowderedSoftOres.name=Powdered Soft Ore Pile
 info.ExMachina.tooltips.obsidianConcrete=Substitute bedrock for Bedrock Breaker
 info.ExMachina.tooltips.bedrockBreaker=Use with Bedrock or Obsidian Concrete
 itemGroup.ExMachina.general=Ex Machina

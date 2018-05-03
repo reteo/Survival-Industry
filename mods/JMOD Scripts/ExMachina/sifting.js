@@ -2,12 +2,48 @@
    In this way, we can preserve the mining progression, even when playing a skyblock
    game. */
 
+/* First, we need to create "processables," or middle-level sifted materials that are
+   solely for the purpose of being processed again for further materials. */
+
+var newItems = [
+    "Bones",                  // Filter for fossils
+    "CropSeeds",              // Filter for crop seeds
+    "WildSeeds",              // Filter for seeds to things like grass, trees, cacti
+    "BrokenHardOres",         // Filter for broken hard ores
+    "BrokenHardOresNether",   // Filter for broken hard nether ores
+    "BrokenSoftOres",         // Filter for broken soft ores
+    "BrokenSoftOresNether",   // Filter for broken soft nether ores
+    "CrushedHardOres",        // Filter for crushed hard ores
+    "CrushedSoftOres",        // Filter for crushed soft ores
+    "PowderedHardOres",       // Filter for powdered hard ores
+    "PowderedSoftOres"        // Filter for powdered soft ores
+];
+
+(function(items){
+    for (var n in items){
+	var item = "item" + items[n];
+
+	log("Creating " + item);
+	
+	addItem("CoreItem").set({
+	    name: item,
+	    stacksize: 64,
+	    tab: "ExMachina.general"
+	});
+    }
+})(newItems)
+
+/* Now, let's make the recipes to process materials. */
+
+// The sieve does not need new recipes, but some removals are important.
 
 var removeSiftRecipes = [
     ["exnihilo:dust", ["appliedenergistics2:item.ItemMultiMaterial:2", "minecraft:blaze_powder", "minecraft:glowstone_dust"]],
     ["minecraft:sand", ["appliedenergistics2:item.ItemMultiMaterial:0", "appliedenergistics2:item.ItemMultiMaterial:1"]],
     ["minecraft:gravel",["minecraft:diamond", "minecraft:emerald"]],
     ["minecraft:soul_sand", ["minecraft:quartz", "minecraft:ghast_tear"]]];
+
+// Some additions will be needed to work with added mods.
 
 var addSiftRecipes = [
     ["minecraft:dirt", [
@@ -29,7 +65,10 @@ var addSiftRecipes = [
 	["minecraft:quartz", 50], // A tiny chance of Nether Quartz using the sieve.
     ]]];
 
+// The centrifuge will need a lot of changes to fit the needs for the gametype.
+
 var addCentrifugeRecipes = [
+
     ["minecraft:dirt", [
 	["minecraft:clay", 10],
 	["exnihilo:stone", 100],

@@ -31,7 +31,7 @@ var recipes = [
 // For an example, let's add EnderIO materials for processing in the blast furnace.
 if (isModLoaded("EnderIO")){
     
-// EnderIO Definitions
+    // EnderIO Definitions
     var eioSilicon              =	"EnderIO:itemMaterial";
     // EnderAlloy
     var electricalSteel         =	"EnderIO:itemAlloy:0";
@@ -49,28 +49,42 @@ if (isModLoaded("EnderIO")){
     var enlightenedClearGlass   =	"EnderIO:blockFusedQuartz:3";
     var darkFusedQuartz         =	"EnderIO:blockFusedQuartz:4";
     var darkClearGlass          =	"EnderIO:blockFusedQuartz:5";
-           
+    
     var eioAlloys = [
-      [electricalSteel,       [0, "ingotSteel"],          600,    ["itemSilicon", 100, 1],        [null],                    [null],    false,   1],
-      [electricalSteel,       [0, "ingotHSLA"],           600,    ["itemSilicon", 100, 1],        [null],                    [null],    false,   1],
-      [energeticAlloy,        [0, "ingotGold"],          1000,    ["dustRedstone", 100, 1],       ["dustGlowstone", 100, 1], [null],    false,   1],
-      [vibrantAlloy,          [0, "ingotEnergeticAlloy"],1450,    ["pearlEnder", 100, 1],         [null],                    [null],    false,   1],
-      [fusedQuartz,           [4, "gemQuartz"],           600,    [null],                         [null],                    [null],    false,   1],
-      [quiteClearGlass,       [1, "sand"],                600,    [null],                         [null],                    [null],    false,   1],
-      [enlightenedFusedQuartz,[4, "gemQuartz"],           600,    ["dustGlowstone",100, 4],       [null],                    [null],    false,   1],
-      [enlightenedClearGlass, [1, "sand"],                600,    ["dustGlowstone",100, 4],       [null],                    [null],    false,   1],
-      [darkFusedQuartz,       [4, "gemQuartz"],           600,    ["dyeBlack",100, 4],            [null],                    [null],    false,   1],
-      [darkClearGlass,        [1, "sand"],                600,    ["dyeBlack",100, 4],            [null],                    [null],    false,   1],
-      [conductiveIron,        [0, "ingotIron"],           600,    ["dustRedstone", 100, 1],       [null],                    [null],    false,   1],
-      [redstoneAlloy,         [0, "itemSilicon"],         600,    ["dustRedstone", 100, 1],       [null],                    [null],    false,   1],
-      [pulsatingIron,         [0, "ingotIron"],          1000,    ["pearlEnder", 100, 1],         [null],                    [null],    false,   1],
-      [darkSteel,             [0, "ingotSteel"],         1200,    ["blockObsidian", 100, 1],      [null],                    [null],    false,   1],
-      [darkSteel,             [0, "ingotHSLA"],          1200,    ["blockObsidian", 100, 1],      [null],                    [null],    false,   1],
-      [soularium,             [0, "soulsand"],           1450,    ["ingotGold", 100, 1],          [null],                    [null],    false,   1],
+	[electricalSteel,       [0, "ingotSteel"],          600,    ["itemSilicon", 100, 1],        [null],                    [null],    false,   1],
+	[electricalSteel,       [0, "ingotHSLA"],           600,    ["itemSilicon", 100, 1],        [null],                    [null],    false,   1],
+	[energeticAlloy,        [0, "ingotGold"],          1000,    ["dustRedstone", 100, 1],       ["dustGlowstone", 100, 1], [null],    false,   1],
+	[vibrantAlloy,          [0, "ingotEnergeticAlloy"],1450,    ["pearlEnder", 100, 1],         [null],                    [null],    false,   1],
+	[fusedQuartz,           [4, "gemQuartz"],           600,    [null],                         [null],                    [null],    false,   1],
+	[quiteClearGlass,       [1, "sand"],                600,    [null],                         [null],                    [null],    false,   1],
+	[enlightenedFusedQuartz,[4, "gemQuartz"],           600,    ["dustGlowstone",100, 4],       [null],                    [null],    false,   1],
+	[enlightenedClearGlass, [1, "sand"],                600,    ["dustGlowstone",100, 4],       [null],                    [null],    false,   1],
+	[darkFusedQuartz,       [4, "gemQuartz"],           600,    ["dyeBlack",100, 4],            [null],                    [null],    false,   1],
+	[darkClearGlass,        [1, "sand"],                600,    ["dyeBlack",100, 4],            [null],                    [null],    false,   1],
+	[conductiveIron,        [0, "ingotIron"],           600,    ["dustRedstone", 100, 1],       [null],                    [null],    false,   1],
+	[redstoneAlloy,         [0, "itemSilicon"],         600,    ["dustRedstone", 100, 1],       [null],                    [null],    false,   1],
+	[pulsatingIron,         [0, "ingotIron"],          1000,    ["pearlEnder", 100, 1],         [null],                    [null],    false,   1],
+	[darkSteel,             [0, "ingotSteel"],         1200,    ["blockObsidian", 100, 1],      [null],                    [null],    false,   1],
+	[darkSteel,             [0, "ingotHSLA"],          1200,    ["blockObsidian", 100, 1],      [null],                    [null],    false,   1],
+	[soularium,             [0, "soulsand"],           1450,    ["ingotGold", 100, 1],          [null],                    [null],    false,   1]
     ];
     
     alloys = alloys.concat(eioAlloys); // Merge the general alloys with the EnderIO specific ones.
     
+}
+
+if (isModLoaded("EnderIO")){
+
+    // Applied Energistics Definitions
+    
+    var ae2SkyStone = "appliedenergistics2:tile.BlockSkyStone";
+    var ae2SkyStoneDust = "appliedenergistics2:item.ItemMultiMaterial:45";
+
+    var ae2Alloys = [
+	[ae2SkyStone,           [0, ae2SkyStoneDust],       600,    [null],                         [null],                    [null],    false,   1]
+    ];
+
+    alloys = alloys.concat(ae2Alloys); // Add in the Applied Energistics alloy recipes.
 }
 
 // ------- Assignment Code; don't change anything after this line. -----------
@@ -80,6 +94,9 @@ if (isModLoaded("EnderIO")){
 (function (craftingRecipes) {
     for (var m in craftingRecipes) {
         var recipe = craftingRecipes[m];
+
+	log("Adding Blast Furnace Recipe: " + recipe[0]);
+	
         RotaryCraft.addBlastFurnaceRecipe(recipe[0],recipe[1],recipe[2],recipe[3],recipe[4]);
     }
 })(recipes);
@@ -90,7 +107,9 @@ if (isModLoaded("EnderIO")){
         var alloy = alloyingRecipes[m];
         
         var alloyRecipe = RotaryCraft.addBlastFurnaceAlloying(alloy[0], alloy[1][1], alloy[2]);
-        
+
+	log("Adding Blast Furnace Alloying Recipe: " + alloy[0]);
+	
         if (alloy[1][0] > 0) alloyRecipe.required(alloy[1][0]);
         if (alloy[7] > 0) alloyRecipe.setXP(alloy[7]);
         if (alloy[6]) alloyRecipe.addBonus();
