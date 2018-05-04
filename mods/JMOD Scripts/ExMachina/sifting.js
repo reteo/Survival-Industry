@@ -217,7 +217,7 @@ var addCentrifugeRecipes = [
 	["exnihilo:exnihilo.aluminum_powdered", 13],
 	
     ]],
-    ["ExMachina:minecraft:dirt", [
+    ["minecraft:dirt", [
 	["minecraft:clay", 10],
 	["exnihilo:stone", 100],
 	["exnihilo:stone", 100],
