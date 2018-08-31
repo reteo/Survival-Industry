@@ -40,4 +40,4 @@ This game is designed to avoid specific modpack clichés, such as:
 
 ---
 
-This page is the github for this modpack.  The modpack itself cannot be distributed outside of the Feed the Beast launcher, but here you can find the configuration files used in the pack. Additionally, this will be the official issue tracker for the modpack.
+This page is the github for this modpack.  The modpack itself cannot be distributed outside of ATLauncher, but here you can find the configuration files used in the pack. Additionally, this will be the official issue tracker for the modpack.
