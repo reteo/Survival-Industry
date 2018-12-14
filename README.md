@@ -1,3 +1,12 @@
+**IMPORTANT:** The modpack was designed to support Reika's tech mods, but unfortunately, while Reika is keeping up his mods on 1.7.10, the same does not apply to other mod authors.  As time goes on, the issues inherent in the pack cannot be fixed, as the pack depends on a lot of abandoned mods, and I am not a Java programmer, so I don't know enough to fix things.  Because of this, I will no longer be supporting Survival Industry.  
+
+If you want to adopt this pack, then you are free to do so, although it is important to know that while you have _my_ permission to adopt and maintain this pack, _you will still need to contact Reika for permission to distribute his mods_; his permission to me is not transferrable.
+
+Thank you for enjoying this pack, and hopefully, if someone wants to adopt it, you will continue to enjoy this pack.
+
+Peace out!
+  --- Reteo Varala
+
 **[Survival Industry](http://forum.feed-the-beast.com/threads/1-7-10-survival-industry-rotarycraft-based-tech.112573/)** is a *sandbox challenge tech pack*, meaning that it is a sandbox game (not using Hardcore Quest Mode) with technical mods that is designed to be more challenging than usual, while attempting to avoid the clichés currently in force in the modpack landscape.
 
 * Monsters are more aware, more varied, and more cooperative. They can spawn in groups, travel in groups, and work in groups.
